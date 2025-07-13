@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import { Monitor, Smartphone, Zap, Sun, Moon } from 'lucide-react';
+import React, { useState, useEffect, useMemo } from 'react';
+import { Monitor, Smartphone, Zap } from 'lucide-react';
 import { useLanguage } from "./language-context";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
@@ -9,15 +9,31 @@ import ProjectCard, { ProjectCardData } from "@/components/ProjectCard";
 import ProjectModal from "@/components/ProjectModal";
 import { projectCards } from "@/data/projects";
 
+// Type for star positions
+type StarPosition = {
+  left: string;
+  top: string;
+  animationDelay: string;
+  animationDuration: string;
+};
+
 export default function Home() {
   const { t } = useLanguage();
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [selectedCard, setSelectedCard] = useState<null | ProjectCardData>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [starPositions, setStarPositions] = useState<StarPosition[]>([]);
 
-  // Ensure we only run theme detection after mount to avoid hydration mismatch
+  // Generate star positions on the client side only
   useEffect(() => {
+    const newStarPositions = Array(50).fill(0).map(() => ({
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      animationDelay: `${Math.random() * 3}s`,
+      animationDuration: `${2 + Math.random() * 3}s`
+    }));
+    setStarPositions(newStarPositions);
     setMounted(true);
   }, []);
 
@@ -25,10 +41,6 @@ export default function Home() {
   if (!mounted) return <div className="min-h-screen"></div>;
 
   const isDark = theme === "dark";
-
-  const toggleTheme = () => {
-    setTheme(isDark ? "light" : "dark");
-  };
 
   const openModal = (card: ProjectCardData) => {
     setSelectedCard(card);
@@ -53,17 +65,17 @@ export default function Home() {
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Stars */}
-          {[...Array(50)].map((_, i) => (
+          {starPositions.map((pos, i) => (
             <div
               key={i}
               className={`absolute w-1 h-1 rounded-full animate-pulse ${
                 isDark ? 'bg-white' : 'bg-blue-300'
               }`}
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${2 + Math.random() * 3}s`
+                left: pos.left,
+                top: pos.top,
+                animationDelay: pos.animationDelay,
+                animationDuration: pos.animationDuration
               }}
             />
           ))}
