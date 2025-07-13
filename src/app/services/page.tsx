@@ -1,3 +1,9 @@
+import ServicesSection from "@/components/sections/ServicesSection";
+
 export default function Services() {
-  return <div>Services</div>;
+  return (
+    <main>
+      <ServicesSection />
+    </main>
+  );
 }

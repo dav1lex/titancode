@@ -13,5 +13,39 @@
     "welcome": "Welcome to TITANCODE",
     "subtitle": "Your next-generation development platform",
     "getStarted": "Get Started"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Premium solutions tailored to your needs",
+    "viewDetails": "View Details",
+    "webDev": {
+      "title": "Web Development",
+      "description": "Custom websites and web applications built with cutting-edge technologies for optimal performance and user experience."
+    },
+    "mobileDev": {
+      "title": "Mobile Development",
+      "description": "Native and cross-platform mobile applications that deliver seamless experiences across all devices."
+    },
+    "uiUx": {
+      "title": "UI/UX Design",
+      "description": "Elegant, intuitive interfaces designed with user-centered principles to maximize engagement and satisfaction."
+    },
+    "ecommerce": {
+      "title": "E-Commerce Solutions",
+      "description": "Scalable online stores with secure payment processing, inventory management, and optimized conversion rates."
+    },
+    "consulting": {
+      "title": "Technical Consulting",
+      "description": "Expert guidance on technology stack selection, architecture planning, and digital transformation strategies."
+    },
+    "maintenance": {
+      "title": "Maintenance & Support",
+      "description": "Ongoing technical support, performance optimization, and regular updates to keep your digital products running smoothly."
+    }
+  },
+  "hero": {
+    "title": "Elevate Your Digital Experience",
+    "subtitle": "We craft premium web solutions that blend cutting-edge technology with elegant design to help your brand stand out in the digital landscape.",
+    "cta": "Get Started"
   }
 } 

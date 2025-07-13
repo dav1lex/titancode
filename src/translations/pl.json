@@ -13,5 +13,39 @@
     "welcome": "Witaj w TITANCODE",
     "subtitle": "Twoja platforma programistyczna nowej generacji",
     "getStarted": "Rozpocznij"
+  },
+  "services": {
+    "title": "Nasze Usługi",
+    "subtitle": "Rozwiązania premium dostosowane do Twoich potrzeb",
+    "viewDetails": "Zobacz Szczegóły",
+    "webDev": {
+      "title": "Tworzenie Stron WWW",
+      "description": "Niestandardowe strony internetowe i aplikacje webowe zbudowane przy użyciu najnowszych technologii dla optymalnej wydajności i doświadczenia użytkownika."
+    },
+    "mobileDev": {
+      "title": "Rozwój Aplikacji Mobilnych",
+      "description": "Natywne i wieloplatformowe aplikacje mobilne zapewniające płynne doświadczenia na wszystkich urządzeniach."
+    },
+    "uiUx": {
+      "title": "Projektowanie UI/UX",
+      "description": "Eleganckie, intuicyjne interfejsy zaprojektowane zgodnie z zasadami projektowania zorientowanego na użytkownika, aby zmaksymalizować zaangażowanie i satysfakcję."
+    },
+    "ecommerce": {
+      "title": "Rozwiązania E-Commerce",
+      "description": "Skalowalne sklepy internetowe z bezpiecznym przetwarzaniem płatności, zarządzaniem zapasami i zoptymalizowanymi wskaźnikami konwersji."
+    },
+    "consulting": {
+      "title": "Doradztwo Techniczne",
+      "description": "Eksperckie wskazówki dotyczące wyboru stosu technologicznego, planowania architektury i strategii transformacji cyfrowej."
+    },
+    "maintenance": {
+      "title": "Utrzymanie i Wsparcie",
+      "description": "Ciągłe wsparcie techniczne, optymalizacja wydajności i regularne aktualizacje, aby Twoje produkty cyfrowe działały sprawnie."
+    }
+  },
+  "hero": {
+    "title": "Podnieś Swoje Cyfrowe Doświadczenie",
+    "subtitle": "Tworzymy premium rozwiązania internetowe, które łączą najnowocześniejszą technologię z eleganckim designem, aby pomóc Twojej marce wyróżnić się w cyfrowym świecie.",
+    "cta": "Rozpocznij"
   }
 } 
