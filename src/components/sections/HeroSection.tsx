@@ -26,7 +26,7 @@ interface Particle {
 }
 
 // Improved Star Field Component
-const StarField = ({ starCount = 150, speed = 0.02 }) => {
+const StarField = ({ starCount = 150 }) => {
   const [stars, setStars] = useState<Star[]>([]);
   
   useEffect(() => {
@@ -349,7 +349,7 @@ export default function HeroSection() {
         />
         
         {/* Enhanced Star Field (Dark Mode Only) */}
-        {mounted && isDark && <StarField starCount={180} speed={0.03} />}
+        {mounted && isDark && <StarField starCount={180} />}
         
         {/* Enhanced Floating Particles */}
         {mounted && <FloatingParticles isDark={isDark} />}
