@@ -1,6 +1,8 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import en from "../translations/en.json";
+import pl from "../translations/pl.json";
 
 type Language = "en" | "pl";
 
@@ -12,26 +14,8 @@ type LanguageContextType = {
 
 // Default translations
 const translations = {
-  en: {
-    "nav.home": "Home",
-    "nav.projects": "Projects",
-    "nav.about": "About",
-    "nav.contact": "Contact",
-    "footer.rights": "All rights reserved",
-    "home.welcome": "Welcome to TITANCODE",
-    "home.subtitle": "Your next-generation development platform",
-    "home.getStarted": "Get Started",
-  },
-  pl: {
-    "nav.home": "Strona główna",
-    "nav.projects": "Projekty",
-    "nav.about": "O nas",
-    "nav.contact": "Kontakt",
-    "footer.rights": "Wszelkie prawa zastrzeżone",
-    "home.welcome": "Witaj w TITANCODE",
-    "home.subtitle": "Twoja platforma programistyczna nowej generacji",
-    "home.getStarted": "Rozpocznij",
-  },
+  en,
+  pl,
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -54,7 +38,17 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   // Translation function
   const t = (key: string): string => {
-    return translations[language][key as keyof typeof translations[typeof language]] || key;
+    const keys = key.split(".");
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let result: any = translations[language];
+    for (const k of keys) {
+      if (result && typeof result === "object" && k in result) {
+        result = result[k];
+      } else {
+        return key;
+      }
+    }
+    return typeof result === "string" ? result : key;
   };
 
   return (

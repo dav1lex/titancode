@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "home": "Strona główna",
+    "services": "Usługi",
+    "portfolio": "Portfolio",
+    "about": "O nas",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "rights": "Wszelkie prawa zastrzeżone"
+  },
+  "home": {
+    "welcome": "Witaj w TITANCODE",
+    "subtitle": "Twoja platforma programistyczna nowej generacji",
+    "getStarted": "Rozpocznij"
+  }
+} 
