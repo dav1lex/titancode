@@ -25,16 +25,7 @@ const translations = {
     "home.responsivePages": "Responsive Pages",
     "home.fastLoading": "Fast Loading",
     "home.viewServices": "View Services",
-    "home.contact": "Contact Us",
-    "home.ourProjects": "Our Projects",
-    "home.projectsDescription": "Check out some of our recent work and discover how we can help bring your vision to life",
-    "home.viewDetails": "View Details",
-    "home.projectDetails": "Project Details",
-    "home.client": "Client",
-    "home.duration": "Duration",
-    "home.technologies": "Technologies",
-    "home.features": "Key Features",
-    "home.contactAboutProject": "Contact About This Project"
+    "home.contact": "Contact Us"
   },
   pl: {
     "nav.home": "Strona główna",
@@ -49,16 +40,7 @@ const translations = {
     "home.responsivePages": "Responsywne Strony",
     "home.fastLoading": "Szybkie Ładowanie",
     "home.viewServices": "Zobacz Usługi",
-    "home.contact": "Skontaktuj Się",
-    "home.ourProjects": "Nasze Projekty",
-    "home.projectsDescription": "Zobacz nasze ostatnie prace i dowiedz się, jak możemy pomóc w realizacji Twojej wizji",
-    "home.viewDetails": "Zobacz Szczegóły",
-    "home.projectDetails": "Szczegóły Projektu",
-    "home.client": "Klient",
-    "home.duration": "Czas Realizacji",
-    "home.technologies": "Technologie",
-    "home.features": "Kluczowe Funkcje",
-    "home.contactAboutProject": "Zapytaj o Ten Projekt"
+    "home.contact": "Skontaktuj Się"
   },
 };
 
