@@ -18,14 +18,9 @@ const translations = {
     "nav.about": "About",
     "nav.contact": "Contact",
     "footer.rights": "All rights reserved",
-    "home.welcome": "Professional Web Development",
+    "home.welcome": "Welcome to TITANCODE",
     "home.subtitle": "Your next-generation development platform",
     "home.getStarted": "Get Started",
-    "home.modernDesign": "Modern Design",
-    "home.responsivePages": "Responsive Pages",
-    "home.fastLoading": "Fast Loading",
-    "home.viewServices": "View Services",
-    "home.contact": "Contact Us"
   },
   pl: {
     "nav.home": "Strona główna",
@@ -33,14 +28,9 @@ const translations = {
     "nav.about": "O nas",
     "nav.contact": "Kontakt",
     "footer.rights": "Wszelkie prawa zastrzeżone",
-    "home.welcome": "Profesjonalne tworzenie stron internetowych",
+    "home.welcome": "Witaj w TITANCODE",
     "home.subtitle": "Twoja platforma programistyczna nowej generacji",
     "home.getStarted": "Rozpocznij",
-    "home.modernDesign": "Nowoczesny Design",
-    "home.responsivePages": "Responsywne Strony",
-    "home.fastLoading": "Szybkie Ładowanie",
-    "home.viewServices": "Zobacz Usługi",
-    "home.contact": "Skontaktuj Się"
   },
 };
 
