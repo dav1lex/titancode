@@ -3,7 +3,6 @@
 import { useLanguage } from "@/app/language-context";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
