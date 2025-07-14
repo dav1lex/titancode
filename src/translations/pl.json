@@ -15,10 +15,14 @@
     "getStarted": "Rozpocznij"
   },
   "services": {
-    "title": "Usługi Krawieckie",
+    "title": "Usługi Premium",
     "subtitle": "Inżynieria cyfrowa dla wymagających marek",
     "viewDetails": "Zobacz Szczegóły",
     "startingFrom": "Cena od",
+    "customSolutions": {
+      "title": "Więcej Niż Szablony: Prawdziwa Inżynieria Cyfrowa",
+      "description": "Nie używamy WordPressa ani gotowych szablonów. Każdy projekt to czysta karta, tworzony od podstaw przy użyciu czystego, nowoczesnego kodu, aby dostarczyć unikalne doświadczenie cyfrowe, które jest szybkie, bezpieczne i idealnie dopasowane do Twojej marki."
+    },
     "webDev": {
       "title": "Tworzenie Stron WWW",
       "description": "Niestandardowe strony internetowe i aplikacje webowe zbudowane przy użyciu najnowszych technologii dla optymalnej wydajności i doświadczenia użytkownika.",
@@ -77,6 +81,7 @@
     "estimateTitle": "Twoja wycena",
     "basePrice": "Cena bazowa",
     "totalCost": "Całkowity koszt projektu",
+    "upfrontPayment": "Zaliczka (40%)",
     "monthlySupport": "+ {cost} PLN/miesiąc za wsparcie",
     "includedTitle": "Co jest wliczone:",
     "startOver": "Zacznij od nowa",
@@ -84,27 +89,33 @@
     "timeline": "Oś czasu",
     "tiers": {
       "starter": {
-        "name": "Pakiet Startowy",
-        "description": "Kompleksowe rozwiązanie dla profesjonalistów i małych firm, obejmujące projekt, wdrożenie i podstawowe SEO, aby zapewnić solidny start w internecie."
+        "name": "Starter Profesjonalny",
+        "description": "Indywidualnie projektowana, profesjonalnie skonstruowana obecność w sieci dla wymagających klientów indywidualnych i małych firm."
       },
       "custom": {
-        "name": "Rozwiązanie Biznesowe",
-        "description": "Zaawansowane, szyte na miarę strony z CMS i integracjami, stworzone dla firm, które potrzebują unikalnych funkcji i pełnej kontroli nad treścią."
+        "name": "Custom Enterprise",
+        "description": "Dopasowane, wysokowydajne rozwiązanie cyfrowe zaprojektowane dla ugruntowanych firm i dynamicznie rozwijających się startupów."
       },
       "ecommerce": {
-        "name": "Sklep E-Commerce",
-        "description": "W pełni funkcjonalna platforma e-commerce ze zintegrowanymi płatnościami i zarządzaniem produktami, gotowa do sprzedaży online."
+        "name": "E-Commerce Profesjonalny",
+        "description": "Potężna, stworzona na zamówienie platforma e-commerce, zaprojektowana z myślą o wzroście i bezproblemowych doświadczeniach klientów."
       },
       "enterprise": {
-        "name": "Rozwiązanie Enterprise",
-        "description": "Dedykowany ekosystem cyfrowy dla dużych organizacji, obejmujący niestandardowe aplikacje, zaawansowane integracje i gwarancję poziomu usług (SLA)."
+        "name": "Enterprise Elitarny",
+        "description": "Kompleksowy, dedykowany ekosystem cyfrowy dla dużych organizacji o złożonych potrzebach operacyjnych."
       }
     },
     "options": {
       "hasDesign": "Mam już projekt",
-      "contentWriting": "Pisanie treści (za 5 stron)",
+      "hasDesign_description": "Zmniejsza koszt, jeśli dostarczysz kompletny, gotowy do wdrożenia plik projektu (np. Figma).",
+      "contentSeoPack": "Pakiet Content & SEO",
+      "contentSeoPack_description": "Profesjonalne pisanie treści na 5 stron w połączeniu z zaawansowanym SEO w celu maksymalizacji ruchu organicznego.",
+      "advancedFeaturesPack": "Pakiet Zaawansowanych Funkcji",
+      "advancedFeaturesPack_description": "Obejmuje niestandardowy panel administracyjny oraz funkcje automatycznego generowania i wysyłania plików PDF.",
       "logoDesign": "Projekt logo",
-      "constantSupport": "Miesięczny abonament na wsparcie"
+      "logoDesign_description": "Unikalne, profesjonalne logo reprezentujące tożsamość Twojej marki.",
+      "constantSupport": "Miesięczny abonament na wsparcie",
+      "constantSupport_description": "Bieżące wsparcie techniczne, aktualizacje i monitorowanie wydajności."
     },
     "optionDetails": {
       "discount": "({value}% zniżki)",
@@ -112,7 +123,8 @@
     },
     "summary": {
       "hasDesign": "Zniżka za projekt",
-      "contentWriting": "Pisanie treści",
+      "contentSeoPack": "Pakiet Content & SEO",
+      "advancedFeaturesPack": "Pakiet Zaawansowanych Funkcji",
       "logoDesign": "Projekt logo"
     }
   },

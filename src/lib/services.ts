@@ -1,7 +1,7 @@
 export const SERVICE_TIERS = {
   starter: {
     name: 'Professional Starter',
-    basePrice: 3500, // PLN
+    basePrice: 2500, // PLN
     description: 'A bespoke, professionally engineered web presence for discerning individuals and small businesses.',
     includes: [
       'Comprehensive UI/UX Design',
@@ -18,7 +18,7 @@ export const SERVICE_TIERS = {
   },
   custom: {
     name: 'Enterprise Custom',
-    basePrice: 9500, // PLN
+    basePrice: 7000, // PLN
     description: 'A tailored, high-performance digital solution engineered for established businesses and high-growth startups.',
     includes: [
       'Everything in Starter',
@@ -35,7 +35,7 @@ export const SERVICE_TIERS = {
   },
   ecommerce: {
     name: 'E-Commerce Pro',
-    basePrice: 14000, // PLN
+    basePrice: 10000, // PLN
     description: 'A powerful, custom-built e-commerce platform engineered for growth and seamless customer experiences.',
     includes: [
       'Everything in Business Elite',
@@ -51,7 +51,7 @@ export const SERVICE_TIERS = {
   },
   enterprise: {
     name: 'Enterprise Elite',
-    basePrice: 28000, // PLN
+    basePrice: 20000, // PLN
     description: 'A comprehensive, bespoke digital ecosystem for large-scale organizations with complex operational needs.',
     includes: [
       'Everything in E-Commerce Premium',

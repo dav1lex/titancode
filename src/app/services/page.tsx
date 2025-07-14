@@ -24,6 +24,17 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Custom Solutions Section */}
+      <section className="py-16 sm:py-20 bg-white dark:bg-black">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold tracking-tight">
+            {t("services.customSolutions.title")}
+          </h2>
+          <p className="mt-4 max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400">
+            {t("services.customSolutions.description")}
+          </p>
+        </div>
+      </section>
 
       {/* Services Details Section */}
       <section className="py-24 sm:py-32 bg-gray-50 dark:bg-gray-900/50">

@@ -19,6 +19,10 @@
     "subtitle": "Premium solutions tailored to your needs",
     "viewDetails": "View Details",
     "startingFrom": "Starting from",
+    "customSolutions": {
+      "title": "Beyond Templates: True Custom Engineering",
+      "description": "We don't use WordPress or off-the-shelf templates. Every project is a blank canvas, engineered from the ground up with clean, modern code to deliver a truly bespoke digital experience that is fast, secure, and perfectly tailored to your brand."
+    },
     "webDev": {
       "title": "Web Development",
       "description": "Custom websites and web applications built with cutting-edge technologies for optimal performance and user experience.",
@@ -64,7 +68,7 @@
   "calculateEstimate": {
     "title": "Ready to Start Your Project?",
     "subtitle": "Use our interactive calculator to get a estimate for your project. It only takes a few minutes.",
-    "cta": "Calculate Estimate",
+    "cta": "Check Estimate",
     "testPrompt": "Want to calculate your estimate?",
     "testDescription": "Take a small test to get an estimated cost for your project.",
     "testButton": "Check Estimate"
@@ -77,6 +81,7 @@
     "estimateTitle": "Your Estimate",
     "basePrice": "Base Price",
     "totalCost": "Total Project Cost",
+    "upfrontPayment": "Upfront Payment (40%)",
     "monthlySupport": "+ {cost} PLN/month for support",
     "includedTitle": "What's Included:",
     "startOver": "Start Over",
@@ -102,9 +107,15 @@
     },
     "options": {
       "hasDesign": "I already have a design",
-      "contentWriting": "Content writing (per 5 pages)",
+      "hasDesign_description": "Reduces cost if you provide a complete, development-ready design file (e.g., Figma).",
+      "contentSeoPack": "Content & SEO Pack",
+      "contentSeoPack_description": "Professional content writing for up to 5 pages combined with advanced SEO to maximize organic traffic.",
+      "advancedFeaturesPack": "Advanced Features Pack",
+      "advancedFeaturesPack_description": "Includes a custom admin panel and automated PDF generation/mailing capabilities.",
       "logoDesign": "Logo design",
-      "constantSupport": "Monthly support retainer"
+      "logoDesign_description": "A unique, professional logo to represent your brand identity.",
+      "constantSupport": "Monthly support retainer",
+      "constantSupport_description": "Ongoing technical support, updates, and performance monitoring."
     },
     "optionDetails": {
       "discount": "({value}% discount)",
@@ -112,7 +123,8 @@
     },
     "summary": {
       "hasDesign": "Design Discount",
-      "contentWriting": "Content Writing",
+      "contentSeoPack": "Content & SEO Pack",
+      "advancedFeaturesPack": "Advanced Features Pack",
       "logoDesign": "Logo Design"
     }
   },

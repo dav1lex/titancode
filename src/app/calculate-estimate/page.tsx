@@ -1,10 +1,12 @@
 "use client";
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '../language-context';
 import { SERVICE_TIERS, ServiceTierKey } from '@/lib/services';
+import { Info } from 'lucide-react';
 
 type OptionConfig = {
   label: string;
+  description: string;
   type: 'discount' | 'surcharge';
   value: number;
   appliesTo: ServiceTierKey[];
@@ -13,26 +15,37 @@ type OptionConfig = {
 const ADDITIONAL_OPTIONS: Record<string, OptionConfig> = {
   hasDesign: {
     label: 'I already have a design',
+    description: 'Reduces cost if you provide a complete, development-ready design file (e.g., Figma).',
     type: 'discount',
-    value: 0.10, // Reduced discount
+    value: 0.10,
     appliesTo: ['starter', 'custom', 'ecommerce', 'enterprise']
   },
-  contentWriting: {
-    label: 'Content writing (per 5 pages)',
+  contentSeoPack: {
+    label: 'Content & SEO Pack',
+    description: 'Professional content writing for up to 5 pages combined with advanced SEO to maximize organic traffic.',
     type: 'surcharge',
-    value: 1000, // Increased price
+    value: 2200,
     appliesTo: ['starter', 'custom', 'ecommerce', 'enterprise']
+  },
+  advancedFeaturesPack: {
+    label: 'Advanced Features Pack',
+    description: 'Includes a custom admin panel and automated PDF generation/mailing capabilities.',
+    type: 'surcharge',
+    value: 4000,
+    appliesTo: ['custom', 'ecommerce', 'enterprise']
   },
   logoDesign: {
     label: 'Logo design',
+    description: 'A unique, professional logo to represent your brand identity.',
     type: 'surcharge',
-    value: 1500, // Increased price
+    value: 1500,
     appliesTo: ['starter', 'custom', 'ecommerce', 'enterprise']
   },
   constantSupport: {
     label: 'Monthly support retainer',
+    description: 'Ongoing technical support, updates, and performance monitoring.',
     type: 'surcharge',
-    value: 0.20,
+    value: 0, // Note: This is now handled by SUPPORT_COST
     appliesTo: ['starter', 'custom', 'ecommerce', 'enterprise']
   }
 };
@@ -49,9 +62,18 @@ const SUPPORT_COST = {
 export default function CalculateEstimatePage() {
   const { t } = useLanguage();
   const [tier, setTier] = useState<ServiceTierKey | ''>('');
+  const detailsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (tier && detailsRef.current) {
+      detailsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [tier]);
+  
   const [selectedOptions, setSelectedOptions] = useState<Record<OptionKey, boolean>>({
     hasDesign: false,
-    contentWriting: false,
+    contentSeoPack: false,
+    advancedFeaturesPack: false,
     logoDesign: false,
     constantSupport: false
   });
@@ -64,9 +86,8 @@ export default function CalculateEstimatePage() {
     setTier('');
     setSelectedOptions({
       hasDesign: false,
-      canSetup: false,
-      noFramework: false,
-      contentWriting: false,
+      contentSeoPack: false,
+      advancedFeaturesPack: false,
       logoDesign: false,
       constantSupport: false
     });
@@ -144,7 +165,7 @@ export default function CalculateEstimatePage() {
 
             {/* Project Details & Results */}
             {tier && (
-              <div className="transition-all duration-500 ease-in-out">
+              <div ref={detailsRef} className="transition-all duration-500 ease-in-out pt-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
                   <div className="space-y-6">
                     <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{t('estimatePage.step2Title')}</h2>
@@ -162,11 +183,17 @@ export default function CalculateEstimatePage() {
                             onChange={() => handleOptionChange(key)}
                             className="h-5 w-5 text-cyan-600 focus:ring-cyan-500 border-gray-300 rounded"
                           />
-                          <label htmlFor={key} className="ml-3 block text-gray-700 dark:text-gray-300">
+                          <label htmlFor={key} className="ml-3 block text-gray-700 dark:text-gray-300 flex-grow">
                             {t(`estimatePage.options.${key}`)}
                             {option.type === 'discount' && ` ${t('estimatePage.optionDetails.discount').replace('{value}', (option.value * 100).toString())}`}
                             {option.type === 'surcharge' && typeof option.value === 'number' && ` ${t('estimatePage.optionDetails.surcharge').replace('{value}', option.value.toString())}`}
                           </label>
+                          <div className="relative group">
+                            <Info className="h-5 w-5 text-gray-400 dark:text-gray-500 cursor-help" />
+                            <div className="absolute bottom-full mb-2 w-64 bg-gray-800 text-white text-sm rounded-lg p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10 right-0 transform translate-x-1/2">
+                              {t(`estimatePage.options.${key}_description`)}
+                            </div>
+                          </div>
                         </div>
                       );
                     })}
@@ -195,7 +222,7 @@ export default function CalculateEstimatePage() {
                           amount = option.value;
                         }
 
-                        if (key === 'constantSupport') return null; // Handled separately
+                        if (key === 'constantSupport') return null;
 
                         return (
                           <div key={key} className={`flex justify-between text-sm ${option.type === 'discount' ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
@@ -209,6 +236,10 @@ export default function CalculateEstimatePage() {
                         <div className="flex justify-between font-bold text-xl text-gray-900 dark:text-white">
                           <span>{t('estimatePage.totalCost')}:</span>
                           <span>{calculateTotal()} PLN</span>
+                        </div>
+                        <div className="flex justify-between text-lg text-gray-800 dark:text-gray-200">
+                          <span>{t('estimatePage.upfrontPayment')}:</span>
+                          <span className="font-medium">{Math.round(calculateTotal() * 0.4)} PLN</span>
                         </div>
                       </div>
 
