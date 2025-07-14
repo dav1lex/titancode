@@ -50,18 +50,18 @@ export default function HeroSection() {
           >
             <Button 
               size="lg" 
-              className="bg-black hover:bg-gray-800 text-white dark:bg-white dark:hover:bg-gray-200 dark:text-black rounded-md px-6 transition-all"
+              className="bg-black hover:bg-gray-800 active:bg-gray-800 text-white dark:bg-white dark:hover:bg-gray-200 dark:active:bg-gray-200 dark:text-black rounded-md px-6 transition-all"
             >
               <span className="flex items-center gap-2">
                 {t("hero.cta")} 
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-active:translate-x-1" />
               </span>
             </Button>
             
             <Button 
               size="lg" 
               variant="outline"
-              className="border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md px-6 transition-all"
+              className="border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-100 active:bg-gray-100 dark:hover:bg-gray-800 dark:active:bg-gray-800 rounded-md px-6 transition-all"
             >
               <span className="flex items-center gap-2">
                 View Portfolio

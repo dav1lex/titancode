@@ -53,5 +53,10 @@
     "subtitle": "Prezentacja naszych najlepszych prac z różnych branż i technologii.",
     "viewProject": "Zobacz Projekt",
     "viewAll": "Zobacz Wszystkie Projekty"
+  },
+  "calculateEstimate": {
+    "title": "Gotowy, aby rozpocząć projekt?",
+    "subtitle": "Użyj naszego interaktywnego kalkulatora, aby uzyskać wstępną wycenę dla swojego projektu. To zajmie tylko kilka minut.",
+    "cta": "Oblicz Wycenę"
   }
 } 

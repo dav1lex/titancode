@@ -107,11 +107,11 @@ export default function ServicesSection() {
               </p>
               <Button 
                 variant="outline" 
-                className="group text-primary dark:text-primary hover:text-primary-foreground hover:bg-primary dark:hover:text-primary-foreground dark:hover:bg-primary px-3 hover:px-4 transition-all duration-300"
+                className="group text-primary dark:text-primary hover:text-primary-foreground active:text-primary-foreground hover:bg-primary active:bg-primary dark:hover:text-primary-foreground dark:active:text-primary-foreground dark:hover:bg-primary dark:active:bg-primary px-3 hover:px-4 active:px-4 transition-all duration-300"
               >
                 <span className="flex items-center gap-2">
                   {t("services.viewDetails")}
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-active:translate-x-1" />
                 </span>
               </Button>
             </motion.div>

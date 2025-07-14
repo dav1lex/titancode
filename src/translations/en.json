@@ -53,5 +53,10 @@
     "subtitle": "Showcasing our finest work across various industries and technologies.",
     "viewProject": "View Project",
     "viewAll": "View All Projects"
+  },
+  "calculateEstimate": {
+    "title": "Ready to Start Your Project?",
+    "subtitle": "Use our interactive calculator to get a preliminary estimate for your project. It only takes a few minutes.",
+    "cta": "Calculate Estimate"
   }
 } 

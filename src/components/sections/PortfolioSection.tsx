@@ -2,17 +2,28 @@
 
 import { useLanguage } from "@/app/language-context";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
-// Portfolio project data
 const projects = [
   {
     id: 1,
     title: "E-Commerce Platform",
     category: "Web Development",
-    image: "/images/portfolio/ecommerce.jpg",
     imageAlt: "E-commerce website preview",
     link: "/portfolio/ecommerce",
   },
@@ -20,7 +31,6 @@ const projects = [
     id: 2,
     title: "Banking App",
     category: "Mobile Development",
-    image: "/images/portfolio/banking.jpg",
     imageAlt: "Banking application preview",
     link: "/portfolio/banking",
   },
@@ -28,7 +38,6 @@ const projects = [
     id: 3,
     title: "Fitness Tracker",
     category: "UI/UX Design",
-    image: "/images/portfolio/fitness.jpg",
     imageAlt: "Fitness tracker application preview",
     link: "/portfolio/fitness",
   },
@@ -36,7 +45,6 @@ const projects = [
     id: 4,
     title: "Educational Platform",
     category: "Web Development",
-    image: "/images/portfolio/education.jpg",
     imageAlt: "Educational platform preview",
     link: "/portfolio/education",
   },
@@ -44,7 +52,6 @@ const projects = [
     id: 5,
     title: "Restaurant Booking System",
     category: "Web Development",
-    image: "/images/portfolio/restaurant.jpg",
     imageAlt: "Restaurant booking system preview",
     link: "/portfolio/restaurant",
   },
@@ -52,7 +59,6 @@ const projects = [
     id: 6,
     title: "Travel Companion App",
     category: "Mobile Development",
-    image: "/images/portfolio/travel.jpg",
     imageAlt: "Travel companion app preview",
     link: "/portfolio/travel",
   },
@@ -61,28 +67,11 @@ const projects = [
 export default function PortfolioSection() {
   const { t } = useLanguage();
 
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const item = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 },
-  };
-
   return (
-    <section className="relative py-24 bg-white dark:bg-black transition-all duration-300 z-10">
-      {/* Background elements */}
-      <div className="absolute left-20 top-1/2 w-72 h-72 bg-blue-500/10 dark:bg-blue-500/5 rounded-full blur-3xl opacity-70 -z-10"></div>
-      <div className="absolute right-20 bottom-20 w-64 h-64 bg-cyan-500/10 dark:bg-cyan-500/5 rounded-full blur-3xl opacity-70 -z-10"></div>
+    <section className="relative w-full py-24 bg-white dark:bg-black transition-all duration-300 z-10">
+      <div className="absolute inset-0 h-full w-full bg-white dark:bg-black bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#374151_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
       
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 relative">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <motion.h2 
             className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-b from-gray-900 to-gray-600 dark:from-white dark:to-gray-300"
@@ -105,63 +94,53 @@ export default function PortfolioSection() {
           </motion.p>
         </div>
 
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto"
         >
-          {projects.map((project) => (
-            <motion.div 
-              key={project.id} 
-              variants={item}
-              className="group relative bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-cyan-900/20"
-            >
-              <div className="aspect-[16/9] relative overflow-hidden">
-                {/* Placeholder for image - you'll need to add actual images */}
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center">
-                  <span className="text-gray-500 dark:text-gray-400 text-sm">
-                    {project.imageAlt}
-                  </span>
+          <CarouselContent>
+            {projects.map((project) => (
+              <CarouselItem key={project.id} className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <Card className="h-full bg-white/50 dark:bg-black/50 backdrop-blur-sm border-gray-200/50 dark:border-gray-800/50 hover:border-gray-300 dark:hover:border-gray-700 transition-all">
+                    <CardHeader className="h-48 flex items-center justify-center bg-gray-100 dark:bg-gray-900 rounded-t-lg">
+                      <span className="text-gray-500 dark:text-gray-400 text-sm p-4 text-center">
+                        {project.imageAlt}
+                      </span>
+                    </CardHeader>
+                    <CardContent className="pt-6">
+                      <p className="text-xs font-medium text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">
+                        {project.category}
+                      </p>
+                      <CardTitle className="text-xl font-semibold text-gray-900 dark:text-white">
+                        {project.title}
+                      </CardTitle>
+                    </CardContent>
+                    <CardFooter>
+                      <Link href={project.link} className="w-full">
+                        <Button variant="outline" className="w-full">
+                          {t("portfolio.viewProject")}
+                        </Button>
+                      </Link>
+                    </CardFooter>
+                  </Card>
                 </div>
-                {/* Uncomment when images are available */}
-                {/* <Image
-                  src={project.image}
-                  alt={project.imageAlt}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                /> */}
-              </div>
-              
-              <div className="p-6">
-                <span className="text-xs font-medium text-blue-600 dark:text-blue-400 uppercase tracking-wider">
-                  {project.category}
-                </span>
-                <h3 className="mt-2 text-xl font-semibold text-gray-900 dark:text-white">
-                  {project.title}
-                </h3>
-                
-                <div className="mt-4 flex items-center">
-                  <a 
-                    href={project.link} 
-                    className="inline-flex items-center text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                  >
-                    {t("portfolio.viewProject")}
-                    <ArrowRight className="ml-1 w-4 h-4 transition-transform group-hover:translate-x-1" />
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden sm:flex" />
+          <CarouselNext className="hidden sm:flex" />
+        </Carousel>
 
         <div className="mt-16 text-center">
           <Link href="/portfolio">
             <Button 
               size="lg" 
               variant="outline"
-              className="border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md px-6 transition-all"
+              className="border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-100 active:bg-gray-100 dark:hover:bg-gray-800 dark:active:bg-gray-800 rounded-md px-6 transition-all"
             >
               {t("portfolio.viewAll")}
             </Button>
@@ -170,4 +149,4 @@ export default function PortfolioSection() {
       </div>
     </section>
   );
-}   
+}
