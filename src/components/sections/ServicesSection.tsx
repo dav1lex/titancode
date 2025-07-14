@@ -63,7 +63,7 @@ export default function ServicesSection() {
         {/* Section header */}
         <div className="text-center mb-16">
           <motion.h2 
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold bg-clip-text pb-4 text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

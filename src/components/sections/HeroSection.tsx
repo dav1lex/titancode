@@ -12,7 +12,7 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-white dark:bg-black transition-all duration-300">
-      {/* Premium gradient blur */}
+      {/*  gradient blur */}
       <div className="absolute top-[-250px] right-[-150px] w-[500px] h-[500px] bg-blue-500/20 dark:bg-blue-500/10 rounded-full blur-3xl opacity-50"></div>
       <div className="absolute bottom-[-200px] left-[-100px] w-[400px] h-[400px] bg-cyan-500/20 dark:bg-cyan-500/10 rounded-full blur-3xl opacity-50"></div>
       
