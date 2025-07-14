@@ -56,7 +56,71 @@
   },
   "calculateEstimate": {
     "title": "Ready to Start Your Project?",
-    "subtitle": "Use our interactive calculator to get a preliminary estimate for your project. It only takes a few minutes.",
-    "cta": "Calculate Estimate"
+    "subtitle": "Use our interactive calculator to get a estimate for your project. It only takes a few minutes.",
+    "cta": "Calculate Estimate",
+    "testPrompt": "Want to calculate your estimate?",
+    "testDescription": "Take a small test to get an estimated cost for your project.",
+    "testButton": "Check Estimate"
+  },
+  "estimatePage": {
+    "mainTitle": "Web Development Estimate",
+    "mainSubtitle": "Get an instant quote for your project",
+    "step1Title": "1. Select Website Type",
+    "step2Title": "2. Customize Your Project",
+    "estimateTitle": "Your Estimate",
+    "basePrice": "Base Price",
+    "totalCost": "Total Project Cost",
+    "monthlySupport": "+ {cost} PLN/month for support",
+    "includedTitle": "What's Included:",
+    "startOver": "Start Over",
+    "techStack": "Tech Stack",
+    "timeline": "Timeline",
+    "tiers": {
+      "basic": {
+        "name": "Basic Website",
+        "description": "Simple site for showcasing your business or personal brand."
+      },
+      "complex": {
+        "name": "Complex Website",
+        "description": "Dynamic website with interactive elements and more features."
+      },
+      "ecommerce": {
+        "name": "E-Commerce",
+        "description": "Online store for selling products or services."
+      },
+      "enterprise": {
+        "name": "Enterprise Solution",
+        "description": "Custom solution for large organizations with specific needs."
+      }
+    },
+    "options": {
+      "hasDesign": "I already have a design",
+      "canSetup": "I can handle some technical setup",
+      "noFramework": "Use vanilla JS (no framework)",
+      "contentWriting": "Content writing (per 5 pages)",
+      "logoDesign": "Logo design",
+      "constantSupport": "Monthly support retainer"
+    },
+    "optionDetails": {
+      "discount": "({value}% discount)",
+      "surcharge": "(+{value} PLN)"
+    },
+    "summary": {
+      "hasDesign": "Design Discount",
+      "canSetup": "Technical Setup Discount",
+      "noFramework": "No Framework Discount",
+      "contentWriting": "Content Writing",
+      "logoDesign": "Logo Design"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have a question or a project in mind? We'd love to hear from you.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send Message"
+    }
   }
-} 
+}

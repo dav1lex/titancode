@@ -57,6 +57,70 @@
   "calculateEstimate": {
     "title": "Gotowy, aby rozpocząć projekt?",
     "subtitle": "Użyj naszego interaktywnego kalkulatora, aby uzyskać wstępną wycenę dla swojego projektu. To zajmie tylko kilka minut.",
-    "cta": "Oblicz Wycenę"
+    "cta": "Oblicz Wycenę",
+    "testPrompt": "Chcesz obliczyć wycenę?",
+    "testDescription": "Rozwiąż krótki test, aby uzyskać szacunkowy koszt swojego projektu.",
+    "testButton": "Sprawdź"
+  },
+  "estimatePage": {
+    "mainTitle": "Wycena projektu deweloperskiego",
+    "mainSubtitle": "Otrzymaj natychmiastową wycenę dla swojego projektu",
+    "step1Title": "1. Wybierz rodzaj strony internetowej",
+    "step2Title": "2. Dostosuj swój projekt",
+    "estimateTitle": "Twoja wycena",
+    "basePrice": "Cena bazowa",
+    "totalCost": "Całkowity koszt projektu",
+    "monthlySupport": "+ {cost} PLN/miesiąc za wsparcie",
+    "includedTitle": "Co jest wliczone:",
+    "startOver": "Zacznij od nowa",
+    "techStack": "Stos technologiczny",
+    "timeline": "Oś czasu",
+    "tiers": {
+      "basic": {
+        "name": "Podstawowa strona internetowa",
+        "description": "Prosta strona do prezentacji Twojej firmy lub marki osobistej."
+      },
+      "complex": {
+        "name": "Złożona strona internetowa",
+        "description": "Dynamiczna strona z interaktywnymi elementami i większą liczbą funkcji."
+      },
+      "ecommerce": {
+        "name": "E-Commerce",
+        "description": "Sklep internetowy do sprzedaży produktów lub usług."
+      },
+      "enterprise": {
+        "name": "Rozwiązanie dla przedsiębiorstw",
+        "description": "Niestandardowe rozwiązanie dla dużych organizacji o specyficznych potrzebach."
+      }
+    },
+    "options": {
+      "hasDesign": "Mam już projekt",
+      "canSetup": "Mogę zająć się pewnymi ustawieniami technicznymi",
+      "noFramework": "Użyj czystego JS (bez frameworka)",
+      "contentWriting": "Pisanie treści (za 5 stron)",
+      "logoDesign": "Projekt logo",
+      "constantSupport": "Miesięczny abonament na wsparcie"
+    },
+    "optionDetails": {
+      "discount": "({value}% zniżki)",
+      "surcharge": "(+{value} PLN)"
+    },
+    "summary": {
+      "hasDesign": "Zniżka za projekt",
+      "canSetup": "Zniżka za obsługę techniczną",
+      "noFramework": "Zniżka za brak frameworka",
+      "contentWriting": "Pisanie treści",
+      "logoDesign": "Projekt logo"
+    }
+  },
+  "contact": {
+    "title": "Skontaktuj się z nami",
+    "subtitle": "Masz pytanie lub pomysł na projekt? Chętnie o tym usłyszymy.",
+    "form": {
+      "name": "Imię",
+      "email": "Email",
+      "message": "Wiadomość",
+      "submit": "Wyślij wiadomość"
+    }
   }
-} 
+}
