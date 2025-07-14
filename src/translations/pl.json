@@ -20,27 +20,33 @@
     "viewDetails": "Zobacz Szczegóły",
     "webDev": {
       "title": "Tworzenie Stron WWW",
-      "description": "Niestandardowe strony internetowe i aplikacje webowe zbudowane przy użyciu najnowszych technologii dla optymalnej wydajności i doświadczenia użytkownika."
+      "description": "Niestandardowe strony internetowe i aplikacje webowe zbudowane przy użyciu najnowszych technologii dla optymalnej wydajności i doświadczenia użytkownika.",
+      "longDescription": "Specjalizujemy się w tworzeniu dedykowanych rozwiązań internetowych, od eleganckich stron docelowych po złożone aplikacje na poziomie korporacyjnym. Nasz zespół wykorzystuje najnowsze frameworki i najlepsze praktyki, aby zapewnić, że Twoja strona jest szybka, skalowalna i bezpieczna. Ściśle współpracujemy z Tobą, aby zrozumieć Twoje cele i dostarczyć produkt, który przekracza oczekiwania."
     },
-    "mobileDev": {
-      "title": "Rozwój Aplikacji Mobilnych",
-      "description": "Natywne i wieloplatformowe aplikacje mobilne zapewniające płynne doświadczenia na wszystkich urządzeniach."
+    "automation": {
+      "title": "Automatyzacja i Web Scraping",
+      "description": "Skrypty do powtarzalnych zadań, web scraping, zbieranie danych i niestandardowe rozwiązania dla konkretnych problemów biznesowych.",
+      "longDescription": "Tworzymy niestandardowe skrypty do automatyzacji procesów, pozyskiwania danych z internetu i dostarczania rozwiązań dla Twoich potrzeb biznesowych, pomagając oszczędzać czas i zasoby."
     },
-    "uiUx": {
-      "title": "Projektowanie UI/UX",
-      "description": "Eleganckie, intuicyjne interfejsy zaprojektowane zgodnie z zasadami projektowania zorientowanego na użytkownika, aby zmaksymalizować zaangażowanie i satysfakcję."
+    "seo": {
+      "title": "SEO",
+      "description": "Popraw pozycję w wyszukiwarkach i zwiększ organiczny ruch na swojej stronie dzięki naszym eksperckim usługom SEO.",
+      "longDescription": "Nasze usługi SEO obejmują badanie słów kluczowych, optymalizację on-page i off-page, techniczne SEO oraz strategię treści, aby pomóc Ci osiągnąć wyższą pozycję w wynikach wyszukiwania i przyciągnąć więcej klientów."
     },
     "ecommerce": {
       "title": "Rozwiązania E-Commerce",
-      "description": "Skalowalne sklepy internetowe z bezpiecznym przetwarzaniem płatności, zarządzaniem zapasami i zoptymalizowanymi wskaźnikami konwersji."
+      "description": "Skalowalne sklepy internetowe z bezpiecznym przetwarzaniem płatności, zarządzaniem zapasami i zoptymalizowanymi wskaźnikami konwersji.",
+      "longDescription": "Budujemy solidne platformy e-commerce, które napędzają sprzedaż i zapewniają płynne zakupy dla Twoich klientów. Nasze rozwiązania obejmują wszystko, czego potrzebujesz do prowadzenia udanego sklepu internetowego, od bezpiecznej integracji bramek płatniczych po zaawansowane zarządzanie zapasami i analitykę. Skupiamy się na optymalizacji przepływu użytkownika w celu maksymalizacji wskaźników konwersji."
     },
     "consulting": {
       "title": "Doradztwo Techniczne",
-      "description": "Eksperckie wskazówki dotyczące wyboru stosu technologicznego, planowania architektury i strategii transformacji cyfrowej."
+      "description": "Eksperckie wskazówki dotyczące wyboru stosu technologicznego, planowania architektury i strategii transformacji cyfrowej.",
+      "longDescription": "Poruszanie się po złożonym świecie technologii może być wyzwaniem. Nasi doświadczeni konsultanci udzielają strategicznych porad, które pomogą Ci podejmować świadome decyzje. Możemy pomóc w wyborze odpowiedniego stosu technologicznego, zaprojektowaniu skalowalnej i odpornej architektury oraz opracowaniu mapy drogowej dla Twojej podróży transformacji cyfrowej."
     },
     "maintenance": {
       "title": "Utrzymanie i Wsparcie",
-      "description": "Ciągłe wsparcie techniczne, optymalizacja wydajności i regularne aktualizacje, aby Twoje produkty cyfrowe działały sprawnie."
+      "description": "Ciągłe wsparcie techniczne, optymalizacja wydajności i regularne aktualizacje, aby Twoje produkty cyfrowe działały sprawnie.",
+      "longDescription": "Nasze zaangażowanie nie kończy się na uruchomieniu. Oferujemy kompleksowe pakiety utrzymania i wsparcia, aby zapewnić, że Twoja strona internetowa lub aplikacja pozostaje bezpieczna, aktualna i działa z najwyższą wydajnością. Nasze usługi obejmują regularne kopie zapasowe, monitorowanie bezpieczeństwa, optymalizację wydajności i pomoc techniczną na żądanie."
     }
   },
   "hero": {
@@ -76,27 +82,25 @@
     "techStack": "Stos technologiczny",
     "timeline": "Oś czasu",
     "tiers": {
-      "basic": {
-        "name": "Podstawowa strona internetowa",
-        "description": "Prosta strona do prezentacji Twojej firmy lub marki osobistej."
+      "starter": {
+        "name": "Profesjonalny Starter",
+        "description": "Dedykowana, profesjonalnie zaprojektowana obecność w sieci dla wymagających osób i małych firm."
       },
-      "complex": {
-        "name": "Złożona strona internetowa",
-        "description": "Dynamiczna strona z interaktywnymi elementami i większą liczbą funkcji."
+      "custom": {
+        "name": "Enterprise Custom",
+        "description": "Dopasowane, wysokowydajne rozwiązanie cyfrowe zaprojektowane dla ugruntowanych firm i szybko rozwijających się startupów."
       },
       "ecommerce": {
-        "name": "E-Commerce",
-        "description": "Sklep internetowy do sprzedaży produktów lub usług."
+        "name": "E-Commerce Pro",
+        "description": "Potężna, niestandardowa platforma e-commerce stworzona z myślą o wzroście i płynnych doświadczeniach klientów."
       },
       "enterprise": {
-        "name": "Rozwiązanie dla przedsiębiorstw",
-        "description": "Niestandardowe rozwiązanie dla dużych organizacji o specyficznych potrzebach."
+        "name": "Enterprise Elite",
+        "description": "Kompleksowy, dedykowany ekosystem cyfrowy dla dużych organizacji o złożonych potrzebach operacyjnych."
       }
     },
     "options": {
       "hasDesign": "Mam już projekt",
-      "canSetup": "Mogę zająć się pewnymi ustawieniami technicznymi",
-      "noFramework": "Użyj czystego JS (bez frameworka)",
       "contentWriting": "Pisanie treści (za 5 stron)",
       "logoDesign": "Projekt logo",
       "constantSupport": "Miesięczny abonament na wsparcie"
@@ -107,8 +111,6 @@
     },
     "summary": {
       "hasDesign": "Zniżka za projekt",
-      "canSetup": "Zniżka za obsługę techniczną",
-      "noFramework": "Zniżka za brak frameworka",
       "contentWriting": "Pisanie treści",
       "logoDesign": "Projekt logo"
     }

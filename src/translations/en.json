@@ -20,27 +20,33 @@
     "viewDetails": "View Details",
     "webDev": {
       "title": "Web Development",
-      "description": "Custom websites and web applications built with cutting-edge technologies for optimal performance and user experience."
+      "description": "Custom websites and web applications built with cutting-edge technologies for optimal performance and user experience.",
+      "longDescription": "We specialize in creating bespoke web solutions, from sleek landing pages to complex enterprise-level applications. Our team leverages the latest frameworks and best practices to ensure your site is fast, scalable, and secure. We work closely with you to understand your goals and deliver a product that exceeds expectations."
     },
-    "mobileDev": {
-      "title": "Mobile Development",
-      "description": "Native and cross-platform mobile applications that deliver seamless experiences across all devices."
+    "automation": {
+      "title": "Automation & Web Scraping",
+      "description": "Scripts for repetitive tasks, web scraping, data collection, and custom solutions for specific business problems.",
+      "longDescription": "We create custom scripts to automate your workflows, scrape data from the web, and provide solutions for your business needs, helping you save time and resources."
     },
-    "uiUx": {
-      "title": "UI/UX Design",
-      "description": "Elegant, intuitive interfaces designed with user-centered principles to maximize engagement and satisfaction."
+    "seo": {
+      "title": "SEO",
+      "description": "Improve your search engine rankings and drive organic traffic to your website with our expert SEO services.",
+      "longDescription": "Our SEO services include keyword research, on-page and off-page optimization, technical SEO, and content strategy to help you rank higher in search results and attract more customers."
     },
     "ecommerce": {
       "title": "E-Commerce Solutions",
-      "description": "Scalable online stores with secure payment processing, inventory management, and optimized conversion rates."
+      "description": "Scalable online stores with secure payment processing, inventory management, and optimized conversion rates.",
+      "longDescription": "We build robust e-commerce platforms that drive sales and provide a smooth shopping experience for your customers. Our solutions include everything you need to run a successful online store, from secure payment gateway integration to advanced inventory management and analytics. We focus on optimizing the user flow to maximize conversion rates."
     },
     "consulting": {
       "title": "Technical Consulting",
-      "description": "Expert guidance on technology stack selection, architecture planning, and digital transformation strategies."
+      "description": "Expert guidance on technology stack selection, architecture planning, and digital transformation strategies.",
+      "longDescription": "Navigating the complex world of technology can be challenging. Our experienced consultants provide strategic advice to help you make informed decisions. We can assist with choosing the right technology stack, designing a scalable and resilient architecture, and developing a roadmap for your digital transformation journey."
     },
     "maintenance": {
       "title": "Maintenance & Support",
-      "description": "Ongoing technical support, performance optimization, and regular updates to keep your digital products running smoothly."
+      "description": "Ongoing technical support, performance optimization, and regular updates to keep your digital products running smoothly.",
+      "longDescription": "Our commitment to you doesn't end at launch. We offer comprehensive maintenance and support packages to ensure your website or application remains secure, up-to-date, and performing at its best. Our services include regular backups, security monitoring, performance optimization, and on-demand technical assistance."
     }
   },
   "hero": {
@@ -76,27 +82,25 @@
     "techStack": "Tech Stack",
     "timeline": "Timeline",
     "tiers": {
-      "basic": {
-        "name": "Basic Website",
-        "description": "Simple site for showcasing your business or personal brand."
+      "starter": {
+        "name": "Professional Starter",
+        "description": "A bespoke, professionally engineered web presence for discerning individuals and small businesses."
       },
-      "complex": {
-        "name": "Complex Website",
-        "description": "Dynamic website with interactive elements and more features."
+      "custom": {
+        "name": "Enterprise Custom",
+        "description": "A tailored, high-performance digital solution engineered for established businesses and high-growth startups."
       },
       "ecommerce": {
-        "name": "E-Commerce",
-        "description": "Online store for selling products or services."
+        "name": "E-Commerce Pro",
+        "description": "A powerful, custom-built e-commerce platform engineered for growth and seamless customer experiences."
       },
       "enterprise": {
-        "name": "Enterprise Solution",
-        "description": "Custom solution for large organizations with specific needs."
+        "name": "Enterprise Elite",
+        "description": "A comprehensive, bespoke digital ecosystem for large-scale organizations with complex operational needs."
       }
     },
     "options": {
       "hasDesign": "I already have a design",
-      "canSetup": "I can handle some technical setup",
-      "noFramework": "Use vanilla JS (no framework)",
       "contentWriting": "Content writing (per 5 pages)",
       "logoDesign": "Logo design",
       "constantSupport": "Monthly support retainer"
@@ -107,8 +111,6 @@
     },
     "summary": {
       "hasDesign": "Design Discount",
-      "canSetup": "Technical Setup Discount",
-      "noFramework": "No Framework Discount",
       "contentWriting": "Content Writing",
       "logoDesign": "Logo Design"
     }

@@ -19,7 +19,7 @@ export default function ContactSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="w-full py-24 md:py-32">
+    <section className="w-full py-24 md:py-32 transition-colors duration-300">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <motion.h2

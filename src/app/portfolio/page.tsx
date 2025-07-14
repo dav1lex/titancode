@@ -1,5 +1,8 @@
 import PortfolioSection from "@/components/sections/PortfolioSection";
 
 export default function Portfolio() {
-    return <PortfolioSection />;
+    return <>
+    <h1>test</h1>
+    </>;
+
 }

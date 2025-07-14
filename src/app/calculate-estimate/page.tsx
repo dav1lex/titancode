@@ -1,71 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { useLanguage } from '../language-context';
-
-const SERVICE_TIERS = {
-  basic: {
-    name: 'Basic Website',
-    basePrice: 2200, // PLN (Increased base price)
-    description: 'Simple site for showcasing your business or personal brand.',
-    includes: [
-      'Responsive design',
-      'Basic SEO optimization',
-      'Contact form',
-      'Up to 5 pages',
-      'Free domain for 1 year',
-      'Basic hosting (1 year)'
-    ],
-    techStack: 'HTML, CSS, JavaScript (no framework)',
-    time: '1-2 weeks'
-  },
-  complex: {
-    name: 'Complex Website',
-    basePrice: 5000, // PLN (Increased base price)
-    description: 'Dynamic website with interactive elements and more features.',
-    includes: [
-      'Everything in Basic',
-      'Advanced SEO optimization',
-      'Up to 15 pages',
-      'Optional blog functionality',
-      'Content management system (CMS)',
-      'Performance optimization',
-    ],
-    techStack: 'React or Vue.js',
-    time: '2-4 weeks'
-  },
-  ecommerce: {
-    name: 'E-Commerce',
-    basePrice: 8500, // PLN (Increased base price)
-    description: 'Online store for selling products or services.',
-    includes: [
-      'Everything in Complex',
-      'Unlimited pages',
-      'Product management system',
-      'Payment gateway integration',
-      'Shopping cart and checkout',
-      'Customer accounts',
-    ],
-    techStack: 'Next.js or similar (server-side rendering)',
-    time: '4-8 weeks'
-  },
-  enterprise: {
-    name: 'Enterprise Solution',
-    basePrice: 15000, // PLN (Increased base price)
-    description: 'Custom solution for large organizations with specific needs.',
-    includes: [
-      'Everything in E-Commerce',
-      'Custom application development',
-      'API integrations',
-      'Advanced security measures',
-      'Dedicated project manager',
-      'Priority support',
-    ],
-    techStack: 'Custom (based on requirements)',
-    time: 'Project dependent'
-  }
-} as const;
-
-type ServiceTierKey = keyof typeof SERVICE_TIERS;
+import { SERVICE_TIERS, ServiceTierKey } from '@/lib/services';
 
 type OptionConfig = {
   label: string;
@@ -78,48 +14,36 @@ const ADDITIONAL_OPTIONS: Record<string, OptionConfig> = {
   hasDesign: {
     label: 'I already have a design',
     type: 'discount',
-    value: 0.15,
-    appliesTo: ['basic', 'complex', 'ecommerce', 'enterprise']
-  },
-  canSetup: {
-    label: 'I can handle some technical setup',
-    type: 'discount',
-    value: 0.05,
-    appliesTo: ['basic', 'complex', 'ecommerce', 'enterprise']
-  },
-  noFramework: {
-    label: 'Use vanilla JS (no framework)',
-    type: 'discount',
-    value: 0.10,
-    appliesTo: ['basic']
+    value: 0.10, // Reduced discount
+    appliesTo: ['starter', 'custom', 'ecommerce', 'enterprise']
   },
   contentWriting: {
     label: 'Content writing (per 5 pages)',
     type: 'surcharge',
-    value: 800, // Fixed price surcharge
-    appliesTo: ['basic', 'complex', 'ecommerce']
+    value: 1000, // Increased price
+    appliesTo: ['starter', 'custom', 'ecommerce', 'enterprise']
   },
   logoDesign: {
     label: 'Logo design',
     type: 'surcharge',
-    value: 1200, // Fixed price surcharge
-    appliesTo: ['basic', 'complex']
+    value: 1500, // Increased price
+    appliesTo: ['starter', 'custom', 'ecommerce', 'enterprise']
   },
   constantSupport: {
     label: 'Monthly support retainer',
     type: 'surcharge',
-    value: 0.20, // This is now a multiplier for the monthly cost, not the base price
-    appliesTo: ['basic', 'complex', 'ecommerce', 'enterprise']
+    value: 0.20,
+    appliesTo: ['starter', 'custom', 'ecommerce', 'enterprise']
   }
 };
 
 type OptionKey = keyof typeof ADDITIONAL_OPTIONS;
 
 const SUPPORT_COST = {
-  basic: 500,
-  complex: 800,
-  ecommerce: 1200,
-  enterprise: 2000
+  starter: 600,
+  custom: 1500,
+  ecommerce: 2500,
+  enterprise: 4000
 };
 
 export default function CalculateEstimatePage() {
@@ -127,8 +51,6 @@ export default function CalculateEstimatePage() {
   const [tier, setTier] = useState<ServiceTierKey | ''>('');
   const [selectedOptions, setSelectedOptions] = useState<Record<OptionKey, boolean>>({
     hasDesign: false,
-    canSetup: false,
-    noFramework: false,
     contentWriting: false,
     logoDesign: false,
     constantSupport: false
