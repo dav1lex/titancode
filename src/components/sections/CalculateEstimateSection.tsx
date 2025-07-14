@@ -5,90 +5,123 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import { useEffect, useState } from "react";
 
-const Beams = () => (
-  <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-    <div className="absolute inset-0 z-0">
-      <div
-        style={{
-          "maskImage": "radial-gradient(ellipse at center, white 10%, transparent 70%)",
-          "WebkitMaskImage": "radial-gradient(ellipse at center, white 10%, transparent 70%)",
-        }}
-        className="absolute inset-0 bg-gradient-to-b from-cyan-500/50 to-transparent"
-      ></div>
-    </div>
-    <div className="absolute top-1/2 left-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2">
-      {[...Array(7)].map((_, i) => (
-        <motion.div
-          key={`beam_${i}`}
-          initial={{ rotate: 0 }}
-          animate={{ rotate: 360 }}
-          transition={{
-            duration: Math.random() * 15 + 10, // 10s to 25s
-            repeat: Infinity,
-            ease: "linear",
-            delay: Math.random() * -5,
-          }}
-          className="absolute h-full w-px bg-gradient-to-b from-transparent via-cyan-500 to-transparent"
-          style={{
-            left: `${(i / 7) * 100}%`,
-            transformOrigin: "center top",
-          }}
-        />
-      ))}
-    </div>
-  </div>
-);
-
+const services = [
+  {
+    id: 1,
+    title: "Web Development",
+    description: "Custom websites and web applications",
+    cta: "Estimate Project",
+  },
+  {
+    id: 2,
+    title: "Mobile Apps",
+    description: "iOS and Android app development",
+    cta: "Estimate Project",
+  },
+  {
+    id: 3,
+    title: "UI/UX Design",
+    description: "User experience and interface design",
+    cta: "Estimate Project",
+  },
+];
 
 export default function CalculateEstimateSection() {
   const { t } = useLanguage();
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // Use effect to handle theme change after component mount
+  useEffect(() => {
+    const html = document.documentElement;
+    setIsDarkMode(html.classList.contains('dark'));
+    
+    // Listen for theme changes
+    const observer = new MutationObserver(() => {
+      setIsDarkMode(html.classList.contains('dark'));
+    });
+    
+    observer.observe(html, { attributes: true, attributeFilter: ['class'] });
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <section className="relative w-full py-32 bg-white dark:bg-black transition-all duration-300 z-10 overflow-hidden">
-      <Beams />
+    <section className={`relative w-full py-28 transition-colors duration-300 ${
+      isDarkMode ? 'bg-gray-900' : 'bg-white'
+    }`}>
+      <div className={`absolute inset-0 h-full w-full transition-all duration-300 ${
+        isDarkMode 
+          ? 'bg-[radial-gradient(#1f2937_1px,transparent_1px)]' 
+          : 'bg-[radial-gradient(#e5e7eb_1px,transparent_1px)]'
+      } [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]`}></div>
+      
+      <div className={`absolute inset-0 bg-gradient-to-br transition-all duration-300 ${
+        isDarkMode 
+          ? 'from-blue-900/30 to-cyan-900/30' 
+          : 'from-blue-50/60 to-cyan-50/60'
+      } z-[1]`}></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center mb-16">
           <motion.h2 
-            className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-b from-gray-900 to-gray-600 dark:from-white dark:to-gray-300"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-b from-blue-700 to-cyan-600 dark:from-blue-400 dark:to-cyan-300"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
           >
             {t("calculateEstimate.title")}
           </motion.h2>
           
           <motion.p 
-            className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed mb-8"
+            className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.7 }}
+            transition={{ delay: 0.1, duration: 0.7 }}
             viewport={{ once: true }}
           >
             {t("calculateEstimate.subtitle")}
           </motion.p>
+        </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.7 }}
-            viewport={{ once: true }}
-          >
-            <Link href="/calculate-estimate">
-              <Button 
-                size="lg" 
-                className="group bg-black hover:bg-gray-800 active:bg-gray-800 text-white dark:bg-white dark:hover:bg-gray-200 dark:active:bg-gray-200 dark:text-black rounded-md px-6 transition-all shadow-lg hover:shadow-cyan-500/20 dark:shadow-cyan-500/20"
-              >
-                <span className="flex items-center gap-2">
-                  {t("calculateEstimate.cta")}
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-active:translate-x-1" />
-                </span>
-              </Button>
-            </Link>
-          </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {services.map((service, index) => (
+            <motion.div
+              key={service.id}
+              className={`backdrop-blur-sm border rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ${
+                isDarkMode 
+                  ? 'bg-gray-800/60 border-gray-700' 
+                  : 'bg-white/70 border-gray-200/50'
+              }`}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 + index * 0.1, duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <div className="p-8 h-full flex flex-col">
+                <div className="flex-grow">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400 mb-6">
+                    {service.description}
+                  </p>
+                </div>
+                <Link href="/calculate-estimate" passHref>
+                  <Button
+                    size="lg"
+                    className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 dark:from-blue-500 dark:to-cyan-500 dark:hover:from-blue-600 dark:hover:to-cyan-600 text-white transition-all"
+                  >
+                    <span className="flex items-center justify-center gap-2">
+                      {service.cta}
+                      <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                    </span>
+                  </Button>
+                </Link>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
