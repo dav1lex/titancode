@@ -3,7 +3,7 @@
 import { useLanguage } from "@/app/language-context";
 import { Button } from "@/components/ui/button";
 import { SERVICE_TIERS, ServiceTierKey } from "@/lib/services";
-import { ArrowRight, CheckCircle2, Briefcase, Lightbulb, PenSquare, Rocket } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 
 export default function ServicesPage() {
