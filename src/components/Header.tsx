@@ -74,7 +74,7 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {["home", "services", "portfolio", "about", "contact"].map((item, i) => {
+            {["home", "services", "portfolio", "about", "contact"].map((item) => {
               const href = item === "home" ? "/" : `/${item}`;
               const isActive = item === 'home' ? pathname === href : pathname.startsWith(href);
               return (

@@ -1,3 +1,5 @@
+import PortfolioSection from "@/components/sections/PortfolioSection";
+
 export default function Portfolio() {
-    return <div>Portfolio</div>;
+    return <PortfolioSection />;
 }

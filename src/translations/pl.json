@@ -47,5 +47,11 @@
     "title": "Podnieś Swoje Cyfrowe Doświadczenie",
     "subtitle": "Tworzymy premium rozwiązania internetowe, które łączą najnowocześniejszą technologię z eleganckim designem, aby pomóc Twojej marce wyróżnić się w cyfrowym świecie.",
     "cta": "Rozpocznij"
+  },
+  "portfolio": {
+    "title": "Nasze Portfolio",
+    "subtitle": "Prezentacja naszych najlepszych prac z różnych branż i technologii.",
+    "viewProject": "Zobacz Projekt",
+    "viewAll": "Zobacz Wszystkie Projekty"
   }
 } 

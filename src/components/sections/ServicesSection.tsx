@@ -58,7 +58,7 @@ export default function ServicesSection() {
   };
 
   return (
-    <section className="py-24 bg-gray-50 dark:bg-zinc-900 transition-colors duration-300">
+    <section className="relative py-24 bg-gray-50 dark:bg-zinc-900 transition-colors duration-300 z-10">
       <div className="container mx-auto px-4">
         {/* Section header */}
         <div className="text-center mb-16">

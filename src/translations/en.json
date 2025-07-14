@@ -47,5 +47,11 @@
     "title": "Elevate Your Digital Experience",
     "subtitle": "We craft premium web solutions that blend cutting-edge technology with elegant design to help your brand stand out in the digital landscape.",
     "cta": "Get Started"
+  },
+  "portfolio": {
+    "title": "Our Portfolio",
+    "subtitle": "Showcasing our finest work across various industries and technologies.",
+    "viewProject": "View Project",
+    "viewAll": "View All Projects"
   }
 } 
