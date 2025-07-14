@@ -15,9 +15,10 @@
     "getStarted": "Rozpocznij"
   },
   "services": {
-    "title": "Nasze Usługi",
-    "subtitle": "Rozwiązania premium dostosowane do Twoich potrzeb",
+    "title": "Usługi Krawieckie",
+    "subtitle": "Inżynieria cyfrowa dla wymagających marek",
     "viewDetails": "Zobacz Szczegóły",
+    "startingFrom": "Cena od",
     "webDev": {
       "title": "Tworzenie Stron WWW",
       "description": "Niestandardowe strony internetowe i aplikacje webowe zbudowane przy użyciu najnowszych technologii dla optymalnej wydajności i doświadczenia użytkownika.",
@@ -83,20 +84,20 @@
     "timeline": "Oś czasu",
     "tiers": {
       "starter": {
-        "name": "Profesjonalny Starter",
-        "description": "Dedykowana, profesjonalnie zaprojektowana obecność w sieci dla wymagających osób i małych firm."
+        "name": "Pakiet Startowy",
+        "description": "Kompleksowe rozwiązanie dla profesjonalistów i małych firm, obejmujące projekt, wdrożenie i podstawowe SEO, aby zapewnić solidny start w internecie."
       },
       "custom": {
-        "name": "Enterprise Custom",
-        "description": "Dopasowane, wysokowydajne rozwiązanie cyfrowe zaprojektowane dla ugruntowanych firm i szybko rozwijających się startupów."
+        "name": "Rozwiązanie Biznesowe",
+        "description": "Zaawansowane, szyte na miarę strony z CMS i integracjami, stworzone dla firm, które potrzebują unikalnych funkcji i pełnej kontroli nad treścią."
       },
       "ecommerce": {
-        "name": "E-Commerce Pro",
-        "description": "Potężna, niestandardowa platforma e-commerce stworzona z myślą o wzroście i płynnych doświadczeniach klientów."
+        "name": "Sklep E-Commerce",
+        "description": "W pełni funkcjonalna platforma e-commerce ze zintegrowanymi płatnościami i zarządzaniem produktami, gotowa do sprzedaży online."
       },
       "enterprise": {
-        "name": "Enterprise Elite",
-        "description": "Kompleksowy, dedykowany ekosystem cyfrowy dla dużych organizacji o złożonych potrzebach operacyjnych."
+        "name": "Rozwiązanie Enterprise",
+        "description": "Dedykowany ekosystem cyfrowy dla dużych organizacji, obejmujący niestandardowe aplikacje, zaawansowane integracje i gwarancję poziomu usług (SLA)."
       }
     },
     "options": {

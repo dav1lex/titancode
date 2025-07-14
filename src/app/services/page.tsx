@@ -3,7 +3,7 @@
 import { useLanguage } from "@/app/language-context";
 import { Button } from "@/components/ui/button";
 import { SERVICE_TIERS, ServiceTierKey } from "@/lib/services";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, Briefcase, Lightbulb, PenSquare, Rocket } from "lucide-react";
 import Link from "next/link";
 
 export default function ServicesPage() {
@@ -11,9 +11,9 @@ export default function ServicesPage() {
   const servicesOrder: ServiceTierKey[] = ["starter", "custom", "ecommerce", "enterprise"];
 
   return (
-    <div className="bg-white dark:bg-black text-gray-900 dark:text-white">
+    <div className="bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
       {/* Hero Section */}
-      <section className="py-20 sm:py-32 text-center bg-gray-50 dark:bg-gray-900/50">
+      <section className="py-12 sm:py-20 text-center bg-gray-50 dark:bg-gray-900/50">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
             {t("services.title")}
@@ -24,8 +24,9 @@ export default function ServicesPage() {
         </div>
       </section>
 
+
       {/* Services Details Section */}
-      <section className="py-24 sm:py-32">
+      <section className="py-24 sm:py-32 bg-gray-50 dark:bg-gray-900/50">
         <div className="container mx-auto px-4">
           <div className="space-y-20">
             {servicesOrder.map((key, index) => {
@@ -50,8 +51,8 @@ export default function ServicesPage() {
                       <p><strong>{t('estimatePage.timeline')}:</strong> {service.time}</p>
                     </div>
                   </div>
-                  <div className={`p-8 bg-gray-50 dark:bg-gray-900/50 rounded-2xl ${isEven ? '' : 'md:col-start-1'}`}>
-                    <p className="text-sm font-semibold uppercase text-gray-500 dark:text-gray-400">Starting from</p>
+                  <div className={`p-8 bg-white dark:bg-black rounded-2xl shadow-lg ${isEven ? '' : 'md:col-start-1'}`}>
+                    <p className="text-sm font-semibold uppercase text-gray-500 dark:text-gray-400">{t('services.startingFrom')}</p>
                     <p className="text-5xl font-extrabold mt-2">{service.basePrice} PLN</p>
                     <p className="mt-4 text-gray-600 dark:text-gray-300">{t(`estimatePage.tiers.${key}.description`)}</p>
                     <Button asChild size="lg" className="mt-8 w-full">
@@ -87,6 +88,7 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
     </div>
   );
 }

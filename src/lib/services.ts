@@ -1,14 +1,16 @@
 export const SERVICE_TIERS = {
   starter: {
     name: 'Professional Starter',
-    basePrice: 2500, // PLN
+    basePrice: 3500, // PLN
     description: 'A bespoke, professionally engineered web presence for discerning individuals and small businesses.',
     includes: [
-      'Up to 5 pages',
-      'Bespoke, responsive design',
-      'Core SEO optimization',
-      'Secure SSL Certificate (3 months)',
-      'Contact & inquiry forms'
+      'Comprehensive UI/UX Design',
+      'Up to 5 custom-designed pages',
+      'Full development & deployment',
+      'Mobile-first responsive design',
+      'Technical SEO setup & optimization',
+      'Contact forms & lead capture',
+      '30-day post-launch warranty'
     ],
     idealFor: 'Solo professionals, small service businesses, and portfolio sites.',
     techStack: 'HTML, CSS, JavaScript (Jamstack)',
@@ -16,14 +18,16 @@ export const SERVICE_TIERS = {
   },
   custom: {
     name: 'Enterprise Custom',
-    basePrice: 7000, // PLN
+    basePrice: 9500, // PLN
     description: 'A tailored, high-performance digital solution engineered for established businesses and high-growth startups.',
     includes: [
-      'Up to 15 pages',
-      'Custom-engineered features',
-      'Advanced SEO & performance optimization',
-      'Custom API integrations',
-      'Priority support & maintenance'
+      'Everything in Starter',
+      'Up to 15 content pages',
+      'Headless CMS integration',
+      'Advanced analytics & reporting setup',
+      'Custom API & third-party integrations',
+      'Performance & speed optimization',
+      'Priority email & chat support'
     ],
     idealFor: 'Established businesses, companies requiring complex integrations, and high-growth startups.',
     techStack: 'Next.js, TypeScript, or custom stack',
@@ -31,14 +35,15 @@ export const SERVICE_TIERS = {
   },
   ecommerce: {
     name: 'E-Commerce Pro',
-    basePrice: 9500, // PLN
+    basePrice: 14000, // PLN
     description: 'A powerful, custom-built e-commerce platform engineered for growth and seamless customer experiences.',
     includes: [
-      'Everything in Enterprise Custom',
-      'Unlimited product listings',
-      'Secure payment gateway integration',
-      'Advanced inventory management',
-      'Customer accounts & order history'
+      'Everything in Business Elite',
+      'Full e-commerce functionality',
+      'Secure payment gateway integration (Stripe, etc.)',
+      'Product & inventory management',
+      'Customer accounts & order history',
+      'Abandoned cart recovery features'
     ],
     idealFor: 'Online retailers, direct-to-consumer brands, and subscription businesses.',
     techStack: 'Next.js, Shopify Headless, or custom solution',
@@ -46,14 +51,15 @@ export const SERVICE_TIERS = {
   },
   enterprise: {
     name: 'Enterprise Elite',
-    basePrice: 20000, // PLN
+    basePrice: 28000, // PLN
     description: 'A comprehensive, bespoke digital ecosystem for large-scale organizations with complex operational needs.',
     includes: [
-      'Everything in E-Commerce Pro',
-      'Full-scale custom application development',
-      'Multi-system API integrations',
-      'Advanced security & compliance audits',
-      'Dedicated project manager & team'
+      'Everything in E-Commerce Premium',
+      'Bespoke application & feature development',
+      'Complex multi-system API architecture',
+      'Advanced security & compliance (GDPR, etc.)',
+      'Dedicated project & account manager',
+      'Service Level Agreement (SLA)'
     ],
     idealFor: 'Large corporations, multi-national businesses, and organizations with unique workflow requirements.',
     techStack: 'Custom-architected solution',

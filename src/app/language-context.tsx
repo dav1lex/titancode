@@ -13,7 +13,7 @@ type LanguageContextType = {
 };
 
 // Default translations
-const translations = {
+export const translations = {
   en,
   pl,
 };
