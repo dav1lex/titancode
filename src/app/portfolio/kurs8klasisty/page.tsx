@@ -9,7 +9,7 @@ export default function Page() {
   const projectData = {
     title: t("portfolio.projects.kurs8klasisty.title"),
     subtitle: t("portfolio.projects.kurs8klasisty.subtitle"),
-    mainImage: "https://titancode.pl/images/portfolio/english-tutor/main.png",
+    mainImage: "https://assets.titancode.pl/images/portfolio/english-tutor/main.png",
     projectInfo: {
       client: t("portfolio.projects.kurs8klasisty.client"),
       year: t("portfolio.projects.kurs8klasisty.year"),
@@ -20,10 +20,10 @@ export default function Page() {
     solutionText: <p>{t("portfolio.projects.kurs8klasisty.solutionText")}</p>,
     technologies: ["HTML", "CSS", "PHP", "JavaScript", "MySQL", "Tailwind CSS", "Alpine.js"],
     images: [
-      "https://titancode.pl/images/portfolio/english-tutor/main.png",
-      "https://titancode.pl/images/portfolio/english-tutor/k2.png",
-      "https://titancode.pl/images/portfolio/english-tutor/k3.png",
-      "https://titancode.pl/images/portfolio/english-tutor/k4.png",
+      "https://assets.titancode.pl/images/portfolio/english-tutor/main.png",
+      "https://assets.titancode.pl/images/portfolio/english-tutor/k2.png",
+      "https://assets.titancode.pl/images/portfolio/english-tutor/k3.png",
+      "https://assets.titancode.pl/images/portfolio/english-tutor/k4.png",
     ],
     liveSiteUrl: "https://kurs8klasisty.pl",
     t: t,

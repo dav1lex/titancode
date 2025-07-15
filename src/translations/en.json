@@ -177,5 +177,61 @@
       "message": "Message",
       "submit": "Send Message"
     }
+  },
+  "aboutPage": {
+    "hero": {
+      "title": "We Don't Just Build Websites. We Engineer Digital Experiences.",
+      "subtitle": "Your website is more than a digital brochure—it's your most powerful asset. We craft custom web solutions that drive growth and set you apart."
+    },
+    "mission": {
+      "title": "Our Philosophy: Beyond the Template",
+      "text": "The digital world is crowded. Generic templates make businesses blend in. We created TITANCODE to build truly custom digital solutions. We don't use WordPress or other template systems. Every line of code is written by hand, and every project is engineered for performance, security, and scalability. Our mantra is simple: **Don't Blend In. Stand Out. Dominate.**"
+    },
+    "process": {
+      "title": "Our Process",
+      "step1": "Discovery & Strategy",
+      "step1_desc": "We start by diving deep into your business and goals to create a clear strategy.",
+      "step2": "UI/UX Design",
+      "step2_desc": "We design an intuitive and engaging user experience that reflects your brand.",
+      "step3": "Development",
+      "step3_desc": "We bring the design to life with clean, efficient code using modern technologies.",
+      "step4": "Testing & QA",
+      "step4_desc": "We rigorously test the project to ensure it's bug-free and works perfectly on all devices.",
+      "step5": "Deployment & Launch",
+      "step5_desc": "We handle the entire deployment process for a smooth launch.",
+      "step6": "Support & Growth",
+      "step6_desc": "Our support doesn't end at launch. We offer ongoing help to ensure your continued success."
+    },
+    "whyUs": {
+      "title": "Why Work With Us?",
+      "feature1": "Custom Code",
+      "feature1_desc": "No templates. Just 100% custom-coded solutions tailored to your exact needs.",
+      "feature2": "Built for Speed",
+      "feature2_desc": "We build for speed. Fast sites mean a better user experience and improved SEO.",
+      "feature3": "SEO by Default",
+      "feature3_desc": "Technical SEO is built-in from the start, not added on later.",
+      "feature4": "Direct Partnership",
+      "feature4_desc": "You work directly with us. We believe in clear and transparent communication.",
+      "feature5": "Modern Technology",
+      "feature5_desc": "We use modern, scalable technologies like Next.js to ensure your investment lasts.",
+      "feature6": "Dedicated Support",
+      "feature6_desc": "We're your long-term partner, committed to your success long after launch."
+    },
+    "cta": {
+      "title": "Have a project in mind?",
+      "subtitle": "Let's turn your vision into a reality.",
+      "button": "Get in Touch"
+    }
+  },
+  "contactPage": {
+    "title": "Contact Us",
+    "subtitle": "We're here to help. Reach out to us with any questions or to start your new project.",
+    "emailLabel": "Email",
+    "email": "contact@titancode.com",
+    "phoneLabel": "Phone",
+    "phone": "+48 123 456 789",
+    "addressTitle": "Address",
+    "addressLine1": "Warsaw",
+    "addressLine2": "Poland"
   }
 }

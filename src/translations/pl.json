@@ -177,5 +177,61 @@
       "message": "Wiadomość",
       "submit": "Wyślij wiadomość"
     }
+  },
+  "aboutPage": {
+    "hero": {
+      "title": "Nie Tylko Budujemy Strony. My Inżynierujemy Cyfrowe Doświadczenia.",
+      "subtitle": "Twoja strona to coś więcej niż cyfrowa broszura – to Twój najpotężniejszy atut. Tworzymy niestandardowe rozwiązania internetowe, które napędzają wzrost i wyróżniają Cię."
+    },
+    "mission": {
+      "title": "Nasza Filozofia: Poza Szablonem",
+      "text": "Cyfrowy świat jest zatłoczony. Generyczne szablony sprawiają, że firmy wtapiają się w tło. Stworzyliśmy TITANCODE, aby tworzyć prawdziwie niestandardowe rozwiązania cyfrowe. Nie używamy WordPressa ani innych systemów szablonowych. Każda linia kodu jest pisana ręcznie, a każdy projekt jest zaprojektowany pod kątem wydajności, bezpieczeństwa i skalowalności. Nasze motto jest proste: **Nie Wtapiaj Się. Wyróżnij Się. Dominuj.**"
+    },
+    "process": {
+      "title": "Nasz Proces",
+      "step1": "Odkrycie i Strategia",
+      "step1_desc": "Zaczynamy od dogłębnego poznania Twojej firmy i celów, aby stworzyć jasną strategię.",
+      "step2": "Projektowanie UI/UX",
+      "step2_desc": "Projektujemy intuicyjne i angażujące doświadczenie użytkownika, które odzwierciedla Twoją markę.",
+      "step3": "Development",
+      "step3_desc": "Ożywiamy projekt za pomocą czystego, wydajnego kodu, używając nowoczesnych technologii.",
+      "step4": "Testowanie i QA",
+      "step4_desc": "Rygorystycznie testujemy projekt, aby upewnić się, że jest wolny od błędów i działa idealnie na wszystkich urządzeniach.",
+      "step5": "Wdrożenie i Uruchomienie",
+      "step5_desc": "Zajmujemy się całym procesem wdrożenia, aby zapewnić płynne uruchomienie.",
+      "step6": "Wsparcie i Rozwój",
+      "step6_desc": "Nasze wsparcie nie kończy się w momencie uruchomienia. Oferujemy stałą pomoc, aby zapewnić Twój dalszy sukces."
+    },
+    "whyUs": {
+      "title": "Dlaczego Warto Z Nami Współpracować?",
+      "feature1": "Kod na Zamówienie",
+      "feature1_desc": "Żadnych szablonów. Tylko w 100% ręcznie kodowane rozwiązania, dopasowane do Twoich potrzeb.",
+      "feature2": "Zbudowane z Myślą o Szybkości",
+      "feature2_desc": "Budujemy z myślą o szybkości. Szybkie strony to lepsze doświadczenie użytkownika i SEO.",
+      "feature3": "SEO w Standardzie",
+      "feature3_desc": "Techniczne SEO jest wbudowane od początku, a nie dodawane później.",
+      "feature4": "Bezpośrednia Współpraca",
+      "feature4_desc": "Pracujesz bezpośrednio z nami. Wierzymy w jasną i przejrzystą komunikację.",
+      "feature5": "Nowoczesna Technologia",
+      "feature5_desc": "Używamy nowoczesnych, skalowalnych technologii, jak Next.js, aby Twoja inwestycja była trwała.",
+      "feature6": "Dedykowane Wsparcie",
+      "feature6_desc": "Jesteśmy Twoim długoterminowym partnerem, zaangażowanym w Twój sukces długo po starcie."
+    },
+    "cta": {
+      "title": "Masz pomysł na projekt?",
+      "subtitle": "Zamieńmy Twoją wizję w rzeczywistość.",
+      "button": "Skontaktuj się"
+    }
+  },
+  "contactPage": {
+    "title": "Skontaktuj się z nami",
+    "subtitle": "Jesteśmy tutaj, aby pomóc. Skontaktuj się z nami w razie jakichkolwiek pytań lub aby rozpocząć nowy projekt.",
+    "emailLabel": "Email",
+    "email": "kontakt@titancode.com",
+    "phoneLabel": "Telefon",
+    "phone": "+48 123 456 789",
+    "addressTitle": "Adres",
+    "addressLine1": "Warszawa",
+    "addressLine2": "Polska"
   }
 }

@@ -12,11 +12,11 @@ export default function Portfolio() {
   const projects = [
     {
       slug: "nanobid",
-      imageUrl: "https://titancode.pl/images/portfolio/nanobid/n1.png",
+      imageUrl: "https://assets.titancode.pl/images/portfolio/nanobid/n1.png",
     },
     {
       slug: "kurs8klasisty",
-      imageUrl: "https://titancode.pl/images/portfolio/english-tutor/main.png",
+      imageUrl: "https://assets.titancode.pl/images/portfolio/english-tutor/main.png",
     },
   ];
 
