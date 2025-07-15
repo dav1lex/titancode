@@ -126,23 +126,70 @@
     "includedTitle": "Co jest wliczone:",
     "startOver": "Zacznij od nowa",
     "techStack": "Stos technologiczny",
+    "idealFor": "Dla",
     "timeline": "Oś czasu",
     "tiers": {
       "starter": {
         "name": "Starter Profesjonalny",
-        "description": "Indywidualnie projektowana, profesjonalnie skonstruowana obecność w sieci dla wymagających klientów indywidualnych i małych firm."
+        "description": "Indywidualnie projektowana, profesjonalnie skonstruowana obecność w sieci dla wymagających klientów indywidualnych i małych firm.",
+        "idealFor": "Profesjonaliści solo, małe firmy usługowe i strony portfolio.",
+        "techStack": "HTML, CSS, JavaScript",
+        "time": "1-2 tygodnie",
+        "includes": [
+          "Kompleksowy projekt UI/UX",
+          "Do 5 indywidualnie zaprojektowanych stron",
+          "Pełne wdrożenie i uruchomienie",
+          "Responsywny design z podejściem mobile-first",
+          "Konfiguracja i optymalizacja technicznego SEO",
+          "Formularze kontaktowe i przechwytywanie leadów",
+          "30-dniowa gwarancja po uruchomieniu"
+        ]
       },
       "custom": {
         "name": "Custom Enterprise",
-        "description": "Dopasowane, wysokowydajne rozwiązanie cyfrowe zaprojektowane dla ugruntowanych firm i dynamicznie rozwijających się startupów."
+        "description": "Dopasowane, wysokowydajne rozwiązanie cyfrowe zaprojektowane dla ugruntowanych firm i dynamicznie rozwijających się startupów.",
+        "idealFor": "Ugruntowane firmy, firmy wymagające złożonych integracji i dynamicznie rozwijające się startupy.",
+        "techStack": "Next.js, TypeScript lub niestandardowy stos",
+        "time": "3-6 tygodni",
+        "includes": [
+          "Wszystko co w pakiecie Starter",
+          "Do 15 stron z treścią",
+          "Integracja z headless CMS",
+          "Zaawansowana analityka i konfiguracja raportowania",
+          "Niestandardowe integracje API i firm trzecich",
+          "Optymalizacja wydajności i szybkości",
+          "Priorytetowe wsparcie e-mail i czat"
+        ]
       },
       "ecommerce": {
         "name": "E-Commerce Profesjonalny",
-        "description": "Potężna, stworzona na zamówienie platforma e-commerce, zaprojektowana z myślą o wzroście i bezproblemowych doświadczeniach klientów."
+        "description": "Potężna, stworzona na zamówienie platforma e-commerce, zaprojektowana z myślą o wzroście i bezproblemowych doświadczeniach klientów.",
+        "idealFor": "Sprzedawcy internetowi, marki direct-to-consumer i firmy subskrypcyjne.",
+        "techStack": "Next.js, Shopify Headless lub rozwiązanie niestandardowe",
+        "time": "5-10 tygodni",
+        "includes": [
+          "Wszystko co w pakiecie Business Elite",
+          "Pełna funkcjonalność e-commerce",
+          "Bezpieczna integracja bramek płatniczych (Stripe, itp.)",
+          "Zarządzanie produktami i zapasami",
+          "Konta klientów i historia zamówień",
+          "Funkcje odzyskiwania porzuconych koszyków"
+        ]
       },
       "enterprise": {
         "name": "Enterprise Elitarny",
-        "description": "Kompleksowy, dedykowany ekosystem cyfrowy dla dużych organizacji o złożonych potrzebach operacyjnych."
+        "description": "Kompleksowy, dedykowany ekosystem cyfrowy dla dużych organizacji o złożonych potrzebach operacyjnych.",
+        "idealFor": "Duże korporacje, firmy międzynarodowe i organizacje o unikalnych wymaganiach dotyczących przepływu pracy.",
+        "techStack": "Rozwiązanie o architekturze niestandardowej",
+        "time": "Zależne od projektu",
+        "includes": [
+          "Wszystko co w pakiecie E-Commerce Premium",
+          "Indywidualne tworzenie aplikacji i funkcji",
+          "Złożona architektura API z wieloma systemami",
+          "Zaawansowane bezpieczeństwo i zgodność (RODO, itp.)",
+          "Dedykowany menedżer projektu i konta",
+          "Umowa o poziomie usług (SLA)"
+        ]
       }
     },
     "options": {
@@ -175,7 +222,10 @@
       "name": "Imię",
       "email": "Email",
       "message": "Wiadomość",
-      "submit": "Wyślij wiadomość"
+      "submit": "Wyślij wiadomość",
+      "sending": "Wysyłanie...",
+      "successMessage": "Twoja wiadomość została wysłana pomyślnie!",
+      "errorMessage": "Wystąpił błąd. Proszę spróbować ponownie później."
     }
   },
   "aboutPage": {
@@ -223,13 +273,50 @@
       "button": "Skontaktuj się"
     }
   },
+  "faq": {
+    "title": "Często zadawane pytania",
+    "questions": {
+      "priceInclude": {
+        "question": "Co zawiera cena?",
+        "answer": "Cena obejmuje projekt, wdrożenie, testowanie, hosting, domenę i certyfikat SSL na pierwszy rok. Bez ukrytych kosztów i dodatkowych opłat."
+      },
+      "beginnerStart": {
+        "question": "Jestem początkujący, jak zacząć?",
+        "answer": "Skontaktuj się z nami przez formularz na tej stronie. Wyjaśnimy wszystko prostym językiem – domeny, hosting, koszty. Pomogliśmy wielu osobom bez doświadczenia technicznego zaistnieć w internecie."
+      },
+      "hostingIncluded": {
+        "question": "Czy hosting jest w cenie?",
+        "answer": "Tak, hosting jest wliczony w cenę. Nie musisz go szukać ani kupować na własną rękę."
+      },
+      "renewalFees": {
+        "question": "Czy są opłaty za odnowienie?",
+        "answer": "Tak, po pierwszym roku hostingu i domeny koszt odnowienia to zazwyczaj 300-500 zł rocznie, w zależności od wymagań projektu."
+      },
+      "quality": {
+        "question": "Czy strona jest dobrej jakości?",
+        "answer": "Wszystkie nasze strony są zoptymalizowane pod kątem szybkości i SEO. Osiągają wysokie wyniki w testach Google Lighthouse, co przekłada się na lepszą pozycję w wyszukiwarkach."
+      },
+      "ssl": {
+        "question": "Czy strony mają certyfikat SSL?",
+        "answer": "Tak, wszystkie nasze strony mają w cenie certyfikat SSL, który zapewnia bezpieczne połączenie."
+      },
+      "cms": {
+        "question": "Czy używacie WordPressa lub innych CMS-ów?",
+        "answer": "Nie, tworzymy własne, zoptymalizowane rozwiązania. Chociaż WordPress i inne systemy CMS (takie jak Joomla czy headless CMS) są popularne, wolimy budować strony od podstaw. Dzięki temu nasze strony są szybsze, lżejsze i precyzyjnie dopasowane do potrzeb klienta."
+      },
+      "customization": {
+        "question": "Czy pakiety można modyfikować?",
+        "answer": "Tak, każdy pakiet można dostosować do indywidualnych potrzeb. Skontaktuj się ze mną, aby omówić Twoje wymagania i otrzymać spersonalizowaną ofertę."
+      }
+    }
+  },
   "contactPage": {
     "title": "Skontaktuj się z nami",
     "subtitle": "Jesteśmy tutaj, aby pomóc. Skontaktuj się z nami w razie jakichkolwiek pytań lub aby rozpocząć nowy projekt.",
     "emailLabel": "Email",
-    "email": "kontakt@titancode.com",
+    "email": "info@titancode.com",
     "phoneLabel": "Telefon",
-    "phone": "+48 123 456 789",
+    "phone": "+48 511 118 916",
     "addressTitle": "Adres",
     "addressLine1": "Warszawa",
     "addressLine2": "Polska"

@@ -152,8 +152,9 @@ export default function CalculateEstimatePage() {
                         <h3 className="font-bold text-xl text-gray-900 dark:text-white">{t(`estimatePage.tiers.${serviceKey}.name`)}</h3>
                         <p className="text-gray-600 dark:text-gray-300">{t(`estimatePage.tiers.${serviceKey}.description`)}</p>
                         <div className="text-sm text-gray-500 dark:text-gray-400 space-y-1 pt-2">
-                          <p><strong>{t('estimatePage.techStack')}:</strong> {service.techStack}</p>
-                          <p><strong>{t('estimatePage.timeline')}:</strong> {service.time}</p>
+                          <p><strong>{t('estimatePage.techStack')}:</strong> {t(service.techStack)}</p>
+                          <p><strong>{t('estimatePage.timeline')}:</strong> {t(service.time)}</p>
+                          <p><strong>{t('estimatePage.idealFor')}:</strong> {t(service.idealFor)}</p>
                         </div>
                         <p className="text-2xl font-bold text-cyan-600 dark:text-cyan-400 pt-2">{service.basePrice} PLN</p>
                       </button>
@@ -260,7 +261,7 @@ export default function CalculateEstimatePage() {
                           <svg className="h-5 w-5 text-cyan-500 mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
-                          <span>{item}</span>
+                          <span>{t(item)}</span>
                         </li>
                       ))}
                     </ul>

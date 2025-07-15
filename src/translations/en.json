@@ -126,23 +126,71 @@
     "includedTitle": "What's Included:",
     "startOver": "Start Over",
     "techStack": "Tech Stack",
+    "idealFor": "For",
     "timeline": "Timeline",
+    
     "tiers": {
       "starter": {
         "name": "Professional Starter",
-        "description": "A bespoke, professionally engineered web presence for discerning individuals and small businesses."
+        "description": "A bespoke, professionally engineered web presence for discerning individuals and small businesses.",
+        "idealFor": "Solo professionals, small service businesses, and portfolio sites.",
+        "techStack": "HTML, CSS, JavaScript",
+        "time": "1-2 weeks",
+        "includes": [
+          "Comprehensive UI/UX Design",
+          "Up to 5 custom-designed pages",
+          "Full development & deployment",
+          "Mobile-first responsive design",
+          "Technical SEO setup & optimization",
+          "Contact forms & lead capture",
+          "30-day post-launch warranty"
+        ]
       },
       "custom": {
         "name": "Enterprise Custom",
-        "description": "A tailored, high-performance digital solution engineered for established businesses and high-growth startups."
+        "description": "A tailored, high-performance digital solution engineered for established businesses and high-growth startups.",
+        "idealFor": "Established businesses, companies requiring complex integrations, and high-growth startups.",
+        "techStack": "Next.js, TypeScript, or custom stack",
+        "time": "3-6 weeks",
+        "includes": [
+          "Everything in Starter",
+          "Up to 15 content pages",
+          "Headless CMS integration",
+          "Advanced analytics & reporting setup",
+          "Custom API & third-party integrations",
+          "Performance & speed optimization",
+          "Priority email & chat support"
+        ]
       },
       "ecommerce": {
         "name": "E-Commerce Pro",
-        "description": "A powerful, custom-built e-commerce platform engineered for growth and seamless customer experiences."
+        "description": "A powerful, custom-built e-commerce platform engineered for growth and seamless customer experiences.",
+        "idealFor": "Online retailers, direct-to-consumer brands, and subscription businesses.",
+        "techStack": "Next.js, Shopify Headless, or custom solution",
+        "time": "5-10 weeks",
+        "includes": [
+          "Everything in Business Elite",
+          "Full e-commerce functionality",
+          "Secure payment gateway integration (Stripe, etc.)",
+          "Product & inventory management",
+          "Customer accounts & order history",
+          "Abandoned cart recovery features"
+        ]
       },
       "enterprise": {
         "name": "Enterprise Elite",
-        "description": "A comprehensive, bespoke digital ecosystem for large-scale organizations with complex operational needs."
+        "description": "A comprehensive, bespoke digital ecosystem for large-scale organizations with complex operational needs.",
+        "idealFor": "Large corporations, multi-national businesses, and organizations with unique workflow requirements.",
+        "techStack": "Custom-architected solution",
+        "time": "Project dependent",
+        "includes": [
+          "Everything in E-Commerce Premium",
+          "Bespoke application & feature development",
+          "Complex multi-system API architecture",
+          "Advanced security & compliance (GDPR, etc.)",
+          "Dedicated project & account manager",
+          "Service Level Agreement (SLA)"
+        ]
       }
     },
     "options": {
@@ -175,7 +223,10 @@
       "name": "Name",
       "email": "Email",
       "message": "Message",
-      "submit": "Send Message"
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "successMessage": "Your message has been sent successfully!",
+      "errorMessage": "An error occurred. Please try again later."
     }
   },
   "aboutPage": {
@@ -223,13 +274,50 @@
       "button": "Get in Touch"
     }
   },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": {
+      "priceInclude": {
+        "question": "What does the price include?",
+        "answer": "The price includes design, development, testing, hosting, domain, and SSL certificate for the first year. No hidden costs or additional fees."
+      },
+      "beginnerStart": {
+        "question": "I'm a beginner, how do I start?",
+        "answer": "Contact us through the form on this page. We'll explain everything clearly - domains, hosting, costs. We've helped many beginners without technical experience get started online."
+      },
+      "hostingIncluded": {
+        "question": "Is hosting included in the price?",
+        "answer": "Yes, hosting is included in the price. You don't need to find or purchase it separately."
+      },
+      "renewalFees": {
+        "question": "Are there renewal fees?",
+        "answer": "Yes, after the first year of hosting and domain, the renewal cost is typically 300-500 PLN annually depending on the project requirements."
+      },
+      "quality": {
+        "question": "Is the website good quality?",
+        "answer": "All our websites are optimized for speed and SEO. They score high in Google Lighthouse tests, which improves their search engine ranking."
+      },
+      "ssl": {
+        "question": "Do websites have SSL certificates?",
+        "answer": "Yes, all our websites include an SSL certificate in the price, ensuring a secure connection."
+      },
+      "cms": {
+        "question": "Do you use WordPress or other CMS?",
+        "answer": "No, we create our own optimized solutions. While WordPress and other CMS systems (like Joomla or headless CMS) are popular, we prefer building sites from scratch. This makes our websites faster, lighter, and precisely tailored to client needs."
+      },
+      "customization": {
+        "question": "Can packages be customized?",
+        "answer": "Yes, each package can be customized to your unique needs. Contact us to discuss your requirements and get a personalized quote."
+      }
+    }
+  },
   "contactPage": {
     "title": "Contact Us",
     "subtitle": "We're here to help. Reach out to us with any questions or to start your new project.",
     "emailLabel": "Email",
-    "email": "contact@titancode.com",
+    "email": "info@titancode.com",
     "phoneLabel": "Phone",
-    "phone": "+48 123 456 789",
+    "phone": "+48 511 118 916",
     "addressTitle": "Address",
     "addressLine1": "Warsaw",
     "addressLine2": "Poland"

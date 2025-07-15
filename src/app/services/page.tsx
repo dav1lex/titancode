@@ -1,6 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/app/language-context";
+import { FaqSection } from "@/components/sections/FaqSection";
 import { Button } from "@/components/ui/button";
 import { SERVICE_TIERS, ServiceTierKey } from "@/lib/services";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
@@ -79,6 +80,8 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      <FaqSection />
 
       {/* CTA Section */}
       <section className="bg-gray-100 dark:bg-gray-900 py-20 sm:py-24">

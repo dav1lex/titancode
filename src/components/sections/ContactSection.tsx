@@ -14,9 +14,45 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
 import { Send } from "lucide-react";
+import { FormEvent, useState } from "react";
 
 export default function ContactSection() {
   const { t } = useLanguage();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [responseMessage, setResponseMessage] = useState("");
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+    setResponseMessage("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setStatus("success");
+        setResponseMessage(t("contact.form.successMessage"));
+        setName("");
+        setEmail("");
+        setMessage("");
+      } else {
+        setStatus("error");
+        setResponseMessage(t("contact.form.errorMessage"));
+      }
+    } catch (error) {
+      setStatus("error");
+      setResponseMessage(t("contact.form.errorMessage"));
+    }
+  };
 
   return (
     <section className="w-full py-24 md:py-32 transition-colors duration-300">
@@ -50,31 +86,38 @@ export default function ContactSection() {
           viewport={{ once: true }}
         >
           <Card className="max-w-lg mx-auto bg-white/30 dark:bg-black/30 backdrop-blur-lg border border-gray-200/30 dark:border-gray-800/30 hover:border-gray-300/50 dark:hover:border-gray-700/50 transition-all duration-300 shadow-xl hover:shadow-2xl rounded-2xl overflow-hidden">
-            <CardHeader>
-              <CardTitle className="text-2xl font-bold text-gray-900 dark:text-white text-center">
-                {t("contact.form.submit")}
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="name">{t("contact.form.name")}</Label>
-                <Input id="name" placeholder="John Doe" />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="email">{t("contact.form.email")}</Label>
-                <Input id="email" type="email" placeholder="john.doe@example.com" />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="message">{t("contact.form.message")}</Label>
-                <Textarea id="message" placeholder="Your message..." />
-              </div>
-            </CardContent>
-            <CardFooter>
-              <Button size="lg" className="w-full bg-gray-900 text-white dark:bg-white dark:text-black hover:bg-gray-700 dark:hover:bg-gray-200 transition-all duration-300 group">
-                {t("contact.form.submit")}
-                <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </CardFooter>
+            <form onSubmit={handleSubmit}>
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-gray-900 dark:text-white text-center">
+                  {t("contact.form.submit")}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="name">{t("contact.form.name")}</Label>
+                  <Input id="name" placeholder="John Doe" value={name} onChange={(e) => setName(e.target.value)} required />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="email">{t("contact.form.email")}</Label>
+                  <Input id="email" type="email" placeholder="john.doe@example.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="message">{t("contact.form.message")}</Label>
+                  <Textarea id="message" placeholder="Your message..." value={message} onChange={(e) => setMessage(e.target.value)} required />
+                </div>
+                {responseMessage && (
+                  <p className={`text-sm ${status === 'success' ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
+                    {responseMessage}
+                  </p>
+                )}
+              </CardContent>
+              <CardFooter>
+                <Button size="lg" type="submit" disabled={status === 'loading'} className="w-full bg-gray-900 text-white dark:bg-white dark:text-black hover:bg-gray-700 dark:hover:bg-gray-200 transition-all duration-300 group">
+                  {status === 'loading' ? t("contact.form.sending") : t("contact.form.submit")}
+                  {status !== 'loading' && <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />}
+                </Button>
+              </CardFooter>
+            </form>
           </Card>
         </motion.div>
       </div>
