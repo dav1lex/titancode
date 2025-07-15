@@ -321,5 +321,8 @@
     "addressTitle": "Address",
     "addressLine1": "Warsaw",
     "addressLine2": "Poland"
+  },
+  "currency": {
+    "pln": "PLN"
   }
 }

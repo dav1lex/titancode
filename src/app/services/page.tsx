@@ -54,18 +54,18 @@ export default function ServicesPage() {
                       {service.includes.map((item, i) => (
                         <li key={i} className="flex items-start">
                           <CheckCircle2 className="h-6 w-6 text-cyan-500 mr-3 mt-1 flex-shrink-0" />
-                          <span>{item}</span>
+                          <span>{t(item)}</span>
                         </li>
                       ))}
                     </ul>
                     <div className="mt-8">
-                      <p><strong>{t('estimatePage.techStack')}:</strong> {service.techStack}</p>
-                      <p><strong>{t('estimatePage.timeline')}:</strong> {service.time}</p>
+                      <p><strong>{t('estimatePage.techStack')}:</strong> {t(service.techStack)}</p>
+                      <p><strong>{t('estimatePage.timeline')}:</strong> {t(service.time)}</p>
                     </div>
                   </div>
                   <div className={`p-8 bg-white dark:bg-black rounded-2xl shadow-lg ${isEven ? '' : 'md:col-start-1'}`}>
                     <p className="text-sm font-semibold uppercase text-gray-500 dark:text-gray-400">{t('services.startingFrom')}</p>
-                    <p className="text-5xl font-extrabold mt-2">{service.basePrice} PLN</p>
+                    <p className="text-5xl font-extrabold mt-2">{service.basePrice} {t("currency.pln")}</p>
                     <p className="mt-4 text-gray-600 dark:text-gray-300">{t(`estimatePage.tiers.${key}.description`)}</p>
                     <Button asChild size="lg" className="mt-8 w-full">
                       <Link href="/calculate-estimate">
