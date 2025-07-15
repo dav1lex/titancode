@@ -22,13 +22,14 @@ export default function HeroSection() {
       </div>
 
       <div className="container mx-auto relative z-10 h-screen flex flex-col justify-center items-center px-4">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           
           <motion.h1 
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-b from-gray-900 to-gray-600 dark:from-white dark:to-gray-300"
+            className=" whitespace-pre-line text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight pb-6 bg-clip-text text-transparent bg-gradient-to-b from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 whitespace-pre-line"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
+
           >
             {t("hero.title")}
           </motion.h1>

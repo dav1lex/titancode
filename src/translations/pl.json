@@ -15,8 +15,8 @@
     "getStarted": "Rozpocznij"
   },
   "services": {
-    "title": "Usługi Premium",
-    "subtitle": "Inżynieria cyfrowa dla wymagających marek",
+    "title": "Usługi",
+    "subtitle": "Rozwiązania premium dostosowane do Twoich potrzeb",
     "viewDetails": "Zobacz Szczegóły",
     "startingFrom": "Cena od",
     "customSolutions": {
@@ -55,7 +55,7 @@
     }
   },
   "hero": {
-    "title": "Podnieś Swoje Cyfrowe Doświadczenie",
+    "title": "Nie Wtapiaj Się. Wyróżnij. \nDominuj.",
     "subtitle": "Tworzymy premium rozwiązania internetowe, które łączą najnowocześniejszą technologię z eleganckim designem, aby pomóc Twojej marce wyróżnić się w cyfrowym świecie.",
     "cta": "Rozpocznij"
   },
@@ -63,7 +63,47 @@
     "title": "Nasze Portfolio",
     "subtitle": "Prezentacja naszych najlepszych prac z różnych branż i technologii.",
     "viewProject": "Zobacz Projekt",
-    "viewAll": "Zobacz Wszystkie Projekty"
+    "viewAll": "Zobacz Wszystkie Projekty",
+    "projects": {
+      "detailsTitle": "Szczegóły Projektu",
+      "clientLabel": "Klient",
+      "yearLabel": "Rok",
+      "durationLabel": "Czas trwania",
+      "techTitle": "Użyte Technologie",
+      "summaryTitle": "O Projekcie",
+      "challengeTitle": "Wyzwanie",
+      "solutionTitle": "Rozwiązanie",
+      "screenshotsTitle": "Zrzuty Ekranu z Projektu",
+      "backButton": "Wróć",
+      "visitButton": "Odwiedź Stronę",
+      "nanobid": {
+        "title": "NanoBid - Platforma Aukcyjna",
+        "subtitle": "Aplikacja Full Stack",
+        "description": "Lekka i przyjazna dla użytkownika platforma aukcyjna online, zbudowana od podstaw w czystym PHP.",
+        "client": "Projekt własny",
+        "year": "2025",
+        "duration": "4 miesiące",
+        "summaryText": "NanoBid to lekka, przyjazna dla użytkownika platforma aukcyjna online, zbudowana od podstaw w czystym PHP. Jest przeznaczona dla domów aukcyjnych, które chcą prowadzić własne aukcje internetowe na czas, bez polegania na drogich usługach firm trzecich. Aplikacja wykorzystuje niestandardową architekturę Model-View-Controller (MVC), co sprawia, że kod jest zorganizowany, łatwy w utrzymaniu i skalowalny.",
+        "challengeText": "Głównym wyzwaniem było zaprojektowanie i zbudowanie kompletnego, bezpiecznego i niezawodnego systemu aukcyjnego od podstaw przy użyciu czystego PHP, w tym niestandardowego frameworka MVC. Celem było uniknięcie nadmiernej inżynierii i stworzenie czystego, łatwego w utrzymaniu kodu, skoncentrowanego na podstawowych funkcjonalnościach aukcyjnych.",
+        "solutionText": "Wdrożono niestandardową architekturę MVC, aby logicznie ustrukturyzować aplikację. Do wszystkich interakcji z bazą danych użyto PDO z przygotowanymi instrukcjami, aby zapobiec atakom SQL injection. Niestandardowy router obsługuje wszystkie żądania, kierując je do odpowiednich kontrolerów. Frontend został zbudowany przy użyciu Bootstrap 5, co zapewnia profesjonalne i responsywne doświadczenie użytkownika."
+      },
+      "kurs8klasisty": {
+        "title": "Kurs8Klasisty - Strona dla Korepetytora",
+        "subtitle": "Strona Internetowa dla Platformy E-learningowej",
+        "description": "Kompletne rozwiązanie internetowe dla kursu online przygotowującego polskich ósmoklasistów do egzaminu z języka angielskiego.",
+        "client": "Kurs8Klasisty",
+        "year": "2025",
+        "duration": "4 tygodnie",
+        "summaryText": "Ten projekt to kompletne rozwiązanie internetowe dla kursu online przygotowującego ósmoklasistów do egzaminu z języka angielskiego. Platforma obejmuje publiczną stronę promocyjną i zintegrowany blog, zarządzane przez bezpieczny panel administracyjny.",
+        "challengeText": "Głównym wyzwaniem było stworzenie systemu o podwójnej funkcjonalności: dynamicznego CMS do aktualizacji w czasie rzeczywistym oraz wysoce wydajnej strony statycznej, zapewniając jednocześnie płynne doświadczenie użytkownika i solidne bezpieczeństwo.",
+        "solutionText": "Zbudowaliśmy system hybrydowy wykorzystujący PHP i MySQL dla backendu, z nowoczesnym frontendem opartym na Tailwind CSS i Alpine.js. Panel administracyjny oferuje pełne zarządzanie treścią, a generator stron statycznych jednym kliknięciem zwiększa wydajność i bezpieczeństwo."
+      },
+      "dreamProject": {
+        "title": "Twój Wymarzony Projekt",
+        "description": "To miejsce jest zarezerwowane dla Twojej wizji. Zbudujmy razem coś niesamowitego.",
+        "cta": "Skontaktuj się z nami"
+      }
+    }
   },
   "calculateEstimate": {
     "title": "Gotowy, aby rozpocząć projekt?",

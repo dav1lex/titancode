@@ -3,6 +3,7 @@
 import { useLanguage } from "@/app/language-context";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Carousel,
   CarouselContent,
@@ -22,45 +23,27 @@ import { Button } from "@/components/ui/button";
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "NanoBid - Auction Platform",
     category: "Web Development",
-    imageAlt: "E-commerce website preview",
-    link: "/portfolio/ecommerce",
+    image: "https://titancode.pl/images/portfolio/nanobid/n1.png",
+    imageAlt: "NanoBid website preview",
+    link: "/portfolio/nanobid",
   },
   {
     id: 2,
-    title: "Banking App",
-    category: "Mobile Development",
-    imageAlt: "Banking application preview",
-    link: "/portfolio/banking",
+    title: "Kurs8Klasisty.pl",
+    category: "Web Development",
+    image: "https://titancode.pl/images/portfolio/english-tutor/main.png",
+    imageAlt: "Kurs8Klasisty.pl website preview",
+    link: "/portfolio/kurs8klasisty",
   },
   {
     id: 3,
-    title: "Fitness Tracker",
-    category: "UI/UX Design",
-    imageAlt: "Fitness tracker application preview",
-    link: "/portfolio/fitness",
-  },
-  {
-    id: 4,
-    title: "Educational Platform",
+    title: "TITANCODE",
     category: "Web Development",
-    imageAlt: "Educational platform preview",
-    link: "/portfolio/education",
-  },
-  {
-    id: 5,
-    title: "Restaurant Booking System",
-    category: "Web Development",
-    imageAlt: "Restaurant booking system preview",
-    link: "/portfolio/restaurant",
-  },
-  {
-    id: 6,
-    title: "Travel Companion App",
-    category: "Mobile Development",
-    imageAlt: "Travel companion app preview",
-    link: "/portfolio/travel",
+    image: "https://placehold.co/600x400/000000/FFFFFF/png",
+    imageAlt: "titancode application preview",
+    link: "/portfolio/titancode",
   },
 ];
 
@@ -104,14 +87,18 @@ export default function PortfolioSection() {
           <CarouselContent>
             {projects.map((project) => (
               <CarouselItem key={project.id} className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-1">
-                  <Card className="h-full bg-white/50 dark:bg-black/50 backdrop-blur-sm border-gray-200/50 dark:border-gray-800/50 hover:border-gray-300 dark:hover:border-gray-700 transition-all">
-                    <CardHeader className="h-48 flex items-center justify-center bg-gray-100 dark:bg-gray-900 rounded-t-lg">
-                      <span className="text-gray-500 dark:text-gray-400 text-sm p-4 text-center">
-                        {project.imageAlt}
-                      </span>
+                <div className="p-1 h-full">
+                  <Card className="h-full flex flex-col bg-white/50 dark:bg-black/50 backdrop-blur-sm border-gray-200/50 dark:border-gray-800/50 hover:border-gray-300 dark:hover:border-gray-700 transition-all">
+                    <CardHeader className="p-0">
+                      <Image
+                        src={project.image}
+                        alt={project.imageAlt}
+                        width={600}
+                        height={400}
+                        className="rounded-t-lg object-cover"
+                      />
                     </CardHeader>
-                    <CardContent className="pt-6">
+                    <CardContent className="pt-2 flex-grow">
                       <p className="text-xs font-medium text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">
                         {project.category}
                       </p>
@@ -131,8 +118,8 @@ export default function PortfolioSection() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden sm:flex" />
-          <CarouselNext className="hidden sm:flex" />
+          <CarouselPrevious />
+          <CarouselNext />
         </Carousel>
 
         <div className="mt-16 text-center">

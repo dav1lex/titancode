@@ -21,7 +21,7 @@
     "startingFrom": "Starting from",
     "customSolutions": {
       "title": "Beyond Templates: True Custom Engineering",
-      "description": "We don't use WordPress or off-the-shelf templates. Every project is a blank canvas, engineered from the ground up with clean, modern code to deliver a truly bespoke digital experience that is fast, secure, and perfectly tailored to your brand."
+      "description": "We don't use WordPress or off-the-shelf templates. Every project is a blank canvas, created from the ground up with clean, modern code to deliver the best experience that is fast, secure, and perfectly aligned to you."
     },
     "webDev": {
       "title": "Web Development",
@@ -55,15 +55,55 @@
     }
   },
   "hero": {
-    "title": "Elevate Your Digital Experience",
-    "subtitle": "We craft premium web solutions that blend cutting-edge technology with elegant design to help your brand stand out in the digital landscape.",
+    "title": "Don't Blend In. Stand Out.   \n Dominate.",
+    "subtitle": "We create premium web solutions that blend with new technology and elegant design to help your brand stand out in the digital space.",
     "cta": "Get Started"
   },
   "portfolio": {
     "title": "Our Portfolio",
     "subtitle": "Showcasing our finest work across various industries and technologies.",
     "viewProject": "View Project",
-    "viewAll": "View All Projects"
+    "viewAll": "View All Projects",
+    "projects": {
+      "detailsTitle": "Project Details",
+      "clientLabel": "Client",
+      "yearLabel": "Year",
+      "durationLabel": "Duration",
+      "techTitle": "Technologies Used",
+      "summaryTitle": "About The Project",
+      "challengeTitle": "The Challenge",
+      "solutionTitle": "The Solution",
+      "screenshotsTitle": "Project Screenshots",
+      "backButton": "Go Back",
+      "visitButton": "Visit Site",
+      "nanobid": {
+        "title": "NanoBid - Auction Platform",
+        "subtitle": "Full Stack Application",
+        "description": "A lightweight and user-friendly online auction platform built from the ground up with vanilla PHP.",
+        "client": "Self-initiated",
+        "year": "2025",
+        "duration": "4 months",
+        "summaryText": "NanoBid is a lightweight, user-friendly online auction platform built from scratch in vanilla PHP. It's designed for auction houses wanting to run their own timed online auctions without expensive third-party services. The application uses a custom Model-View-Controller (MVC) architecture, making the code organized, maintainable, and scalable.",
+        "challengeText": "The primary challenge was to design and build a complete, secure, and reliable auction system from scratch using pure PHP, including a custom MVC framework. The goal was to avoid over-engineering and create a clean, maintainable codebase focused on core auction functionalities.",
+        "solutionText": "A custom MVC architecture was implemented to structure the application logically. PDO with prepared statements is used for all database interactions to prevent SQL injection. A custom router handles all requests, directing them to the appropriate controllers. The frontend was built with Bootstrap 5, ensuring a professional and responsive user experience."
+      },
+      "kurs8klasisty": {
+        "title": "Kurs8Klasisty - English Tutor Site",
+        "subtitle": "Web Development for an E-Learning Platform",
+        "description": "A complete web solution for an online course preparing Polish 8th-grade students for their English language exam.",
+        "client": "Kurs8Klasisty",
+        "year": "2025",
+        "duration": "4 weeks",
+        "summaryText": "This project is a complete web solution for an online course preparing Polish 8th-grade students for their English exam. The platform includes a public-facing promotional site and an integrated blog, all managed through a secure admin back-end.",
+        "challengeText": "The main challenge was to build a dual-function system: a dynamic CMS for real-time updates and a high-performance static site, ensuring a seamless user experience and strong security.",
+        "solutionText": "We built a hybrid system using PHP and MySQL for the backend, with a modern frontend using Tailwind CSS and Alpine.js. The admin panel features full content management, while a one-click static site generator boosts performance and security."
+      },
+      "dreamProject": {
+        "title": "Your Dream Project",
+        "description": "This spot is reserved for your vision. Let's build something amazing together.",
+        "cta": "Contact Us"
+      }
+    }
   },
   "calculateEstimate": {
     "title": "Ready to Start Your Project?",
