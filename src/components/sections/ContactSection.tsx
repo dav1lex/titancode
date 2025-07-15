@@ -47,7 +47,7 @@ export default function ContactSection() {
         setStatus("error");
         setResponseMessage(t("contact.form.errorMessage"));
       }
-    } catch (error) {
+    } catch {
       setStatus("error");
       setResponseMessage(t("contact.form.errorMessage"));
     }

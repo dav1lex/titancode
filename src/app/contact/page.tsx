@@ -40,7 +40,7 @@ export default function ContactPage() {
         setStatus("error");
         setResponseMessage(t("contact.form.errorMessage"));
       }
-    } catch (error) {
+    } catch {
       setStatus("error");
       setResponseMessage(t("contact.form.errorMessage"));
     }
