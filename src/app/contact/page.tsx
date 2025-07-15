@@ -30,8 +30,6 @@ export default function ContactPage() {
         body: JSON.stringify({ name, email, message }),
       });
 
-      const data = await res.json();
-
       if (res.ok) {
         setStatus("success");
         setResponseMessage(t("contact.form.successMessage"));

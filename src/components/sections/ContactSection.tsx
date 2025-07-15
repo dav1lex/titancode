@@ -36,7 +36,6 @@ export default function ContactSection() {
         body: JSON.stringify({ name, email, message }),
       });
 
-      const data = await res.json();
 
       if (res.ok) {
         setStatus("success");
