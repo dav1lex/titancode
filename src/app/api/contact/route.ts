@@ -4,7 +4,7 @@ import createDOMPurify from 'dompurify';
 import { JSDOM } from 'jsdom';
 
 const window = new JSDOM('').window;
-const DOMPurify = createDOMPurify(window as any);
+const DOMPurify = createDOMPurify(window);
 
 export async function POST(request: Request) {
   const apiKey = process.env.RESEND_API_KEY;

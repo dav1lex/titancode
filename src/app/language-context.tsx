@@ -24,7 +24,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const t = (key: string): string => {
     const keys = key.split(".");
-    let result: any = translations[language];
+    let result: unknown = translations[language];
     for (const k of keys) {
       if (result && typeof result === "object" && k in result) {
         result = result[k];
