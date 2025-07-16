@@ -6,12 +6,16 @@ import en from "../translations/en.json";
 import pl from "../translations/pl.json";
 import { Locale } from "../../i18n-config";
 
+type NestedTranslations = {
+  [key: string]: string | string[] | NestedTranslations;
+};
+
 type LanguageContextType = {
   language: Locale;
   t: (key: string) => string;
 };
 
-const translations: { [key: string]: any } = {
+const translations: { [key: string]: NestedTranslations } = {
   en,
   pl,
 };
@@ -24,10 +28,16 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const t = (key: string): string => {
     const keys = key.split(".");
-    let result: any = translations[language];
+    let result: NestedTranslations | string | string[] =
+      translations[language];
     for (const k of keys) {
-      if (result && typeof result === "object" && k in result) {
-        result = result[k];
+      if (
+        result &&
+        typeof result === "object" &&
+        !Array.isArray(result) &&
+        k in result
+      ) {
+        result = (result as NestedTranslations)[k];
       } else {
         return key;
       }
