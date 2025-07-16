@@ -11,7 +11,7 @@ type LanguageContextType = {
   t: (key: string) => string;
 };
 
-const translations = {
+const translations: { [key: string]: any } = {
   en,
   pl,
 };
@@ -24,7 +24,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const t = (key: string): string => {
     const keys = key.split(".");
-    let result: unknown = translations[language];
+    let result: any = translations[language];
     for (const k of keys) {
       if (result && typeof result === "object" && k in result) {
         result = result[k];
