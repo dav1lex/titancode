@@ -6,7 +6,6 @@ import ContactSection from "@/components/sections/ContactSection";
 import CalculateEstimateSection from "@/components/sections/CalculateEstimateSection";
 
 export default function Home() {
-
   return (
     <>
       <HeroSection />

@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { LanguageProvider } from "../language-context";
 import { i18n } from "../../../i18n-config";
+import { getLocaleFromLang } from "@/lib/locale-utils";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,56 +23,65 @@ export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://example.com'),
-  title: {
-    default: 'TITANCODE - Next-Generation Development Platform',
-    template: `%s | TITANCODE`,
-  },
-  description: 'We craft premium web solutions that blend cutting-edge technology with elegant design to help your brand stand out in the digital landscape.',
-  keywords: ['Web Development', 'Mobile Development', 'UI/UX Design', 'Next.js', 'React', 'TITANCODE'],
-  authors: [{ name: 'TITANCODE', url: 'https://example.com' }],
-  creator: 'TITANCODE',
-  publisher: 'TITANCODE',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const locale = getLocaleFromLang(lang);
+
+  return {
+    metadataBase: new URL('https://example.com'),
+    title: {
+      default: 'TITANCODE - Next-Generation Development Platform',
+      template: `%s | TITANCODE`,
+    },
+    description: 'We craft premium web solutions that blend cutting-edge technology with elegant design to help your brand stand out in the digital landscape.',
+    keywords: ['Web Development', 'Mobile Development', 'UI/UX Design', 'Next.js', 'React', 'TITANCODE'],
+    authors: [{ name: 'TITANCODE', url: 'https://example.com' }],
+    creator: 'TITANCODE',
+    publisher: 'TITANCODE',
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    title: 'TITANCODE - Elevate Your Digital Experience',
-    description: 'Premium web solutions that blend cutting-edge technology with elegant design.',
-    url: 'https://example.com',
-    siteName: 'TITANCODE',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'A preview image for TITANCODE',
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
       },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'TITANCODE - Elevate Your Digital Experience',
-    description: 'Premium web solutions that blend cutting-edge technology with elegant design.',
-    images: ['/twitter-image.png'],
-  },
-  icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
-  },
-  manifest: '/site.webmanifest',
-};
+    },
+    openGraph: {
+      title: 'TITANCODE - Elevate Your Digital Experience',
+      description: 'Premium web solutions that blend cutting-edge technology with elegant design.',
+      url: 'https://example.com',
+      siteName: 'TITANCODE',
+      images: [
+        {
+          url: '/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: 'A preview image for TITANCODE',
+        },
+      ],
+      locale: locale,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'TITANCODE - Elevate Your Digital Experience',
+      description: 'Premium web solutions that blend cutting-edge technology with elegant design.',
+      images: ['/twitter-image.png'],
+    },
+    icons: {
+      icon: '/favicon.ico',
+      apple: '/apple-touch-icon.png',
+    },
+    manifest: '/site.webmanifest',
+  };
+}
 
 export default async function RootLayout({
   children,

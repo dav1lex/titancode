@@ -12,17 +12,34 @@ This document outlines the findings from a comprehensive review of the TITANCODE
 
 ## SEO Findings
 
-### 1. Client-Side Internationalization (i18n) (High Impact)
+### 1. Client-Side Internationalization (i18n) (High Impact) DONE
 
 *   **Location:** [`src/app/language-context.tsx`](./src/app/language-context.tsx)
 *   **Issue:** The current i18n implementation is client-side only, which is detrimental to SEO. Search engines will likely only index the default language ("en").
 *   **Recommendation:** Implement Next.js's built-in i18n routing. This will create unique URLs for each language (e.g., `/en/about`, `/pl/about`), allowing search engines to discover and index all language versions of your pages.
 
-### 2. Missing Per-Page Metadata (High Impact)
+### 2. Missing Per-Page Metadata (High Impact) DONE
 
 *   **Location:** [`src/app/about/page.tsx`](./src/app/about/page.tsx) and other pages.
 *   **Issue:** Pages are implemented as client components and lack their own `metadata` export. They fall back to the generic metadata in the root layout.
 *   **Recommendation:** Convert pages to server components where possible and add a unique, descriptive `metadata` export to each page. For client components that need dynamic titles, use the `title.template` in the root layout's metadata.
+*   **COMPLETED:** Added comprehensive metadata exports to all pages using separate metadata.ts files:
+    - Home page (`/[lang]/metadata.ts`)
+    - About page (`/[lang]/about/metadata.ts`)
+    - Services page (`/[lang]/services/metadata.ts`)
+    - Contact page (`/[lang]/contact/metadata.ts`)
+    - Portfolio page (`/[lang]/portfolio/metadata.ts`)
+    - Calculate Estimate page (`/[lang]/calculate-estimate/metadata.ts`)
+    - Individual portfolio project pages (`/[lang]/portfolio/nanobid/metadata.ts`, `/[lang]/portfolio/kurs8klasisty/metadata.ts`)
+*   **Features Added:**
+    - Unique titles and descriptions for each page
+    - Relevant keywords for better SEO
+    - OpenGraph metadata for social media sharing
+    - Twitter Card metadata
+    - Language alternates for multilingual SEO
+    - Proper locale handling (en_US/pl_PL)
+    - Dynamic metadata generation based on current language
+    - Separation of client components and server metadata
 
 ### 3. Hardcoded Language and Locale (Medium Impact)
 
