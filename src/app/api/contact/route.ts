@@ -1,5 +1,10 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import createDOMPurify from 'dompurify';
+import { JSDOM } from 'jsdom';
+
+const window = new JSDOM('').window;
+const DOMPurify = createDOMPurify(window as any);
 
 export async function POST(request: Request) {
   const apiKey = process.env.RESEND_API_KEY;
@@ -24,12 +29,17 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
+    // Sanitize user input
+    const sanitizedName = DOMPurify.sanitize(name);
+    const sanitizedEmail = DOMPurify.sanitize(email);
+    const sanitizedMessage = DOMPurify.sanitize(message);
+
     const { error } = await resend.emails.send({
       from: fromEmail,
       to: toEmail,
-      subject: `New message from ${name} via titancode.pl`,
-      replyTo: email,
-      html: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Message: ${message}</p>`,
+      subject: `New message from ${sanitizedName} via titancode.pl`,
+      replyTo: sanitizedEmail,
+      html: `<p>Name: ${sanitizedName}</p><p>Email: ${sanitizedEmail}</p><p>Message: ${sanitizedMessage}</p>`,
     });
 
     if (error) {

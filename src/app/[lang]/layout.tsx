@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { ThemeProvider } from "next-themes";
+import "../globals.css";
+import { Providers } from "../providers";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { LanguageProvider } from "./language-context";
+import { LanguageProvider } from "../language-context";
+import { i18n } from "../../../i18n-config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,6 +16,10 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }));
+}
 
 export const metadata: Metadata = {
   // Set the base URL for your site.
@@ -86,17 +91,20 @@ export const metadata: Metadata = {
   manifest: '/site.webmanifest', // Place this file in the `public` directory.
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-}>) {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={lang} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <Providers>
           <LanguageProvider>
             <Header />
             <main>
@@ -104,7 +112,7 @@ export default function RootLayout({
             </main>
             <Footer />
           </LanguageProvider>
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );

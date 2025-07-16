@@ -15,6 +15,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const { t } = useLanguage();
   const pathname = usePathname();
+  const { language } = useLanguage();
 
   // Handle scroll effect
   useEffect(() => {
@@ -44,7 +45,7 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <Link href="/" className="flex items-center">
+            <Link href={`/${language}`} className="flex items-center">
               <div className="overflow-hidden flex">
                 {logoLetters.map((letter, index) => (
                   <motion.span
@@ -75,7 +76,7 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {["home", "services", "portfolio", "about", "contact"].map((item) => {
-              const href = item === "home" ? "/" : `/${item}`;
+              const href = item === "home" ? `/${language}` : `/${language}/${item}`;
               const isActive = item === 'home' ? pathname === href : pathname.startsWith(href);
               return (
               <Link 
@@ -179,11 +180,11 @@ export default function Header() {
             >
               <nav className="flex flex-col space-y-8 text-lg">
                 {[
-                  { name: t("nav.home"), path: "/" },
-                  { name: t("nav.services"), path: "/services" },
-                  { name: t("nav.portfolio"), path: "/portfolio" },
-                  { name: t("nav.about"), path: "/about" },
-                  { name: t("nav.contact"), path: "/contact" },
+                  { name: t("nav.home"), path: `/${language}` },
+                  { name: t("nav.services"), path: `/${language}/services` },
+                  { name: t("nav.portfolio"), path: `/${language}/portfolio` },
+                  { name: t("nav.about"), path: `/${language}/about` },
+                  { name: t("nav.contact"), path: `/${language}/contact` },
                 ].map((item, i) => {
                   const isActive = item.path === "/" ? pathname === item.path : pathname.startsWith(item.path);
                   return (

@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from 'react';
-import { useLanguage } from '../language-context';
+import { useLanguage } from '@/app/language-context';
 import { SERVICE_TIERS, ServiceTierKey } from '@/lib/services';
 import { Info } from 'lucide-react';
 

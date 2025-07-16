@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import WebpageAnimation from "@/components/ui/webpage-animation";
+import Strong from "@/components/ui/strong";
 
 export default function AboutPage() {
   const { t } = useLanguage();
@@ -130,8 +131,9 @@ export default function AboutPage() {
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">{t("aboutPage.mission.title")}</h2>
             <p
               className="mt-6 text-lg text-gray-600 dark:text-gray-400 prose dark:prose-invert"
-              dangerouslySetInnerHTML={{ __html: t("aboutPage.mission.text") }}
-            />
+            >
+              <Strong text="aboutPage.mission.text" />
+            </p>
           </motion.div>
           <motion.div
             initial={{ x: 50, opacity: 0 }}

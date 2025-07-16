@@ -1,6 +1,6 @@
 "use client";
 
-import { useLanguage, translations } from "@/app/language-context";
+import { useLanguage } from "@/app/language-context";
 import {
   Accordion,
   AccordionContent,
@@ -9,9 +9,17 @@ import {
 } from "@/components/ui/accordion";
 
 export function FaqSection() {
-  const { language, t } = useLanguage();
-  const faqTranslations = translations[language].faq;
-  const faqKeys = Object.keys(faqTranslations.questions);
+  const { t } = useLanguage();
+  const faqKeys = [
+    "priceInclude",
+    "beginnerStart",
+    "hostingIncluded",
+    "renewalFees",
+    "quality",
+    "ssl",
+    "cms",
+    "customization",
+  ];
 
   return (
     <section className="py-16 sm:py-20">
@@ -22,12 +30,11 @@ export function FaqSection() {
         <div className="mt-10 max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="w-full">
             {faqKeys.map((key) => {
-              const item = faqTranslations.questions[key as keyof typeof faqTranslations.questions];
               return (
                 <AccordionItem value={key} key={key}>
-                  <AccordionTrigger className="text-left">{item.question}</AccordionTrigger>
+                  <AccordionTrigger className="text-left">{t(`faq.questions.${key}.question`)}</AccordionTrigger>
                   <AccordionContent className="prose prose-lg dark:prose-invert max-w-none">
-                    {item.answer}
+                    {t(`faq.questions.${key}.answer`)}
                   </AccordionContent>
                 </AccordionItem>
               );
