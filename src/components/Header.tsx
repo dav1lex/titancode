@@ -186,7 +186,7 @@ export default function Header() {
                   { name: t("nav.about"), path: `/${language}/about` },
                   { name: t("nav.contact"), path: `/${language}/contact` },
                 ].map((item, i) => {
-                  const isActive = item.path === "/" ? pathname === item.path : pathname.startsWith(item.path);
+                  const isActive = item.name === t("nav.home") ? pathname === item.path : pathname.startsWith(item.path);
                   return (
                   <motion.div
                     key={i}

@@ -24,6 +24,7 @@
     "dompurify": "^3.2.6",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.23.3",
+    "js-cookie": "^3.0.5",
     "jsdom": "^26.1.0",
     "lucide-react": "^0.525.0",
     "negotiator": "^1.0.0",
@@ -38,6 +39,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/js-cookie": "^3.0.6",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

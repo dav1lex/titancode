@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-import { Providers } from "../providers";
+import { ThemeProviders } from "../theme-providers";
+import { cookies } from "next/headers";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { LanguageProvider } from "../language-context";
@@ -22,27 +23,16 @@ export async function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  // Set the base URL for your site.
-  metadataBase: new URL('https://example.com'), // TODO: Replace with your actual domain
-
-  // Define a dynamic title for better SEO.
+  metadataBase: new URL('https://example.com'),
   title: {
-    default: 'TITANCODE - Next-Generation Development Platform', // Title for the home page
-    template: `%s | TITANCODE`, // Template for other pages (e.g., "Services | TITANCODE")
+    default: 'TITANCODE - Next-Generation Development Platform',
+    template: `%s | TITANCODE`,
   },
-
-  // Use a more descriptive and engaging description.
   description: 'We craft premium web solutions that blend cutting-edge technology with elegant design to help your brand stand out in the digital landscape.',
-
-  // Add relevant keywords for search engines.
   keywords: ['Web Development', 'Mobile Development', 'UI/UX Design', 'Next.js', 'React', 'TITANCODE'],
-
-  // Specify the author and publisher.
-  authors: [{ name: 'TITANCODE', url: 'https://example.com' }], // TODO: Replace with your actual domain
+  authors: [{ name: 'TITANCODE', url: 'https://example.com' }],
   creator: 'TITANCODE',
   publisher: 'TITANCODE',
-
-  // Control how search engines crawl your site.
   robots: {
     index: true,
     follow: true,
@@ -54,16 +44,14 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-
-  // Configure Open Graph metadata for rich social media sharing.
   openGraph: {
     title: 'TITANCODE - Elevate Your Digital Experience',
     description: 'Premium web solutions that blend cutting-edge technology with elegant design.',
-    url: 'https://example.com', // TODO: Replace with your actual domain
+    url: 'https://example.com',
     siteName: 'TITANCODE',
     images: [
       {
-        url: '/og-image.png', // Place this image in the `public` directory.
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'A preview image for TITANCODE',
@@ -72,23 +60,17 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website',
   },
-
-  // Configure Twitter-specific metadata for Twitter Cards.
   twitter: {
     card: 'summary_large_image',
     title: 'TITANCODE - Elevate Your Digital Experience',
     description: 'Premium web solutions that blend cutting-edge technology with elegant design.',
-    images: ['/twitter-image.png'], // Place this image in the `public` directory.
+    images: ['/twitter-image.png'],
   },
-
-  // Define icons for browsers and devices.
   icons: {
-    icon: '/favicon.ico', // Place favicon.ico in the `public` directory.
-    apple: '/apple-touch-icon.png', // Place this image in the `public` directory.
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
   },
-
-  // Link to a web app manifest file.
-  manifest: '/site.webmanifest', // Place this file in the `public` directory.
+  manifest: '/site.webmanifest',
 };
 
 export default async function RootLayout({
@@ -99,12 +81,15 @@ export default async function RootLayout({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
+  const cookieStore = await cookies();
+  const theme = cookieStore.get("theme")?.value || "system";
+
   return (
-    <html lang={lang} suppressHydrationWarning>
+    <html lang={lang} className={theme} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Providers>
+        <ThemeProviders theme={theme}>
           <LanguageProvider>
             <Header />
             <main>
@@ -112,7 +97,7 @@ export default async function RootLayout({
             </main>
             <Footer />
           </LanguageProvider>
-        </Providers>
+        </ThemeProviders>
       </body>
     </html>
   );
