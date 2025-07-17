@@ -1,10 +1,10 @@
 {
   "nav": {
-    "home": "Strona główna",
+    "home": "Start",
     "services": "Usługi",
     "offer": "Oferta",
     "calculate_estimate": "Wycena",
-    "portfolio": "Portfolio",
+    "portfolio": "Realizacje",
     "about": "O nas",
     "contact": "Kontakt"
   },
@@ -12,205 +12,205 @@
     "rights": "Wszelkie prawa zastrzeżone"
   },
   "home": {
-    "welcome": "Witaj w TITANCODE",
-    "subtitle": "Strony, które naprawdę działają",
-    "getStarted": "Zacznij projekt"
+    "welcome": "Witamy w TITANCODE",
+    "subtitle": "Strony internetowe, które pracują tak ciężko jak Ty",
+    "getStarted": "Rozpocznij projekt"
   },
   "services": {
-    "title": "Co robimy",
-    "subtitle": "Każda linijka kodu pisana dla Ciebie",
+    "title": "Co tworzymy",
+    "subtitle": "Każda linia kodu pisana specjalnie dla Ciebie",
     "viewDetails": "Zobacz szczegóły",
     "startingFrom": "Od",
     "customSolutions": {
-      "title": "Budujemy od zera",
-      "description": "Bez WordPressa, bez szablonów. Każdy projekt zaczynamy od pustego pliku i kończymy kodem, który robi dokładnie to, czego potrzebujesz."
+      "title": "Tworzymy od podstaw",
+      "description": "Żadnych gotowców ani WordPressa. Każdy projekt zaczynamy od czystej kartki i kończymy rozwiązaniem idealnie dopasowanym do Twoich potrzeb."
     },
     "webDev": {
-      "title": "Strony i aplikacje",
-      "description": "Szybkie, bezpieczne strony, które działają na każdym urządzeniu.",
-      "longDescription": "Od prostych stron po skomplikowane narzędzia biznesowe. Piszemy każdą linijkę kodu ręcznie, testujemy dokładnie i upewniamy się, że wszystko działa jak należy."
+      "title": "Strony i aplikacje internetowe",
+      "description": "Szybkie, bezpieczne witryny działające na każdym urządzeniu i w każdej przeglądarce.",
+      "longDescription": "Od prostych stron wizytówek po zaawansowane narzędzia biznesowe. Każdą linię kodu piszemy ręcznie, dokładnie testujemy i dbamy o to, by wszystko działało perfekcyjnie dla Twoich użytkowników."
     },
     "automation": {
-      "title": "Automatyzacja",
-      "description": "Przestań robić to samo w kółko. Komputery mogą to zrobić za Ciebie.",
-      "longDescription": "Budujemy skrypty, które oszczędzają Ci godziny każdego tygodnia. Zbieranie danych, przetwarzanie plików, raporty - jeśli się powtarza, możemy to zautomatyzować."
+      "title": "Automatyzacja procesów",
+      "description": "Przestań wykonywać te same zadania wielokrotnie. Pozwól komputerom zająć się nudną robotą.",
+      "longDescription": "Tworzymy skrypty, które oszczędzają Ci godziny każdego tygodnia. Zbieranie danych, przetwarzanie plików, generowanie raportów - jeśli coś się powtarza, możemy to zautomatyzować."
     },
     "seo": {
-      "title": "Pozycjonowanie",
-      "description": "Znajdź się w Google, gdy ktoś szuka tego, co robisz.",
-      "longDescription": "SEO budujemy w każdy projekt od pierwszego dnia. Czysty kod, szybkie ładowanie, dobra struktura - wszystko, czego Google oczekuje."
+      "title": "Optymalizacja SEO",
+      "description": "Bądź widoczny, gdy ludzie szukają tego, co oferujesz.",
+      "longDescription": "SEO wbudowujemy w każdy projekt od samego początku. Czysty kod, szybkie ładowanie, właściwa struktura - wszystko to, czego oczekuje Google."
     },
     "ecommerce": {
       "title": "Sklepy internetowe",
-      "description": "Sprzedawaj więcej ze sklepem, który działa dla Twoich klientów.",
-      "longDescription": "Bezpieczne płatności, prosta kasa i magazyn, który się sam aktualizuje. Wszystko, czego potrzebujesz, żeby sprzedawać online."
+      "description": "Sprzedawaj więcej dzięki sklepowi, który naprawdę działa dla Twoich klientów.",
+      "longDescription": "Bezpieczne płatności, intuicyjny proces zakupów i magazyn aktualizujący się automatycznie. Wszystko czego potrzebujesz do sprzedaży online, nic więcej."
     },
     "consulting": {
-      "title": "Doradztwo",
-      "description": "Nie wiesz, czego potrzebujesz? Pomożemy Ci to rozgryźć.",
-      "longDescription": "Bez technicznego żargonu. Pomożemy Ci wybrać narzędzia, które naprawdę rozwiązują Twoje problemy i nie zepsują się, gdy urośniesz."
+      "title": "Doradztwo technologiczne",
+      "description": "Nie wiesz czego potrzebujesz? Pomożemy Ci to ustalić.",
+      "longDescription": "Bez technicznych zawiłości. Pomożemy Ci wybrać rozwiązania, które rzeczywiście rozwiążą Twoje problemy i będą działać nawet gdy Twój biznes się rozwinie."
     },
     "maintenance": {
-      "title": "Wsparcie",
-      "description": "Zostajemy z Tobą. Twoja strona będzie szybka, bezpieczna i aktualna.",
-      "longDescription": "Start to dopiero początek. Zajmujemy się aktualizacjami, naprawiamy problemy i robimy zmiany, gdy ich potrzebujesz. Bez miesięcznych umów."
+      "title": "Wsparcie techniczne",
+      "description": "Zostajemy z Tobą na dłużej. Twoja strona pozostanie szybka, bezpieczna i aktualna.",
+      "longDescription": "Uruchomienie to dopiero początek. Zajmujemy się aktualizacjami, naprawiamy błędy i wprowadzamy zmiany kiedy ich potrzebujesz. Bez przymusu długoterminowych umów."
     }
   },
   "hero": {
-    "title": "Twoja strona powinna pracować tak ciężko jak Ty",
-    "subtitle": "Budujemy strony i aplikacje, które naprawdę działają. Bez szablonów, bez skrótów, po prostu kod, który robi swoje.",
-    "cta": "Zacznij projekt"
+    "title": "Twoja strona internetowa powinna pracować tak ciężko jak Ty",
+    "subtitle": "Tworzymy strony i aplikacje internetowe, które rzeczywiście przynoszą rezultaty. Bez gotowych szablonów, bez skrótów - tylko kod, który działa.",
+    "cta": "Rozpocznij projekt"
   },
   "portfolio": {
-    "title": "Nasze projekty",
+    "title": "Nasze realizacje",
     "subtitle": "Prawdziwe projekty dla prawdziwych firm",
     "viewProject": "Zobacz projekt",
-    "viewAll": "Zobacz wszystkie",
+    "viewAll": "Zobacz wszystkie realizacje",
     "projects": {
       "detailsTitle": "Szczegóły projektu",
       "clientLabel": "Klient",
       "yearLabel": "Rok",
-      "durationLabel": "Czas trwania",
-      "techTitle": "Technologie",
-      "summaryTitle": "Co zbudowaliśmy",
-      "challengeTitle": "Problem",
-      "solutionTitle": "Rozwiązanie",
+      "durationLabel": "Czas realizacji",
+      "techTitle": "Użyte technologie",
+      "summaryTitle": "Co stworzyliśmy",
+      "challengeTitle": "Wyzwanie",
+      "solutionTitle": "Nasze rozwiązanie",
       "screenshotsTitle": "Zrzuty ekranu",
-      "backButton": "Wróć",
-      "visitButton": "Odwiedź stronę",
+      "backButton": "Powrót",
+      "visitButton": "Odwiedź witrynę",
       "nanobid": {
         "title": "NanoBid - Platforma aukcyjna",
         "subtitle": "Kompletny system aukcyjny",
-        "description": "Własna platforma aukcyjna zbudowana od zera w PHP dla domu aukcyjnego.",
+        "description": "Autorska platforma aukcyjna stworzona od podstaw w PHP dla domu aukcyjnego.",
         "client": "Projekt własny",
         "year": "2025",
         "duration": "4 miesiące",
-        "summaryText": "Zbudowaliśmy kompletny system aukcyjny od podstaw. Obsługuje aukcje czasowe, licytacje, płatności i zarządzanie użytkownikami. Działa na własnym frameworku PHP stworzonym specjalnie dla tego projektu.",
-        "challengeText": "Dom aukcyjny potrzebował własnego systemu zamiast płacić drogim firmom zewnętrznym. Potrzebowali czegoś niezawodnego do obsługi prawdziwych transakcji.",
-        "solutionText": "Zbudowaliśmy bezpieczną platformę aukcyjną z własnym PHP, bazą MySQL i frontendem Bootstrap. Zawiera funkcje przeciwko snajperom, automatyczne podbicia i bezpieczne płatności."
+        "summaryText": "Stworzyliśmy kompletny system aukcyjny od podstaw. Obsługuje aukcje czasowe, licytowanie, płatności oraz zarządzanie użytkownikami. Działa na autorskim frameworku PHP opracowanym specjalnie na potrzeby tego projektu.",
+        "challengeText": "Dom aukcyjny potrzebował własnego systemu zamiast płacenia wysokich prowizji zewnętrznym firmom. Wymagali niezawodnego rozwiązania do obsługi rzeczywistych transakcji finansowych.",
+        "solutionText": "Stworzyliśmy bezpieczną platformę aukcyjną wykorzystującą autorski kod PHP, bazę danych MySQL oraz interfejs Bootstrap. System zawiera zabezpieczenia przed snajpingiem, automatyczne podbijanie stawek oraz bezpieczne przetwarzanie płatności."
       },
       "kurs8klasisty": {
-        "title": "Kurs8Klasisty - Kurs angielskiego",
-        "subtitle": "Platforma e-learning",
-        "description": "Kompletna strona i platforma kursowa dla korepetytora angielskiego.",
+        "title": "Kurs8Klasisty - Kurs języka angielskiego",
+        "subtitle": "Platforma e-learningowa",
+        "description": "Kompletna witryna i platforma kursowa dla nauczyciela języka angielskiego.",
         "client": "Kurs8Klasisty",
         "year": "2025",
         "duration": "4 tygodnie",
-        "summaryText": "Zbudowaliśmy kompletną stronę dla korepetytora angielskiego z podstronami kursów, blogiem i systemem administracyjnym. Uczniowie mogą korzystać z materiałów i śledzić postępy.",
-        "challengeText": "Potrzebna była profesjonalna strona, która obsłuży materiały kursowe, zarządzanie uczniami i będzie dobrze wyglądać na telefonach.",
-        "solutionText": "Stworzyliśmy własny backend PHP z bazą MySQL i responsywnym frontendem. Zawiera system zarządzania treścią, śledzenie uczniów i projekt zoptymalizowany pod telefony."
+        "summaryText": "Stworzyliśmy kompletną witrynę dla nauczyciela języka angielskiego wraz z sekcjami kursowymi, blogiem oraz panelem administracyjnym. Uczniowie mają dostęp do materiałów edukacyjnych i mogą śledzić swoje postępy.",
+        "challengeText": "Potrzebna była profesjonalna witryna, która obsłuży materiały kursowe, zarządzanie uczniami oraz będzie doskonale wyglądać na urządzeniach mobilnych.",
+        "solutionText": "Opracowaliśmy autorski backend w PHP z bazą danych MySQL oraz responsywny frontend. System zawiera panel zarządzania treścią, śledzenie postępów uczniów oraz design zoptymalizowany pod urządzenia mobilne."
       },
       "dreamProject": {
-        "title": "Twój projekt tutaj",
-        "description": "To miejsce czeka na Twój pomysł. Zbudujmy coś, co naprawdę pomoże Twojemu biznesowi.",
-        "cta": "Zacznijmy"
+        "title": "Twój projekt w tym miejscu",
+        "description": "To miejsce czeka na Twój pomysł. Stwórzmy razem coś, co rzeczywiście pomoże Twojemu biznesowi.",
+        "cta": "Rozpocznijmy współpracę"
       }
     }
   },
   "calculateEstimate": {
     "title": "Ile to będzie kosztować?",
-    "subtitle": "Dowiedz się realnej ceny w 2 minuty. Bez rozmów sprzedażowych, same liczby.",
-    "cta": "Daj mi cenę",
-    "testPrompt": "Chcesz poznać cenę?",
-    "testDescription": "Odpowiedz na kilka pytań i otrzymaj wycenę od razu.",
-    "testButton": "Oblicz"
+    "subtitle": "Poznaj realną cenę w 2 minuty. Bez rozmów handlowych - tylko konkretne liczby.",
+    "cta": "Sprawdź cenę",
+    "testPrompt": "Chcesz poznać koszt?",
+    "testDescription": "Odpowiedz na kilka pytań i otrzymaj natychmiastową wycenę.",
+    "testButton": "Oblicz koszt"
   },
   "estimatePage": {
     "mainTitle": "Wycena projektu",
-    "mainSubtitle": "Otrzymaj wycenę od razu",
-    "step1Title": "1. Wybierz rodzaj strony",
-    "step2Title": "2. Dostosuj projekt",
+    "mainSubtitle": "Otrzymaj natychmiastową wycenę swojego projektu",
+    "step1Title": "1. Wybierz typ projektu",
+    "step2Title": "2. Dopasuj do swoich potrzeb",
     "estimateTitle": "Twoja wycena",
-    "basePrice": "Cena bazowa",
-    "totalCost": "Całkowity koszt",
-    "upfrontPayment": "Zaliczka (40%)",
-    "monthlySupport": "+ {cost} PLN/miesięcznie za wsparcie",
-    "includedTitle": "Co zawiera:",
-    "startOver": "Zacznij od nowa",
-    "techStack": "Technologia",
-    "idealFor": "Dla kogo",
+    "basePrice": "Cena podstawowa",
+    "totalCost": "Łączny koszt",
+    "upfrontPayment": "Pierwsza wpłata (40%)",
+    "monthlySupport": "+ {cost} PLN/miesiąc za wsparcie",
+    "includedTitle": "W cenie:",
+    "startOver": "Rozpocznij ponownie",
+    "techStack": "Technologie",
+    "idealFor": "Idealne dla",
     "timeline": "Czas realizacji",
     "tiers": {
       "starter": {
         "name": "Starter",
-        "description": "Profesjonalna strona dla osób i małych firm.",
+        "description": "Profesjonalna witryna dla freelancerów i małych firm.",
         "idealFor": "Freelancerzy, małe firmy, marki osobiste.",
         "techStack": "HTML, CSS, JavaScript",
         "time": "1-2 tygodnie",
         "includes": [
-          "Własny projekt",
-          "Do 5 stron",
-          "Działa na telefonach",
+          "Autorski projekt graficzny",
+          "Do 5 podstron",
+          "Responsywność mobilna",
           "Formularze kontaktowe",
-          "Podstawowe SEO",
-          "30 dni wsparcia"
+          "Podstawowa optymalizacja SEO",
+          "30 dni wsparcia technicznego"
         ]
       },
       "custom": {
         "name": "Business",
-        "description": "Strona z zaawansowanymi funkcjami dla rozwijających się firm.",
-        "idealFor": "Ugruntowane firmy, firmy potrzebujące integracji.",
-        "techStack": "Next.js, TypeScript lub własne",
+        "description": "Zaawansowana witryna z dodatkowymi funkcjami dla rozwijających się firm.",
+        "idealFor": "Ugruntowane firmy wymagające integracji z zewnętrznymi systemami.",
+        "techStack": "Next.js, TypeScript lub autorskie rozwiązanie",
         "time": "3-6 tygodni",
         "includes": [
-          "Wszystko z Starter",
-          "Do 15 stron",
-          "System zarządzania treścią",
-          "Analityka",
-          "Integracje API",
-          "Priorytetowe wsparcie"
+          "Wszystko z pakietu Starter",
+          "Do 15 podstron",
+          "Panel zarządzania treścią",
+          "Integracja z Google Analytics",
+          "Połączenia z zewnętrznymi API",
+          "Priorytetowe wsparcie techniczne"
         ]
       },
       "ecommerce": {
         "name": "E-Commerce",
-        "description": "Kompletny sklep internetowy z bezpiecznymi płatnościami i magazynem.",
-        "idealFor": "Sklepy internetowe, marki direct-to-consumer.",
-        "techStack": "Next.js, Shopify lub własne",
+        "description": "Kompletny sklep internetowy z bezpiecznymi płatnościami i zarządzaniem magazynem.",
+        "idealFor": "Sklepy internetowe, marki sprzedające bezpośrednio klientom.",
+        "techStack": "Next.js, Shopify lub autorskie rozwiązanie",
         "time": "5-10 tygodni",
         "includes": [
-          "Wszystko z Business",
-          "Zarządzanie produktami",
-          "Bezpieczne płatności",
-          "Śledzenie zamówień",
-          "Konta klientów"
+          "Wszystko z pakietu Business",
+          "System zarządzania produktami",
+          "Bezpieczne bramki płatności",
+          "Śledzenie statusu zamówień",
+          "Panele kont klientów"
         ]
       },
       "enterprise": {
         "name": "Enterprise",
-        "description": "Własne rozwiązania dla dużych firm z złożonymi potrzebami.",
-        "idealFor": "Duże firmy, złożone wymagania.",
-        "techStack": "Rozwiązanie własne",
-        "time": "Zależny od projektu",
+        "description": "Dedykowane rozwiązania dla dużych organizacji o złożonych wymaganiach.",
+        "idealFor": "Duże firmy, korporacje, złożone wymagania biznesowe.",
+        "techStack": "Rozwiązanie dopasowane do potrzeb",
+        "time": "Ustalany indywidualnie",
         "includes": [
-          "Wszystko z E-Commerce",
-          "Własne funkcje",
-          "Złożone integracje",
-          "Bezpieczeństwo i zgodność",
-          "Dedykowane wsparcie"
+          "Wszystko z pakietu E-Commerce",
+          "Funkcje dostosowane do potrzeb",
+          "Zaawansowane integracje systemowe",
+          "Zgodność z wymogami bezpieczeństwa",
+          "Dedykowane wsparcie techniczne"
         ]
       }
     },
     "options": {
-      "hasDesign": "Mam już projekt",
-      "hasDesign_description": "Obniża cenę, jeśli dostarczysz gotowy projekt (Figma, itp.)",
-      "contentSeoPack": "Treści i SEO",
-      "contentSeoPack_description": "Profesjonalne pisanie treści do 5 stron z SEO, które działa.",
-      "advancedFeaturesPack": "Zaawansowane funkcje",
-      "advancedFeaturesPack_description": "Własny panel administracyjny i automatyczne PDF-y.",
-      "logoDesign": "Projekt logo",
-      "logoDesign_description": "Unikalne logo dla Twojej marki.",
-      "constantSupport": "Miesięczne wsparcie",
-      "constantSupport_description": "Stałe wsparcie techniczne i monitoring."
+      "hasDesign": "Mam gotowy projekt graficzny",
+      "hasDesign_description": "Oszczędź pieniądze dostarczając kompletny projekt graficzny (Figma, Sketch, itp.)",
+      "contentSeoPack": "Pakiet treści i SEO",
+      "contentSeoPack_description": "Profesjonalne teksty na maksymalnie 5 podstron połączone z zaawansowaną optymalizacją SEO dla maksymalnego ruchu organicznego.",
+      "advancedFeaturesPack": "Pakiet zaawansowanych funkcji",
+      "advancedFeaturesPack_description": "Zawiera autorski panel administracyjny oraz automatyczne generowanie i wysyłanie dokumentów PDF.",
+      "logoDesign": "Projekt logotypu",
+      "logoDesign_description": "Unikalny, profesjonalny logotyp reprezentujący tożsamość Twojej marki.",
+      "constantSupport": "Abonament wsparcia technicznego",
+      "constantSupport_description": "Ciągłe wsparcie techniczne, aktualizacje oraz monitoring wydajności."
     },
     "optionDetails": {
-      "discount": "({value}% zniżki)",
+      "discount": "({value}% rabatu)",
       "surcharge": "(+{value} PLN)"
     },
     "summary": {
-      "hasDesign": "Zniżka za projekt",
-      "contentSeoPack": "Treści i SEO",
+      "hasDesign": "Rabat za gotowy projekt",
+      "contentSeoPack": "Pakiet treści i SEO",
       "advancedFeaturesPack": "Zaawansowane funkcje",
-      "logoDesign": "Projekt logo"
+      "logoDesign": "Projekt logotypu"
     }
   },
   "contact": {
@@ -228,47 +228,47 @@
   },
   "aboutPage": {
     "hero": {
-      "title": "Budujemy strony, które naprawdę działają",
-      "subtitle": "Twoja strona powinna być Twoim najlepszym pracownikiem. Upewniamy się, że tak jest."
+      "title": "Tworzymy witryny, które rzeczywiście działają",
+      "subtitle": "Twoja strona internetowa powinna być Twoim najlepszym pracownikiem. Dbamy o to, żeby tak właśnie było."
     },
     "mission": {
       "title": "Dlaczego to robimy",
-      "text": "Większość stron jest budowana z szablonów i wygląda jak wszystkie inne. Założyliśmy TITANCODE, bo wierzymy, że Twój biznes zasługuje na coś lepszego. Piszemy każdą linijkę kodu ręcznie, specjalnie dla Ciebie. Bez skrótów, bez kompromisów. Po prostu strony, które działają tak, jak potrzebujesz."
+      "text": "Większość stron internetowych powstaje z gotowych szablonów i wygląda identycznie jak tysiące innych. Założyliśmy TITANCODE, ponieważ wierzymy, że Twój biznes zasługuje na coś wyjątkowego. Każdą linię kodu piszemy ręcznie, specjalnie dla Ciebie. Bez skrótów, bez kompromisów. Po prostu witryny, które działają dokładnie tak, jak tego potrzebujesz."
     },
     "process": {
       "title": "Jak pracujemy",
-      "step1": "Rozmowa",
-      "step1_desc": "Uczymy się o Twoim biznesie i tym, czego naprawdę potrzebujesz.",
-      "step2": "Projekt",
-      "step2_desc": "Tworzymy projekt, który ma sens dla Twoich użytkowników.",
-      "step3": "Budowa",
-      "step3_desc": "Budujemy czysty kod, który nie zepsuje się, gdy urośniesz.",
+      "step1": "Poznanie potrzeb",
+      "step1_desc": "Dokładnie poznajemy Twój biznes i ustalamy, czego rzeczywiście potrzebujesz.",
+      "step2": "Projektowanie",
+      "step2_desc": "Tworzymy projekt, który jest intuicyjny i przyjazny dla Twoich użytkowników.",
+      "step3": "Programowanie",
+      "step3_desc": "Piszemy czysty, solidny kod, który będzie działać nawet gdy Twój biznes się rozwinie.",
       "step4": "Testowanie",
-      "step4_desc": "Testujemy wszystko, żeby upewnić się, że działa jak należy.",
-      "step5": "Start",
-      "step5_desc": "Zajmujemy się technicznymi sprawami, żebyś mógł skupić się na biznesie.",
+      "step4_desc": "Dokładnie testujemy każdą funkcję, aby upewnić się, że wszystko działa bezbłędnie.",
+      "step5": "Uruchomienie",
+      "step5_desc": "Zajmujemy się wszystkimi aspektami technicznymi, abyś mógł skupić się na prowadzeniu biznesu.",
       "step6": "Wsparcie",
-      "step6_desc": "Jesteśmy tutaj, gdy potrzebujesz zmian albo coś się zepsuje."
+      "step6_desc": "Jesteśmy dostępni, gdy potrzebujesz wprowadzić zmiany lub coś wymaga naprawy."
     },
     "whyUs": {
-      "title": "Dlaczego warto z nami pracować?",
-      "feature1": "Własny kod",
-      "feature1_desc": "Bez szablonów. Każdy projekt jest budowany specjalnie dla Ciebie.",
-      "feature2": "Zbudowane na lata",
-      "feature2_desc": "Czysty kod, który nie zepsuje się, gdy Twój biznes urośnie.",
-      "feature3": "Naprawdę szybkie",
-      "feature3_desc": "Szybkie strony, których Twoi klienci będą chcieli używać.",
+      "title": "Dlaczego warto z nami współpracować?",
+      "feature1": "Autorski kod",
+      "feature1_desc": "Żadnych szablonów. Każdy projekt programujemy indywidualnie dla Ciebie.",
+      "feature2": "Rozwiązania na lata",
+      "feature2_desc": "Czysty, przemyślany kod, który pozostanie stabilny wraz z rozwojem Twojego biznesu.",
+      "feature3": "Rzeczywista szybkość",
+      "feature3_desc": "Szybkie witryny, z których Twoi klienci będą chcieli korzystać.",
       "feature4": "Bezpośredni kontakt",
-      "feature4_desc": "Rozmawiasz bezpośrednio z osobami budującymi Twoją stronę.",
-      "feature5": "Dobre narzędzia",
-      "feature5_desc": "Używamy sprawdzonych technologii, które nie staną się przestarzałe.",
-      "feature6": "Prawdziwe wsparcie",
-      "feature6_desc": "Potrzebujesz zmian? Coś się zepsuło? Jesteśmy tutaj."
+      "feature4_desc": "Rozmawiasz bezpośrednio z programistami tworzącymi Twoją stronę.",
+      "feature5": "Sprawdzone technologie",
+      "feature5_desc": "Wykorzystujemy nowoczesne, stabilne rozwiązania, które nie staną się przestarzałe.",
+      "feature6": "Rzeczywiste wsparcie",
+      "feature6_desc": "Potrzebujesz zmian? Coś nie działa? Jesteśmy tutaj, aby pomóc."
     },
     "cta": {
-      "title": "Gotowy, żeby zacząć?",
-      "subtitle": "Zbudujmy coś, co naprawdę pomoże Twojemu biznesowi.",
-      "button": "Napisz do nas"
+      "title": "Gotowy na start?",
+      "subtitle": "Stwórzmy razem coś, co rzeczywiście pomoże Twojemu biznesowi.",
+      "button": "Skontaktuj się z nami"
     }
   },
   "faq": {
