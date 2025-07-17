@@ -269,38 +269,55 @@
       "button": "Get in Touch"
     },
     "comparison": {
-      "title": "The Right Tool for the Job",
-      "subtitle": "WordPress is a great starting point, but growing businesses need more.",
-      "custom": {
-        "title": "Custom Solution",
-        "feature1_title": "Rock-Solid Security",
-        "feature1_desc": "We build your site from the ground up, eliminating the third-party plugin vulnerabilities that are a common target on WordPress.",
-        "feature2_title": "Optimized for Speed",
-        "feature2_desc": "No bloated themes or unnecessary code. Just a fast, clean, and efficient website that your users and Google will love.",
-        "feature3_title": "Limitless Possibilities",
-        "feature3_desc": "Your website is a unique asset, built to your exact specifications without the constraints of templates or pre-built plugins."
+      "title": "WordPress vs. Custom Code: The Honest Truth",
+      "subtitle": "A high-end WordPress site often costs the same as a custom-built one. Here’s a look at what your money *really* buys you.",
+      "tabs": {
+        "performance": "Performance",
+        "security": "Security",
+        "cost": "Total Cost"
       },
-      "wordpress": {
-        "title": "WordPress",
-        "feature1_title": "Potential Security Trade-offs",
-        "feature1_desc": "Its popularity makes it a target. Security often depends on third-party plugins, which can introduce vulnerabilities if not managed carefully.",
-        "feature2_title": "Performance Considerations",
-        "feature2_desc": "Easy-to-use page builders and numerous plugins can add 'code bloat,' leading to slower load times and a less optimal user experience.",
-        "feature3_title": "Design & Feature Constraints",
-        "feature3_desc": "While flexible, achieving a truly unique design or complex feature set often requires fighting against the template, adding complexity and cost."
+      "performance": {
+        "label_wp": "WordPress + Plugins",
+        "label_custom": "Custom Code",
+        "value_wp": "4.2s",
+        "value_custom": "0.8s",
+        "title": "Speed Matters. A Lot.",
+        "description": "Slow websites lose customers. It's that simple. We build for instant loading, because every millisecond counts for your ranking and your revenue.",
+        "whatYouGet": "A site that feels fast, keeps visitors engaged, and ranks higher on Google."
       },
-      "conclusion_title": "An Investment in Your Asset",
-      "conclusion_text": "WordPress is an excellent tool for blogs and simple sites. But when your website is a critical business asset, a custom solution provides the security, performance, and scalability you need to grow. It's the difference between renting a space and owning the building."
+      "security": {
+        "label_wp": "WordPress + Plugins",
+        "label_custom": "Custom Code",
+        "value_wp": "90%",
+        "value_custom": "0%",
+        "title": "Don't Be an Easy Target.",
+        "description": "WordPress is a hacker's favorite playground, with plugins being the most common weak spot. A custom site has no public blueprint for attackers to follow.",
+        "whatYouGet": "Real peace of mind. Your business data and customer trust are properly protected."
+      },
+      "cost": {
+        "label_wp": "WordPress + Plugins",
+        "label_custom": "Custom Code",
+        "value_wp": "$7,500+",
+        "value_custom": "$7,500",
+        "title": "Same Price, Different Value.",
+        "description": "When you add up the costs of premium themes, plugins, and constant maintenance, WordPress isn't the budget option it seems. The initial price is often the same.",
+        "whatYouGet": "A faster, safer, one-of-a-kind website that's an actual asset, not a liability."
+      }
     },
     "techStack": {
-      "title": "Our Technology Stack",
-      "subtitle": "We build with modern, enterprise-grade tools to create future-proof websites.",
-      "nextjs_desc": "Backed by Vercel, Next.js is the leading framework for building fast, scalable, and SEO-friendly React applications.",
-      "react_desc": "Created and maintained by Meta (Facebook), React is the world's most popular library for building dynamic user interfaces.",
-      "typescript_desc": "Developed by Microsoft, TypeScript adds a powerful layer of security and reliability to JavaScript, preventing common bugs.",
-      "javascript_desc": "The foundational language of the web, we use its modern features to build interactive and engaging experiences.",
-      "php_desc": "Powering a huge portion of the web, PHP remains a robust and reliable choice for server-side logic and database integration.",
-      "tailwind_desc": "A utility-first CSS framework that allows for rapid development of custom designs without the bloat of traditional CSS libraries."
+      "title": "The Tools of the Trade",
+      "subtitle": "We use modern, production-grade technology. Here's what that means for you.",
+      "nextjs_desc": "The gold standard for building fast, user-focused web applications.",
+      "nextjs_benefit": "Your site is fast, secure, and loved by Google.",
+      "react_desc": "The engine for building dynamic, engaging user interfaces.",
+      "react_benefit": "A modern, seamless experience for your customers.",
+      "typescript_desc": "Catches errors before they happen, ensuring rock-solid reliability.",
+      "typescript_benefit": "Your application is more stable and less prone to bugs.",
+      "php_desc": "The backbone of the web, used for reliable and secure server logic.",
+      "php_benefit": "A cost-effective and battle-tested foundation for your backend.",
+      "tailwind_desc": "Allows for rapid, pixel-perfect design implementation.",
+      "tailwind_benefit": "A beautiful, consistent design that we can update quickly.",
+      "benefit_title": "What's in it for you?"
     }
   },
   "faq": {

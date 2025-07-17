@@ -274,38 +274,55 @@
       "button": "Skontaktuj się z nami"
     },
     "comparison": {
-      "title": "Właściwe narzędzie do właściwej pracy",
-      "subtitle": "WordPress to świetny punkt wyjścia, ale rozwijające się firmy potrzebują czegoś więcej.",
-      "custom": {
-        "title": "Rozwiązanie dedykowane",
-        "feature1_title": "Pancerne bezpieczeństwo",
-        "feature1_desc": "Budujemy Twoją stronę od podstaw, eliminując luki w zabezpieczeniach wtyczek firm trzecich, które są częstym celem ataków na WordPressie.",
-        "feature2_title": "Zoptymalizowana pod kątem szybkości",
-        "feature2_desc": "Bez rozdętych motywów i niepotrzebnego kodu. Po prostu szybka, czysta i wydajna witryna, którą pokochają Twoi użytkownicy i Google.",
-        "feature3_title": "Nieograniczone możliwości",
-        "feature3_desc": "Twoja strona internetowa to unikalny zasób, zbudowany według Twoich dokładnych specyfikacji, bez ograniczeń szablonów czy gotowych wtyczek."
+      "title": "WordPress kontra Kod Dedykowany: Cała Prawda",
+      "subtitle": "Strona na WordPressie z górnej półki często kosztuje tyle samo, co strona pisana na zamówienie. Zobacz, co tak naprawdę kupujesz za swoje pieniądze.",
+      "tabs": {
+        "performance": "Szybkość",
+        "security": "Bezpieczeństwo",
+        "cost": "Całkowity Koszt"
       },
-      "wordpress": {
-        "title": "WordPress",
-        "feature1_title": "Potencjalne kompromisy w bezpieczeństwie",
-        "feature1_desc": "Jego popularność czyni go celem. Bezpieczeństwo często zależy od wtyczek firm trzecich, które mogą wprowadzać luki, jeśli nie są starannie zarządzane.",
-        "feature2_title": "Kwestie wydajności",
-        "feature2_desc": "Łatwe w użyciu kreatory stron i liczne wtyczki mogą powodować 'rozdęcie kodu', prowadząc do wolniejszego ładowania i mniej optymalnych wrażeń użytkownika.",
-        "feature3_title": "Ograniczenia projektowe i funkcjonalne",
-        "feature3_desc": "Chociaż jest elastyczny, osiągnięcie naprawdę unikalnego projektu lub złożonej funkcjonalności często wymaga walki z szablonem, co zwiększa złożoność i koszty."
+      "performance": {
+        "label_wp": "WordPress + Wtyczki",
+        "label_custom": "Kod Dedykowany",
+        "value_wp": "4.2s",
+        "value_custom": "0.8s",
+        "title": "Szybkość ma znaczenie. Ogromne.",
+        "description": "Wolne strony tracą klientów. To proste. My tworzymy z myślą o natychmiastowym ładowaniu, bo każda milisekunda liczy się dla Twojej pozycji w Google i Twoich zysków.",
+        "whatYouGet": "Strona, która działa błyskawicznie, utrzymuje zaangażowanie odwiedzających i jest wyżej w wynikach wyszukiwania."
       },
-      "conclusion_title": "Inwestycja w Twój biznes",
-      "conclusion_text": "WordPress to doskonałe narzędzie do prowadzenia blogów i prostych stron. Ale kiedy Twoja witryna jest kluczowym zasobem biznesowym, dedykowane rozwiązanie zapewnia bezpieczeństwo, wydajność i skalowalność, których potrzebujesz, aby się rozwijać. To różnica między wynajmowaniem lokalu a posiadaniem własnego budynku."
+      "security": {
+        "label_wp": "WordPress + Wtyczki",
+        "label_custom": "Kod Dedykowany",
+        "value_wp": "90%",
+        "value_custom": "0%",
+        "title": "Nie bądź łatwym celem.",
+        "description": "WordPress to ulubiony plac zabaw hakerów, a wtyczki to jego najsłabszy punkt. Strona na zamówienie nie ma publicznej instrukcji obsługi dla atakujących.",
+        "whatYouGet": "Prawdziwy spokój ducha. Dane Twojej firmy i zaufanie klientów są należycie chronione."
+      },
+      "cost": {
+        "label_wp": "WordPress + Wtyczki",
+        "label_custom": "Kod Dedykowany",
+        "value_wp": "30 000+ zł",
+        "value_custom": "30 000 zł",
+        "title": "Ta sama cena, inna wartość.",
+        "description": "Gdy zsumujesz koszty płatnych szablonów, wtyczek i ciągłej opieki, WordPress wcale nie jest taką tanią opcją, na jaką wygląda. Początkowa cena jest często identyczna.",
+        "whatYouGet": "Szybsza, bezpieczniejsza i jedyna w swoim rodzaju strona, która jest realnym atutem, a nie obciążeniem."
+      }
     },
     "techStack": {
-      "title": "Nasz Stos Technologiczny",
-      "subtitle": "Tworzymy z użyciem nowoczesnych narzędzi klasy korporacyjnej, aby budować strony gotowe na przyszłość.",
-      "nextjs_desc": "Wspierany przez Vercel, Next.js to wiodący framework do budowy szybkich, skalowalnych i przyjaznych dla SEO aplikacji React.",
-      "react_desc": "Stworzony i utrzymywany przez Meta (Facebook), React to najpopularniejsza na świecie biblioteka do budowy dynamicznych interfejsów użytkownika.",
-      "typescript_desc": "Opracowany przez Microsoft, TypeScript dodaje potężną warstwę bezpieczeństwa i niezawodności do JavaScript, zapobiegając częstym błędom.",
-      "javascript_desc": "Fundamentalny język internetu, używamy jego nowoczesnych funkcji do tworzenia interaktywnych i angażujących doświadczeń.",
-      "php_desc": "Napędzając ogromną część sieci, PHP pozostaje solidnym i niezawodnym wyborem dla logiki serwerowej i integracji z bazami danych.",
-      "tailwind_desc": "Framework CSS typu utility-first, który pozwala na szybkie tworzenie niestandardowych projektów bez balastu tradycyjnych bibliotek CSS."
+      "title": "Narzędzia Pracy",
+      "subtitle": "Używamy nowoczesnych technologii klasy produkcyjnej. Oto, co to oznacza dla Ciebie.",
+      "nextjs_desc": "Złoty standard do budowy szybkich, zorientowanych na użytkownika aplikacji internetowych.",
+      "nextjs_benefit": "Twoja strona jest szybka, bezpieczna i uwielbiana przez Google.",
+      "react_desc": "Silnik do budowania dynamicznych, angażujących interfejsów użytkownika.",
+      "react_benefit": "Nowoczesne, płynne doświadczenie dla Twoich klientów.",
+      "typescript_desc": "Wychwytuje błędy, zanim się pojawią, zapewniając niezachwianą niezawodność.",
+      "typescript_benefit": "Twoja aplikacja jest bardziej stabilna i mniej podatna na błędy.",
+      "php_desc": "Kręgosłup internetu, używany do niezawodnej i bezpiecznej logiki serwerowej.",
+      "php_benefit": "Opłacalny i sprawdzony w boju fundament dla Twojego backendu.",
+      "tailwind_desc": "Pozwala na szybką implementację projektu z dokładnością co do piksela.",
+      "tailwind_benefit": "Piękny, spójny design, który możemy szybko aktualizować.",
+      "benefit_title": "Co z tego masz?"
     }
   },
   "faq": {
