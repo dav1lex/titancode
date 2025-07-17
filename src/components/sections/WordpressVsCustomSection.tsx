@@ -3,8 +3,7 @@
 import { useState } from "react";
 import { useLanguage } from "@/app/language-context";
 import { motion } from "framer-motion";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { cn } from "@/lib/utils";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const WordpressVsCustomSection = () => {
   const { t } = useLanguage();
