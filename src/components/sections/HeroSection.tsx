@@ -6,9 +6,10 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { FaJs, FaNode, FaPhp, FaReact } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
+import Link from "next/link";
 
 export default function HeroSection() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-white dark:bg-black transition-all duration-300 z-10">
@@ -49,25 +50,29 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.7 }}
           >
-            <Button 
-              size="lg" 
-              className="bg-black hover:bg-gray-800 active:bg-gray-800 text-white dark:bg-white dark:hover:bg-gray-200 dark:active:bg-gray-200 dark:text-black rounded-md px-6 transition-all"
-            >
-              <span className="flex items-center gap-2">
-                {t("hero.cta")} 
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-active:translate-x-1" />
-              </span>
-            </Button>
+            <Link href={`/${language}/calculate-estimate`}>
+              <Button
+                size="lg"
+                className="bg-black hover:bg-gray-800 active:bg-gray-800 text-white dark:bg-white dark:hover:bg-gray-200 dark:active:bg-gray-200 dark:text-black rounded-md px-6 transition-all"
+              >
+                <span className="flex items-center gap-2">
+                  {t("hero.cta")}
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-active:translate-x-1" />
+                </span>
+              </Button>
+            </Link>
             
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-100 active:bg-gray-100 dark:hover:bg-gray-800 dark:active:bg-gray-800 rounded-md px-6 transition-all"
-            >
-              <span className="flex items-center gap-2">
-                View Portfolio
-              </span>
-            </Button>
+            <Link href={`/${language}/portfolio`}>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-100 active:bg-gray-100 dark:hover:bg-gray-800 dark:active:bg-gray-800 rounded-md px-6 transition-all"
+              >
+                <span className="flex items-center gap-2">
+                 {t("portfolio.title")}
+                </span>
+              </Button>
+            </Link>
           </motion.div>
           
           {/* Tech stack logos */}

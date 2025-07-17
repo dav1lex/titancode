@@ -48,7 +48,7 @@ const projects = [
 ];
 
 export default function PortfolioSection() {
-  const { t } = useLanguage();
+  const { t,language } = useLanguage();
 
   return (
     <section className="relative w-full py-24 bg-white dark:bg-black transition-all duration-300 z-10">
@@ -107,7 +107,7 @@ export default function PortfolioSection() {
                       </CardTitle>
                     </CardContent>
                     <CardFooter>
-                      <Link href={project.link} className="w-full">
+                      <Link href={`/${language}${project.link}`} className="w-full">
                         <Button variant="outline" className="w-full">
                           {t("portfolio.viewProject")}
                         </Button>
@@ -123,7 +123,7 @@ export default function PortfolioSection() {
         </Carousel>
 
         <div className="mt-16 text-center">
-          <Link href="/portfolio">
+          <Link href={`/${language}/portfolio`}>
             <Button 
               size="lg" 
               variant="outline"

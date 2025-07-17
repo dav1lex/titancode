@@ -11,11 +11,6 @@
   "footer": {
     "rights": "All rights reserved"
   },
-  "home": {
-    "welcome": "Welcome to TITANCODE",
-    "subtitle": "Custom websites that work as hard as you do",
-    "getStarted": "Start Your Project"
-  },
   "services": {
     "title": "What We Build",
     "subtitle": "Every line of code written for you",
@@ -57,7 +52,7 @@
     }
   },
   "hero": {
-    "title": "Your website should work as hard as you do",
+    "title": "Designed to dominate. \n Built to endure.",
     "subtitle": "We build custom websites and web applications that actually get results. No templates, no shortcuts, just code that works.",
     "cta": "Start Your Project"
   },
@@ -130,7 +125,6 @@
     "techStack": "Technology",
     "idealFor": "Best For",
     "timeline": "Timeline",
-    
     "tiers": {
       "starter": {
         "name": "Starter",
@@ -218,9 +212,12 @@
     "title": "Get in Touch",
     "subtitle": "Have a question or a project in mind? We'd love to hear from you.",
     "form": {
+      "title": "Send us a message",
+      "description": "We'll get back to you as soon as possible.",
       "name": "Name",
       "email": "Email",
       "message": "Message",
+      "messagePlaceholder": "Your message...",
       "submit": "Send Message",
       "sending": "Sending...",
       "successMessage": "Your message has been sent successfully!",

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 export default function Portfolio() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const projects = [
     {
@@ -30,7 +30,7 @@ export default function Portfolio() {
       </div>
       <div className="border-t container mx-auto px-4">
         {projects.map((project) => (
-          <Link href={`/portfolio/${project.slug}`} key={project.slug}>
+          <Link href={`/${language}/portfolio/${project.slug}`} key={project.slug}>
             <div className="border-b p-6 md:p-8 transition-colors hover:bg-gray-50/50 dark:hover:bg-gray-900/50 flex flex-col md:flex-row items-center gap-6 md:gap-8">
               <div className="relative w-full md:w-48 h-48 md:h-32 flex-shrink-0">
                 <Image
@@ -53,7 +53,7 @@ export default function Portfolio() {
             </div>
           </Link>
         ))}
-        <Link href="/contact">
+        <Link href={`/${language}/contact`}>
           <div className="border-b p-6 md:p-8 transition-colors hover:bg-gray-50/50 dark:hover:bg-gray-900/50 flex items-center justify-between">
             <div>
               <h2 className="text-xl font-semibold">

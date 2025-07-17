@@ -22,7 +22,7 @@ import WebpageAnimation from "@/components/ui/webpage-animation";
 import Strong from "@/components/ui/strong";
 
 export default function AboutPage() {
-  const { t } = useLanguage();
+  const { t ,language } = useLanguage();
 
   const whyUsFeatures = [
     {
@@ -212,7 +212,7 @@ export default function AboutPage() {
           </p>
           <div className="mt-8">
             <Button asChild size="lg">
-              <Link href="/contact">
+              <Link href={`/${language}/contact`}>
                 {t("aboutPage.cta.button")}
               </Link>
             </Button>

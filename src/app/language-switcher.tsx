@@ -27,7 +27,7 @@ export default function LanguageSwitcher() {
   return (
     <Link href={redirectedPathName(getNextLocale())}>
       <Button variant="outline" size="sm">
-        {language.toUpperCase()}
+        {getNextLocale().toUpperCase()}
       </Button>
     </Link>
   );

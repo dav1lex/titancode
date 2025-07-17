@@ -14,7 +14,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function CalculateEstimateSection() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <section className="relative w-full py-24 md:py-32 bg-gray-50 dark:bg-zinc-900 transition-all duration-300">
@@ -61,7 +61,7 @@ export default function CalculateEstimateSection() {
                 </p>
               </CardContent>
               <CardFooter>
-                <Link href="/calculate-estimate" passHref className="w-full">
+                <Link href={`/${language}/calculate-estimate`} passHref className="w-full">
                   <Button size="lg" variant={"default"}  className="hover:bg-gray-700 dark:hover:bg-gray-200 transition-all duration-300 group">
                     {t("calculateEstimate.testButton")} 
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

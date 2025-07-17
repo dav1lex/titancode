@@ -57,7 +57,7 @@
     }
   },
   "hero": {
-    "title": "Twoja strona internetowa powinna pracować tak ciężko jak Ty",
+    "title": "Unikalne jak Twój biznes. Trwałe jak skała",
     "subtitle": "Tworzymy strony i aplikacje internetowe, które rzeczywiście przynoszą rezultaty. Bez gotowych szablonów, bez skrótów - tylko kod, który działa.",
     "cta": "Rozpocznij projekt"
   },
@@ -217,9 +217,12 @@
     "title": "Skontaktuj się",
     "subtitle": "Masz pytanie lub pomysł na projekt? Chętnie o tym porozmawiamy.",
     "form": {
+      "title": "Napisz do nas",
+      "description": "Odpowiemy tak szybko, jak to możliwe.",
       "name": "Imię",
       "email": "Email",
       "message": "Wiadomość",
+      "messagePlaceholder": "Twoja wiadomość...",
       "submit": "Wyślij",
       "sending": "Wysyłanie...",
       "successMessage": "Wiadomość wysłana!",
