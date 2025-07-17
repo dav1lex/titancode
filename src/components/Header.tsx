@@ -8,6 +8,13 @@ import ThemeToggle from "@/app/theme-toggle";
 import LanguageSwitcher from "@/app/language-switcher";
 import { useLanguage } from "@/app/language-context";
 import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import "@fontsource/space-grotesk";
 
 export default function Header() {
@@ -75,12 +82,42 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {["home", "services", "portfolio", "about", "contact"].map((item) => {
+            {["home", "offer", "portfolio", "about", "contact"].map((item) => {
+              if (item === "offer") {
+                const servicesPath = `/${language}/services`;
+                const estimatePath = `/${language}/calculate-estimate`;
+                const isActive = pathname.startsWith(servicesPath) || pathname.startsWith(estimatePath);
+                return (
+                  <DropdownMenu key={item}>
+                    <DropdownMenuTrigger asChild>
+                      <button
+                        className={`relative font-['Space_Grotesk'] transition-colors group flex items-center gap-1 outline-none ${
+                          isActive
+                            ? "text-black dark:text-white"
+                            : "text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white"
+                        }`}
+                      >
+                        <span className="relative z-10">{t(`nav.offer`)}</span>
+                        <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                      </button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                      <DropdownMenuItem asChild>
+                        <Link href={servicesPath}>{t('nav.services')}</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <Link href={estimatePath}>{t('nav.calculate_estimate')}</Link>
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                );
+              }
+
               const href = item === "home" ? `/${language}` : `/${language}/${item}`;
               const isActive = item === 'home' ? pathname === href : pathname.startsWith(href);
               return (
-              <Link 
-                href={href} 
+              <Link
+                href={href}
                 key={item}
                 className={`relative font-['Space_Grotesk'] transition-colors group ${
                   isActive
@@ -91,7 +128,7 @@ export default function Header() {
                 <span className="relative z-10">
                   {t(`nav.${item}`)}
                 </span>
-                <motion.span 
+                <motion.span
                   className="absolute bottom-0 left-0 h-0.5 bg-blue-500 dark:bg-cyan-400"
                   animate={{ width: isActive ? "100%" : "0%" }}
                   whileHover={{ width: "100%" }}
@@ -182,6 +219,7 @@ export default function Header() {
                 {[
                   { name: t("nav.home"), path: `/${language}` },
                   { name: t("nav.services"), path: `/${language}/services` },
+                  { name: t("nav.calculate_estimate"), path: `/${language}/calculate-estimate` },
                   { name: t("nav.portfolio"), path: `/${language}/portfolio` },
                   { name: t("nav.about"), path: `/${language}/about` },
                   { name: t("nav.contact"), path: `/${language}/contact` },

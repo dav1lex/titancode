@@ -2,6 +2,8 @@
   "nav": {
     "home": "Home",
     "services": "Services",
+    "offer": "Offer",
+    "calculate_estimate": "Pricing",
     "portfolio": "Portfolio",
     "about": "About",
     "contact": "Contact"
@@ -11,192 +13,188 @@
   },
   "home": {
     "welcome": "Welcome to TITANCODE",
-    "subtitle": "Your next-generation development platform",
-    "getStarted": "Get Started"
+    "subtitle": "Custom websites that work as hard as you do",
+    "getStarted": "Start Your Project"
   },
   "services": {
-    "title": "Our Services",
-    "subtitle": "Premium solutions tailored to your needs",
-    "viewDetails": "View Details",
-    "startingFrom": "Starting from",
+    "title": "What We Build",
+    "subtitle": "Every line of code written for you",
+    "viewDetails": "See Details",
+    "startingFrom": "From",
     "customSolutions": {
-      "title": "Beyond Templates: True Custom Engineering",
-      "description": "We don't use WordPress or off-the-shelf templates. Every project is a blank canvas, created from the ground up with clean, modern code to deliver the best experience that is fast, secure, and perfectly aligned to you."
+      "title": "Built From Scratch",
+      "description": "No WordPress. No templates. Every project starts with a blank file and ends with code that does exactly what you need."
     },
     "webDev": {
-      "title": "Web Development",
-      "description": "Custom websites and web applications built with cutting-edge technologies for optimal performance and user experience.",
-      "longDescription": "We specialize in creating bespoke web solutions, from sleek landing pages to complex enterprise-level applications. Our team leverages the latest frameworks and best practices to ensure your site is fast, scalable, and secure. We work closely with you to understand your goals and deliver a product that exceeds expectations."
+      "title": "Websites & Web Apps",
+      "description": "Fast, secure sites that work on every device and every browser.",
+      "longDescription": "From one-page sites to complex business tools. We write every line of code by hand, test it thoroughly, and make sure it works perfectly for your users."
     },
     "automation": {
-      "title": "Automation & Web Scraping",
-      "description": "Scripts for repetitive tasks, web scraping, data collection, and custom solutions for specific business problems.",
-      "longDescription": "We create custom scripts to automate your workflows, scrape data from the web, and provide solutions for your business needs, helping you save time and resources."
+      "title": "Automation",
+      "description": "Stop doing the same task twice. Let computers handle the boring work.",
+      "longDescription": "We build scripts that save you hours each week. Data collection, file processing, report generation - if it's repetitive, we can automate it."
     },
     "seo": {
-      "title": "SEO",
-      "description": "Improve your search engine rankings and drive organic traffic to your website with our expert SEO services.",
-      "longDescription": "Our SEO services include keyword research, on-page and off-page optimization, technical SEO, and content strategy to help you rank higher in search results and attract more customers."
+      "title": "Search Engine Optimization",
+      "description": "Get found when people search for what you do.",
+      "longDescription": "We build SEO into every project from day one. Clean code, fast loading, proper structure - everything Google wants to see."
     },
     "ecommerce": {
-      "title": "E-Commerce Solutions",
-      "description": "Scalable online stores with secure payment processing, inventory management, and optimized conversion rates.",
-      "longDescription": "We build robust e-commerce platforms that drive sales and provide a smooth shopping experience for your customers. Our solutions include everything you need to run a successful online store, from secure payment gateway integration to advanced inventory management and analytics. We focus on optimizing the user flow to maximize conversion rates."
+      "title": "Online Stores",
+      "description": "Sell more with a store that actually works for your customers.",
+      "longDescription": "Secure payments, simple checkout, and inventory that updates automatically. Everything you need to sell online, nothing you don't."
     },
     "consulting": {
-      "title": "Technical Consulting",
-      "description": "Expert guidance on technology stack selection, architecture planning, and digital transformation strategies.",
-      "longDescription": "Navigating the complex world of technology can be challenging. Our experienced consultants provide strategic advice to help you make informed decisions. We can assist with choosing the right technology stack, designing a scalable and resilient architecture, and developing a roadmap for your digital transformation journey."
+      "title": "Technology Advice",
+      "description": "Not sure what you need? We'll help you figure it out.",
+      "longDescription": "Skip the tech jargon. We'll help you choose tools that solve your actual problems and won't break when your business grows."
     },
     "maintenance": {
-      "title": "Maintenance & Support",
-      "description": "Ongoing technical support, performance optimization, and regular updates to keep your digital products running smoothly.",
-      "longDescription": "Our commitment to you doesn't end at launch. We offer comprehensive maintenance and support packages to ensure your website or application remains secure, up-to-date, and performing at its best. Our services include regular backups, security monitoring, performance optimization, and on-demand technical assistance."
+      "title": "Ongoing Support",
+      "description": "We stick around. Your site stays fast, secure, and up-to-date.",
+      "longDescription": "Launch is just the beginning. We handle updates, fix issues, and make changes when you need them. No monthly contracts required."
     }
   },
   "hero": {
-    "title": "Don't Blend In. Stand Out.   \n Dominate.",
-    "subtitle": "We create premium web solutions that blend with new technology and elegant design to help your brand stand out in the digital space.",
-    "cta": "Get Started"
+    "title": "Your website should work as hard as you do",
+    "subtitle": "We build custom websites and web applications that actually get results. No templates, no shortcuts, just code that works.",
+    "cta": "Start Your Project"
   },
   "portfolio": {
-    "title": "Our Portfolio",
-    "subtitle": "Showcasing our finest work across various industries and technologies.",
+    "title": "Our Work",
+    "subtitle": "Real projects for real businesses",
     "viewProject": "View Project",
-    "viewAll": "View All Projects",
+    "viewAll": "See All Projects",
     "projects": {
       "detailsTitle": "Project Details",
       "clientLabel": "Client",
       "yearLabel": "Year",
       "durationLabel": "Duration",
-      "techTitle": "Technologies Used",
-      "summaryTitle": "About The Project",
-      "challengeTitle": "The Challenge",
-      "solutionTitle": "The Solution",
-      "screenshotsTitle": "Project Screenshots",
-      "backButton": "Go Back",
+      "techTitle": "Built With",
+      "summaryTitle": "What We Built",
+      "challengeTitle": "The Problem",
+      "solutionTitle": "How We Solved It",
+      "screenshotsTitle": "Screenshots",
+      "backButton": "Back",
       "visitButton": "Visit Site",
       "nanobid": {
         "title": "NanoBid - Auction Platform",
-        "subtitle": "Full Stack Application",
-        "description": "A lightweight and user-friendly online auction platform built from the ground up with vanilla PHP.",
+        "subtitle": "Complete auction system",
+        "description": "A custom auction platform built from scratch in PHP for a local auction house.",
         "client": "Self-initiated",
         "year": "2025",
         "duration": "4 months",
-        "summaryText": "NanoBid is a lightweight, user-friendly online auction platform built from scratch in vanilla PHP. It's designed for auction houses wanting to run their own timed online auctions without expensive third-party services. The application uses a custom Model-View-Controller (MVC) architecture, making the code organized, maintainable, and scalable.",
-        "challengeText": "The primary challenge was to design and build a complete, secure, and reliable auction system from scratch using pure PHP, including a custom MVC framework. The goal was to avoid over-engineering and create a clean, maintainable codebase focused on core auction functionalities.",
-        "solutionText": "A custom MVC architecture was implemented to structure the application logically. PDO with prepared statements is used for all database interactions to prevent SQL injection. A custom router handles all requests, directing them to the appropriate controllers. The frontend was built with Bootstrap 5, ensuring a professional and responsive user experience."
+        "summaryText": "Built a complete auction system from the ground up. Handles timed auctions, bidding, payments, and user management. Runs on a custom PHP framework we built specifically for this project.",
+        "challengeText": "The auction house needed their own system instead of paying expensive third-party fees. They needed something reliable that could handle real money transactions.",
+        "solutionText": "Built a secure auction platform with custom PHP, MySQL database, and Bootstrap frontend. Includes anti-sniping features, automatic bid increments, and secure payment processing."
       },
       "kurs8klasisty": {
-        "title": "Kurs8Klasisty - English Tutor Site",
-        "subtitle": "Web Development for an E-Learning Platform",
-        "description": "A complete web solution for an online course preparing Polish 8th-grade students for their English language exam.",
+        "title": "Kurs8Klasisty - English Course",
+        "subtitle": "E-learning platform",
+        "description": "A complete website and course platform for an English tutor.",
         "client": "Kurs8Klasisty",
         "year": "2025",
         "duration": "4 weeks",
-        "summaryText": "This project is a complete web solution for an online course preparing Polish 8th-grade students for their English exam. The platform includes a public-facing promotional site and an integrated blog, all managed through a secure admin back-end.",
-        "challengeText": "The main challenge was to build a dual-function system: a dynamic CMS for real-time updates and a high-performance static site, ensuring a seamless user experience and strong security.",
-        "solutionText": "We built a hybrid system using PHP and MySQL for the backend, with a modern frontend using Tailwind CSS and Alpine.js. The admin panel features full content management, while a one-click static site generator boosts performance and security."
+        "summaryText": "Built a complete website for an English tutor including course pages, blog, and admin system. Students can access course materials and track their progress.",
+        "challengeText": "Needed a professional website that could handle course content, student management, and look great on mobile devices.",
+        "solutionText": "Created a custom PHP backend with MySQL database and responsive frontend. Includes content management system, student tracking, and mobile-optimized design."
       },
       "dreamProject": {
-        "title": "Your Dream Project",
-        "description": "This spot is reserved for your vision. Let's build something amazing together.",
-        "cta": "Contact Us"
+        "title": "Your Project Here",
+        "description": "This spot is waiting for your idea. Let's build something that actually works for your business.",
+        "cta": "Get Started"
       }
     }
   },
   "calculateEstimate": {
-    "title": "Ready to Start Your Project?",
-    "subtitle": "Use our interactive calculator to get a estimate for your project. It only takes a few minutes.",
-    "cta": "Check Estimate",
-    "testPrompt": "Want to calculate your estimate?",
-    "testDescription": "Take a small test to get an estimated cost for your project.",
-    "testButton": "Check Estimate"
+    "title": "How Much Will It Cost?",
+    "subtitle": "Get a realistic price in 2 minutes. No sales calls, just numbers.",
+    "cta": "Get My Price",
+    "testPrompt": "Want to know the cost?",
+    "testDescription": "Answer a few questions and get an instant estimate.",
+    "testButton": "Calculate"
   },
   "estimatePage": {
-    "mainTitle": "Web Development Estimate",
+    "mainTitle": "Project Pricing",
     "mainSubtitle": "Get an instant quote for your project",
-    "step1Title": "1. Select Website Type",
-    "step2Title": "2. Customize Your Project",
-    "estimateTitle": "Your Estimate",
+    "step1Title": "1. Choose Your Project Type",
+    "step2Title": "2. Add What You Need",
+    "estimateTitle": "Your Quote",
     "basePrice": "Base Price",
-    "totalCost": "Total Project Cost",
-    "upfrontPayment": "Upfront Payment (40%)",
+    "totalCost": "Total Cost",
+    "upfrontPayment": "First Payment (40%)",
     "monthlySupport": "+ {cost} PLN/month for support",
     "includedTitle": "What's Included:",
     "startOver": "Start Over",
-    "techStack": "Tech Stack",
-    "idealFor": "For",
+    "techStack": "Technology",
+    "idealFor": "Best For",
     "timeline": "Timeline",
     
     "tiers": {
       "starter": {
-        "name": "Professional Starter",
-        "description": "A bespoke, professionally engineered web presence for discerning individuals and small businesses.",
-        "idealFor": "Solo professionals, small service businesses, and portfolio sites.",
+        "name": "Starter",
+        "description": "A professional website for individuals and small businesses.",
+        "idealFor": "Freelancers, small businesses, personal brands.",
         "techStack": "HTML, CSS, JavaScript",
         "time": "1-2 weeks",
         "includes": [
-          "Comprehensive UI/UX Design",
-          "Up to 5 custom-designed pages",
-          "Full development & deployment",
-          "Mobile-first responsive design",
-          "Technical SEO setup & optimization",
-          "Contact forms & lead capture",
-          "30-day post-launch warranty"
+          "Custom design",
+          "Up to 5 pages",
+          "Mobile-friendly",
+          "Contact forms",
+          "Basic SEO",
+          "30-day support"
         ]
       },
       "custom": {
-        "name": "Enterprise Custom",
-        "description": "A tailored, high-performance digital solution engineered for established businesses and high-growth startups.",
-        "idealFor": "Established businesses, companies requiring complex integrations, and high-growth startups.",
-        "techStack": "Next.js, TypeScript, or custom stack",
+        "name": "Business",
+        "description": "A custom website with advanced features for growing businesses.",
+        "idealFor": "Established businesses, companies needing integrations.",
+        "techStack": "Next.js, TypeScript, or custom",
         "time": "3-6 weeks",
         "includes": [
           "Everything in Starter",
-          "Up to 15 content pages",
-          "Headless CMS integration",
-          "Advanced analytics & reporting setup",
-          "Custom API & third-party integrations",
-          "Performance & speed optimization",
-          "Priority email & chat support"
+          "Up to 15 pages",
+          "Content management",
+          "Analytics setup",
+          "API integrations",
+          "Priority support"
         ]
       },
       "ecommerce": {
-        "name": "E-Commerce Pro",
-        "description": "A powerful, custom-built e-commerce platform engineered for growth and seamless customer experiences.",
-        "idealFor": "Online retailers, direct-to-consumer brands, and subscription businesses.",
-        "techStack": "Next.js, Shopify Headless, or custom solution",
+        "name": "E-Commerce",
+        "description": "A complete online store with secure payments and inventory.",
+        "idealFor": "Online stores, direct-to-consumer brands.",
+        "techStack": "Next.js, Shopify, or custom",
         "time": "5-10 weeks",
         "includes": [
-          "Everything in Business Elite",
-          "Full e-commerce functionality",
-          "Secure payment gateway integration (Stripe, etc.)",
-          "Product & inventory management",
-          "Customer accounts & order history",
-          "Abandoned cart recovery features"
+          "Everything in Business",
+          "Product management",
+          "Secure payments",
+          "Order tracking",
+          "Customer accounts"
         ]
       },
       "enterprise": {
-        "name": "Enterprise Elite",
-        "description": "A comprehensive, bespoke digital ecosystem for large-scale organizations with complex operational needs.",
-        "idealFor": "Large corporations, multi-national businesses, and organizations with unique workflow requirements.",
-        "techStack": "Custom-architected solution",
+        "name": "Enterprise",
+        "description": "Custom solutions for large organizations with complex needs.",
+        "idealFor": "Large companies, complex requirements.",
+        "techStack": "Custom solution",
         "time": "Project dependent",
         "includes": [
-          "Everything in E-Commerce Premium",
-          "Bespoke application & feature development",
-          "Complex multi-system API architecture",
-          "Advanced security & compliance (GDPR, etc.)",
-          "Dedicated project & account manager",
-          "Service Level Agreement (SLA)"
+          "Everything in E-Commerce",
+          "Custom features",
+          "Complex integrations",
+          "Security compliance",
+          "Dedicated support"
         ]
       }
     },
     "options": {
-      "hasDesign": "I already have a design",
-      "hasDesign_description": "Reduces cost if you provide a complete, development-ready design file (e.g., Figma).",
-      "contentSeoPack": "Content & SEO Pack",
+      "hasDesign": "I have a design ready",
+      "hasDesign_description": "Save money if you provide a complete design file (Figma, Sketch, etc.)",
+      "contentSeoPack": "Content & SEO",
       "contentSeoPack_description": "Professional content writing for up to 5 pages combined with advanced SEO to maximize organic traffic.",
       "advancedFeaturesPack": "Advanced Features Pack",
       "advancedFeaturesPack_description": "Includes a custom admin panel and automated PDF generation/mailing capabilities.",
@@ -231,89 +229,89 @@
   },
   "aboutPage": {
     "hero": {
-      "title": "We Don't Just Build Websites. We Engineer Digital Experiences.",
-      "subtitle": "Your website is more than a digital brochure—it's your most powerful asset. We craft custom web solutions that drive growth and set you apart."
+      "title": "We Build Websites That Actually Work",
+      "subtitle": "Your website should be your hardest working employee. We make sure it is."
     },
     "mission": {
-      "title": "Our Philosophy: Beyond the Template",
-      "text": "The digital world is crowded. Generic templates make businesses blend in. We created TITANCODE to build truly custom digital solutions. We don't use WordPress or other template systems. Every line of code is written by hand, and every project is engineered for performance, security, and scalability. Our mantra is simple: **Don't Blend In. Stand Out. Dominate.**"
+      "title": "Why We Do This",
+      "text": "Most websites are built from templates and look like everyone else's. We started TITANCODE because we believe your business deserves better. We write every line of code by hand, specifically for your needs. No shortcuts, no compromises. Just websites that work exactly how you need them to."
     },
     "process": {
-      "title": "Our Process",
-      "step1": "Discovery & Strategy",
-      "step1_desc": "We start by diving deep into your business and goals to create a clear strategy.",
-      "step2": "UI/UX Design",
-      "step2_desc": "We design an intuitive and engaging user experience that reflects your brand.",
+      "title": "How We Work",
+      "step1": "Discovery",
+      "step1_desc": "We learn about your business and what you actually need.",
+      "step2": "Design",
+      "step2_desc": "We create a design that makes sense for your users.",
       "step3": "Development",
-      "step3_desc": "We bring the design to life with clean, efficient code using modern technologies.",
-      "step4": "Testing & QA",
-      "step4_desc": "We rigorously test the project to ensure it's bug-free and works perfectly on all devices.",
-      "step5": "Deployment & Launch",
-      "step5_desc": "We handle the entire deployment process for a smooth launch.",
-      "step6": "Support & Growth",
-      "step6_desc": "Our support doesn't end at launch. We offer ongoing help to ensure your continued success."
+      "step3_desc": "We build it with clean code that won't break when you grow.",
+      "step4": "Testing",
+      "step4_desc": "We test everything to make sure it works perfectly.",
+      "step5": "Launch",
+      "step5_desc": "We handle the technical stuff so you can focus on your business.",
+      "step6": "Support",
+      "step6_desc": "We're here when you need changes or something breaks."
     },
     "whyUs": {
       "title": "Why Work With Us?",
       "feature1": "Custom Code",
-      "feature1_desc": "No templates. Just 100% custom-coded solutions tailored to your exact needs.",
-      "feature2": "Built for Speed",
-      "feature2_desc": "We build for speed. Fast sites mean a better user experience and improved SEO.",
-      "feature3": "SEO by Default",
-      "feature3_desc": "Technical SEO is built-in from the start, not added on later.",
-      "feature4": "Direct Partnership",
-      "feature4_desc": "You work directly with us. We believe in clear and transparent communication.",
-      "feature5": "Modern Technology",
-      "feature5_desc": "We use modern, scalable technologies like Next.js to ensure your investment lasts.",
-      "feature6": "Dedicated Support",
-      "feature6_desc": "We're your long-term partner, committed to your success long after launch."
+      "feature1_desc": "No templates. Every project is built specifically for you.",
+      "feature2": "Built to Last",
+      "feature2_desc": "Clean code that won't break when your business grows.",
+      "feature3": "Actually Fast",
+      "feature3_desc": "Fast sites that your customers will actually use.",
+      "feature4": "Direct Contact",
+      "feature4_desc": "You talk directly to the people building your site.",
+      "feature5": "Modern Tools",
+      "feature5_desc": "We use proven technologies that won't become obsolete.",
+      "feature6": "Real Support",
+      "feature6_desc": "Need changes? Something broken? We're here to help."
     },
     "cta": {
-      "title": "Have a project in mind?",
-      "subtitle": "Let's turn your vision into a reality.",
+      "title": "Ready to get started?",
+      "subtitle": "Let's build something that actually works for your business.",
       "button": "Get in Touch"
     }
   },
   "faq": {
-    "title": "Frequently Asked Questions",
+    "title": "Questions?",
     "questions": {
       "priceInclude": {
-        "question": "What does the price include?",
-        "answer": "The price includes design, development, testing, hosting, domain, and SSL certificate for the first year. No hidden costs or additional fees."
+        "question": "What's included in the price?",
+        "answer": "Everything you need to get online: design, development, testing, hosting, domain, and SSL certificate for the first year. No hidden fees."
       },
       "beginnerStart": {
-        "question": "I'm a beginner, how do I start?",
-        "answer": "Contact us through the form on this page. We'll explain everything clearly - domains, hosting, costs. We've helped many beginners without technical experience get started online."
+        "question": "I'm new to this. How do I start?",
+        "answer": "Just fill out our contact form. We'll explain everything in plain English - domains, hosting, costs. We've helped many people with no technical experience get online."
       },
       "hostingIncluded": {
-        "question": "Is hosting included in the price?",
-        "answer": "Yes, hosting is included in the price. You don't need to find or purchase it separately."
+        "question": "Is hosting included?",
+        "answer": "Yes. Hosting is included for the first year. After that, it's typically 300-500 PLN per year depending on your needs."
       },
       "renewalFees": {
         "question": "Are there renewal fees?",
-        "answer": "Yes, after the first year of hosting and domain, the renewal cost is typically 300-500 PLN annually depending on the project requirements."
+        "answer": "Yes, after the first year you'll pay for hosting and domain renewal. Usually 300-500 PLN annually."
       },
       "quality": {
-        "question": "Is the website good quality?",
-        "answer": "All our websites are optimized for speed and SEO. They score high in Google Lighthouse tests, which improves their search engine ranking."
+        "question": "Will my website be good quality?",
+        "answer": "Yes. All our sites are optimized for speed and work well on all devices. We test everything thoroughly before launch."
       },
       "ssl": {
-        "question": "Do websites have SSL certificates?",
-        "answer": "Yes, all our websites include an SSL certificate in the price, ensuring a secure connection."
+        "question": "Do I get an SSL certificate?",
+        "answer": "Yes, all websites include SSL certificates for security. Your site will show as secure in browsers."
       },
       "cms": {
-        "question": "Do you use WordPress or other CMS?",
-        "answer": "No, we create our own optimized solutions. While WordPress and other CMS systems (like Joomla or headless CMS) are popular, we prefer building sites from scratch. This makes our websites faster, lighter, and precisely tailored to client needs."
+        "question": "Do you use WordPress?",
+        "answer": "No. We build everything from scratch. This gives you exactly what you need without the bloat and security issues that come with WordPress."
       },
       "customization": {
-        "question": "Can packages be customized?",
-        "answer": "Yes, each package can be customized to your unique needs. Contact us to discuss your requirements and get a personalized quote."
+        "question": "Can I customize the packages?",
+        "answer": "Yes. Every package can be adjusted to fit your specific needs. Contact us to discuss your requirements."
       }
     }
   },
   "contactPage": {
     "title": "Contact Us",
-    "subtitle": "We're here to help. Reach out to us with any questions or to start your new project.",
+    "subtitle": "Questions about your project? We're here to help.",
     "emailLabel": "Email",
     "email": "info@titancode.com",
     "phoneLabel": "Phone",

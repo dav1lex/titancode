@@ -3,6 +3,13 @@ import { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '@/app/language-context';
 import { SERVICE_TIERS, ServiceTierKey } from '@/lib/services';
 import { Info } from 'lucide-react';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 type OptionConfig = {
   label: string;
@@ -176,25 +183,34 @@ export default function CalculateEstimatePage() {
                       if (!tier || !option.appliesTo.includes(tier)) return null;
 
                       return (
-                        <div key={key} className="flex items-center">
-                          <input
-                            type="checkbox"
-                            id={key}
-                            checked={selectedOptions[key]}
-                            onChange={() => handleOptionChange(key)}
-                            className="h-5 w-5 text-cyan-600 focus:ring-cyan-500 border-gray-300 rounded"
-                          />
-                          <label htmlFor={key} className="ml-3 block text-gray-700 dark:text-gray-300 flex-grow">
-                            {t(`estimatePage.options.${key}`)}
-                            {option.type === 'discount' && ` ${t('estimatePage.optionDetails.discount').replace('{value}', (option.value * 100).toString())}`}
-                            {option.type === 'surcharge' && typeof option.value === 'number' && ` ${t('estimatePage.optionDetails.surcharge').replace('{value}', option.value.toString())}`}
-                          </label>
-                          <div className="relative group">
-                            <Info className="h-5 w-5 text-gray-400 dark:text-gray-500 cursor-help" />
-                            <div className="absolute bottom-full mb-2 w-64 bg-gray-800 text-white text-sm rounded-lg p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10 right-0 transform translate-x-1/2">
-                              {t(`estimatePage.options.${key}_description`)}
-                            </div>
+                        <div key={key} className="flex items-center justify-between">
+                          <div className="flex items-center">
+                            <input
+                              type="checkbox"
+                              id={key}
+                              checked={selectedOptions[key]}
+                              onChange={() => handleOptionChange(key)}
+                              className="h-5 w-5 text-cyan-600 focus:ring-cyan-500 border-gray-300 rounded"
+                            />
+                            <label htmlFor={key} className="ml-3 block text-gray-700 dark:text-gray-300">
+                              {t(`estimatePage.options.${key}`)}
+                              {option.type === 'discount' && ` ${t('estimatePage.optionDetails.discount').replace('{value}', (option.value * 100).toString())}`}
+                              {option.type === 'surcharge' && typeof option.value === 'number' && ` ${t('estimatePage.optionDetails.surcharge').replace('{value}', option.value.toString())}`}
+                            </label>
                           </div>
+                          <Dialog>
+                            <DialogTrigger asChild>
+                              <Info className="h-5 w-5 text-gray-400 dark:text-gray-500 cursor-help" onClick={(e) => e.stopPropagation()} />
+                            </DialogTrigger>
+                            <DialogContent className="sm:max-w-[425px]">
+                              <DialogHeader>
+                                <DialogTitle>{t(`estimatePage.options.${key}`)}</DialogTitle>
+                              </DialogHeader>
+                              <div className="py-4">
+                                {t(`estimatePage.options.${key}_description`)}
+                              </div>
+                            </DialogContent>
+                          </Dialog>
                         </div>
                       );
                     })}
