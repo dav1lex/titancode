@@ -235,7 +235,7 @@
       "subtitle": "Twoja strona internetowa powinna być Twoim najlepszym pracownikiem. Dbamy o to, żeby tak właśnie było."
     },
     "mission": {
-      "title": "Dlaczego to robimy",
+      "title": "Dlaczego nie WordPress?",
       "text": "Większość stron internetowych powstaje z gotowych szablonów i wygląda identycznie jak tysiące innych. Założyliśmy TITANCODE, ponieważ wierzymy, że Twój biznes zasługuje na coś wyjątkowego. Każdą linię kodu piszemy ręcznie, specjalnie dla Ciebie. Bez skrótów, bez kompromisów. Po prostu witryny, które działają dokładnie tak, jak tego potrzebujesz."
     },
     "process": {
@@ -272,6 +272,40 @@
       "title": "Gotowy na start?",
       "subtitle": "Stwórzmy razem coś, co rzeczywiście pomoże Twojemu biznesowi.",
       "button": "Skontaktuj się z nami"
+    },
+    "comparison": {
+      "title": "Właściwe narzędzie do właściwej pracy",
+      "subtitle": "WordPress to świetny punkt wyjścia, ale rozwijające się firmy potrzebują czegoś więcej.",
+      "custom": {
+        "title": "Rozwiązanie dedykowane",
+        "feature1_title": "Pancerne bezpieczeństwo",
+        "feature1_desc": "Budujemy Twoją stronę od podstaw, eliminując luki w zabezpieczeniach wtyczek firm trzecich, które są częstym celem ataków na WordPressie.",
+        "feature2_title": "Zoptymalizowana pod kątem szybkości",
+        "feature2_desc": "Bez rozdętych motywów i niepotrzebnego kodu. Po prostu szybka, czysta i wydajna witryna, którą pokochają Twoi użytkownicy i Google.",
+        "feature3_title": "Nieograniczone możliwości",
+        "feature3_desc": "Twoja strona internetowa to unikalny zasób, zbudowany według Twoich dokładnych specyfikacji, bez ograniczeń szablonów czy gotowych wtyczek."
+      },
+      "wordpress": {
+        "title": "WordPress",
+        "feature1_title": "Potencjalne kompromisy w bezpieczeństwie",
+        "feature1_desc": "Jego popularność czyni go celem. Bezpieczeństwo często zależy od wtyczek firm trzecich, które mogą wprowadzać luki, jeśli nie są starannie zarządzane.",
+        "feature2_title": "Kwestie wydajności",
+        "feature2_desc": "Łatwe w użyciu kreatory stron i liczne wtyczki mogą powodować 'rozdęcie kodu', prowadząc do wolniejszego ładowania i mniej optymalnych wrażeń użytkownika.",
+        "feature3_title": "Ograniczenia projektowe i funkcjonalne",
+        "feature3_desc": "Chociaż jest elastyczny, osiągnięcie naprawdę unikalnego projektu lub złożonej funkcjonalności często wymaga walki z szablonem, co zwiększa złożoność i koszty."
+      },
+      "conclusion_title": "Inwestycja w Twój biznes",
+      "conclusion_text": "WordPress to doskonałe narzędzie do prowadzenia blogów i prostych stron. Ale kiedy Twoja witryna jest kluczowym zasobem biznesowym, dedykowane rozwiązanie zapewnia bezpieczeństwo, wydajność i skalowalność, których potrzebujesz, aby się rozwijać. To różnica między wynajmowaniem lokalu a posiadaniem własnego budynku."
+    },
+    "techStack": {
+      "title": "Nasz Stos Technologiczny",
+      "subtitle": "Tworzymy z użyciem nowoczesnych narzędzi klasy korporacyjnej, aby budować strony gotowe na przyszłość.",
+      "nextjs_desc": "Wspierany przez Vercel, Next.js to wiodący framework do budowy szybkich, skalowalnych i przyjaznych dla SEO aplikacji React.",
+      "react_desc": "Stworzony i utrzymywany przez Meta (Facebook), React to najpopularniejsza na świecie biblioteka do budowy dynamicznych interfejsów użytkownika.",
+      "typescript_desc": "Opracowany przez Microsoft, TypeScript dodaje potężną warstwę bezpieczeństwa i niezawodności do JavaScript, zapobiegając częstym błędom.",
+      "javascript_desc": "Fundamentalny język internetu, używamy jego nowoczesnych funkcji do tworzenia interaktywnych i angażujących doświadczeń.",
+      "php_desc": "Napędzając ogromną część sieci, PHP pozostaje solidnym i niezawodnym wyborem dla logiki serwerowej i integracji z bazami danych.",
+      "tailwind_desc": "Framework CSS typu utility-first, który pozwala na szybkie tworzenie niestandardowych projektów bez balastu tradycyjnych bibliotek CSS."
     }
   },
   "faq": {

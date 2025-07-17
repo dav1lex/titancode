@@ -230,7 +230,7 @@
       "subtitle": "Your website should be your hardest working employee. We make sure it is."
     },
     "mission": {
-      "title": "Why We Do This",
+      "title": "Why not WordPress?",
       "text": "Most websites are built from templates and look like everyone else's. We started TITANCODE because we believe your business deserves better. We write every line of code by hand, specifically for your needs. No shortcuts, no compromises. Just websites that work exactly how you need them to."
     },
     "process": {
@@ -267,6 +267,40 @@
       "title": "Ready to get started?",
       "subtitle": "Let's build something that actually works for your business.",
       "button": "Get in Touch"
+    },
+    "comparison": {
+      "title": "The Right Tool for the Job",
+      "subtitle": "WordPress is a great starting point, but growing businesses need more.",
+      "custom": {
+        "title": "Custom Solution",
+        "feature1_title": "Rock-Solid Security",
+        "feature1_desc": "We build your site from the ground up, eliminating the third-party plugin vulnerabilities that are a common target on WordPress.",
+        "feature2_title": "Optimized for Speed",
+        "feature2_desc": "No bloated themes or unnecessary code. Just a fast, clean, and efficient website that your users and Google will love.",
+        "feature3_title": "Limitless Possibilities",
+        "feature3_desc": "Your website is a unique asset, built to your exact specifications without the constraints of templates or pre-built plugins."
+      },
+      "wordpress": {
+        "title": "WordPress",
+        "feature1_title": "Potential Security Trade-offs",
+        "feature1_desc": "Its popularity makes it a target. Security often depends on third-party plugins, which can introduce vulnerabilities if not managed carefully.",
+        "feature2_title": "Performance Considerations",
+        "feature2_desc": "Easy-to-use page builders and numerous plugins can add 'code bloat,' leading to slower load times and a less optimal user experience.",
+        "feature3_title": "Design & Feature Constraints",
+        "feature3_desc": "While flexible, achieving a truly unique design or complex feature set often requires fighting against the template, adding complexity and cost."
+      },
+      "conclusion_title": "An Investment in Your Asset",
+      "conclusion_text": "WordPress is an excellent tool for blogs and simple sites. But when your website is a critical business asset, a custom solution provides the security, performance, and scalability you need to grow. It's the difference between renting a space and owning the building."
+    },
+    "techStack": {
+      "title": "Our Technology Stack",
+      "subtitle": "We build with modern, enterprise-grade tools to create future-proof websites.",
+      "nextjs_desc": "Backed by Vercel, Next.js is the leading framework for building fast, scalable, and SEO-friendly React applications.",
+      "react_desc": "Created and maintained by Meta (Facebook), React is the world's most popular library for building dynamic user interfaces.",
+      "typescript_desc": "Developed by Microsoft, TypeScript adds a powerful layer of security and reliability to JavaScript, preventing common bugs.",
+      "javascript_desc": "The foundational language of the web, we use its modern features to build interactive and engaging experiences.",
+      "php_desc": "Powering a huge portion of the web, PHP remains a robust and reliable choice for server-side logic and database integration.",
+      "tailwind_desc": "A utility-first CSS framework that allows for rapid development of custom designs without the bloat of traditional CSS libraries."
     }
   },
   "faq": {

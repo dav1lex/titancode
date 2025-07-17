@@ -20,9 +20,11 @@ import {
 import Link from "next/link";
 import WebpageAnimation from "@/components/ui/webpage-animation";
 import Strong from "@/components/ui/strong";
-
-export default function AboutPage() {
-  const { t ,language } = useLanguage();
+import WordpressVsCustomSection from "@/components/sections/WordpressVsCustomSection";
+import TechStackSection from "@/components/sections/TechStackSection";
+ 
+ export default function AboutPage() {
+   const { t ,language } = useLanguage();
 
   const whyUsFeatures = [
     {
@@ -200,6 +202,10 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <WordpressVsCustomSection />
+
+      <TechStackSection />
 
       {/* CTA Section */}
       <section className="bg-gray-100 dark:bg-gray-900 py-20 sm:py-24">
