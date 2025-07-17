@@ -32,14 +32,14 @@ export async function generateMetadata({
   const locale = getLocaleFromLang(lang);
 
   return {
-    metadataBase: new URL('https://example.com'),
+    metadataBase: new URL('https://titancode.pl'),
     title: {
       default: 'TITANCODE - Next-Generation Development Platform',
       template: `%s | TITANCODE`,
     },
     description: 'We craft premium web solutions that blend cutting-edge technology with elegant design to help your brand stand out in the digital landscape.',
     keywords: ['Web Development', 'Mobile Development', 'UI/UX Design', 'Next.js', 'React', 'TITANCODE'],
-    authors: [{ name: 'TITANCODE', url: 'https://example.com' }],
+    authors: [{ name: 'TITANCODE', url: 'https://titancode.pl' }],
     creator: 'TITANCODE',
     publisher: 'TITANCODE',
     robots: {
@@ -56,7 +56,7 @@ export async function generateMetadata({
     openGraph: {
       title: 'TITANCODE - Elevate Your Digital Experience',
       description: 'Premium web solutions that blend cutting-edge technology with elegant design.',
-      url: 'https://example.com',
+      url: 'https://titancode.pl',
       siteName: 'TITANCODE',
       images: [
         {
@@ -99,6 +99,38 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "url": "https://titancode.pl/",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://titancode.pl/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "TITANCODE",
+              "url": "https://titancode.pl/",
+              "logo": "https://titancode.pl/logo.png",
+              "sameAs": [
+                // Add social media links here, e.g.,
+                // "https://www.facebook.com/titancode",
+                // "https://www.linkedin.com/company/titancode"
+              ]
+            })
+          }}
+        />
         <ThemeProviders theme={theme}>
           <LanguageProvider>
             <Header />

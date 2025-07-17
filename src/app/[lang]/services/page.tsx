@@ -8,7 +8,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 
 export default function ServicesPage() {
-  const { t } = useLanguage();
+  const { t, tArray } = useLanguage();
   const servicesOrder: ServiceTierKey[] = ["starter", "custom", "ecommerce", "enterprise"];
 
   return (
@@ -51,10 +51,10 @@ export default function ServicesPage() {
                     <h2 className="text-3xl font-bold">{t(`estimatePage.tiers.${key}.name`)}</h2>
                     <p>{t(`estimatePage.tiers.${key}.description`)}</p>
                     <ul className="mt-6 space-y-3">
-                      {service.includes.map((item, i) => (
+                      {tArray(`estimatePage.tiers.${key}.includes`).map((item, i) => (
                         <li key={i} className="flex items-start">
                           <CheckCircle2 className="h-6 w-6 text-cyan-500 mr-3 mt-1 flex-shrink-0" />
-                          <span>{t(item)}</span>
+                          <span>{item}</span>
                         </li>
                       ))}
                     </ul>

@@ -45,8 +45,35 @@ export default function PortfolioProjectLayout({
   return (
     <div className="bg-white dark:bg-black text-gray-900 dark:text-gray-100">
       <div className="container mx-auto px-4 py-12">
-        
-        <motion.header 
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://titancode.pl"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Portfolio",
+                  "item": "https://titancode.pl/portfolio"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": title
+                }
+              ]
+            })
+          }}
+        />
+        <motion.header
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}

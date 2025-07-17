@@ -60,7 +60,7 @@ const SUPPORT_COST = {
 };
 
 export default function CalculateEstimatePage() {
-  const { t } = useLanguage();
+  const { t, tArray } = useLanguage();
   const [tier, setTier] = useState<ServiceTierKey | ''>('');
   const detailsRef = useRef<HTMLDivElement>(null);
 
@@ -256,12 +256,12 @@ export default function CalculateEstimatePage() {
                   <div className="md:col-span-2 pt-8">
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{t('estimatePage.includedTitle')}</h3>
                     <ul className="text-gray-600 dark:text-gray-300 space-y-2 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
-                      {SERVICE_TIERS[tier].includes.map((item, i) => (
+                      {tArray(`estimatePage.tiers.${tier}.includes`).map((item, i) => (
                         <li key={i} className="flex items-start">
                           <svg className="h-5 w-5 text-cyan-500 mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
-                          <span>{t(item)}</span>
+                          <span>{item}</span>
                         </li>
                       ))}
                     </ul>

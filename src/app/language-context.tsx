@@ -13,6 +13,7 @@ type NestedTranslations = {
 type LanguageContextType = {
   language: Locale;
   t: (key: string) => string;
+  tArray: (key: string) => string[];
 };
 
 const translations: { [key: string]: NestedTranslations } = {
@@ -45,8 +46,27 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     return typeof result === "string" ? result : key;
   };
 
+  const tArray = (key: string): string[] => {
+    const keys = key.split(".");
+    let result: NestedTranslations | string | string[] =
+      translations[language];
+    for (const k of keys) {
+      if (
+        result &&
+        typeof result === "object" &&
+        !Array.isArray(result) &&
+        k in result
+      ) {
+        result = (result as NestedTranslations)[k];
+      } else {
+        return [key];
+      }
+    }
+    return Array.isArray(result) ? result.map(String) : [key];
+  };
+
   return (
-    <LanguageContext.Provider value={{ language, t }}>
+    <LanguageContext.Provider value={{ language, t, tArray }}>
       {children}
     </LanguageContext.Provider>
   );
