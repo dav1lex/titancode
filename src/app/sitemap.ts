@@ -1,10 +1,11 @@
 import { MetadataRoute } from 'next';
 import { i18n } from '../../i18n-config';
+import { getSortedPostsData } from '../lib/blog';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = 'https://titancode.pl';
 
-  const routes = [
+  const staticRoutes = [
     '',
     '/about',
     '/services',
@@ -18,5 +19,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  return routes;
+  const blogIndex = {
+    url: `${siteUrl}/blog`,
+    lastModified: new Date(),
+  };
+
+  const blogPosts = getSortedPostsData().map((post) => ({
+    url: `${siteUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+  }));
+
+  return [...staticRoutes, blogIndex, ...blogPosts];
 }

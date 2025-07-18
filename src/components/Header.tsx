@@ -82,7 +82,7 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {["home", "offer", "portfolio", "about", "contact"].map((item) => {
+            {["home", "offer", "portfolio", "blog", "about", "contact"].map((item) => {
               if (item === "offer") {
                 const servicesPath = `/${language}/services`;
                 const estimatePath = `/${language}/calculate-estimate`;
@@ -113,7 +113,7 @@ export default function Header() {
                 );
               }
 
-              const href = item === "home" ? `/${language}` : `/${language}/${item}`;
+              const href = item === "home" ? `/${language}` : item === "blog" ? "/blog" : `/${language}/${item}`;
               const isActive = item === 'home' ? pathname === href : pathname.startsWith(href);
               return (
               <Link
@@ -221,6 +221,7 @@ export default function Header() {
                   { name: t("nav.services"), path: `/${language}/services` },
                   { name: t("nav.calculate_estimate"), path: `/${language}/calculate-estimate` },
                   { name: t("nav.portfolio"), path: `/${language}/portfolio` },
+                  { name: t("nav.blog"), path: "/blog" },
                   { name: t("nav.about"), path: `/${language}/about` },
                   { name: t("nav.contact"), path: `/${language}/contact` },
                 ].map((item, i) => {

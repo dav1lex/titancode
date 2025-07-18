@@ -17,7 +17,7 @@ const LOCALE_MAP: LocaleMapping = {
 /**
  * Default locale to use when language is not supported
  */
-const DEFAULT_LOCALE = 'en_US';
+const DEFAULT_LOCALE = 'pl_PL';
 
 /**
  * Maps a language code to its corresponding locale identifier

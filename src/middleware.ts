@@ -25,6 +25,11 @@ export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
   // // `/_next/` and `/api/` are ignored by the watcher, but we need to ignore files in `public`
+  // Check if the pathname is for the blog
+  if (pathname.startsWith('/blog')) {
+    return NextResponse.next();
+  }
+
   if (
     [
       '/manifest.json',
