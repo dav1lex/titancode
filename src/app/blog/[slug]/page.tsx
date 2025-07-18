@@ -8,15 +8,15 @@ import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 import Link from 'next/link';
 
 interface PostPageProps {
-  params: Promise<{
+  params: {
     slug: string;
-  }>;
+  };
 }
 
 export async function generateMetadata({
   params,
 }: PostPageProps): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug } = params;
   try {
     const post = await getPostData(slug);
     return {
@@ -57,7 +57,7 @@ export async function generateStaticParams() {
 }
 
 export default async function PostPage({ params }: PostPageProps) {
-  const { slug } = await params;
+  const { slug } = params;
   let post;
   try {
     post = await getPostData(slug);
