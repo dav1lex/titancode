@@ -7,13 +7,16 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 import Link from 'next/link';
 
-type Props = {
-  params: { slug: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-};
+interface PostPageProps {
+  params: Promise<{
+    slug: string;
+  }>;
+}
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = params;
+export async function generateMetadata({
+  params,
+}: PostPageProps): Promise<Metadata> {
+  const { slug } = await params;
   try {
     const post = await getPostData(slug);
     return {
@@ -50,14 +53,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const slugs = getAllPostSlugs();
-  return slugs.map((slug) => ({
-    slug: slug.slug,
-  }));
+  return getAllPostSlugs();
 }
 
-export default async function PostPage({ params }: Props) {
-  const { slug } = params;
+export default async function PostPage({ params }: PostPageProps) {
+  const { slug } = await params;
   let post;
   try {
     post = await getPostData(slug);
