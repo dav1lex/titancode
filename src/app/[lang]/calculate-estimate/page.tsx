@@ -1,15 +1,30 @@
 "use client";
 import { useState, useRef, useEffect } from 'react';
+import Link from 'next/link';
 import { useLanguage } from '@/app/language-context';
 import { SERVICE_TIERS, ServiceTierKey } from '@/lib/services';
-import { Info } from 'lucide-react';
 import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+  Info,
+  Calculator,
+  Sparkles,
+  CheckCircle2,
+  ArrowRight,
+  Zap,
+  TrendingUp,
+  Shield,
+  Clock,
+  Users,
+  Palette,
+  Code,
+  Globe,
+  Headphones
+} from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ClientNumber } from '@/components/ui/client-number';
+import { Switch } from "@/components/ui/switch";
+import { Separator } from "@/components/ui/separator";
 
 type OptionConfig = {
   label: string;
@@ -45,7 +60,8 @@ const ADDITIONAL_OPTIONS: Record<string, OptionConfig> = {
     label: 'Logo design',
     description: 'A unique, professional logo to represent your brand identity.',
     type: 'surcharge',
-    value: 1500,
+    value: 100, // Fixed price for logo design
+    // Note: This is a fixed price and does not depend on the service tier
     appliesTo: ['starter', 'custom', 'ecommerce', 'enterprise']
   },
   constantSupport: {
@@ -60,10 +76,10 @@ const ADDITIONAL_OPTIONS: Record<string, OptionConfig> = {
 type OptionKey = keyof typeof ADDITIONAL_OPTIONS;
 
 const SUPPORT_COST = {
-  starter: 600,
-  custom: 1500,
-  ecommerce: 2500,
-  enterprise: 4000
+  starter: 100,
+  custom: 200,
+  ecommerce: 300,
+  enterprise: 500
 };
 
 export default function CalculateEstimatePage() {
@@ -76,7 +92,7 @@ export default function CalculateEstimatePage() {
       detailsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }, [tier]);
-  
+
   const [selectedOptions, setSelectedOptions] = useState<Record<OptionKey, boolean>>({
     hasDesign: false,
     contentSeoPack: false,
@@ -107,7 +123,7 @@ export default function CalculateEstimatePage() {
 
     Object.entries(selectedOptions).forEach(([key, isSelected]) => {
       if (!isSelected) return;
-      
+
       const optionKey = key as OptionKey;
       const option = ADDITIONAL_OPTIONS[optionKey];
 
@@ -129,102 +145,222 @@ export default function CalculateEstimatePage() {
     return SUPPORT_COST[tier];
   };
 
-  return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
-        <div className="p-8 md:p-12">
-          <div className="text-center mb-10">
-            <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white sm:text-5xl">{t('estimatePage.mainTitle')}</h1>
-            <p className="mt-4 text-xl text-gray-600 dark:text-gray-300">{t('estimatePage.mainSubtitle')}</p>
-          </div>
+  const getServiceIcon = (serviceKey: ServiceTierKey) => {
+    const icons = {
+      starter: Code,
+      custom: Sparkles,
+      ecommerce: TrendingUp,
+      enterprise: Shield
+    };
+    return icons[serviceKey] || Code;
+  };
 
-          <div className="space-y-12">
-            {/* Service Tier Selection */}
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">{t('estimatePage.step1Title')}</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {Object.keys(SERVICE_TIERS).map((key) => {
-                  const serviceKey = key as ServiceTierKey;
-                  const service = SERVICE_TIERS[serviceKey];
-                  return (
-                    <div
-                      key={serviceKey}
-                      className={`p-6 border-2 rounded-xl transition-all ${
-                        tier === serviceKey
-                          ? 'border-cyan-500 bg-cyan-50 dark:bg-cyan-900/20'
-                          : 'border-gray-200 dark:border-gray-700 hover:border-cyan-400 dark:hover:border-cyan-600'
+  const getOptionIcon = (optionKey: OptionKey) => {
+    const icons: Record<OptionKey, typeof Info> = {
+      hasDesign: Palette,
+      contentSeoPack: Globe,
+      advancedFeaturesPack: Zap,
+      logoDesign: Sparkles,
+      constantSupport: Headphones
+    };
+    return icons[optionKey] || Info;
+  };
+
+  const [currentStep, setCurrentStep] = useState<'services' | 'customize'>('services');
+
+  return (
+    <div className="bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
+      {/* Hero Section */}
+      <section className="pt-12 pb-6 text-center bg-gray-50 dark:bg-black">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
+            {t('estimatePage.mainTitle')}
+          </h1>
+          <p className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-8">
+            {t('estimatePage.mainSubtitle')}
+          </p>
+          <div className="flex items-center justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+          </div>
+        </div>
+      </section>
+
+      <div className="container mx-auto px-4 py-16 sm:py-24">
+        {/* Step Navigation */}
+        <div className="flex items-center justify-center mb-12">
+          <div className="flex items-center gap-4">
+            <Button
+              variant={currentStep === 'services' ? 'default' : 'outline'}
+              onClick={() => setCurrentStep('services')}
+              className="flex items-center gap-2"
+            >
+              <Sparkles className="h-4 w-4" />
+              {t('estimatePage.step1Button')}
+            </Button>
+            <ArrowRight className="h-4 w-4 text-gray-400" />
+            <Button
+              variant={currentStep === 'customize' ? 'default' : 'outline'}
+              onClick={() => tier && setCurrentStep('customize')}
+              disabled={!tier}
+              className="flex items-center gap-2"
+            >
+              <Zap className="h-4 w-4" />
+              {t('estimatePage.step2Button')}
+            </Button>
+          </div>
+        </div>
+
+        {/* Services Selection */}
+        {currentStep === 'services' && (
+          <div className="space-y-8">
+            <div className="text-center mb-8 ">
+              <h2 className="text-3xl font-bold mb-4">{t('estimatePage.step1Title')}</h2>
+              <p className="text-gray-600 dark:text-gray-400">{t('estimatePage.step1Subtitle')}</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+              {Object.keys(SERVICE_TIERS).map((key) => {
+                const serviceKey = key as ServiceTierKey;
+                const service = SERVICE_TIERS[serviceKey];
+                const IconComponent = getServiceIcon(serviceKey);
+                const isSelected = tier === serviceKey;
+
+                return (
+                  <Card
+                    key={serviceKey}
+                    className={`relative cursor-pointer transition-all duration-300 hover:shadow-lg bg-white dark:bg-zinc-900 ${isSelected ? 'ring-2 ring-black dark:ring-white shadow-lg' : 'hover:shadow-md'
                       }`}
-                    >
-                      <button onClick={() => setTier(serviceKey)} className="w-full text-left space-y-2">
-                        <h3 className="font-bold text-xl text-gray-900 dark:text-white">{t(`estimatePage.tiers.${serviceKey}.name`)}</h3>
-                        <p className="text-gray-600 dark:text-gray-300">{t(`estimatePage.tiers.${serviceKey}.description`)}</p>
-                        <div className="text-sm text-gray-500 dark:text-gray-400 space-y-1 pt-2">
-                          <p><strong>{t('estimatePage.techStack')}:</strong> {t(service.techStack)}</p>
-                          <p><strong>{t('estimatePage.timeline')}:</strong> {t(service.time)}</p>
-                          <p><strong>{t('estimatePage.idealFor')}:</strong> {t(service.idealFor)}</p>
+                    onClick={() => setTier(serviceKey)}
+                  >
+                    <CardHeader className="pt-4 ">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <div className={`p-2 rounded-lg ${isSelected ? 'bg-black dark:bg-white text-white dark:text-black' : 'bg-gray-100 dark:bg-zinc-800'}`}>
+                            <IconComponent className="h-5 w-5" />
+                          </div>
+                          <div>
+                            <CardTitle className="text-xl">{t(`estimatePage.tiers.${serviceKey}.name`)}</CardTitle>
+                            <CardDescription className="text-sm">{t(`estimatePage.tiers.${serviceKey}.description`)}</CardDescription>
+                          </div>
                         </div>
-                        <p className="text-2xl font-bold text-cyan-600 dark:text-cyan-400 pt-2">{service.basePrice} PLN</p>
-                      </button>
-                    </div>
+                        {isSelected && <CheckCircle2 className="h-6 w-6 text-black dark:text-white" />}
+                      </div>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                      <div className="grid grid-cols-1 gap-3 text-sm">
+                        <div className="flex items-center gap-2">
+                          <Code className="h-4 w-4 text-gray-500 dark:text-gray-400" />
+                          <span><strong>Tech:</strong> {t(service.techStack)}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Clock className="h-4 w-4 text-gray-500 dark:text-gray-400" />
+                          <span><strong>Timeline:</strong> {t(service.time)}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Users className="h-4 w-4 text-gray-500 dark:text-gray-400" />
+                          <span><strong>Ideal for:</strong> {t(service.idealFor)}</span>
+                        </div>
+                      </div>
+                      <Separator />
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-gray-500 dark:text-gray-400">{t('estimatePage.startingFrom')}</span>
+                        <div className="text-right">
+                          <div className="text-2xl font-bold">
+                            <ClientNumber value={service.basePrice} /> {t('currency.pln')}
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+
+            {tier && (
+              <div className="text-center pt-8">
+                <Button
+                  size="lg"
+                  onClick={() => setCurrentStep('customize')}
+                  className="group"
+                >
+                  {t('estimatePage.continueButton')}
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Customization */}
+        {currentStep === 'customize' && tier && (
+          <div ref={detailsRef} className="space-y-8 ">
+
+            <div className="text-center">
+              <h2 className="text-3xl font-bold mb-4">{t('estimatePage.step2Title')}</h2>
+              <p className="text-gray-600 dark:text-gray-400">{t('estimatePage.step2Subtitle')}</p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              {/* Options */}
+              <div className="lg:col-span-2 space-y-4">
+                {(Object.keys(ADDITIONAL_OPTIONS) as OptionKey[]).map((key) => {
+                  const option = ADDITIONAL_OPTIONS[key];
+                  if (!tier || !option.appliesTo.includes(tier)) return null;
+
+                  const IconComponent = getOptionIcon(key);
+                  const isSelected = selectedOptions[key];
+
+                  return (
+                    <Card key={key} className={`transition-all duration-200 bg-white dark:bg-zinc-900   ${isSelected ? 'ring-2 ring-black dark:ring-white' : ''}`}>
+                      <CardContent className="pt-6">
+                        <div className="flex items-center justify-between gap-1">
+                          <div className="flex items-center gap-6 flex-1 ">
+                            <div className={`p-2 rounded-lg ${isSelected ? 'bg-black dark:bg-white text-white dark:text-black' : 'bg-gray-100 dark:bg-zinc-800'}`}>
+                              <IconComponent className="h-5 w-5" />
+                            </div>
+                            <div className="flex-1">
+                              <div className="flex items-center gap-2 mb-2 ">
+                                <h3 className="font-semibold">{t(`estimatePage.options.${key}`)}</h3>
+                                {option.type === 'discount' && (
+                                  <Badge variant="secondary" className="text-green-700 dark:text-green-400 bg-green-50 dark:bg-green-950">
+                                    -{(option.value * 100)}%
+                                  </Badge>
+                                )}
+                                {option.type === 'surcharge' && option.value > 0 && (
+                                  <Badge variant="secondary" className="text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-950">
+                                    +<ClientNumber value={option.value} /> zł
+                                  </Badge>
+                                )}
+                              </div>
+                              <p className="text-sm text-gray-600 dark:text-gray-400">
+                                {t(`estimatePage.options.${key}_description`)}
+                              </p>
+                            </div>
+                          </div>
+                          <Switch
+                            checked={isSelected}
+                            onCheckedChange={() => handleOptionChange(key)}
+                          />
+                        </div>
+                      </CardContent>
+                    </Card>
                   );
                 })}
               </div>
-            </div>
 
-            {/* Project Details & Results */}
-            {tier && (
-              <div ref={detailsRef} className="transition-all duration-500 ease-in-out pt-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-                  <div className="space-y-6">
-                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{t('estimatePage.step2Title')}</h2>
-                    <div className="space-y-5">
-                    {(Object.keys(ADDITIONAL_OPTIONS) as OptionKey[]).map((key) => {
-                      const option = ADDITIONAL_OPTIONS[key];
-                      if (!tier || !option.appliesTo.includes(tier)) return null;
-
-                      return (
-                        <div key={key} className="flex items-center justify-between">
-                          <div className="flex items-center">
-                            <input
-                              type="checkbox"
-                              id={key}
-                              checked={selectedOptions[key]}
-                              onChange={() => handleOptionChange(key)}
-                              className="h-5 w-5 text-cyan-600 focus:ring-cyan-500 border-gray-300 rounded"
-                            />
-                            <label htmlFor={key} className="ml-3 block text-gray-700 dark:text-gray-300">
-                              {t(`estimatePage.options.${key}`)}
-                              {option.type === 'discount' && ` ${t('estimatePage.optionDetails.discount').replace('{value}', (option.value * 100).toString())}`}
-                              {option.type === 'surcharge' && typeof option.value === 'number' && ` ${t('estimatePage.optionDetails.surcharge').replace('{value}', option.value.toString())}`}
-                            </label>
-                          </div>
-                          <Dialog>
-                            <DialogTrigger asChild>
-                              <Info className="h-5 w-5 text-gray-400 dark:text-gray-500 cursor-help" onClick={(e) => e.stopPropagation()} />
-                            </DialogTrigger>
-                            <DialogContent className="sm:max-w-[425px]">
-                              <DialogHeader>
-                                <DialogTitle>{t(`estimatePage.options.${key}`)}</DialogTitle>
-                              </DialogHeader>
-                              <div className="py-4">
-                                {t(`estimatePage.options.${key}_description`)}
-                              </div>
-                            </DialogContent>
-                          </Dialog>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-
-                {/* Results */}
-                <div className="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6">
-                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">{t('estimatePage.estimateTitle')}</h2>
-                  {tier && (
-                    <div className="space-y-4">
-                      <div className="flex justify-between text-gray-700 dark:text-gray-300">
-                        <span>{t('estimatePage.basePrice')}:</span>
-                        <span className="font-medium">{SERVICE_TIERS[tier].basePrice} PLN</span>
+              {/* Estimate Summary */}
+              <div className="col-span-1 ">
+                <Card className="sticky top-24 bg-white dark:bg-zinc-900 ">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <Calculator className="h-5 w-5" />
+                      {t('estimatePage.estimateTitle')}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="space-y-3">
+                      <div className="flex justify-between">
+                        <span className="text-sm">{t('estimatePage.basePrice')}:</span>
+                        <span className="font-medium"><ClientNumber value={SERVICE_TIERS[tier].basePrice} /> {t('currency.pln')}</span>
                       </div>
 
                       {(Object.keys(selectedOptions) as OptionKey[]).map((key) => {
@@ -242,62 +378,80 @@ export default function CalculateEstimatePage() {
                         if (key === 'constantSupport') return null;
 
                         return (
-                          <div key={key} className={`flex justify-between text-sm ${option.type === 'discount' ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
-                            <span>{t(`estimatePage.summary.${key}`)}:</span>
-                            <span>{option.type === 'discount' ? '-' : '+'}{Math.round(amount)} PLN</span>
+                          <div key={key} className="flex justify-between text-sm">
+                            <span className="text-gray-600 dark:text-gray-400">{t(`estimatePage.summary.${key}`)}:</span>
+                            <span className={option.type === 'discount' ? 'text-green-600 dark:text-green-400' : 'text-blue-600 dark:text-blue-400'}>
+                              {option.type === 'discount' ? '-' : '+'}<ClientNumber value={Math.round(amount)} /> {t('currency.pln')}
+                            </span>
                           </div>
                         );
                       })}
+                    </div>
 
-                      <div className="border-t border-gray-200 dark:border-gray-700 pt-4 mt-4">
-                        <div className="flex justify-between font-bold text-xl text-gray-900 dark:text-white">
-                          <span>{t('estimatePage.totalCost')}:</span>
-                          <span>{calculateTotal()} PLN</span>
-                        </div>
-                        <div className="flex justify-between text-lg text-gray-800 dark:text-gray-200">
-                          <span>{t('estimatePage.upfrontPayment')}:</span>
-                          <span className="font-medium">{Math.round(calculateTotal() * 0.4)} PLN</span>
+                    <Separator />
+
+                    <div className="space-y-2">
+                      <div className="flex justify-between font-bold text-lg">
+                        <span>{t('estimatePage.totalCost')}:</span>
+                        <span><ClientNumber value={calculateTotal()} /> {t('currency.pln')}</span>
+                      </div>
+                      <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400">
+                        <span>{t('estimatePage.upfrontPayment')}:</span>
+                        <span><ClientNumber value={Math.round(calculateTotal() * 0.4)} /> {t('currency.pln')}</span>
+                      </div>
+                    </div>
+
+                    {selectedOptions.constantSupport && (
+                      <div className="p-3 bg-gray-50 dark:bg-zinc-800 rounded-lg">
+                        <div className="text-sm">
+                          <div className="font-medium mb-1">{t('estimatePage.monthlySupportTitle')}</div>
+                          <div className="text-gray-600 dark:text-gray-400">
+                            <ClientNumber value={getSupportCost()} /> {t('currency.pln')}/{t('estimatePage.monthly')}
+                          </div>
                         </div>
                       </div>
+                    )}
 
-                      {selectedOptions.constantSupport && (
-                        <div className="text-sm text-gray-600 dark:text-gray-400 mt-2 text-right">
-                          {t('estimatePage.monthlySupport').replace('{cost}', getSupportCost().toString())}
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </div>
-
-                  <div className="md:col-span-2 pt-8">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{t('estimatePage.includedTitle')}</h3>
-                    <ul className="text-gray-600 dark:text-gray-300 space-y-2 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
-                      {tArray(`estimatePage.tiers.${tier}.includes`).map((item, i) => (
-                        <li key={i} className="flex items-start">
-                          <svg className="h-5 w-5 text-cyan-500 mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                    <Link href="/contact" className="w-full">
+                      <Button className="w-full" size="lg">
+                        {t('estimatePage.getQuoteButton')}
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+                  </CardContent>
+                </Card>
               </div>
-            )}
-          </div>
-          
-          {tier && (
-            <div className="mt-10 text-center">
-              <button
-                onClick={resetCalculator}
-                className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 underline transition-colors"
-              >
-                {t('estimatePage.startOver')}
-              </button>
             </div>
-          )}
-        </div>
+
+            {/* What's Included */}
+            <Card className="bg-white dark:bg-zinc-900">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-400" />
+                  {t('estimatePage.includedTitle')}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
+                  {tArray(`estimatePage.tiers.${tier}.includes`).map((item, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-400 mt-1 flex-shrink-0" />
+                      <span className="text-sm">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        )}
+
+        {tier && (
+          <div className="text-center mt-12">
+            <Button variant="outline" onClick={resetCalculator}>
+              {t('estimatePage.startOver')}
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   );

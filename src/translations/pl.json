@@ -117,17 +117,25 @@
     "testButton": "Oblicz koszt"
   },
   "estimatePage": {
-    "mainTitle": "Wycena projektu",
-    "mainSubtitle": "Otrzymaj natychmiastową wycenę swojego projektu",
-    "step1Title": "1. Wybierz typ projektu",
-    "step2Title": "2. Dopasuj do swoich potrzeb",
-    "estimateTitle": "Twoja wycena",
-    "basePrice": "Cena podstawowa",
-    "totalCost": "Łączny koszt",
-    "upfrontPayment": "Pierwsza wpłata (40%)",
-    "monthlySupport": "+ {cost} PLN/miesiąc za wsparcie",
-    "includedTitle": "W cenie:",
-    "startOver": "Rozpocznij ponownie",
+    "mainTitle": "Kalkulator Wyceny Projektu",
+    "mainSubtitle": "Otrzymaj natychmiastową wycenę swojego projektu. Bez rozmów handlowych, tylko liczby.",
+    "step1Title": "1. Wybierz Usługę",
+    "step1Subtitle": "Wybierz pakiet usług, który najlepiej odpowiada Twoim potrzebom.",
+    "step1Button": "Wybierz usługę",
+    "step2Title": "2. Dostosuj i Oblicz",
+    "step2Subtitle": "Dostosuj swój projekt za pomocą dodatkowych opcji.",
+    "step2Button": "Dostosuj i oblicz",
+    "estimateTitle": "Twoja Wycena",
+    "basePrice": "Cena Bazowa",
+    "totalCost": "Całkowity Koszt",
+    "upfrontPayment": "Pierwsza Wpłata (40%)",
+    "monthlySupportTitle": "Miesięczne Wsparcie",
+    "monthly": "miesiąc",
+    "includedTitle": "Co jest wliczone",
+    "startOver": "Zacznij od nowa",
+    "getQuoteButton": "Otrzymaj Szczegółową Wycenę",
+    "continueButton": "Przejdź do Dostosowywania",
+    "startingFrom": "Już od",
     "techStack": "Technologie",
     "idealFor": "Idealne dla",
     "timeline": "Czas realizacji",
@@ -193,15 +201,15 @@
     },
     "options": {
       "hasDesign": "Mam gotowy projekt graficzny",
-      "hasDesign_description": "Oszczędź pieniądze dostarczając kompletny projekt graficzny (Figma, Sketch, itp.)",
+      "hasDesign_description": "Oszczędź pieniądze dostarczając kompletny projekt graficzny (Figma, Sketch, itp.), i zdjecia, tresci itp. Wtedy nie musimy tworzyć projektu graficznego od podstaw.",
       "contentSeoPack": "Pakiet treści i SEO",
-      "contentSeoPack_description": "Profesjonalne teksty na maksymalnie 5 podstron połączone z zaawansowaną optymalizacją SEO dla maksymalnego ruchu organicznego.",
+      "contentSeoPack_description": "Profesjonalne teksty na maksymalnie 5 podstron połączone z zaawansowaną optymalizacją SEO dla maksymalnego ruchu organicznego. Czyli, ustawienie w Google Search Console, Google Analytics, Google Tag Manager i inne.",
       "advancedFeaturesPack": "Pakiet zaawansowanych funkcji",
       "advancedFeaturesPack_description": "Zawiera autorski panel administracyjny oraz automatyczne generowanie i wysyłanie dokumentów PDF.",
       "logoDesign": "Projekt logotypu",
       "logoDesign_description": "Unikalny, profesjonalny logotyp reprezentujący tożsamość Twojej marki.",
       "constantSupport": "Abonament wsparcia technicznego",
-      "constantSupport_description": "Ciągłe wsparcie techniczne, aktualizacje oraz monitoring wydajności."
+      "constantSupport_description": "Ciągłe wsparcie techniczne, aktualizacje oraz monitoring wydajności. Ważne: Dla panstwa i tak mamy gwarantowane 30 dni wsparcia technicznego w cenie."
     },
     "optionDetails": {
       "discount": "({value}% rabatu)",
@@ -228,6 +236,12 @@
       "sending": "Wysyłanie...",
       "successMessage": "Wiadomość wysłana!",
       "errorMessage": "Coś poszło nie tak. Spróbuj ponownie."
+    },
+    "contactInfo": {
+      "title": "Informacje kontaktowe",
+      "description": "Możesz również skontaktować się z nami bezpośrednio, korzystając z poniższych kanałów.",
+      "email": "info@titancode.com",
+      "phone": "+48 123 456 789"
     }
   },
   "aboutPage": {
@@ -303,8 +317,8 @@
       "cost": {
         "label_wp": "WordPress + Wtyczki",
         "label_custom": "Kod Dedykowany",
-        "value_wp": "30 000+ zł",
-        "value_custom": "30 000 zł",
+        "value_wp": "5.000+ zł",
+        "value_custom": "5.000 zł",
         "title": "Ta sama cena, inna wartość.",
         "description": "Gdy zsumujesz koszty płatnych szablonów, wtyczek i ciągłej opieki, WordPress wcale nie jest taką tanią opcją, na jaką wygląda. Początkowa cena jest często identyczna.",
         "whatYouGet": "Szybsza, bezpieczniejsza i jedyna w swoim rodzaju strona, która jest realnym atutem, a nie obciążeniem."

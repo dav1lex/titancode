@@ -14,7 +14,7 @@ export default function ServicesPage() {
   return (
     <div className="bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
       {/* Hero Section */}
-      <section className="py-12 sm:py-20 text-center bg-gray-50 dark:bg-gray-900/50">
+      <section className="py-12 sm:py-20 text-center bg-gray-50 dark:bg-black">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
             {t("services.title")}
@@ -26,7 +26,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Custom Solutions Section */}
-      <section className="py-16 sm:py-20 bg-white dark:bg-black">
+      <section className="py-16 sm:py-20 bg-white dark:bg-zinc-900">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold tracking-tight">
             {t("services.customSolutions.title")}
@@ -38,7 +38,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Details Section */}
-      <section className="py-24 sm:py-32 bg-gray-50 dark:bg-gray-900/50">
+      <section className="py-24 sm:py-32 bg-gray-50 dark:bg-black">
         <div className="container mx-auto px-4">
           <div className="space-y-20">
             {servicesOrder.map((key, index) => {
@@ -46,8 +46,8 @@ export default function ServicesPage() {
               const isEven = index % 2 === 0;
 
               return (
-                <div key={key} className={`grid md:grid-cols-2 gap-12 items-center ${isEven ? '' : 'md:grid-flow-col-dense'}`}>
-                  <div className={`prose prose-lg dark:prose-invert max-w-none ${isEven ? '' : 'md:col-start-2'}`}>
+                <div key={key} className={`grid md:grid-cols-2 gap-12 items-center ${isEven ? '' : 'md:grid-flow-col-dense '}`}>
+                  <div className={`prose prose-lg bg-white shadow-lg dark:prose-invert max-w-none dark:bg-zinc-900 p-8 rounded rounded-2xl ${isEven ? '' : 'md:col-start-2'}`}>
                     <h2 className="text-3xl font-bold">{t(`estimatePage.tiers.${key}.name`)}</h2>
                     <p>{t(`estimatePage.tiers.${key}.description`)}</p>
                     <ul className="mt-6 space-y-3">
@@ -63,7 +63,7 @@ export default function ServicesPage() {
                       <p><strong>{t('estimatePage.timeline')}:</strong> {t(service.time)}</p>
                     </div>
                   </div>
-                  <div className={`p-8 bg-white dark:bg-black rounded-2xl shadow-lg ${isEven ? '' : 'md:col-start-1'}`}>
+                  <div className={`p-8 bg-white dark:bg-zinc-900 rounded-2xl shadow-lg ${isEven ? '' : 'md:col-start-1'}`}>
                     <p className="text-sm font-semibold uppercase text-gray-500 dark:text-gray-400">{t('services.startingFrom')}</p>
                     <p className="text-5xl font-extrabold mt-2">{service.basePrice} {t("currency.pln")}</p>
                     <p className="mt-4 text-gray-600 dark:text-gray-300">{t(`estimatePage.tiers.${key}.description`)}</p>
@@ -84,7 +84,7 @@ export default function ServicesPage() {
       <FaqSection />
 
       {/* CTA Section */}
-      <section className="bg-gray-100 dark:bg-gray-900 py-20 sm:py-24">
+      <section className="bg-gray-100 dark:bg-zinc-900 py-20 sm:py-24">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
             {t("calculateEstimate.title")}

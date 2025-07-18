@@ -16,7 +16,7 @@ export default function HeroSection() {
       {/*  gradient blur */}
       <div className="absolute top-[-250px] right-[-150px] w-[500px] h-[500px] bg-blue-500/20 dark:bg-blue-500/10 rounded-full blur-3xl opacity-50 z-[-1]"></div>
       <div className="absolute bottom-[-200px] left-[-100px] w-[400px] h-[400px] bg-cyan-500/20 dark:bg-cyan-500/10 rounded-full blur-3xl opacity-50 z-[-1]"></div>
-      
+
       {/* Grid overlay */}
       <div className="absolute inset-0 z-0 opacity-20 dark:opacity-30">
         <div className="vercel-grid"></div>
@@ -24,8 +24,8 @@ export default function HeroSection() {
 
       <div className="container mx-auto relative z-10 h-screen flex flex-col justify-center items-center px-4">
         <div className="max-w-5xl mx-auto text-center">
-          
-          <motion.h1 
+
+          <motion.h1
             className=" whitespace-pre-line text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight pb-6 bg-clip-text text-transparent bg-gradient-to-b from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 whitespace-pre-line"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -34,8 +34,8 @@ export default function HeroSection() {
           >
             {t("hero.title")}
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -43,7 +43,7 @@ export default function HeroSection() {
           >
             {t("hero.subtitle")}
           </motion.p>
-          
+
           <motion.div
             className="flex flex-wrap gap-4 justify-center"
             initial={{ opacity: 0, y: 20 }}
@@ -61,7 +61,7 @@ export default function HeroSection() {
                 </span>
               </Button>
             </Link>
-            
+
             <Link href={`/${language}/portfolio`}>
               <Button
                 size="lg"
@@ -69,12 +69,12 @@ export default function HeroSection() {
                 className="border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-100 active:bg-gray-100 dark:hover:bg-gray-800 dark:active:bg-gray-800 rounded-md px-6 transition-all"
               >
                 <span className="flex items-center gap-2">
-                 {t("portfolio.title")}
+                  {t("portfolio.title")}
                 </span>
               </Button>
             </Link>
           </motion.div>
-          
+
           {/* Tech stack logos */}
           <motion.div
             className="mt-16 flex flex-wrap gap-8 justify-center items-center opacity-70 dark:opacity-50"
@@ -84,23 +84,23 @@ export default function HeroSection() {
           >
             {/* React */}
             <div className="h-6 w-auto text-black dark:text-gray-500 flex items-center justify-center">
-            <FaReact className="text-4xl" />
+              <FaReact className="text-4xl" />
             </div>
             {/* JavaScript */}
             <div className="h-6 w-auto text-black dark:text-gray-500 flex items-center justify-center">
-             <FaJs className="text-4xl" />
+              <FaJs className="text-4xl" />
             </div>
             {/* Next.js */}
             <div className="h-6 w-auto text-black dark:text-gray-500 flex items-center justify-center">
-            <RiNextjsFill className="text-4xl" />
+              <RiNextjsFill className="text-4xl" />
             </div>
             {/* Node.js */}
             <div className="h-6 w-auto text-black dark:text-gray-500 flex items-center justify-center">
-            <FaNode className="text-4xl" />
+              <FaNode className="text-4xl" />
             </div>
             {/* PHP */}
             <div className="h-6 w-auto text-black dark:text-gray-500 flex items-center justify-center">
-            <FaPhp className="text-4xl" />
+              <FaPhp className="text-4xl" />
             </div>
           </motion.div>
         </div>

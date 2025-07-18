@@ -72,7 +72,7 @@ export default function ServicesSection() {
   };
 
   return (
-    <section className="py-24 sm:py-32 bg-white dark:bg-black transition-colors duration-300">
+    <section className="py-24 sm:py-32 bg-zinc-50 dark:bg-black transition-colors duration-300">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl lg:max-w-4xl mx-auto text-center mb-16">
           <motion.h2
@@ -106,7 +106,7 @@ export default function ServicesSection() {
             <motion.div
               key={service.key}
               variants={itemVariants}
-              className="group relative p-8 bg-gray-50 dark:bg-zinc-900 rounded-2xl overflow-hidden border border-transparent hover:border-primary dark:hover:border-primary transition-all duration-300"
+              className="group relative p-8 bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border  hover:border-primary dark:hover:border-primary transition-all duration-300"
             >
               <div className="relative z-10">
                 <div className="mb-6 flex items-center justify-center w-12 h-12 bg-gray-100 dark:bg-zinc-800 rounded-lg text-primary dark:text-white group-hover:bg-primary dark:group-hover:bg-primary group-hover:text-white dark:group-hover:text-black transition-colors duration-300">

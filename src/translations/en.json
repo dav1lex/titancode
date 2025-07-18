@@ -112,17 +112,25 @@
     "testButton": "Calculate"
   },
   "estimatePage": {
-    "mainTitle": "Project Pricing",
-    "mainSubtitle": "Get an instant quote for your project",
-    "step1Title": "1. Choose Your Project Type",
-    "step2Title": "2. Add What You Need",
-    "estimateTitle": "Your Quote",
+    "mainTitle": "Project Cost Calculator",
+    "mainSubtitle": "Get an instant quote for your project. No sales calls, just numbers.",
+    "step1Title": "1. Choose Your Service",
+    "step1Subtitle": "Select the service tier that best fits your project needs.",
+    "step1Button": "Choose Service",
+    "step2Title": "2. Customize & Calculate",
+    "step2Subtitle": "Customize your project with additional options.",
+    "step2Button": "Customize & Calculate",
+    "estimateTitle": "Your Estimate",
     "basePrice": "Base Price",
     "totalCost": "Total Cost",
     "upfrontPayment": "First Payment (40%)",
-    "monthlySupport": "+ {cost} PLN/month for support",
-    "includedTitle": "What's Included:",
+    "monthlySupportTitle": "Monthly Support",
+    "monthly": "month",
+    "includedTitle": "What's Included",
     "startOver": "Start Over",
+    "getQuoteButton": "Get Detailed Quote",
+    "continueButton": "Continue to Customization",
+    "startingFrom": "Starting from",
     "techStack": "Technology",
     "idealFor": "Best For",
     "timeline": "Timeline",
@@ -188,15 +196,15 @@
     },
     "options": {
       "hasDesign": "I have a design ready",
-      "hasDesign_description": "Save money if you provide a complete design file (Figma, Sketch, etc.)",
+      "hasDesign_description": "Save money if you provide a complete design file (Figma, Sketch, or even designs on paper), so that we can precisely create the design you imagine.",
       "contentSeoPack": "Content & SEO",
-      "contentSeoPack_description": "Professional content writing for up to 5 pages combined with advanced SEO to maximize organic traffic.",
+      "contentSeoPack_description": "Professional content writing for up to 5 pages combined with advanced SEO to maximize organic traffic. Also includes; setting up Google Search Console, extensive keyword research and more.",
       "advancedFeaturesPack": "Advanced Features Pack",
-      "advancedFeaturesPack_description": "Includes a custom admin panel and automated PDF generation/mailing capabilities.",
+      "advancedFeaturesPack_description": "This can be anything froma functionality in admin panel, or purchases, ",
       "logoDesign": "Logo design",
-      "logoDesign_description": "A unique, professional logo to represent your brand identity.",
-      "constantSupport": "Monthly support retainer",
-      "constantSupport_description": "Ongoing technical support, updates, and performance monitoring."
+      "logoDesign_description": "A unique, professional logo to represent your brand identity. Also includes favicon (small icon in browser tab).",
+      "constantSupport": "I need ongoing support",
+      "constantSupport_description": "This is great option, if you are not a technical person, and you want to have peace of mind that your website is always up-to-date and secure. Note: We guarantee 30 days of free support after launch,so this option is included for the next month."
     },
     "optionDetails": {
       "discount": "({value}% discount)",
@@ -223,6 +231,12 @@
       "sending": "Sending...",
       "successMessage": "Your message has been sent successfully!",
       "errorMessage": "An error occurred. Please try again later."
+    },
+    "contactInfo": {
+      "title": "Contact Information",
+      "description": "You can also reach us directly through the following channels.",
+      "email": "info@titancode.com",
+      "phone": "+48 123 456 789"
     }
   },
   "aboutPage": {
@@ -289,7 +303,7 @@
       "security": {
         "label_wp": "WordPress + Plugins",
         "label_custom": "Custom Code",
-        "value_wp": "90%",
+        "value_wp": "90% more risk",
         "value_custom": "0%",
         "title": "Don't Be an Easy Target.",
         "description": "WordPress is a hacker's favorite playground, with plugins being the most common weak spot. A custom site has no public blueprint for attackers to follow.",
@@ -298,8 +312,8 @@
       "cost": {
         "label_wp": "WordPress + Plugins",
         "label_custom": "Custom Code",
-        "value_wp": "$7,500+",
-        "value_custom": "$7,500",
+        "value_wp": "5.000 PLN",
+        "value_custom": "5.000 PLN",
         "title": "Same Price, Different Value.",
         "description": "When you add up the costs of premium themes, plugins, and constant maintenance, WordPress isn't the budget option it seems. The initial price is often the same.",
         "whatYouGet": "A faster, safer, one-of-a-kind website that's an actual asset, not a liability."

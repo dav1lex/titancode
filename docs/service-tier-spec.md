@@ -50,7 +50,7 @@
 ## Add-on Packages
 - **Content & SEO Pack**: 2200 PLN (content + SEO)
 - **Advanced Features Pack**: 4000 PLN (admin panel + PDF generation)
-- **Logo Design**: 1500 PLN
+- **Logo Design**: 200 PLN
 
 ## Payment Terms
 - 40% upfront payment required to start project
@@ -78,8 +78,4 @@
   - Technical account manager
   - SLA-backed response times
 
-## Messaging Guidelines
-- Use terms like "bespoke", "tailored", "engineered"
-- Highlight technical sophistication
-- Emphasize exclusivity and premium quality
-- Avoid any "free" terminology
+#

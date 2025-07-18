@@ -88,10 +88,10 @@ export default function Header() {
                 const estimatePath = `/${language}/calculate-estimate`;
                 const isActive = pathname.startsWith(servicesPath) || pathname.startsWith(estimatePath);
                 return (
-                  <DropdownMenu key={item}>
+                  <DropdownMenu  key={item}>
                     <DropdownMenuTrigger asChild>
                       <button
-                        className={`relative font-['Space_Grotesk'] transition-colors group flex items-center gap-1 outline-none ${
+                        className={`relative font-['Space_Grotesk'] transition-colors  group flex items-center gap-1 outline-none ${
                           isActive
                             ? "text-black dark:text-white"
                             : "text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white"
@@ -101,7 +101,7 @@ export default function Header() {
                         <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
                       </button>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent>
+                    <DropdownMenuContent className="bg-white dark:bg-black rounded-lg p-2">
                       <DropdownMenuItem asChild>
                         <Link href={servicesPath}>{t('nav.services')}</Link>
                       </DropdownMenuItem>
