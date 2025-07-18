@@ -44,7 +44,7 @@ export async function generateMetadata({
         images: [`https://titancode.pl${post.image}`],
       },
     };
-  } catch (error) {
+  } catch {
     return {
       title: 'Post Not Found',
       description: 'This post could not be found.',
@@ -61,7 +61,7 @@ export default async function PostPage({ params }: PostPageProps) {
   let post;
   try {
     post = await getPostData(slug);
-  } catch (error) {
+  } catch  {
     notFound();
   }
 
