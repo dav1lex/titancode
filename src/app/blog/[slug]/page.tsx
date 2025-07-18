@@ -3,6 +3,9 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
+import Link from 'next/link';
 
 interface PostPageProps {
   params: Promise<{
@@ -89,39 +92,88 @@ export default async function PostPage({ params }: PostPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <main className="container mx-auto px-4 py-12 md:px-6 lg:py-16">
-        <article className="prose prose-lg mx-auto dark:prose-invert">
-          <div className="space-y-4 not-prose">
-            <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">
-              {post.title}
-            </h1>
-            <div className="flex items-center gap-4 text-sm text-muted-foreground">
-              <span>{new Date(post.date).toLocaleDateString('pl-PL')}</span>
-              <span className="mx-2">•</span>
-              <span>{post.readingTime}</span>
-              <span className="mx-2">•</span>
-              <span>By {post.author}</span>
-            </div>
-            <div className="relative my-8 h-64 w-full md:h-96">
-              <Image
-                src={post.image}
-                alt={post.title}
-                fill
-                style={{ objectFit: 'cover' }}
-                className="rounded-lg"
-                priority
-              />
-            </div>
-          </div>
+      
+      <main className="min-h-screen bg-gradient-to-b from-background to-muted/20">
+        <div className="container mx-auto px-4 py-8 md:px-6 lg:py-12">
+          <div className="mx-auto max-w-4xl">
+            <Link href="/blog">
+              <Button variant="ghost" className="mb-8 group">
+                <ArrowLeft className="mr-2 h-4 w-4 transition-transform duration-200 group-hover:-translate-x-1" />
+                Back to all posts
+              </Button>
+            </Link>
 
-          <div dangerouslySetInnerHTML={{ __html: post.content }} />
+            <article className="rounded-lg bg-card shadow-lg">
+              <div className="p-6 md:p-8 lg:p-10">
+                <header className="space-y-6">
+                  <div className="flex flex-wrap gap-2">
+                    {post.tags.map((tag) => (
+                      <Badge key={tag} variant="secondary" className="text-sm">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                  
+                  <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+                    {post.title}
+                  </h1>
+                  
+                  <p className="text-lg text-muted-foreground">
+                    {post.description}
+                  </p>
+                  
+                  <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+                    <div className="flex items-center gap-1">
+                      <Calendar className="h-4 w-4" />
+                      <span>{new Date(post.date).toLocaleDateString('pl-PL')}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Clock className="h-4 w-4" />
+                      <span>{post.readingTime}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <User className="h-4 w-4" />
+                      <span>{post.author}</span>
+                    </div>
+                  </div>
+                </header>
 
-          <div className="mt-8 flex flex-wrap gap-2">
-            {post.tags.map((tag) => (
-              <Badge key={tag} variant="secondary">{tag}</Badge>
-            ))}
+                <div className="my-8">
+                  <div className="relative aspect-[16/9] overflow-hidden rounded-lg">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover"
+                      priority
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+                    />
+                  </div>
+                </div>
+
+                <div 
+                  className="prose prose-lg max-w-none dark:prose-invert prose-headings:font-bold prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-p:text-base prose-p:leading-relaxed prose-a:text-primary hover:prose-a:underline prose-code:text-sm prose-code:bg-muted prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-pre:bg-muted prose-pre:border"
+                  dangerouslySetInnerHTML={{ __html: post.content }}
+                />
+              </div>
+            </article>
+
+            <footer className="mt-12 rounded-lg bg-card p-6 shadow-lg">
+              <div className="flex items-center justify-between">
+                <Link href="/blog">
+                  <Button variant="outline">
+                    <ArrowLeft className="mr-2 h-4 w-4" />
+                    Back to Blog
+                  </Button>
+                </Link>
+                
+                <div className="text-sm text-muted-foreground">
+                  Share this article
+                </div>
+              </div>
+            </footer>
           </div>
-        </article>
+        </div>
       </main>
     </>
   );
