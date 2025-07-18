@@ -121,6 +121,7 @@
     "step2Subtitle": "Customize your project with additional options.",
     "step2Button": "Customize & Calculate",
     "estimateTitle": "Your Estimate",
+    "selectedPackage": "Selected Package",
     "basePrice": "Base Price",
     "totalCost": "Total Cost",
     "upfrontPayment": "First Payment (40%)",
@@ -129,6 +130,8 @@
     "includedTitle": "What's Included",
     "startOver": "Start Over",
     "getQuoteButton": "Get Detailed Quote",
+    "estimateDisclaimerTitle": "Just an Estimate!",
+    "estimateDisclaimerText": "This is a preliminary calculation. Contact us for a detailed quote!",
     "continueButton": "Continue to Customization",
     "startingFrom": "Starting from",
     "techStack": "Technology",
@@ -138,7 +141,7 @@
       "starter": {
         "name": "Starter",
         "description": "A professional website for individuals and small businesses.",
-        "idealFor": "Freelancers, small businesses, personal brands.",
+        "idealFor": "Teachers, trainers, small businesses, personal brands.",
         "techStack": "HTML, CSS, JavaScript",
         "time": "1-2 weeks",
         "includes": [
@@ -147,7 +150,7 @@
           "Mobile-friendly",
           "Contact forms",
           "Basic SEO",
-          "30-day support"
+          "30-day after launch support"
         ]
       },
       "custom": {
@@ -168,7 +171,7 @@
       "ecommerce": {
         "name": "E-Commerce",
         "description": "A complete online store with secure payments and inventory.",
-        "idealFor": "Online stores, direct-to-consumer brands.",
+        "idealFor": "Online stores, Digital item retails, Brands.",
         "techStack": "Next.js, Shopify, or custom",
         "time": "5-10 weeks",
         "includes": [
@@ -181,10 +184,10 @@
       },
       "enterprise": {
         "name": "Enterprise",
-        "description": "Custom solutions for large organizations with complex needs.",
-        "idealFor": "Large companies, complex requirements.",
-        "techStack": "Custom solution",
-        "time": "Project dependent",
+        "description": "Scalable applications for large organizations with complex functionalities.",
+        "idealFor": "Online auction systems, E-learning portals, accountant management system (fix this).",
+        "techStack": "Depends on project requirements",
+        "time": "Depends on complexity / project size",
         "includes": [
           "Everything in E-Commerce",
           "Custom features",
@@ -198,13 +201,16 @@
       "hasDesign": "I have a design ready",
       "hasDesign_description": "Save money if you provide a complete design file (Figma, Sketch, or even designs on paper), so that we can precisely create the design you imagine.",
       "contentSeoPack": "Content & SEO",
-      "contentSeoPack_description": "Professional content writing for up to 5 pages combined with advanced SEO to maximize organic traffic. Also includes; setting up Google Search Console, extensive keyword research and more.",
+      "contentSeoPack_description": "This option enables blog functionality, and simple admin panel to manage articles. It also includes setting Google Search Console, and detailed keyword research for your website, to receive organic traffic from Google.",
       "advancedFeaturesPack": "Advanced Features Pack",
-      "advancedFeaturesPack_description": "This can be anything froma functionality in admin panel, or purchases, ",
+      "advancedFeaturesPack_description": "This can be anything from a functionality in admin panel, or something needs to be automated, to a custom integration with external service. If you have any specific requirements, please let us know.",
       "logoDesign": "Logo design",
       "logoDesign_description": "A unique, professional logo to represent your brand identity. Also includes favicon (small icon in browser tab).",
       "constantSupport": "I need ongoing support",
-      "constantSupport_description": "This is great option, if you are not a technical person, and you want to have peace of mind that your website is always up-to-date and secure. Note: We guarantee 30 days of free support after launch,so this option is included for the next month."
+      "constantSupport_description": "This is great option, if you are not a technical person, and you want to have peace of mind that your website is always up-to-date and secure. Note: We guarantee 30 days of free support after launch,so this option is included for the next month.",
+      "customOption": "Custom requirement",
+      "customOption_description": "If you have any specific requirements that are not covered by the options above, please let us know. We can customize the package to fit your needs."
+
     },
     "optionDetails": {
       "discount": "({value}% discount)",
@@ -214,7 +220,8 @@
       "hasDesign": "Design Discount",
       "contentSeoPack": "Content & SEO Pack",
       "advancedFeaturesPack": "Advanced Features Pack",
-      "logoDesign": "Logo Design"
+      "logoDesign": "Logo Design",
+      "customOption": "Custom Requirement"
     }
   },
   "contact": {

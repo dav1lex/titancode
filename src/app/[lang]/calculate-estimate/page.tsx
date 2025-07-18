@@ -70,6 +70,13 @@ const ADDITIONAL_OPTIONS: Record<string, OptionConfig> = {
     type: 'surcharge',
     value: 0, // Note: This is now handled by SUPPORT_COST
     appliesTo: ['starter', 'custom', 'ecommerce', 'enterprise']
+  },
+  customOption: {
+    label: 'Custom requirement',
+    description: 'If you have any specific requirements that are not covered by the options above, please let us know. We can customize the package to fit your needs.',
+    type: 'surcharge',
+    value: 0, // This will be handled separately based on user input
+    appliesTo: ['starter', 'custom', 'ecommerce', 'enterprise']
   }
 };
 
@@ -184,7 +191,7 @@ export default function CalculateEstimatePage() {
         </div>
       </section>
 
-      <div className="container mx-auto px-4 py-16 sm:py-24">
+      <div className="container mx-auto px-4 py-12 sm:py-16">
         {/* Step Navigation */}
         <div className="flex items-center justify-center mb-12">
           <div className="flex items-center gap-4">
@@ -348,16 +355,22 @@ export default function CalculateEstimatePage() {
               </div>
 
               {/* Estimate Summary */}
-              <div className="col-span-1 ">
-                <Card className="sticky top-24 bg-white dark:bg-zinc-900 ">
-                  <CardHeader>
+              {/* Estimate Summary */}
+              <div className="lg:col-span-1">
+                <Card className="sticky top-24 bg-white dark:bg-zinc-900">
+                  <CardHeader className='p-4'>
                     <CardTitle className="flex items-center gap-2">
                       <Calculator className="h-5 w-5" />
                       {t('estimatePage.estimateTitle')}
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-4">
+                  <CardContent className="p-4 space-y-4">
+                    {/* Price Breakdown */}
                     <div className="space-y-3">
+                      <div className="flex justify-between">
+                        <span className="text-sm text-gray-600 dark:text-gray-400">{t('estimatePage.selectedPackage')}:</span>
+                        <span className="font-semibold underline">{t(`estimatePage.tiers.${tier}.name`)}</span>
+                      </div>
                       <div className="flex justify-between">
                         <span className="text-sm">{t('estimatePage.basePrice')}:</span>
                         <span className="font-medium"><ClientNumber value={SERVICE_TIERS[tier].basePrice} /> {t('currency.pln')}</span>
@@ -390,6 +403,7 @@ export default function CalculateEstimatePage() {
 
                     <Separator />
 
+                    {/* Total */}
                     <div className="space-y-2">
                       <div className="flex justify-between font-bold text-lg">
                         <span>{t('estimatePage.totalCost')}:</span>
@@ -401,6 +415,7 @@ export default function CalculateEstimatePage() {
                       </div>
                     </div>
 
+                    {/* Monthly Support */}
                     {selectedOptions.constantSupport && (
                       <div className="p-3 bg-gray-50 dark:bg-zinc-800 rounded-lg">
                         <div className="text-sm">
@@ -412,36 +427,50 @@ export default function CalculateEstimatePage() {
                       </div>
                     )}
 
+                  
+
+                    {/* CTA Button */}
                     <Link href="/contact" className="w-full">
                       <Button className="w-full" size="lg">
                         {t('estimatePage.getQuoteButton')}
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     </Link>
+
+                    <Separator className="my-4" />
+
+                    {/* What's Included */}
+                    <div className="space-y-3">
+                      <h3 className="font-semibold flex items-center">
+                        <CheckCircle2 className="h-5 w-5 text-green-500 mr-2" />
+                        {t('estimatePage.includedTitle')}
+                      </h3>
+                      <div className="space-y-2">
+                        {tArray(`estimatePage.tiers.${tier}.includes`).map((item, i) => (
+                          <div key={i} className="flex items-start gap-2.5 text-sm">
+                            <CheckCircle2 className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-600 dark:text-gray-400">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                      <div className="p-3 bg-blue-50 dark:bg-blue-950/50 rounded-lg border border-blue-200 dark:border-blue-800">
+                      <div className="flex items-start gap-3">
+                        <Info className="h-5 w-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+                        <div>
+                          <h4 className="font-semibold text-blue-800 dark:text-blue-300">{t('estimatePage.estimateDisclaimerTitle')}</h4>
+                          <p className="text-sm text-blue-700 dark:text-blue-400">
+                            {t('estimatePage.estimateDisclaimerText')}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </div>
             </div>
 
-            {/* What's Included */}
-            <Card className="bg-white dark:bg-zinc-900">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-400" />
-                  {t('estimatePage.includedTitle')}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
-                  {tArray(`estimatePage.tiers.${tier}.includes`).map((item, i) => (
-                    <div key={i} className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-400 mt-1 flex-shrink-0" />
-                      <span className="text-sm">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+           
           </div>
         )}
 
