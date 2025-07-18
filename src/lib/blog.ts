@@ -56,24 +56,35 @@ export function getSortedPostsData(): PostMeta[] {
 }
 
 export async function getPostData(slug: string): Promise<Post> {
-  const fullPath = path.join(postsDirectory, `${slug}.md`);
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
-  const { data, content } = matter(fileContents);
+  try {
+    const fullPath = path.join(postsDirectory, `${slug}.md`);
+    
+    // Check if file exists to prevent crashes
+    if (!fs.existsSync(fullPath)) {
+      throw new Error(`Post not found: ${slug}`);
+    }
+    
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    const { data, content } = matter(fileContents);
 
-  const processedContent = await remark().use(html).process(content);
-  const contentHtml = processedContent.toString();
+    const processedContent = await remark().use(html).process(content);
+    const contentHtml = processedContent.toString();
 
-  return {
-    slug,
-    content: contentHtml,
-    title: data.title,
-    date: data.date,
-    author: data.author,
-    description: data.description,
-    image: data.image,
-    tags: data.tags,
-    readingTime: readingTime(content).text,
-  };
+    return {
+      slug,
+      content: contentHtml,
+      title: data.title || 'Untitled',
+      date: data.date || new Date().toISOString(),
+      author: data.author || 'Unknown',
+      description: data.description || '',
+      image: data.image || '/og-image.png',
+      tags: Array.isArray(data.tags) ? data.tags : [],
+      readingTime: readingTime(content).text,
+    };
+  } catch (error) {
+    console.error('Error loading post:', error);
+    throw error;
+  }
 }
 
 export function getAllPostSlugs() {

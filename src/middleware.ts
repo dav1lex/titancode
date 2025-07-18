@@ -1,24 +1,30 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { i18n } from '../i18n-config';
-import { match as matchLocale } from '@formatjs/intl-localematcher';
-import Negotiator from 'negotiator';
 
-function getLocale(request: NextRequest): string | undefined {
-  // Negotiator expects plain object so we need to transform headers
-  const negotiatorHeaders: Record<string, string> = {};
-  request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
-
-  // @ts-expect-error locales are readonly
-  const locales: string[] = i18n.locales;
-
-  // Use negotiator and intl-localematcher to get the best locale
-  const languages = new Negotiator({ headers: negotiatorHeaders }).languages(
-    locales
-  );
-
-  const locale = matchLocale(languages, locales, i18n.defaultLocale);
-
-  return locale;
+function getLocale(request: NextRequest): string {
+  // Simple locale detection without Negotiator for edge runtime compatibility
+  const acceptLanguage = request.headers.get('accept-language');
+  const browserLocales = acceptLanguage
+    ? acceptLanguage.split(',').map(lang => lang.split(';')[0].trim().toLowerCase())
+    : [];
+  
+  const supportedLocales = [...i18n.locales] as string[];
+  
+  // Find first matching locale
+  for (const browserLocale of browserLocales) {
+    // Check exact match
+    if (supportedLocales.includes(browserLocale)) {
+      return browserLocale;
+    }
+    // Check language part match (e.g., 'en' from 'en-US')
+    const langPart = browserLocale.split('-')[0];
+    const match = supportedLocales.find(locale => locale.startsWith(langPart));
+    if (match) {
+      return match;
+    }
+  }
+  
+  return i18n.defaultLocale;
 }
 
 export function middleware(request: NextRequest) {

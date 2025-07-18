@@ -61,7 +61,8 @@ export default async function PostPage({ params }: PostPageProps) {
   let post;
   try {
     post = await getPostData(slug);
-  } catch  {
+  } catch (error) {
+    console.error('Error loading post:', error);
     notFound();
   }
 
@@ -125,7 +126,7 @@ export default async function PostPage({ params }: PostPageProps) {
                   <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                     <div className="flex items-center gap-1">
                       <Calendar className="h-4 w-4" />
-                      <span>{new Date(post.date).toLocaleDateString('pl-PL')}</span>
+                      <span>{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                     </div>
                     <div className="flex items-center gap-1">
                       <Clock className="h-4 w-4" />
