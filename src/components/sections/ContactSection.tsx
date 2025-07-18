@@ -2,18 +2,11 @@
 
 import { useLanguage } from "@/app/language-context";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
-import { Send } from "lucide-react";
 import { FormEvent, useState } from "react";
 
 export default function ContactSection() {
