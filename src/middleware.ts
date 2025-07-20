@@ -53,14 +53,6 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  if (
-    [
-      '/manifest.json',
-      '/favicon.ico',
-      // Your other files in `public`
-    ].includes(pathname)
-  )
-    return;
 
   // Check if there is any supported locale in the pathname
   const pathnameIsMissingLocale = i18n.locales.every(
@@ -84,5 +76,7 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   // Matcher ignoring `/_next/` and `/api/`
-  matcher: ['/((?!api|blog|_next/static|_next/image|sitemap.xml|robots.txt|favicon.ico).*)'],
+  matcher: [
+    '/((?!api|blog|_next/static|_next/image|sitemap.xml|robots.txt|logo.svg|site.webmanifest|apple-touch-icon.png|og-image.png|twitter-image.png).*)',
+  ],
 };
