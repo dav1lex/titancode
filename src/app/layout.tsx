@@ -63,8 +63,14 @@ export const metadata: Metadata = {
     images: ['/twitter-image.png'],
   },
   icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
+    icon: {
+      url: "/logo.svg",
+      type: "image/svg+xml",
+    },
+    apple: {
+      url: "/logo.svg",
+      type: "image/svg+xml",
+    },
   },
   manifest: '/site.webmanifest',
 };
@@ -105,7 +111,7 @@ export default async function RootLayout({
               "@type": "Organization",
               "name": "TITANCODE",
               "url": "https://www.titancode.pl/",
-              "logo": "https://www.titancode.pl/logo.png",
+              "logo": "https://www.titancode.pl/logo.svg",
               "sameAs": [
               ]
             })

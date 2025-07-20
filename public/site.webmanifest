@@ -4,14 +4,9 @@
   "description": "We craft premium web solutions that blend cutting-edge technology with elegant design to help your brand stand out in the digital landscape.",
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/android-chrome-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
     }
   ],
   "theme_color": "#ffffff",
