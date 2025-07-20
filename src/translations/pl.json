@@ -10,7 +10,10 @@
     "contact": "Kontakt"
   },
   "footer": {
-    "rights": "Wszelkie prawa zastrzeżone"
+    "rights": "Wszelkie prawa zastrzeżone",
+    "about": "Tworzymy strony i aplikacje internetowe, które rzeczywiście przynoszą rezultaty. Bez gotowych szablonów, bez skrótów - tylko kod, który działa.",
+    "navigation": "Nawigacja",
+    "followUs": "Linki"
   },
   "home": {
     "welcome": "Witamy w TITANCODE",

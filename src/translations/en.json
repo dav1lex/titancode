@@ -10,7 +10,10 @@
     "contact": "Contact"
   },
   "footer": {
-    "rights": "All rights reserved"
+    "rights": "All rights reserved",
+    "about": "We build custom websites and web applications that actually get results. No templates, no shortcuts, just code that works.",
+    "navigation": "Navigation",
+    "followUs": "Follow Us"
   },
   "services": {
     "title": "What We Build",
