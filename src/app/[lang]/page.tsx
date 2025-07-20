@@ -22,61 +22,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? ['tworzenie stron internetowych warszawa', 'strony internetowe warszawa', 'projektowanie stron www warszawa', 'agencja interaktywna warszawa', 'profesjonalne strony internetowe', 'mobilne strony www', 'sklepy internetowe warszawa', 'pozycjonowanie stron warszawa', 'titancode']
     : ['custom web development', 'web development warsaw', 'next.js development', 'seo optimization', 'freelance web developer', 'ecommerce solutions', 'titancode'];
 
-  const serviceSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'TITANCODE',
-    url: `https://titancode.pl/${lang}`,
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: `https://titancode.pl/${lang}/search?q={search_term_string}`,
-      'query-input': 'required name=search_term_string',
-    },
-  };
-
-  const localBusinessSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
-    name: 'TITANCODE',
-    image: 'https://titancode.pl/og-image.png',
-    '@id': 'https://titancode.pl',
-    url: 'https://titancode.pl',
-    telephone: '+48 511 118 916',
-    email: 'info@titancode.pl',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '',
-      addressLocality: 'Warszawa',
-      postalCode: '',
-      addressCountry: 'PL',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 52.2297,
-      longitude: 21.0122,
-    },
-    openingHoursSpecification: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: [
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-      ],
-      opens: '09:00',
-      closes: '17:00',
-    },
-    sameAs: [
-      'https://www.linkedin.com/company/titancode-pl',
-    ],
-    priceRange: '$$',
-    description: description,
-    areaServed: {
-      '@type': 'Country',
-      name: 'Poland',
-    },
-  };
 
   return {
     title,

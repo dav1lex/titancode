@@ -28,7 +28,7 @@ export default function ServicesPage() {
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Web Development Packages",
-      "itemListElement": servicesOrder.map((key, index) => ({
+      "itemListElement": servicesOrder.map((key) => ({
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
