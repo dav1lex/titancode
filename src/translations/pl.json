@@ -104,7 +104,7 @@
       "dreamProject": {
         "title": "Twój projekt w tym miejscu",
         "description": "To miejsce czeka na Twój pomysł. Stwórzmy razem coś, co rzeczywiście pomoże Twojemu biznesowi.",
-        "cta": "Rozpocznijmy współpracę"
+        "cta": "Skontaktuj się"
       }
     }
   },
@@ -204,15 +204,15 @@
     },
     "options": {
       "hasDesign": "Mam gotowy projekt graficzny",
-      "hasDesign_description": "Oszczędź pieniądze dostarczając kompletny projekt graficzny (Figma, Sketch, itp.), i zdjecia, tresci itp. Wtedy nie musimy tworzyć projektu graficznego od podstaw.",
+      "hasDesign_description": "Oszczędź pieniądze dostarczając kompletny projekt graficzny (Figma, Sketch, itp.), i zdjecia, tresci itp. Wtedy cały proces będzie szybszy i tańszy.",
       "contentSeoPack": "Pakiet treści i SEO",
       "contentSeoPack_description": "Profesjonalne teksty na maksymalnie 5 podstron połączone z zaawansowaną optymalizacją SEO dla maksymalnego ruchu organicznego. Czyli, ustawienie w Google Search Console, Google Analytics, Google Tag Manager i inne.",
       "advancedFeaturesPack": "Pakiet zaawansowanych funkcji",
-      "advancedFeaturesPack_description": "Zawiera autorski panel administracyjny oraz automatyczne generowanie i wysyłanie dokumentów PDF.",
+      "advancedFeaturesPack_description": "Funkcjonalności tak jak, motyw jasny i ciemny, wielojęzyczność, automatyczne generowanie treści, integracje z zewnętrznymi API. Napisz nam czego potrzebujesz.",
       "logoDesign": "Projekt logotypu",
       "logoDesign_description": "Unikalny, profesjonalny logotyp reprezentujący tożsamość Twojej marki.",
       "constantSupport": "Abonament wsparcia technicznego",
-      "constantSupport_description": "Ciągłe wsparcie techniczne, aktualizacje oraz monitoring wydajności. Ważne: Dla panstwa i tak mamy gwarantowane 30 dni wsparcia technicznego w cenie."
+      "constantSupport_description": "Ciągłe wsparcie techniczne, aktualizacje oraz monitoring wydajności. Ważne: Dla panstwa i tak mamy gwarantowane 30 dni wsparcia technicznego w cenie po oddaniu projektu."
     },
     "optionDetails": {
       "discount": "({value}% rabatu)",
@@ -242,9 +242,9 @@
     },
     "contactInfo": {
       "title": "Informacje kontaktowe",
-      "description": "Możesz również skontaktować się z nami bezpośrednio, korzystając z poniższych kanałów.",
-      "email": "info@titancode.com",
-      "phone": "+48 123 456 789"
+      "description": "Albo, skontaktuj się z nami bezpośrednio:",
+      "email": "info@titancode.pl",
+      "phone": "+48 511 118 916"
     }
   },
   "aboutPage": {
@@ -253,7 +253,7 @@
       "subtitle": "Twoja strona internetowa powinna być Twoim najlepszym pracownikiem. Dbamy o to, żeby tak właśnie było."
     },
     "mission": {
-      "title": "Dlaczego nie WordPress?",
+      "title": "Dlaczego dedykowany kod?",
       "text": "Większość stron internetowych powstaje z gotowych szablonów i wygląda identycznie jak tysiące innych. Założyliśmy TITANCODE, ponieważ wierzymy, że Twój biznes zasługuje na coś wyjątkowego. Każdą linię kodu piszemy ręcznie, specjalnie dla Ciebie. Bez skrótów, bez kompromisów. Po prostu witryny, które działają dokładnie tak, jak tego potrzebujesz."
     },
     "process": {
@@ -311,7 +311,7 @@
       "security": {
         "label_wp": "WordPress + Wtyczki",
         "label_custom": "Kod Dedykowany",
-        "value_wp": "90%",
+        "value_wp": "90% więcej ryzyk",
         "value_custom": "0%",
         "title": "Nie bądź łatwym celem.",
         "description": "WordPress to ulubiony plac zabaw hakerów, a wtyczki to jego najsłabszy punkt. Strona na zamówienie nie ma publicznej instrukcji obsługi dla atakujących.",
@@ -323,7 +323,7 @@
         "value_wp": "5.000+ zł",
         "value_custom": "5.000 zł",
         "title": "Ta sama cena, inna wartość.",
-        "description": "Gdy zsumujesz koszty płatnych szablonów, wtyczek i ciągłej opieki, WordPress wcale nie jest taką tanią opcją, na jaką wygląda. Początkowa cena jest często identyczna.",
+        "description": "Gdy zsumujesz koszty płatnych szablonów, wtyczek i ciągłej opieki, WordPress wcale nie jest taką tanią opcją, na jaką wygląda. Początkowa cena jest często identyczna. Lepij zainwestować w coś, co będzie działać bez problemów przez lata.",
         "whatYouGet": "Szybsza, bezpieczniejsza i jedyna w swoim rodzaju strona, która jest realnym atutem, a nie obciążeniem."
       }
     },
@@ -356,15 +356,15 @@
       },
       "hostingIncluded": {
         "question": "Czy hosting jest w cenie?",
-        "answer": "Tak. Hosting jest wliczony w cenę na pierwszy rok. Później to zazwyczaj 300-500 zł rocznie, w zależności od potrzeb."
+        "answer": "Tak. Hosting jest wliczony w cenę na pierwszy rok. Później to zazwyczaj 200-300 zł rocznie, w zależności od potrzeb."
       },
       "renewalFees": {
         "question": "Czy są opłaty za odnowienie?",
-        "answer": "Tak, po pierwszym roku płacisz za odnowienie hostingu i domeny. Zazwyczaj 300-500 zł rocznie."
+        "answer": "Tak, po pierwszym roku płacisz za odnowienie hostingu i domeny. Zazwyczaj 200-300 zł rocznie."
       },
       "quality": {
         "question": "Czy moja strona będzie dobrej jakości?",
-        "answer": "Tak. Wszystkie nasze strony są zoptymalizowane pod kątem szybkości i działają dobrze na wszystkich urządzeniach. Testujemy wszystko dokładnie przed startem."
+        "answer": "Tak. Wszystkie nasze strony są zoptymalizowane pod kątem szybkości, bezpieczeństwa i działają idealnie na wszystkich urządzeniach. Testujemy wszystko dokładnie przed startem."
       },
       "ssl": {
         "question": "Czy dostanę certyfikat SSL?",
@@ -384,7 +384,7 @@
     "title": "Skontaktuj się",
     "subtitle": "Pytania o projekt? Jesteśmy tutaj, żeby pomóc.",
     "emailLabel": "Email",
-    "email": "info@titancode.com",
+    "email": "info@titancode.pl",
     "phoneLabel": "Telefon",
     "phone": "+48 511 118 916",
     "addressTitle": "Adres",

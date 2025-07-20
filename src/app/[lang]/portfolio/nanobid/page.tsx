@@ -28,7 +28,7 @@ export default function Page() {
       "https://assets.titancode.pl/images/portfolio/nanobid/n6.png",
       "https://assets.titancode.pl/images/portfolio/nanobid/n7.png",
     ],
-    liveSiteUrl: "https://titancode.pl/test/",
+    liveSiteUrl: "https://assets.titancode.pl/test/",
     t: t,
   };
 

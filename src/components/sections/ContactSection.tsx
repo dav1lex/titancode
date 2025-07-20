@@ -117,9 +117,10 @@ export default function ContactSection() {
             </div>
             <div className="relative flex justify-center text-xs uppercase">
               <span className="bg-background px-2 text-muted-foreground">
-                Or contact us directly
+                {t("contact.contactInfo.description")}
               </span>
             </div>
+            
           </div>
           <div className="grid gap-2 text-center text-sm">
             <p className="text-muted-foreground">

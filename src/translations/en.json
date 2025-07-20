@@ -241,9 +241,9 @@
     },
     "contactInfo": {
       "title": "Contact Information",
-      "description": "You can also reach us directly through the following channels.",
-      "email": "info@titancode.com",
-      "phone": "+48 123 456 789"
+      "description": "Or contact us directly:",
+      "email": "info@titancode.pl",
+      "phone": "+48 511 118 916"
     }
   },
   "aboutPage": {
@@ -383,7 +383,7 @@
     "title": "Contact Us",
     "subtitle": "Questions about your project? We're here to help.",
     "emailLabel": "Email",
-    "email": "info@titancode.com",
+    "email": "info@titancode.pl",
     "phoneLabel": "Phone",
     "phone": "+48 511 118 916",
     "addressTitle": "Address",
