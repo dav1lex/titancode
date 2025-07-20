@@ -29,6 +29,7 @@ export async function generateMetadata({
       description: t.aboutPage.hero.seoDescription,
     },
     alternates: {
+      canonical: `/${locale}/about`,
       languages: {
         'en': '/en/about',
         'pl': '/pl/about',

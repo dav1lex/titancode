@@ -29,6 +29,7 @@ export async function generateMetadata({
       description: t.portfolio.seoDescription,
     },
     alternates: {
+      canonical: `/${locale}/portfolio`,
       languages: {
         'en': '/en/portfolio',
         'pl': '/pl/portfolio',

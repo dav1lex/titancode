@@ -29,6 +29,7 @@ export async function generateMetadata({
       description: t.services.seoDescription,
     },
     alternates: {
+      canonical: `/${locale}/services`,
       languages: {
         'en': '/en/services',
         'pl': '/pl/services',

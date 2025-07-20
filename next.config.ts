@@ -26,6 +26,16 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: '/portfolio/auction-portal',
+        destination: '/portfolio/nanobid',
+        permanent: true,
+      },
+      {
+        source: '/pricing',
+        destination: '/calculate-estimate',
+        permanent: true,
+      },
+      {
         source: '/about',
         destination: '/en/about',
         permanent: true,

@@ -11,8 +11,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const isPl = lang === 'pl';
 
   const title = isPl
-    ? 'Tworzenie Stron Internetowych Warszawa | Profesjonalne Strony WWW - TITANCODE'
-    : 'Custom Web Development | Fast & SEO-Optimized Websites - TITANCODE';
+    ? 'Tworzenie Stron Internetowych Warszawa | Profesjonalne Strony WWW'
+    : 'Custom Web Development | Fast & SEO-Optimized Websites';
   
   const description = isPl
     ? 'Profesjonalne tworzenie stron internetowych w Warszawie. Projektujemy szybkie, nowoczesne i zoptymalizowane pod SEO strony WWW dla firm. Indywidualne projekty, gwarancja jakości.'

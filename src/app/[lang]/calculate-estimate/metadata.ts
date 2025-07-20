@@ -29,6 +29,7 @@ export async function generateMetadata({
       description: t.estimatePage.mainSubtitle,
     },
     alternates: {
+      canonical: `/${locale}/calculate-estimate`,
       languages: {
         'en': '/en/calculate-estimate',
         'pl': '/pl/calculate-estimate',

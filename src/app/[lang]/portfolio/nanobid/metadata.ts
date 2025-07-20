@@ -20,24 +20,16 @@ export async function generateMetadata({
     openGraph: {
       title: t.portfolio.projects.nanobid.seoTitle,
       description: t.portfolio.projects.nanobid.seoDescription,
-      type: 'website',
+      type: 'article',
       locale: locale === 'en' ? 'en_US' : 'pl_PL',
-      images: [
-        {
-          url: 'https://assets.titancode.pl/images/portfolio/nanobid/n1.png',
-          width: 1200,
-          height: 630,
-          alt: t.portfolio.projects.nanobid.seoTitle,
-        },
-      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: t.portfolio.projects.nanobid.seoTitle,
       description: t.portfolio.projects.nanobid.seoDescription,
-      images: ['https://assets.titancode.pl/images/portfolio/nanobid/n1.png'],
     },
     alternates: {
+      canonical: `/${locale}/portfolio/nanobid`,
       languages: {
         'en': '/en/portfolio/nanobid',
         'pl': '/pl/portfolio/nanobid',

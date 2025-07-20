@@ -47,14 +47,14 @@ export default function Page() {
       "name": "TITANCODE",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://titancode.pl/og-image.png"
+        "url": "https://www.titancode.pl/og-image.png"
       }
     },
     "datePublished": "2025-01-01", // Example date, should be dynamic in a real app
     "dateModified": "2025-01-01",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://titancode.pl/${language}/portfolio/nanobid`
+      "@id": `https://www.titancode.pl/${language}/portfolio/nanobid`
     }
   };
 
@@ -66,19 +66,19 @@ export default function Page() {
         "@type": "ListItem",
         "position": 1,
         "name": t("nav.home"),
-        "item": `https://titancode.pl/${language}`
+        "item": `https://www.titancode.pl/${language}`
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": t("nav.portfolio"),
-        "item": `https://titancode.pl/${language}/portfolio`
+        "item": `https://www.titancode.pl/${language}/portfolio`
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": t("portfolio.projects.nanobid.title"),
-        "item": `https://titancode.pl/${language}/portfolio/nanobid`
+        "item": `https://www.titancode.pl/${language}/portfolio/nanobid`
       }
     ]
   };

@@ -29,6 +29,7 @@ export async function generateMetadata({
       description: t.hero.subtitle,
     },
     alternates: {
+      canonical: `/${locale}`,
       languages: {
         'en': '/en',
         'pl': '/pl',

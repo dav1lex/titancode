@@ -3,7 +3,7 @@ import { i18n } from '../../i18n-config';
 import { getSortedPostsData } from '../lib/blog';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = 'https://titancode.pl';
+  const siteUrl = 'https://www.titancode.pl';
 
   const staticRoutes = [
     '',

@@ -28,9 +28,26 @@ function getLocale(request: NextRequest): string {
 }
 
 export function middleware(request: NextRequest) {
-  const pathname = request.nextUrl.pathname;
+  const { pathname, hostname, protocol, search } = request.nextUrl;
+  const canonicalHostname = 'www.titancode.pl';
 
-  // // `/_next/` and `/api/` are ignored by the watcher, but we need to ignore files in `public`
+  // In production, redirect to the canonical domain
+  if (
+    process.env.NODE_ENV === 'production' &&
+    (protocol !== 'https:' || hostname !== canonicalHostname)
+  ) {
+    const newUrl = new URL(pathname, `https://${canonicalHostname}`);
+    newUrl.search = search;
+    return NextResponse.redirect(newUrl.toString(), 308); // 308 Permanent Redirect
+  }
+
+  // Handle trailing slash
+  if (pathname.length > 1 && pathname.endsWith('/')) {
+    const newUrl = new URL(pathname.slice(0, -1), request.url);
+    newUrl.search = search;
+    return NextResponse.redirect(newUrl.toString(), 308);
+  }
+
   // Check if the pathname is for the blog
   if (pathname.startsWith('/blog')) {
     return NextResponse.next();

@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://titancode.pl'),
+  metadataBase: new URL('https://www.titancode.pl'),
   title: {
     default: 'TITANCODE - Next-Generation Development Platform',
     template: `%s | TITANCODE`,
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'TITANCODE - Elevate Your Digital Experience',
     description: 'Premium web solutions that blend cutting-edge technology with elegant design.',
-    url: 'https://titancode.pl',
+    url: 'https://www.titancode.pl',
     siteName: 'TITANCODE',
     images: [
       {
@@ -88,10 +88,10 @@ export default async function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "url": "https://titancode.pl/",
+              "url": "https://www.titancode.pl/",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://titancode.pl/search?q={search_term_string}",
+                "target": "https://www.titancode.pl/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             })
@@ -104,8 +104,8 @@ export default async function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "TITANCODE",
-              "url": "https://titancode.pl/",
-              "logo": "https://titancode.pl/logo.png",
+              "url": "https://www.titancode.pl/",
+              "logo": "https://www.titancode.pl/logo.png",
               "sameAs": [
               ]
             })

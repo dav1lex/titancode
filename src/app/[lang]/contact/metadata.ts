@@ -29,6 +29,7 @@ export async function generateMetadata({
       description: t.contactPage.seoDescription,
     },
     alternates: {
+      canonical: `/${locale}/contact`,
       languages: {
         'en': '/en/contact',
         'pl': '/pl/contact',

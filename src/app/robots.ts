@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/search', // Disallow crawling of the search page
     },
-    sitemap: 'https://titancode.pl/sitemap.xml',
+    sitemap: 'https://www.titancode.pl/sitemap.xml',
   };
 }
