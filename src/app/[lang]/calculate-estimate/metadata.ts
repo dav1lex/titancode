@@ -14,19 +14,19 @@ export async function generateMetadata({
   const t = translations[locale] || translations.en;
 
   return {
-    title: t.estimatePage.mainTitle,
-    description: t.estimatePage.mainSubtitle,
-    keywords: ['Web Development Estimate', 'Project Cost Calculator', 'Website Pricing', 'Development Quote', 'TITANCODE Pricing'],
+    title: t.calculateEstimate.seo.title,
+    description: t.calculateEstimate.seo.description,
+    keywords: t.calculateEstimate.seo.keywords.split(', '),
     openGraph: {
-      title: t.estimatePage.mainTitle,
-      description: t.estimatePage.mainSubtitle,
+      title: t.calculateEstimate.seo.title,
+      description: t.calculateEstimate.seo.description,
       type: 'website',
       locale: locale === 'en' ? 'en_US' : 'pl_PL',
     },
     twitter: {
       card: 'summary_large_image',
-      title: t.estimatePage.mainTitle,
-      description: t.estimatePage.mainSubtitle,
+      title: t.calculateEstimate.seo.title,
+      description: t.calculateEstimate.seo.description,
     },
     alternates: {
       canonical: `/${locale}/calculate-estimate`,

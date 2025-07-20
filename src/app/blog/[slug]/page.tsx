@@ -20,10 +20,10 @@ export async function generateMetadata({
   try {
     const post = await getPostData(slug);
     return {
-      title: post.title,
+      title: `${post.title} | TITANCODE Blog`,
       description: post.description,
       openGraph: {
-        title: post.title,
+        title: `${post.title} | TITANCODE Blog`,
         description: post.description,
         type: 'article',
         publishedTime: post.date,

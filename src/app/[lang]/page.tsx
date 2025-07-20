@@ -57,40 +57,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       images: ['https://titancode.pl/twitter-image.png'],
     },
-    other: {
-      'google-site-verification': 'YOUR_GOOGLE_VERIFICATION_CODE', // TODO: Add your Google verification code
-    },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
-    },
     icons: {
-      icon: '/favicon.ico',
-      shortcut: '/favicon.ico',
-      apple: '/apple-touch-icon.png',
-    },
-    manifest: '/site.webmanifest',
-    applicationName: 'TITANCODE',
-    appleWebApp: {
-      title: 'TITANCODE',
-      statusBarStyle: 'default',
-      capable: true,
-    },
-    formatDetection: {
-      telephone: true,
-      email: true,
-      address: true,
-    },
-    metadataBase: new URL('https://titancode.pl'),
-    verification: {
-      google: 'YOUR_GOOGLE_VERIFICATION_CODE', // TODO: Add your Google verification code
+      icon: {
+        url: "/logo.svg",
+        type: "image/svg+xml",
+      },
+      apple: {
+        url: "/logo.svg",
+        type: "image/svg+xml",
+      },
     },
     // Adding JSON-LD structured data
     // The 'other' property is not the standard way, but Next.js doesn't have a dedicated property yet.

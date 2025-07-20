@@ -14,19 +14,19 @@ export async function generateMetadata({
   const t = translations[locale] || translations.en;
 
   return {
-    title: t.services.seoTitle,
-    description: t.services.seoDescription,
-    keywords: t.services.seoKeywords.split(', '),
+    title: t.services.seo.title,
+    description: t.services.seo.description,
+    keywords: t.services.seo.keywords.split(', '),
     openGraph: {
-      title: t.services.seoTitle,
-      description: t.services.seoDescription,
+      title: t.services.seo.title,
+      description: t.services.seo.description,
       type: 'website',
       locale: locale === 'en' ? 'en_US' : 'pl_PL',
     },
     twitter: {
       card: 'summary_large_image',
-      title: t.services.seoTitle,
-      description: t.services.seoDescription,
+      title: t.services.seo.title,
+      description: t.services.seo.description,
     },
     alternates: {
       canonical: `/${locale}/services`,

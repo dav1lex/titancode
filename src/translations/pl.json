@@ -61,7 +61,12 @@
     },
     "seoTitle": "Usługi Tworzenia Stron Internetowych Warszawa | TITANCODE",
     "seoDescription": "Oferujemy kompleksowe usługi tworzenia stron internetowych w Warszawie: projektowanie, programowanie, SEO, e-commerce i wsparcie techniczne. Sprawdź naszą ofertę.",
-    "seoKeywords": "usługi tworzenia stron internetowych, tworzenie stron warszawa, strony www warszawa, sklepy internetowe, optymalizacja seo, agencja interaktywna"
+    "seoKeywords": "usługi tworzenia stron internetowych, tworzenie stron warszawa, strony www warszawa, sklepy internetowe, optymalizacja seo, agencja interaktywna",
+    "seo": {
+      "title": "Tworzenie Stron Internetowych Warszawa | Usługi Web Development",
+      "description": "Profesjonalne tworzenie stron internetowych w Warszawie. Budujemy szybkie, dedykowane strony WWW, sklepy e-commerce i aplikacje webowe. Skontaktuj się po darmową wycenę.",
+      "keywords": "tworzenie stron warszawa, strony internetowe, web development, sklepy e-commerce, next.js, agencja interaktywna"
+    }
   },
   "hero": {
     "title": "Tworzenie Stron Internetowych w Warszawie | Profesjonalne strony WWW",
@@ -129,7 +134,12 @@
     "cta": "Sprawdź cenę",
     "testPrompt": "Chcesz poznać koszt?",
     "testDescription": "Odpowiedz na kilka pytań i otrzymaj natychmiastową wycenę.",
-    "testButton": "Oblicz koszt"
+    "testButton": "Oblicz koszt",
+    "seo": {
+      "title": "Kalkulator Wyceny Strony Internetowej | Cennik | TITANCODE",
+      "description": "Skorzystaj z naszego kalkulatora i poznaj przybliżony koszt stworzenia strony internetowej. Wybierz usługi i funkcje, aby zobaczyć szczegółową wycenę. Bez ukrytych opłat.",
+      "keywords": "kalkulator wyceny stron, cennik stron internetowych, koszt strony www, wycena sklepu internetowego"
+    }
   },
   "estimatePage": {
     "mainTitle": "Kalkulator Wyceny Projektu",
@@ -414,5 +424,19 @@
   },
   "currency": {
     "pln": "PLN"
+  },
+  "blog": {
+    "seo": {
+      "title": "Blog o Tworzeniu Stron | Poradniki, Tutoriale i Nowości | TITANCODE",
+      "description": "Oficjalny blog TITANCODE. Czytaj nasze najnowsze artykuły, poradniki i tutoriale na temat nowoczesnego web developmentu, Next.js, SEO i nie tylko.",
+      "keywords": "blog o programowaniu, tworzenie stron poradniki, tutoriale next.js, wskazówki seo, web development"
+    }
+  },
+  "search": {
+    "seo": {
+      "title": "Wyniki Wyszukiwania | TITANCODE",
+      "description": "Znajdź artykuły, projekty i informacje na temat tworzenia stron internetowych w serwisie TITANCODE.",
+      "keywords": "szukaj, znajdź, tworzenie stron, titancode, wyniki"
+    }
   }
 }

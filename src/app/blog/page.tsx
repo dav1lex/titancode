@@ -5,6 +5,16 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+ title: "Web Development Blog | Insights, Tutorials & News | TITANCODE",
+ description: "The official TITANCODE blog. Read our latest articles, tutorials, and insights on modern web development, Next.js, SEO, and more.",
+ keywords: ["web development blog", "next.js tutorials", "seo tips", "web design articles", "programming insights"],
+ alternates: {
+   canonical: "/blog",
+ },
+};
 
 export default function BlogPage() {
   const posts = getSortedPostsData();

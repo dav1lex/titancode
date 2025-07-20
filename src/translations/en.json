@@ -56,7 +56,12 @@
     },
     "seoTitle": "Web Development Services Warsaw | TITANCODE",
     "seoDescription": "We offer comprehensive web development services in Warsaw: design, coding, SEO, e-commerce, and technical support. Check out our offer.",
-    "seoKeywords": "web development services, web design warsaw, custom websites, e-commerce solutions, seo optimization, interactive agency"
+    "seoKeywords": "web development services, web design warsaw, custom websites, e-commerce solutions, seo optimization, interactive agency",
+    "seo": {
+      "title": "Web Development Services in Warsaw | Custom Websites & E-Commerce",
+      "description": "Professional web development services in Warsaw. We build fast, custom websites, e-commerce stores, and web applications tailored to your needs. Contact us for a free quote.",
+      "keywords": "web development warsaw, custom websites, e-commerce solutions, next.js development, seo services, web design agency"
+    }
   },
   "hero": {
     "title": "Designed to dominate. \n Built to endure.",
@@ -124,7 +129,12 @@
     "cta": "Get My Price",
     "testPrompt": "Want to know the cost?",
     "testDescription": "Answer a few questions and get an instant estimate.",
-    "testButton": "Calculate"
+    "testButton": "Calculate",
+    "seo": {
+      "title": "Website Cost Calculator | Instant Price Estimate | TITANCODE",
+      "description": "Get an instant price estimate for your website with our cost calculator. Select your desired services and features to see a detailed breakdown. No hidden fees.",
+      "keywords": "website cost calculator, price estimate, web development pricing, e-commerce cost, custom website price"
+    }
   },
   "estimatePage": {
     "mainTitle": "Project Cost Calculator",
@@ -413,5 +423,19 @@
   },
   "currency": {
     "pln": "PLN"
+  },
+  "blog": {
+    "seo": {
+      "title": "Web Development Blog | Insights, Tutorials & News | TITANCODE",
+      "description": "The official TITANCODE blog. Read our latest articles, tutorials, and insights on modern web development, Next.js, SEO, and more.",
+      "keywords": "web development blog, next.js tutorials, seo tips, web design articles, programming insights"
+    }
+  },
+  "search": {
+    "seo": {
+      "title": "Search Results | TITANCODE",
+      "description": "Find articles, projects, and information about web development on the TITANCODE website.",
+      "keywords": "search, find, web development, titancode, results"
+    }
   }
 }
