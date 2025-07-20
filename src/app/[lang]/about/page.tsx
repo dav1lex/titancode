@@ -26,6 +26,39 @@ import TechStackSection from "@/components/sections/TechStackSection";
  export default function AboutPage() {
    const { t ,language } = useLanguage();
 
+  const aboutPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": t("aboutPage.seoTitle"),
+    "description": t("aboutPage.seoDescription"),
+    "url": `https://titancode.pl/${language}/about`,
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "TITANCODE",
+      "url": "https://titancode.pl",
+      "logo": "https://titancode.pl/og-image.png"
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": t("nav.home"),
+        "item": `https://titancode.pl/${language}`
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": t("nav.about"),
+        "item": `https://titancode.pl/${language}/about`
+      }
+    ]
+  };
+
   const whyUsFeatures = [
     {
       icon: <Award className="h-10 w-10 text-cyan-500" />,
@@ -93,8 +126,17 @@ import TechStackSection from "@/components/sections/TechStackSection";
   ];
 
   return (
-    <div className="bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
-      {/* Hero Section */}
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className="bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
+        {/* Hero Section */}
       <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -225,6 +267,7 @@ import TechStackSection from "@/components/sections/TechStackSection";
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

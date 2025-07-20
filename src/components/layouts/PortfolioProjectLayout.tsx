@@ -95,7 +95,7 @@ export default function PortfolioProjectLayout({
         >
           <Image
             src={mainImage}
-            alt={title}
+            alt={`${title} - ${t('services.webDev.title')}`}
             fill
             style={{ objectFit: "cover" }}
             className="rounded-xl"
@@ -171,7 +171,7 @@ export default function PortfolioProjectLayout({
               >
                 <Image
                   src={src}
-                  alt={`${t("portfolio.projects.screenshotsTitle")} ${index + 1}`}
+                  alt={`${title} - ${t("portfolio.projects.screenshotsTitle")} ${index + 1}`}
                   fill
                   style={{ objectFit: "cover" }}
                   className="rounded-lg"

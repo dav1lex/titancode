@@ -26,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogPosts = getSortedPostsData().map((post) => ({
     url: `${siteUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
+    lastModified: new Date(post.date || new Date()),
   }));
 
   return [...staticRoutes, blogIndex, ...blogPosts];

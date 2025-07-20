@@ -14,19 +14,19 @@ export async function generateMetadata({
   const t = translations[locale] || translations.en;
 
   return {
-    title: t.contactPage.title,
-    description: t.contactPage.subtitle,
-    keywords: ['Contact TITANCODE', 'Web Development Inquiry', 'Get Quote', 'Project Consultation', 'Warsaw Web Development'],
+    title: t.contactPage.seoTitle,
+    description: t.contactPage.seoDescription,
+    keywords: t.contactPage.seoKeywords.split(', '),
     openGraph: {
-      title: t.contactPage.title,
-      description: t.contactPage.subtitle,
+      title: t.contactPage.seoTitle,
+      description: t.contactPage.seoDescription,
       type: 'website',
       locale: locale === 'en' ? 'en_US' : 'pl_PL',
     },
     twitter: {
       card: 'summary_large_image',
-      title: t.contactPage.title,
-      description: t.contactPage.subtitle,
+      title: t.contactPage.seoTitle,
+      description: t.contactPage.seoDescription,
     },
     alternates: {
       languages: {

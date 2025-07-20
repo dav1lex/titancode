@@ -8,12 +8,70 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 
 export default function ServicesPage() {
-  const { t, tArray } = useLanguage();
+  const { t, tArray, language } = useLanguage();
   const servicesOrder: ServiceTierKey[] = ["starter", "custom", "ecommerce", "enterprise"];
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Web Development",
+    "provider": {
+      "@type": "Organization",
+      "name": "TITANCODE"
+    },
+    "name": t("services.seoTitle"),
+    "description": t("services.seoDescription"),
+    "areaServed": {
+      "@type": "City",
+      "name": "Warszawa"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Web Development Packages",
+      "itemListElement": servicesOrder.map((key, index) => ({
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": t(`estimatePage.tiers.${key}.name`),
+          "description": t(`estimatePage.tiers.${key}.description`)
+        },
+        "priceCurrency": "PLN",
+        "price": SERVICE_TIERS[key].basePrice
+      }))
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": t("nav.home"),
+        "item": `https://titancode.pl/${language}`
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": t("nav.services"),
+        "item": `https://titancode.pl/${language}/services`
+      }
+    ]
+  };
+
   return (
-    <div className="bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
-      {/* Hero Section */}
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className="bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
+        {/* Hero Section */}
       <section className="py-12 sm:py-20 text-center bg-gray-50 dark:bg-black">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
@@ -103,6 +161,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-    </div>
+      </div>
+    </>
   );
 }

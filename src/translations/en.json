@@ -53,7 +53,10 @@
       "title": "Ongoing Support",
       "description": "We stick around. Your site stays fast, secure, and up-to-date.",
       "longDescription": "Launch is just the beginning. We handle updates, fix issues, and make changes when you need them. No monthly contracts required."
-    }
+    },
+    "seoTitle": "Web Development Services Warsaw | TITANCODE",
+    "seoDescription": "We offer comprehensive web development services in Warsaw: design, coding, SEO, e-commerce, and technical support. Check out our offer.",
+    "seoKeywords": "web development services, web design warsaw, custom websites, e-commerce solutions, seo optimization, interactive agency"
   },
   "hero": {
     "title": "Designed to dominate. \n Built to endure.",
@@ -63,6 +66,9 @@
   "portfolio": {
     "title": "Our Work",
     "subtitle": "Real projects for real businesses",
+    "seoTitle": "Portfolio - Web Development Projects in Warsaw | TITANCODE",
+    "seoDescription": "See our portfolio of completed web development projects in Warsaw. We create custom websites, e-commerce stores, and web applications.",
+    "seoKeywords": "portfolio, case studies, web development warsaw, web design projects, titancode",
     "viewProject": "View Project",
     "viewAll": "See All Projects",
     "projects": {
@@ -86,7 +92,10 @@
         "duration": "4 months",
         "summaryText": "Built a complete auction system from the ground up. Handles timed auctions, bidding, payments, and user management. Runs on a custom PHP framework we built specifically for this project.",
         "challengeText": "The auction house needed their own system instead of paying expensive third-party fees. They needed something reliable that could handle real money transactions.",
-        "solutionText": "Built a secure auction platform with custom PHP, MySQL database, and Bootstrap frontend. Includes anti-sniping features, automatic bid increments, and secure payment processing."
+        "solutionText": "Built a secure auction platform with custom PHP, MySQL database, and Bootstrap frontend. Includes anti-sniping features, automatic bid increments, and secure payment processing.",
+        "seoTitle": "Case Study: NanoBid - Auction Platform | Web Development Warsaw",
+        "seoDescription": "See how we built the NanoBid auction platform from scratch. A case study in web application development in Warsaw by TITANCODE.",
+        "seoKeywords": "case study, auction platform, php, mysql, web applications warsaw, titancode portfolio"
       },
       "kurs8klasisty": {
         "title": "Kurs8Klasisty - English Course",
@@ -97,7 +106,10 @@
         "duration": "4 weeks",
         "summaryText": "Built a complete website for an English tutor including course pages, blog, and admin system. Students can access course materials and track their progress.",
         "challengeText": "Needed a professional website that could handle course content, student management, and look great on mobile devices.",
-        "solutionText": "Created a custom PHP backend with MySQL database and responsive frontend. Includes content management system, student tracking, and mobile-optimized design."
+        "solutionText": "Created a custom PHP backend with MySQL database and responsive frontend. Includes content management system, student tracking, and mobile-optimized design.",
+        "seoTitle": "Case Study: Kurs8Klasisty - E-learning Platform | Educational Websites Warsaw",
+        "seoDescription": "Development of the Kurs8Klasisty e-learning platform. See how we create educational websites in Warsaw. A case study by TITANCODE.",
+        "seoKeywords": "case study, e-learning, educational platform, educational websites warsaw, php, mysql, titancode portfolio"
       },
       "dreamProject": {
         "title": "Your Project Here",
@@ -252,7 +264,10 @@
   "aboutPage": {
     "hero": {
       "title": "We Build Websites That Actually Work",
-      "subtitle": "Your website should be your hardest working employee. We make sure it is."
+      "subtitle": "Your website should be your hardest working employee. We make sure it is.",
+      "seoTitle": "About Us - Web Development Agency Warsaw | TITANCODE",
+      "seoDescription": "Meet TITANCODE, a web development agency from Warsaw. We specialize in creating custom websites. See our process and the technologies we use.",
+      "seoKeywords": "about us, web development agency warsaw, custom web development, development team, titancode philosophy"
     },
     "mission": {
       "title": "Why Custom Development?",
@@ -391,7 +406,10 @@
     "phone": "+48 511 118 916",
     "addressTitle": "Address",
     "addressLine1": "Warsaw",
-    "addressLine2": "Poland"
+    "addressLine2": "Poland",
+    "seoTitle": "Contact - Web Development Warsaw | TITANCODE",
+    "seoDescription": "Contact TITANCODE for web development in Warsaw. Call or write to discuss your project and get a free quote.",
+    "seoKeywords": "contact, web development warsaw, website quote, interactive agency contact, phone, email"
   },
   "currency": {
     "pln": "PLN"

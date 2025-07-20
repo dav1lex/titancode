@@ -21,8 +21,8 @@
     "getStarted": "Rozpocznij projekt"
   },
   "services": {
-    "title": "Co tworzymy",
-    "subtitle": "Każda linia kodu pisana specjalnie dla Ciebie",
+    "title": "Nasze Usługi: Tworzenie Stron Internetowych w Warszawie",
+    "subtitle": "Specjalizujemy się w projektowaniu i tworzeniu stron internetowych dla firm z Warszawy i okolic. Zobacz, co możemy dla Ciebie zrobić.",
     "viewDetails": "Zobacz szczegóły",
     "startingFrom": "Od",
     "customSolutions": {
@@ -30,8 +30,8 @@
       "description": "Żadnych gotowców ani WordPressa. Każdy projekt zaczynamy od czystej kartki i kończymy rozwiązaniem idealnie dopasowanym do Twoich potrzeb."
     },
     "webDev": {
-      "title": "Strony i aplikacje internetowe",
-      "description": "Szybkie, bezpieczne witryny działające na każdym urządzeniu i w każdej przeglądarce.",
+      "title": "Strony Internetowe i Aplikacje Webowe",
+      "description": "Tworzymy szybkie i responsywne strony internetowe w Warszawie, idealnie dopasowane do Twojej marki i celów biznesowych.",
       "longDescription": "Od prostych stron wizytówek po zaawansowane narzędzia biznesowe. Każdą linię kodu piszemy ręcznie, dokładnie testujemy i dbamy o to, by wszystko działało perfekcyjnie dla Twoich użytkowników."
     },
     "automation": {
@@ -58,16 +58,22 @@
       "title": "Wsparcie techniczne",
       "description": "Zostajemy z Tobą na dłużej. Twoja strona pozostanie szybka, bezpieczna i aktualna.",
       "longDescription": "Uruchomienie to dopiero początek. Zajmujemy się aktualizacjami, naprawiamy błędy i wprowadzamy zmiany kiedy ich potrzebujesz. Bez przymusu długoterminowych umów."
-    }
+    },
+    "seoTitle": "Usługi Tworzenia Stron Internetowych Warszawa | TITANCODE",
+    "seoDescription": "Oferujemy kompleksowe usługi tworzenia stron internetowych w Warszawie: projektowanie, programowanie, SEO, e-commerce i wsparcie techniczne. Sprawdź naszą ofertę.",
+    "seoKeywords": "usługi tworzenia stron internetowych, tworzenie stron warszawa, strony www warszawa, sklepy internetowe, optymalizacja seo, agencja interaktywna"
   },
   "hero": {
-    "title": "Unikalne jak Twój biznes. Trwałe jak skała",
-    "subtitle": "Tworzymy strony i aplikacje internetowe, które rzeczywiście przynoszą rezultaty. Bez gotowych szablonów, bez skrótów - tylko kod, który działa.",
+    "title": "Tworzenie Stron Internetowych w Warszawie | Profesjonalne strony WWW",
+    "subtitle": "Projektujemy i tworzymy szybkie, nowoczesne i zoptymalizowane pod SEO strony internetowe dla firm w Warszawie. Indywidualne projekty, gwarancja jakości i realne rezultaty.",
     "cta": "Rozpocznij projekt"
   },
   "portfolio": {
     "title": "Nasze realizacje",
     "subtitle": "Zobacz, co stworzyliśmy dla naszych klientów",
+    "seoTitle": "Portfolio - Realizacje Stron Internetowych w Warszawie | TITANCODE",
+    "seoDescription": "Zobacz nasze portfolio zrealizowanych projektów stron internetowych w Warszawie. Tworzymy strony na zamówienie, sklepy e-commerce i aplikacje webowe.",
+    "seoKeywords": "portfolio, realizacje, strony internetowe warszawa, projekty stron www, case studies, titancode",
     "viewProject": "Zobacz projekt",
     "viewAll": "Zobacz wszystkie realizacje",
     "projects": {
@@ -91,7 +97,10 @@
         "duration": "4 miesiące",
         "summaryText": "Stworzyliśmy kompletny system aukcyjny od podstaw. Obsługuje aukcje czasowe, licytowanie, płatności oraz zarządzanie użytkownikami. Działa na autorskim frameworku PHP opracowanym specjalnie na potrzeby tego projektu.",
         "challengeText": "Dom aukcyjny potrzebował własnego systemu zamiast płacenia wysokich prowizji zewnętrznym firmom. Wymagali niezawodnego rozwiązania do obsługi rzeczywistych transakcji finansowych.",
-        "solutionText": "Stworzyliśmy bezpieczną platformę aukcyjną wykorzystującą autorski kod PHP, bazę danych MySQL oraz interfejs Bootstrap. System zawiera zabezpieczenia przed snajpingiem, automatyczne podbijanie stawek oraz bezpieczne przetwarzanie płatności."
+        "solutionText": "Stworzyliśmy bezpieczną platformę aukcyjną wykorzystującą autorski kod PHP, bazę danych MySQL oraz interfejs Bootstrap. System zawiera zabezpieczenia przed snajpingiem, automatyczne podbijanie stawek oraz bezpieczne przetwarzanie płatności.",
+        "seoTitle": "Studium Przypadku: NanoBid - Platforma Aukcyjna | Tworzenie Stron Warszawa",
+        "seoDescription": "Zobacz, jak stworzyliśmy od podstaw platformę aukcyjną NanoBid. Studium przypadku tworzenia aplikacji internetowych w Warszawie przez TITANCODE.",
+        "seoKeywords": "studium przypadku, platforma aukcyjna, php, mysql, aplikacje internetowe warszawa, titancode portfolio"
       },
       "kurs8klasisty": {
         "title": "Kurs8Klasisty - Kurs języka angielskiego",
@@ -102,7 +111,10 @@
         "duration": "4 tygodnie",
         "summaryText": "Stworzyliśmy kompletną witrynę dla nauczyciela języka angielskiego wraz z sekcjami kursowymi, blogiem oraz panelem administracyjnym. Uczniowie mają dostęp do materiałów edukacyjnych i mogą śledzić swoje postępy.",
         "challengeText": "Potrzebna była profesjonalna witryna, która obsłuży materiały kursowe, zarządzanie uczniami oraz będzie doskonale wyglądać na urządzeniach mobilnych.",
-        "solutionText": "Opracowaliśmy autorski backend w PHP z bazą danych MySQL oraz responsywny frontend. System zawiera panel zarządzania treścią, śledzenie postępów uczniów oraz design zoptymalizowany pod urządzenia mobilne."
+        "solutionText": "Opracowaliśmy autorski backend w PHP z bazą danych MySQL oraz responsywny frontend. System zawiera panel zarządzania treścią, śledzenie postępów uczniów oraz design zoptymalizowany pod urządzenia mobilne.",
+        "seoTitle": "Studium Przypadku: Kurs8Klasisty - Platforma E-learningowa | Strony dla Edukacji Warszawa",
+        "seoDescription": "Realizacja platformy e-learningowej Kurs8Klasisty. Zobacz jak tworzymy strony dla edukacji w Warszawie. Studium przypadku od TITANCODE.",
+        "seoKeywords": "studium przypadku, e-learning, platforma edukacyjna, strony dla edukacji warszawa, php, mysql, titancode portfolio"
       },
       "dreamProject": {
         "title": "Twój projekt w tym miejscu",
@@ -253,7 +265,10 @@
   "aboutPage": {
     "hero": {
       "title": "Tworzymy witryny, które rzeczywiście działają",
-      "subtitle": "Twoja strona internetowa powinna być Twoim najlepszym pracownikiem. Dbamy o to, żeby tak właśnie było."
+      "subtitle": "Twoja strona internetowa powinna być Twoim najlepszym pracownikiem. Dbamy o to, żeby tak właśnie było.",
+      "seoTitle": "O Nas - Agencja Interaktywna Warszawa | TITANCODE",
+      "seoDescription": "Poznaj TITANCODE - agencję interaktywną z Warszawy. Specjalizujemy się w tworzeniu stron internetowych na zamówienie. Zobacz nasz proces i technologie.",
+      "seoKeywords": "o nas, agencja interaktywna warszawa, tworzenie stron internetowych, zespół programistów, filozofia titancode"
     },
     "mission": {
       "title": "Dlaczego dedykowany kod?",
@@ -392,7 +407,10 @@
     "phone": "+48 511 118 916",
     "addressTitle": "Adres",
     "addressLine1": "Warszawa",
-    "addressLine2": "Polska"
+    "addressLine2": "Polska",
+    "seoTitle": "Kontakt - Tworzenie Stron Internetowych Warszawa | TITANCODE",
+    "seoDescription": "Skontaktuj się z TITANCODE w sprawie tworzenia stron internetowych w Warszawie. Zadzwoń lub napisz, aby omówić swój projekt i otrzymać darmową wycenę.",
+    "seoKeywords": "kontakt, tworzenie stron internetowych warszawa, wycena strony internetowej, agencja interaktywna kontakt, telefon, email"
   },
   "currency": {
     "pln": "PLN"
