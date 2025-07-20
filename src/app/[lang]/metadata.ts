@@ -35,6 +35,16 @@ export async function generateMetadata({
         'pl': '/pl',
       },
     },
+    icons: {
+      icon: {
+        url: "/logo.svg",
+        type: "image/svg+xml",
+      },
+      apple: {
+        url: "/logo.svg",
+        type: "image/svg+xml",
+      },
+    },
   };
 }
 
