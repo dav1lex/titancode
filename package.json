@@ -26,6 +26,7 @@
     "@types/jsdom": "^21.1.7",
     "@types/negotiator": "^0.6.4",
     "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "dompurify": "^3.2.6",
