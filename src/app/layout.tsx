@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { LanguageProvider } from "./language-context";
 import { getLocaleFromLang } from "@/lib/locale-utils";
+import { Analytics } from "@vercel/analytics/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -122,6 +123,7 @@ export default async function RootLayout({
             <Header />
             <main>
               {children}
+            <Analytics />
             </main>
             <Footer />
           </LanguageProvider>
