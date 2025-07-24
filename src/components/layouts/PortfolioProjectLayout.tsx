@@ -1,6 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { VisuallyHidden } from "@/components/ui/visually-hidden";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { useRouter } from "next/navigation";
@@ -45,34 +52,6 @@ export default function PortfolioProjectLayout({
   return (
     <div className="bg-white dark:bg-black text-gray-900 dark:text-gray-100">
       <div className="container mx-auto px-4 py-12">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://titancode.pl"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Portfolio",
-                  "item": "https://titancode.pl/portfolio"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "name": title
-                }
-              ]
-            })
-          }}
-        />
         <motion.header
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -161,22 +140,45 @@ export default function PortfolioProjectLayout({
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-800 dark:text-gray-200">{t("portfolio.projects.screenshotsTitle")}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
             {images.map((src, index) => (
-              <motion.div 
-                key={index} 
-                className="relative w-full h-64 md:h-80 rounded-lg shadow-lg overflow-hidden"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <Image
-                  src={src}
-                  alt={`${title} - ${t("portfolio.projects.screenshotsTitle")} ${index + 1}`}
-                  fill
-                  style={{ objectFit: "cover" }}
-                  className="rounded-lg"
-                />
-              </motion.div>
+              <Dialog key={index}>
+                <DialogTrigger asChild>
+                  <motion.div
+                    className="relative w-full h-64 cursor-pointer md:h-80 rounded-lg shadow-lg overflow-hidden group"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
+                    <Image
+                      src={src}
+                      alt={`${title} - ${t(
+                        "portfolio.projects.screenshotsTitle"
+                      )} ${index + 1}`}
+                      fill
+                      style={{ objectFit: "cover" }}
+                      className="rounded-lg transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </motion.div>
+                </DialogTrigger>
+                <DialogContent className="p-0 bg-transparent border-none max-w-none w-screen h-screen flex items-center justify-center">
+                  <VisuallyHidden>
+                    <DialogTitle>
+                      {`${title} - ${t(
+                        "portfolio.projects.screenshotsTitle"
+                      )} ${index + 1}`}
+                    </DialogTitle>
+                  </VisuallyHidden>
+                  <Image
+                    src={src}
+                    alt={`${title} - ${t(
+                      "portfolio.projects.screenshotsTitle"
+                    )} ${index + 1}`}
+                    width={1920}
+                    height={1080}
+                    className="rounded-lg object-contain max-w-[90vw] max-h-[90vh] w-auto h-auto"
+                  />
+                </DialogContent>
+              </Dialog>
             ))}
           </div>
         </section>
