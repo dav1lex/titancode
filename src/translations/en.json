@@ -116,38 +116,10 @@
         "seoDescription": "Development of the Kurs8Klasisty e-learning platform. See how we create educational websites in Warsaw. A case study by TITANCODE.",
         "seoKeywords": "case study, e-learning, educational platform, educational websites warsaw, php, mysql, titancode portfolio"
       },
-      "linkedinScrapper": {
-        "title": "LinkedIn Scraper - Automated Job Matcher",
-        "subtitle": "Automated data scraping",
-        "description": "A tool for extracting data from LinkedIn profiles and job postings.",
-        "client": "Self-initiated",
-        "year": "2025",
-        "duration": "2 months",
-        "summaryText": "Developed a web scraper that automates the extraction of data from LinkedIn, including profiles, job postings, and company information.",
-        "challengeText": "LinkedIn's data is not easily accessible, and manual extraction is time-consuming and prone to errors.",
-        "solutionText": "Built a robust web scraping tool using Python and BeautifulSoup to automate data extraction and provide structured output.",
-        "seoTitle": "Case Study: LinkedIn Scraper - Automated Job Matcher | Web Development Warsaw",
-        "seoDescription": "See how we developed a LinkedIn scraping tool to automate data extraction. A case study in web scraping and data processing by TITANCODE.",
-        "seoKeywords": "case study, web scraping, data extraction, linkedin scraper, python, titancode portfolio"
-      },
       "dreamProject": {
         "title": "Your Project Here",
         "description": "This spot is waiting for your idea. Let's build something that actually works for your business.",
         "cta": "Get Started"
-      },
-      "linkedinJobMatcher": {
-        "title": "LinkedIn Job Matcher",
-        "subtitle": "Your personal AI-powered job hunting assistant that finds perfect job matches while you sleep.",
-        "description": "This tool automates the job search process by intelligently scanning LinkedIn, matching opportunities to your CV, and delivering a curated list of relevant jobs.",
-        "client": "Self-initiated",
-        "year": "2024",
-        "duration": "3 weeks",
-        "summaryText": "This tool automates the job search process by intelligently scanning LinkedIn, matching opportunities to your CV, and delivering a curated list of relevant jobs. The system operates in a continuous loop to ensure you never miss a new opportunity. It starts by parsing your CV to understand your skills and experience, then performs an initial scan of LinkedIn for recent job postings based on your preferences. After the first scan, it saves a checkpoint to avoid re-analyzing the same jobs. Each new job is analyzed by a rotating set of AI models to determine a match score, acting as a hiring manager comparing the job description against your CV. The system then monitors for new jobs every 10-15 minutes, and jobs with a match score above 70% are saved and a notification is sent.",
-        "challengeText": "The traditional job search is a time-consuming and inefficient chore. Manually sifting through hundreds of job postings on platforms like LinkedIn leads to missed opportunities and hours of wasted effort. The challenge was to create a system that could automate this entire process, from discovery to qualification, ensuring that users only see the most relevant job openings without lifting a finger.",
-        "solutionText": "The solution is a modular Python application designed for clarity and extensibility. It uses Playwright for robust browser-based scraping of LinkedIn, PyPDF2 to extract text from the user's CV, and the OpenAI library to connect to OpenRouter for AI-powered matching. This setup rotates through various free, high-performance language models, ensuring resilience and avoiding dependency on a single provider. The core logic is orchestrated by main.py, with separate modules for configuration, scraping, CV parsing, AI matching, storage, and notifications. This clean architecture makes the system easy to maintain and extend.",
-        "seoTitle": "Case Study: LinkedIn Job Matcher | AI Automation Warsaw",
-        "seoDescription": "Discover how we built an AI-powered assistant to automate the job search on LinkedIn. A case study in automation and AI by TITANCODE.",
-        "seoKeywords": "case study, ai assistant, job search automation, linkedin scraper, python, playwright, titancode portfolio"
       }
     }
   },

@@ -9,11 +9,19 @@
             <link>https://titancode.pl</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 18 Jul 2025 09:22:59 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 24 Jul 2025 16:57:33 GMT</lastBuildDate>
         <atom:link href="https://titancode.pl/rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Fri, 18 Jul 2025 09:22:59 GMT</pubDate>
+        <pubDate>Thu, 24 Jul 2025 16:57:33 GMT</pubDate>
         <copyright><![CDATA[© 2025 TitanCode]]></copyright>
         <language><![CDATA[pl]]></language>
+        <item>
+            <title><![CDATA[Ile kosztuje strona internetowa w Warszawie w 2025? Kompletny przewodnik po cenach]]></title>
+            <description><![CDATA[Planujesz stronę WWW w Warszawie? Zobacz, od czego zależy cena i ile kosztuje profesjonalna strona internetowa. Poznaj czynniki wpływające na wycenę i uniknij pułapek.]]></description>
+            <link>https://titancode.pl/blog/ile-kosztuje-strona-internetowa-warszawa</link>
+            <guid isPermaLink="false">https://titancode.pl/blog/ile-kosztuje-strona-internetowa-warszawa</guid>
+            <dc:creator><![CDATA[TITANCODE]]></dc:creator>
+            <pubDate>Sun, 20 Jul 2025 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Witaj, Świecie: Mój Pierwszy Wpis na Blogu]]></title>
             <description><![CDATA[To jest pierwszy wpis na moim nowym blogu! Cieszę się, że mogę dzielić się moimi przemyśleniami na temat tworzenia stron internetowych, projektowania i technologii.]]></description>

@@ -1,13 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { VisuallyHidden } from "@/components/ui/visually-hidden";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { useRouter } from "next/navigation";
@@ -66,7 +59,7 @@ export default function PortfolioProjectLayout({
           </p>
         </motion.header>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -140,45 +133,22 @@ export default function PortfolioProjectLayout({
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-800 dark:text-gray-200">{t("portfolio.projects.screenshotsTitle")}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
             {images.map((src, index) => (
-              <Dialog key={index}>
-                <DialogTrigger asChild>
-                  <motion.div
-                    className="relative w-full h-64 cursor-pointer md:h-80 rounded-lg shadow-lg overflow-hidden group"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                  >
-                    <Image
-                      src={src}
-                      alt={`${title} - ${t(
-                        "portfolio.projects.screenshotsTitle"
-                      )} ${index + 1}`}
-                      fill
-                      style={{ objectFit: "cover" }}
-                      className="rounded-lg transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </motion.div>
-                </DialogTrigger>
-                <DialogContent className="p-0 bg-transparent border-none max-w-none w-screen h-screen flex items-center justify-center">
-                  <VisuallyHidden>
-                    <DialogTitle>
-                      {`${title} - ${t(
-                        "portfolio.projects.screenshotsTitle"
-                      )} ${index + 1}`}
-                    </DialogTitle>
-                  </VisuallyHidden>
-                  <Image
-                    src={src}
-                    alt={`${title} - ${t(
-                      "portfolio.projects.screenshotsTitle"
-                    )} ${index + 1}`}
-                    width={1920}
-                    height={1080}
-                    className="rounded-lg object-contain max-w-[90vw] max-h-[90vh] w-auto h-auto"
-                  />
-                </DialogContent>
-              </Dialog>
+              <motion.div
+                key={index}
+                className="relative w-full h-64 md:h-80 rounded-lg shadow-lg overflow-hidden"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Image
+                  src={src}
+                  alt={`${title} - ${t("portfolio.projects.screenshotsTitle")} ${index + 1}`}
+                  fill
+                  style={{ objectFit: "cover" }}
+                  className="rounded-lg"
+                />
+              </motion.div>
             ))}
           </div>
         </section>
@@ -206,6 +176,7 @@ export default function PortfolioProjectLayout({
             </Button>
           )}
         </motion.div>
+
 
       </div>
     </div>

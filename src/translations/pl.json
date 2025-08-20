@@ -125,20 +125,6 @@
         "title": "Twój projekt w tym miejscu",
         "description": "To miejsce czeka na Twój pomysł. Stwórzmy razem coś, co rzeczywiście pomoże Twojemu biznesowi.",
         "cta": "Skontaktuj się"
-      },
-      "linkedinJobMatcher": {
-        "title": "LinkedIn Job Matcher",
-        "subtitle": "Asystent szukania pracy oparty na AI",
-        "description": "Inteligentne narzędzie, które automatycznie skanuje LinkedIn w poszukiwaniu ofert pracy i dopasowuje je do Twojego CV.",
-        "client": "Projekt własny",
-        "year": "2024",
-        "duration": "3 tygodnie",
-        "summaryText": "Zamiast spędzać godziny na przeglądaniu LinkedIn, to inteligentne narzędzie wykonuje za Ciebie ciężką pracę. Automatycznie skanuje LinkedIn w poszukiwaniu nowych ofert pracy na podstawie Twoich preferencji, czyta Twoje CV, aby zrozumieć Twoje umiejętności i doświadczenie, a następnie wykorzystuje AI do dopasowania opisów stanowisk do Twojego profilu, pokazując tylko te oferty, które naprawdę pasują.",
-        "challengeText": "Proces poszukiwania pracy jest czasochłonny i nieefektywny. Kandydaci spędzają godziny na ręcznym wyszukiwaniu odpowiednich ofert i często przegapiają te najlepsze. Celem było stworzenie narzędzia, które zautomatyzuje ten proces i dostarczy wyselekcjonowaną listę wysokiej jakości dopasowań.",
-        "solutionText": "Zbudowaliśmy zautomatyzowany system wykorzystujący Puppeteer do web scrapingu oraz API OpenAI do inteligentnego dopasowywania. Narzędzie działa 24/7, nieustannie skanując nowe oferty, analizując je pod kątem CV użytkownika i prezentując prostą, priorytetyzowaną listę możliwości. Oszczędza to użytkownikom 5-10 godzin tygodniowo i gwarantuje, że nigdy nie przegapią istotnej oferty. Proces jest prosty: najpierw program sprawdza Twoje CV, a następnie zaczyna sprawdzać oferty pracy. Krok po kroku, AI porównuje, czy jesteś dobrym kandydatem. Następnie program co 10 minut odświeża stronę LinkedIn, aby znaleźć nowe oferty. Chociaż scraping nie zawsze jest mile widziany, to rozwiązanie jest w pełni bezpieczne, a kod źródłowy jest ukryty w celu przyszłego rozwoju.",
-        "seoTitle": "Studium Przypadku: LinkedIn Job Matcher | Automatyzacja AI Warszawa",
-        "seoDescription": "Zobacz, jak zbudowaliśmy asystenta AI do automatyzacji poszukiwania pracy na LinkedIn. Studium przypadku w dziedzinie automatyzacji i AI od TITANCODE.",
-        "seoKeywords": "studium przypadku, asystent ai, automatyzacja szukania pracy, scraper linkedin, puppeteer, openai, titancode portfolio"
       }
     }
   },
