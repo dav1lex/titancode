@@ -55,7 +55,7 @@ export const metadata: Metadata = {
         alt: 'A preview image for TITANCODE',
       },
     ],
-    locale: getLocaleFromLang('en'),
+    locale: getLocaleFromLang('pl'),
     type: 'website',
   },
   twitter: {
@@ -86,7 +86,7 @@ export default async function RootLayout({
   const theme = cookieStore.get("theme")?.value || "system";
 
   return (
-    <html lang="en" className={theme} suppressHydrationWarning>
+    <html lang="pl" className={theme} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -99,9 +99,10 @@ export default async function RootLayout({
               "url": "https://www.titancode.pl/",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://www.titancode.pl/search?q={search_term_string}",
+                "target": "https://www.titancode.pl/pl/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"
-              }
+              },
+    
             })
           }}
         />

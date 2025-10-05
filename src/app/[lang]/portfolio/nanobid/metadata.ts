@@ -13,15 +13,16 @@ export async function generateMetadata({
   const locale = params.lang as Locale;
   const t = translations[locale] || translations.en;
 
+  const isEN = locale === 'en';
   return {
     title: t.portfolio.projects.nanobid.seoTitle,
     description: t.portfolio.projects.nanobid.seoDescription,
-    keywords: t.portfolio.projects.nanobid.seoKeywords.split(', '),
+    robots: isEN ? { index: false, follow: true } : undefined,
     openGraph: {
       title: t.portfolio.projects.nanobid.seoTitle,
       description: t.portfolio.projects.nanobid.seoDescription,
       type: 'article',
-      locale: locale === 'en' ? 'en_US' : 'pl_PL',
+      locale: 'pl_PL',
     },
     twitter: {
       card: 'summary_large_image',
@@ -29,11 +30,7 @@ export async function generateMetadata({
       description: t.portfolio.projects.nanobid.seoDescription,
     },
     alternates: {
-      canonical: `/${locale}/portfolio/nanobid`,
-      languages: {
-        'en': '/en/portfolio/nanobid',
-        'pl': '/pl/portfolio/nanobid',
-      },
+      canonical: isEN ? '/pl/portfolio/nanobid' : `/${locale}/portfolio/nanobid`,
     },
   };
 }

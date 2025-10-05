@@ -11,35 +11,9 @@ export default function ServicesPage() {
   const { t, tArray, language } = useLanguage();
   const servicesOrder: ServiceTierKey[] = ["starter", "custom", "ecommerce", "enterprise"];
 
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Web Development",
-    "provider": {
-      "@type": "Organization",
-      "name": "TITANCODE"
-    },
-    "name": t("services.seoTitle"),
-    "description": t("services.seoDescription"),
-    "areaServed": {
-      "@type": "City",
-      "name": "Warszawa"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Web Development Packages",
-      "itemListElement": servicesOrder.map((key) => ({
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": t(`estimatePage.tiers.${key}.name`),
-          "description": t(`estimatePage.tiers.${key}.description`)
-        },
-        "priceCurrency": "PLN",
-        "price": SERVICE_TIERS[key].basePrice
-      }))
-    }
-  };
+  // Service structured data removed to simplify SEO and avoid unused variables
+
+  /* removed duplicate breadcrumbSchema */
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -49,23 +23,18 @@ export default function ServicesPage() {
         "@type": "ListItem",
         "position": 1,
         "name": t("nav.home"),
-        "item": `https://titancode.pl/${language}`
+        "item": `https://www.titancode.pl/${language}`
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": t("nav.services"),
-        "item": `https://titancode.pl/${language}/services`
+        "item": `https://www.titancode.pl/${language}/services`
       }
     ]
   };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

@@ -13,15 +13,16 @@ export async function generateMetadata({
   const locale = params.lang as Locale;
   const t = translations[locale] || translations.en;
 
+  const isEN = locale === 'en';
   return {
     title: t.calculateEstimate.seo.title,
     description: t.calculateEstimate.seo.description,
-    keywords: t.calculateEstimate.seo.keywords.split(', '),
+    robots: isEN ? { index: false, follow: true } : undefined,
     openGraph: {
       title: t.calculateEstimate.seo.title,
       description: t.calculateEstimate.seo.description,
       type: 'website',
-      locale: locale === 'en' ? 'en_US' : 'pl_PL',
+      locale: 'pl_PL',
     },
     twitter: {
       card: 'summary_large_image',
@@ -29,11 +30,7 @@ export async function generateMetadata({
       description: t.calculateEstimate.seo.description,
     },
     alternates: {
-      canonical: `/${locale}/calculate-estimate`,
-      languages: {
-        'en': '/en/calculate-estimate',
-        'pl': '/pl/calculate-estimate',
-      },
+      canonical: isEN ? '/pl/calculate-estimate' : `/${locale}/calculate-estimate`,
     },
   };
 }

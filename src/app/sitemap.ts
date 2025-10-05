@@ -1,5 +1,4 @@
 import { MetadataRoute } from 'next';
-import { i18n } from '../../i18n-config';
 import { getSortedPostsData } from '../lib/blog';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -13,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contact',
     '/calculate-estimate',
   ].flatMap((route) =>
-    i18n.locales.map((locale) => ({
+    ['pl'].map((locale) => ({
       url: `${siteUrl}/${locale}${route}`,
       lastModified: new Date(),
     }))

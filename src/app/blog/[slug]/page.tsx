@@ -30,7 +30,7 @@ export async function generateMetadata({
         authors: [post.author],
         images: [
           {
-            url: `https://titancode.pl${post.image}`,
+            url: `https://www.titancode.pl${post.image}`,
             width: 1200,
             height: 630,
             alt: post.title,
@@ -41,7 +41,7 @@ export async function generateMetadata({
         card: 'summary_large_image',
         title: post.title,
         description: post.description,
-        images: [`https://titancode.pl${post.image}`],
+        images: [`https://www.titancode.pl${post.image}`],
       },
     };
   } catch {
@@ -81,7 +81,7 @@ export default async function PostPage({ params }: PostPageProps) {
       name: 'TitanCode',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://titancode.pl/apple-touch-icon.png',
+        url: 'https://www.titancode.pl/logo.svg',
       },
     },
     description: post.description,

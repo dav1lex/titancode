@@ -31,12 +31,12 @@ import TechStackSection from "@/components/sections/TechStackSection";
     "@type": "AboutPage",
     "name": t("aboutPage.seoTitle"),
     "description": t("aboutPage.seoDescription"),
-    "url": `https://titancode.pl/${language}/about`,
+    "url": `https://www.titancode.pl/${language}/about`,
     "mainEntity": {
       "@type": "Organization",
       "name": "TITANCODE",
-      "url": "https://titancode.pl",
-      "logo": "https://titancode.pl/og-image.png"
+      "url": "https://www.titancode.pl/",
+      "logo": "https://www.titancode.pl/logo.svg"
     }
   };
 
@@ -48,13 +48,13 @@ import TechStackSection from "@/components/sections/TechStackSection";
         "@type": "ListItem",
         "position": 1,
         "name": t("nav.home"),
-        "item": `https://titancode.pl/${language}`
+        "item": `https://www.titancode.pl/${language}`
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": t("nav.about"),
-        "item": `https://titancode.pl/${language}/about`
+        "item": `https://www.titancode.pl/${language}/about`
       }
     ]
   };
@@ -134,6 +134,33 @@ import TechStackSection from "@/components/sections/TechStackSection";
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          "name": "TITANCODE",
+          "url": "https://www.titancode.pl/",
+          "image": "https://www.titancode.pl/og-image.png",
+          "telephone": "+48 511 118 916",
+          "email": "info@titancode.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Warsaw",
+            "addressCountry": "PL"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
+              ],
+              "opens": "00:00",
+              "closes": "23:59"
+            }
+          ]
+        }) }}
       />
       <div className="bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
         {/* Hero Section */}

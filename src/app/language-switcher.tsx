@@ -1,7 +1,6 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { i18n } from "../../i18n-config";
 import { Button } from "@/components/ui/button";
 
@@ -10,10 +9,16 @@ import { useLanguage } from "@/app/language-context";
 export default function LanguageSwitcher() {
   const pathName = usePathname();
   const { language } = useLanguage();
+  const router = useRouter();
 
   const redirectedPathName = (locale: string) => {
     if (!pathName) return "/";
     const segments = pathName.split("/");
+    const currentLocale = segments[1];
+    // Only operate on localized routes like /pl/... or /en/...
+    if (!(i18n.locales as readonly string[]).includes(currentLocale)) {
+      return `/${locale}`; // fallback to locale home if not localized route (e.g., /blog)
+    }
     segments[1] = locale;
     return segments.join("/");
   };
@@ -24,11 +29,14 @@ export default function LanguageSwitcher() {
     return i18n.locales[nextLocaleIndex];
   };
 
+  if (i18n.locales.length < 2) return null;
   return (
-    <Link href={redirectedPathName(getNextLocale())}>
-      <Button variant="outline" size="sm">
-        {getNextLocale().toUpperCase()}
-      </Button>
-    </Link>
+    <Button
+      variant="outline"
+      size="sm"
+      onClick={() => router.push(redirectedPathName(getNextLocale()))}
+    >
+      {getNextLocale().toUpperCase()}
+    </Button>
   );
 }

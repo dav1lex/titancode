@@ -27,37 +27,47 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/portfolio/auction-portal',
-        destination: '/portfolio/nanobid',
+        destination: '/pl/portfolio/nanobid',
         permanent: true,
       },
       {
         source: '/pricing',
-        destination: '/calculate-estimate',
+        destination: '/pl/calculate-estimate',
         permanent: true,
       },
       {
         source: '/about',
-        destination: '/en/about',
+        destination: '/pl/about',
         permanent: true,
       },
       {
         source: '/services',
-        destination: '/en/services',
+        destination: '/pl/services',
         permanent: true,
       },
       {
         source: '/portfolio',
-        destination: '/en/portfolio',
+        destination: '/pl/portfolio',
         permanent: true,
       },
       {
         source: '/contact',
-        destination: '/en/contact',
+        destination: '/pl/contact',
         permanent: true,
       },
       {
         source: '/calculate-estimate',
-        destination: '/en/calculate-estimate',
+        destination: '/pl/calculate-estimate',
+        permanent: true,
+      },
+      {
+        source: '/portfolio/english-tutor',
+        destination: '/pl/portfolio/kurs8klasisty',
+        permanent: true,
+      },
+      {
+        source: '/portfolio/commercial-project',
+        destination: '/pl/portfolio',
         permanent: true,
       },
     ];

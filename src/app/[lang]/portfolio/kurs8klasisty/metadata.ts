@@ -13,15 +13,16 @@ export async function generateMetadata({
   const locale = params.lang as Locale;
   const t = translations[locale] || translations.en;
 
+  const isEN = locale === 'en';
   return {
     title: t.portfolio.projects.kurs8klasisty.seoTitle,
     description: t.portfolio.projects.kurs8klasisty.seoDescription,
-    keywords: t.portfolio.projects.kurs8klasisty.seoKeywords.split(', '),
+    robots: isEN ? { index: false, follow: true } : undefined,
     openGraph: {
       title: t.portfolio.projects.kurs8klasisty.seoTitle,
       description: t.portfolio.projects.kurs8klasisty.seoDescription,
       type: 'website',
-      locale: locale === 'en' ? 'en_US' : 'pl_PL',
+      locale: 'pl_PL',
       images: [
         {
           url: 'https://assets.titancode.pl/images/portfolio/english-tutor/main.png',
@@ -38,10 +39,7 @@ export async function generateMetadata({
       images: ['https://assets.titancode.pl/images/portfolio/english-tutor/main.png'],
     },
     alternates: {
-      languages: {
-        'en': '/en/portfolio/kurs8klasisty',
-        'pl': '/pl/portfolio/kurs8klasisty',
-      },
+      canonical: `/${locale}/portfolio/kurs8klasisty`,
     },
   };
 }

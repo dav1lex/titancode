@@ -13,15 +13,16 @@ export async function generateMetadata({
   const locale = params.lang as Locale;
   const t = translations[locale] || translations.en;
 
+  const isEN = locale === 'en';
   return {
     title: t.aboutPage.hero.seoTitle,
     description: t.aboutPage.hero.seoDescription,
-    keywords: t.aboutPage.hero.seoKeywords.split(', '),
+    robots: isEN ? { index: false, follow: true } : undefined,
     openGraph: {
       title: t.aboutPage.hero.seoTitle,
       description: t.aboutPage.hero.seoDescription,
       type: 'website',
-      locale: locale === 'en' ? 'en_US' : 'pl_PL',
+      locale: 'pl_PL',
     },
     twitter: {
       card: 'summary_large_image',
@@ -29,11 +30,7 @@ export async function generateMetadata({
       description: t.aboutPage.hero.seoDescription,
     },
     alternates: {
-      canonical: `/${locale}/about`,
-      languages: {
-        'en': '/en/about',
-        'pl': '/pl/about',
-      },
+      canonical: isEN ? '/pl/about' : `/${locale}/about`,
     },
   };
 }

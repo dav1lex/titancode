@@ -73,12 +73,12 @@ export default function ContactPage() {
     "@type": "ContactPage",
     "name": t("contactPage.seoTitle"),
     "description": t("contactPage.seoDescription"),
-    "url": `https://titancode.pl/${language}/contact`,
+    "url": `https://www.titancode.pl/${language}/contact`,
     "mainEntity": {
       "@type": "Organization",
       "name": "TITANCODE",
-      "url": "https://titancode.pl",
-      "logo": "https://titancode.pl/og-image.png",
+      "url": "https://www.titancode.pl/",
+      "logo": "https://www.titancode.pl/logo.svg",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": t("contactPage.phone"),
@@ -118,6 +118,33 @@ export default function ContactPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          "name": "TITANCODE",
+          "url": "https://www.titancode.pl/",
+          "image": "https://www.titancode.pl/og-image.png",
+          "telephone": "+48 511 118 916",
+          "email": "info@titancode.pl",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Warsaw",
+            "addressCountry": "PL"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
+              ],
+              "opens": "00:00",
+              "closes": "23:59"
+            }
+          ]
+        }) }}
       />
       <div className="container mx-auto px-4 py-16 sm:py-24 lg:py-32 min-h-[calc(100vh-9rem)]">
         <div className="grid lg:grid-cols-2 lg:gap-16 ">
