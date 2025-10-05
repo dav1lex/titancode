@@ -1,7 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/app/language-context";
-import PortfolioProjectLayout from "@/components/layouts/PortfolioProjectLayout";
+import PortfolioProjectLayoutSimple from "@/components/layouts/PortfolioProjectLayoutSimple";
 
 export default function Page() {
   const { t } = useLanguage();
@@ -33,7 +33,7 @@ export default function Page() {
 
   return (
     <>
-      <PortfolioProjectLayout {...projectData} />
+      <PortfolioProjectLayoutSimple {...projectData} />
     </>
   );
 }

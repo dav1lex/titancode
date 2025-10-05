@@ -17,6 +17,10 @@ export default function Portfolio() {
     {
       slug: "kurs8klasisty",
       imageUrl: "https://assets.titancode.pl/images/portfolio/english-tutor/main.png",
+    },
+    {
+      slug: "careerflex",
+      imageUrl: "https://assets.titancode.pl/images/portfolio/careerflex/cfx1.jpg",
     }
   ];
 

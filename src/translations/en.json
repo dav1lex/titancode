@@ -102,6 +102,20 @@
         "seoDescription": "See how we built the NanoBid auction platform from scratch. A case study in web application development in Warsaw by TITANCODE.",
         "seoKeywords": "case study, auction platform, php, mysql, web applications warsaw, titancode portfolio"
       },
+      "careerflex": {
+        "title": "CareerFlex — AI Job Search Assistant",
+        "subtitle": "Simple SaaS-style site",
+        "description": "A complex SaaS-style page that helps candidates automatically search and analyze jobs with AI.",
+        "client": "CareerFlex",
+        "year": "2025",
+        "duration": "4 months",
+        "summaryText": "We created a clean, no-nonsense product page and app that lets candidates automatically find and analyze job offers using AI. It saves time and gives clear guidance on which offers are a good match.",
+        "challengeText": "Job hunting is slow and repetitive. People read lots of similar descriptions and struggle to compare offers fairly.",
+        "solutionText": "We built a complex, focused experience where users upload their CV once, set basic preferences, and let the system search and analyze job offers automatically — then get straightforward recommendations.",
+        "seoTitle": "Case Study: CareerFlex — AI Job Search Assistant | TITANCODE",
+        "seoDescription": "CareerFlex is a complex SaaS-like page that helps candidates automatically search and analyze jobs with AI. Read the story.",
+        "seoKeywords": "careerflex, ai job search, portfolio, titancode"
+      },
       "kurs8klasisty": {
         "title": "Kurs8Klasisty - English Course",
         "subtitle": "E-learning platform",

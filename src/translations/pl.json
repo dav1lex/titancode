@@ -107,6 +107,20 @@
         "seoDescription": "Zobacz, jak stworzyliśmy od podstaw platformę aukcyjną NanoBid. Studium przypadku tworzenia aplikacji internetowych w Warszawie przez TITANCODE.",
         "seoKeywords": "studium przypadku, platforma aukcyjna, php, mysql, aplikacje internetowe warszawa, titancode portfolio"
       },
+      "careerflex": {
+        "title": "CareerFlex — Asystent do szukania pracy z AI",
+        "subtitle": "Prosty serwis w stylu SaaS",
+        "description": "Kompleksowy serwis w stylu SaaS, który pomaga kandydatom automatycznie wyszukiwać i analizować oferty pracy z pomocą AI.",
+        "client": "CareerFlex",
+        "year": "2025",
+        "duration": "4 miesiące",
+        "summaryText": "Przygotowaliśmy przejrzystą stronę produktu i aplikację, która pozwala kandydatom automatycznie wyszukiwać i analizować oferty pracy dzięki AI. Oszczędza czas i wskazuje oferty najlepiej dopasowane.",
+        "challengeText": "Szukanie pracy jest powolne i powtarzalne. Opisy są podobne, a porównanie ofert bywa trudne.",
+        "solutionText": "Zbudowaliśmy kompleksowe doświadczenie: użytkownik wgrywa CV, określa podstawowe preferencje i pozwala systemowi automatycznie szukać oraz analizować oferty — dostając jasne rekomendacje.",
+        "seoTitle": "Studium Przypadku: CareerFlex — Asystent szukania pracy z AI | TITANCODE",
+        "seoDescription": "CareerFlex to kompleksowy serwis w stylu SaaS, który pomaga kandydatom automatycznie wyszukiwać i analizować oferty pracy z pomocą AI. Poznaj realizację.",
+        "seoKeywords": "careerflex, ai, szukanie pracy, portfolio, titancode"
+      },
       "kurs8klasisty": {
         "title": "Kurs8Klasisty - Kurs języka angielskiego",
         "subtitle": "Platforma e-learningowa",

@@ -39,6 +39,14 @@ const projects = [
   },
   {
     id: 3,
+    title: "CareerFlex - AI job search assistant",
+    category: "Web App",
+    image: "https://placehold.co/600x400/png?text=CareerFlex",
+    imageAlt: "CareerFlex preview",
+    link: "/portfolio/careerflex",
+  },
+  {
+    id: 4,
     title: "Your Project",
     category: "-------------",
     image: "https://placehold.co/600x400/000000/FFFFFF/png",
