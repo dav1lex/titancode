@@ -41,7 +41,7 @@ const projects = [
     id: 3,
     title: "CareerFlex - AI job search assistant",
     category: "Web App",
-    image: "https://placehold.co/600x400/png?text=CareerFlex",
+    image: "https://assets.titancode.pl/images/portfolio/careerflex/cfx1.jpg",
     imageAlt: "CareerFlex preview",
     link: "/portfolio/careerflex",
   },
@@ -98,13 +98,14 @@ export default function PortfolioSection() {
                 <div className="p-1 h-full">
                   <Card className="h-full flex flex-col bg-white/50 dark:bg-black/50 backdrop-blur-sm border-gray-200/50 dark:border-gray-800/50 hover:border-gray-300 dark:hover:border-gray-700 transition-all">
                     <CardHeader className="p-0">
-                      <Image
-                        src={project.image}
-                        alt={project.imageAlt}
-                        width={600}
-                        height={400}
-                        className="rounded-t-lg object-cover"
-                      />
+                      <div className="relative w-full h-72 overflow-hidden rounded-t-lg">
+                        <Image
+                          src={project.image}
+                          alt={project.imageAlt}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
                     </CardHeader>
                     <CardContent className="pt-2 flex-grow">
                       <p className="text-xs font-medium text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">
