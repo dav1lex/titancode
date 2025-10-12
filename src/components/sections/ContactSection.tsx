@@ -126,7 +126,6 @@ export default function ContactSection() {
             <p className="text-muted-foreground">
               {t("contact.contactInfo.email")}
             </p>
-            <p className="font-semibold">{t("contact.contactInfo.phone")}</p>
           </div>
         </motion.div>
       </div>

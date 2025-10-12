@@ -282,8 +282,7 @@
     "contactInfo": {
       "title": "Informacje kontaktowe",
       "description": "Albo, skontaktuj się z nami bezpośrednio:",
-      "email": "info@titancode.pl",
-      "phone": "+48 511 118 916"
+      "email": "info@titancode.pl"
     }
   },
   "aboutPage": {
@@ -427,8 +426,6 @@
     "subtitle": "Pytania o projekt? Jesteśmy tutaj, żeby pomóc.",
     "emailLabel": "Email",
     "email": "info@titancode.pl",
-    "phoneLabel": "Telefon",
-    "phone": "+48 511 118 916",
     "addressTitle": "Adres",
     "addressLine1": "Warszawa",
     "addressLine2": "Polska",

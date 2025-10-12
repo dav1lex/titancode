@@ -143,7 +143,6 @@ import TechStackSection from "@/components/sections/TechStackSection";
           "name": "TITANCODE",
           "url": "https://www.titancode.pl/",
           "image": "https://www.titancode.pl/og-image.png",
-          "telephone": "+48 511 118 916",
           "email": "info@titancode.pl",
           "address": {
             "@type": "PostalAddress",

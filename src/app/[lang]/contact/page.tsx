@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail,  MapPin, Send } from "lucide-react";
 import { FormEvent, useState } from "react";
 
 export default function ContactPage() {
@@ -54,12 +54,6 @@ export default function ContactPage() {
       href: `mailto:${t("contactPage.email")}`,
     },
     {
-      icon: Phone,
-      label: t("contactPage.phoneLabel"),
-      value: t("contactPage.phone"),
-      href: `tel:${t("contactPage.phone")}`,
-    },
-    {
       icon: MapPin,
       label: t("contactPage.addressTitle"),
       value: `${t("contactPage.addressLine1")}, ${t(
@@ -81,7 +75,6 @@ export default function ContactPage() {
       "logo": "https://www.titancode.pl/logo.svg",
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": t("contactPage.phone"),
         "contactType": "Customer Service",
         "email": t("contactPage.email"),
         "areaServed": "PL",
@@ -127,7 +120,6 @@ export default function ContactPage() {
           "name": "TITANCODE",
           "url": "https://www.titancode.pl/",
           "image": "https://www.titancode.pl/og-image.png",
-          "telephone": "+48 511 118 916",
           "email": "info@titancode.pl",
           "address": {
             "@type": "PostalAddress",
