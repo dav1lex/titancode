@@ -4,15 +4,17 @@ import { getSortedPostsData } from '../lib/blog';
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = 'https://www.titancode.pl';
 
-  const staticRoutes = [
+  const routes = [
     '',
     '/about',
     '/services',
     '/portfolio',
     '/contact',
     '/calculate-estimate',
-  ].flatMap((route) =>
-    ['pl'].map((locale) => ({
+  ];
+
+  const staticRoutes = routes.flatMap((route) =>
+    ['pl', 'en'].map((locale) => ({
       url: `${siteUrl}/${locale}${route}`,
       lastModified: new Date(),
     }))

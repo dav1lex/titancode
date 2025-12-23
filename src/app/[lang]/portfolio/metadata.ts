@@ -13,11 +13,9 @@ export async function generateMetadata({
   const locale = params.lang as Locale;
   const t = translations[locale] || translations.en;
 
-  const isEN = locale === 'en';
   return {
     title: t.portfolio.seoTitle,
     description: t.portfolio.seoDescription,
-    robots: isEN ? { index: false, follow: true } : undefined,
     openGraph: {
       title: t.portfolio.seoTitle,
       description: t.portfolio.seoDescription,
@@ -30,7 +28,12 @@ export async function generateMetadata({
       description: t.portfolio.seoDescription,
     },
     alternates: {
-      canonical: isEN ? '/pl/portfolio' : `/${locale}/portfolio`,
+      canonical: `/${locale}/portfolio`,
+      languages: {
+        'pl-PL': '/pl/portfolio',
+        'en-US': '/en/portfolio',
+        'x-default': '/pl/portfolio',
+      },
     },
   };
 }

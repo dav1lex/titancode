@@ -13,11 +13,9 @@ export async function generateMetadata({
   const locale = params.lang as Locale;
   const t = translations[locale] || translations.en;
 
-  const isEN = locale === 'en';
   return {
     title: t.aboutPage.hero.seoTitle,
     description: t.aboutPage.hero.seoDescription,
-    robots: isEN ? { index: false, follow: true } : undefined,
     openGraph: {
       title: t.aboutPage.hero.seoTitle,
       description: t.aboutPage.hero.seoDescription,
@@ -30,7 +28,12 @@ export async function generateMetadata({
       description: t.aboutPage.hero.seoDescription,
     },
     alternates: {
-      canonical: isEN ? '/pl/about' : `/${locale}/about`,
+      canonical: `/${locale}/about`,
+      languages: {
+        'pl-PL': '/pl/about',
+        'en-US': '/en/about',
+        'x-default': '/pl/about',
+      },
     },
   };
 }

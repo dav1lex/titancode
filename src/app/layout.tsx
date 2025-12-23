@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProviders } from "./theme-providers";
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { LanguageProvider } from "./language-context";
@@ -85,8 +85,11 @@ export default async function RootLayout({
   const cookieStore = await cookies();
   const theme = cookieStore.get("theme")?.value || "system";
 
+  const requestHeaders = await headers();
+  const siteLang = requestHeaders.get('x-site-lang') || 'pl';
+
   return (
-    <html lang="pl" className={theme} suppressHydrationWarning>
+    <html lang={siteLang} className={theme} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

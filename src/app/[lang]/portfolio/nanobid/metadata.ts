@@ -13,11 +13,9 @@ export async function generateMetadata({
   const locale = params.lang as Locale;
   const t = translations[locale] || translations.en;
 
-  const isEN = locale === 'en';
   return {
     title: t.portfolio.projects.nanobid.seoTitle,
     description: t.portfolio.projects.nanobid.seoDescription,
-    robots: isEN ? { index: false, follow: true } : undefined,
     openGraph: {
       title: t.portfolio.projects.nanobid.seoTitle,
       description: t.portfolio.projects.nanobid.seoDescription,
@@ -30,7 +28,12 @@ export async function generateMetadata({
       description: t.portfolio.projects.nanobid.seoDescription,
     },
     alternates: {
-      canonical: isEN ? '/pl/portfolio/nanobid' : `/${locale}/portfolio/nanobid`,
+      canonical: `/${locale}/portfolio/nanobid`,
+      languages: {
+        'pl-PL': '/pl/portfolio/nanobid',
+        'en-US': '/en/portfolio/nanobid',
+        'x-default': '/pl/portfolio/nanobid',
+      },
     },
   };
 }

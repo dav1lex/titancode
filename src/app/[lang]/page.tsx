@@ -21,13 +21,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // keywords removed to simplify metadata and avoid unused variables
 
 
-  const isEN = lang === 'en';
   return {
     title,
     description,
-    robots: isEN ? { index: false, follow: true } : undefined,
     alternates: {
-      canonical: isEN ? '/pl' : `/${lang}`,
+      canonical: `/${lang}`,
+      languages: {
+        'pl-PL': '/pl',
+        'en-US': '/en',
+        'x-default': '/pl',
+      },
     },
   };
 }

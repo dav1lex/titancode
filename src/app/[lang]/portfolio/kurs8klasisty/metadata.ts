@@ -13,11 +13,9 @@ export async function generateMetadata({
   const locale = params.lang as Locale;
   const t = translations[locale] || translations.en;
 
-  const isEN = locale === 'en';
   return {
     title: t.portfolio.projects.kurs8klasisty.seoTitle,
     description: t.portfolio.projects.kurs8klasisty.seoDescription,
-    robots: isEN ? { index: false, follow: true } : undefined,
     openGraph: {
       title: t.portfolio.projects.kurs8klasisty.seoTitle,
       description: t.portfolio.projects.kurs8klasisty.seoDescription,
@@ -40,6 +38,11 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `/${locale}/portfolio/kurs8klasisty`,
+      languages: {
+        'pl-PL': '/pl/portfolio/kurs8klasisty',
+        'en-US': '/en/portfolio/kurs8klasisty',
+        'x-default': '/pl/portfolio/kurs8klasisty',
+      },
     },
   };
 }

@@ -17,7 +17,6 @@ export async function generateMetadata({
   return {
     title: t.portfolio.projects.careerflex.seoTitle,
     description: t.portfolio.projects.careerflex.seoDescription,
-    robots: isEN ? { index: false, follow: true } : undefined,
     openGraph: {
       title: t.portfolio.projects.careerflex.seoTitle,
       description: t.portfolio.projects.careerflex.seoDescription,
@@ -30,7 +29,12 @@ export async function generateMetadata({
       description: t.portfolio.projects.careerflex.seoDescription,
     },
     alternates: {
-      canonical: isEN ? '/pl/portfolio/careerflex' : `/${locale}/portfolio/careerflex`,
+      canonical: `/${locale}/portfolio/careerflex`,
+      languages: {
+        'pl-PL': '/pl/portfolio/careerflex',
+        'en-US': '/en/portfolio/careerflex',
+        'x-default': '/pl/portfolio/careerflex',
+      },
     },
   };
 }
