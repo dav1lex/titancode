@@ -23,7 +23,7 @@ export async function generateMetadata({
       locale: 'pl_PL',
       images: [
         {
-          url: 'https://assets.titancode.pl/images/portfolio/english-tutor/main.png',
+          url: '/images/portfolio/english-tutor/main.png',
           width: 1200,
           height: 630,
           alt: t.portfolio.projects.kurs8klasisty.seoTitle,
@@ -34,7 +34,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: t.portfolio.projects.kurs8klasisty.seoTitle,
       description: t.portfolio.projects.kurs8klasisty.seoDescription,
-      images: ['https://assets.titancode.pl/images/portfolio/english-tutor/main.png'],
+      images: ['/images/portfolio/english-tutor/main.png'],
     },
     alternates: {
       canonical: `/${locale}/portfolio/kurs8klasisty`,

@@ -61,6 +61,19 @@ export default function ServicesPage() {
           <p className="mt-4 max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400">
             {t("services.customSolutions.description")}
           </p>
+
+          {/* SEO: internal links to key landing pages */}
+          <div className="mt-8 flex flex-wrap gap-3 justify-center">
+            <Button asChild variant="outline">
+              <Link href={`/${language}/strony-internetowe-warszawa`}>{t("landingWarsaw.kicker")}</Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link href={`/${language}/landing-page-dla-kursu-online`}>{t("landingCourse.kicker")}</Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link href={`/${language}/panel-administracyjny-na-zamowienie`}>{t("landingAdminPanel.kicker")}</Link>
+            </Button>
+          </div>
         </div>
       </section>
 

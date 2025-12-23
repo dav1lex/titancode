@@ -21,8 +21,8 @@
     "getStarted": "Rozpocznij projekt"
   },
   "services": {
-    "title": "Nasze Usługi: Tworzenie Stron Internetowych w Warszawie",
-    "subtitle": "Specjalizujemy się w projektowaniu i tworzeniu stron internetowych dla firm z Warszawy i okolic. Zobacz, co możemy dla Ciebie zrobić.",
+    "title": "Usługi: strony internetowe i aplikacje",
+    "subtitle": "Projektujemy i wdrażamy strony oraz aplikacje, które działają szybko, stabilnie i są gotowe pod SEO.",
     "viewDetails": "Zobacz szczegóły",
     "startingFrom": "Od",
     "customSolutions": {
@@ -31,7 +31,7 @@
     },
     "webDev": {
       "title": "Strony Internetowe i Aplikacje Webowe",
-      "description": "Tworzymy szybkie i responsywne strony internetowe w Warszawie, idealnie dopasowane do Twojej marki i celów biznesowych.",
+      "description": "Tworzymy szybkie i responsywne strony internetowe, idealnie dopasowane do Twojej marki i celów biznesowych.",
       "longDescription": "Od prostych stron wizytówek po zaawansowane narzędzia biznesowe. Każdą linię kodu piszemy ręcznie, dokładnie testujemy i dbamy o to, by wszystko działało perfekcyjnie dla Twoich użytkowników."
     },
     "automation": {
@@ -59,25 +59,25 @@
       "description": "Zostajemy z Tobą na dłużej. Twoja strona pozostanie szybka, bezpieczna i aktualna.",
       "longDescription": "Uruchomienie to dopiero początek. Zajmujemy się aktualizacjami, naprawiamy błędy i wprowadzamy zmiany kiedy ich potrzebujesz. Bez przymusu długoterminowych umów."
     },
-    "seoTitle": "Usługi Tworzenia Stron Internetowych Warszawa | TITANCODE",
-    "seoDescription": "Oferujemy kompleksowe usługi tworzenia stron internetowych w Warszawie: projektowanie, programowanie, SEO, e-commerce i wsparcie techniczne. Sprawdź naszą ofertę.",
+    "seoTitle": "Usługi web development | TITANCODE",
+    "seoDescription": "Kompleksowy web development: projekt, wdrożenie, SEO techniczne, e-commerce i wsparcie. Zobacz ofertę.",
     "seoKeywords": "usługi tworzenia stron internetowych, tworzenie stron warszawa, strony www warszawa, sklepy internetowe, optymalizacja seo, agencja interaktywna",
     "seo": {
-      "title": "Tworzenie Stron Internetowych Warszawa | Usługi Web Development",
-      "description": "Profesjonalne tworzenie stron internetowych w Warszawie. Budujemy szybkie, dedykowane strony WWW, sklepy e-commerce i aplikacje webowe. Skontaktuj się po darmową wycenę.",
+      "title": "Usługi web development | strony, sklepy, aplikacje",
+      "description": "Szybkie, dedykowane strony WWW, sklepy e-commerce i aplikacje webowe. Napisz po darmową wycenę.",
       "keywords": "tworzenie stron warszawa, strony internetowe, web development, sklepy e-commerce, next.js, agencja interaktywna"
     }
   },
   "hero": {
-    "title": "Tworzenie Stron Internetowych w Warszawie | Profesjonalne strony WWW",
-    "subtitle": "Projektujemy i tworzymy szybkie, nowoczesne i zoptymalizowane pod SEO strony internetowe dla firm w Warszawie. Indywidualne projekty, gwarancja jakości i realne rezultaty.",
+    "title": "Szybkie strony WWW i aplikacje, które sprzedają",
+    "subtitle": "Projektujemy i tworzymy szybkie, nowoczesne i zoptymalizowane pod SEO strony internetowe dla firm. Indywidualne projekty i realne rezultaty.",
     "cta": "Rozpocznij projekt"
   },
   "portfolio": {
     "title": "Nasze realizacje",
     "subtitle": "Zobacz, co stworzyliśmy dla naszych klientów",
-    "seoTitle": "Portfolio - Realizacje Stron Internetowych w Warszawie | TITANCODE",
-    "seoDescription": "Zobacz nasze portfolio zrealizowanych projektów stron internetowych w Warszawie. Tworzymy strony na zamówienie, sklepy e-commerce i aplikacje webowe.",
+    "seoTitle": "Portfolio – realizacje | TITANCODE",
+    "seoDescription": "Zobacz portfolio zrealizowanych projektów: strony na zamówienie, sklepy e-commerce i aplikacje webowe.",
     "seoKeywords": "portfolio, realizacje, strony internetowe warszawa, projekty stron www, case studies, titancode",
     "viewProject": "Zobacz projekt",
     "viewAll": "Zobacz wszystkie realizacje",
@@ -289,8 +289,8 @@
     "hero": {
       "title": "Tworzymy witryny, które rzeczywiście działają",
       "subtitle": "Twoja strona internetowa powinna być Twoim najlepszym pracownikiem. Dbamy o to, żeby tak właśnie było.",
-      "seoTitle": "O Nas - Agencja Interaktywna Warszawa | TITANCODE",
-      "seoDescription": "Poznaj TITANCODE - agencję interaktywną z Warszawy. Specjalizujemy się w tworzeniu stron internetowych na zamówienie. Zobacz nasz proces i technologie.",
+      "seoTitle": "O mnie | TITANCODE",
+      "seoDescription": "Poznaj TITANCODE. Specjalizujemy się w tworzeniu stron internetowych i aplikacji na zamówienie. Zobacz nasz proces i technologie.",
       "seoKeywords": "o nas, agencja interaktywna warszawa, tworzenie stron internetowych, zespół programistów, filozofia titancode"
     },
     "mission": {
@@ -429,8 +429,8 @@
     "addressTitle": "Adres",
     "addressLine1": "Warszawa",
     "addressLine2": "Polska",
-    "seoTitle": "Kontakt - Tworzenie Stron Internetowych Warszawa | TITANCODE",
-    "seoDescription": "Skontaktuj się z TITANCODE w sprawie tworzenia stron internetowych w Warszawie. Zadzwoń lub napisz, aby omówić swój projekt i otrzymać darmową wycenę.",
+    "seoTitle": "Kontakt | TITANCODE",
+    "seoDescription": "Skontaktuj się w sprawie strony lub aplikacji. Napisz, aby omówić projekt i dostać darmową wycenę.",
     "seoKeywords": "kontakt, tworzenie stron internetowych warszawa, wycena strony internetowej, agencja interaktywna kontakt, telefon, email"
   },
   "currency": {
@@ -448,6 +448,131 @@
       "title": "Wyniki Wyszukiwania | TITANCODE",
       "description": "Znajdź artykuły, projekty i informacje na temat tworzenia stron internetowych w serwisie TITANCODE.",
       "keywords": "szukaj, znajdź, tworzenie stron, titancode, wyniki"
+    }
+  },
+  "landingWarsaw": {
+    "seo": {
+      "title": "Tworzenie stron internetowych Warszawa | Szybkie strony WWW, SEO i wydajność",
+      "description": "Projektujemy i wdrażamy szybkie, nowoczesne strony internetowe dla firm z Warszawy. Next.js, świetne Core Web Vitals, SEO techniczne, gotowe do pozyskiwania leadów."
+    },
+    "kicker": "Strony internetowe • Warszawa",
+    "h1": "Strony internetowe w Warszawie, które naprawdę sprzedają",
+    "lead": "Jesteśmy zespołem developerskim (TITANCODE). Robimy szybkie strony bez WordPressowych ograniczeń: czyste SEO, świetne Core Web Vitals, stabilna analityka i realne wyniki.",
+    "primaryCta": "Porozmawiajmy o projekcie",
+    "secondaryCta": "Zobacz realizacje",
+    "cards": [
+      {
+        "title": "Wydajność (CWV)",
+        "desc": "Projektujemy pod szybkość: LCP, CLS i INP mają znaczenie. To wpływa na SEO i konwersję."
+      },
+      {
+        "title": "SEO techniczne", 
+        "desc": "Kanoniczne adresy, hreflang, sitemap, robots, poprawne nagłówki i struktura. Bez pułapek indeksacji."
+      },
+      {
+        "title": "Konwersja", 
+        "desc": "Oferta, CTA, sekcje dowodów i case studies. Strona ma dowozić zapytania, a nie tylko \"ładnie wyglądać\"."
+      }
+    ],
+    "section2": {
+      "title": "Co dostajesz (konkretnie)",
+      "bullets": [
+        "Indywidualny projekt + wdrożenie w Next.js (lub inny stack, jeśli ma sens)",
+        "Wersja PL/EN z poprawnym hreflang i kanonicznymi adresami",
+        "Konfiguracja analityki i zdarzeń (GA4, GTM) + podstawowe mierzenie konwersji",
+        "Checklisty SEO i wydajności przed wdrożeniem"
+      ]
+    },
+    "finalCta": {
+      "title": "Chcesz wycenę?",
+      "desc": "Wypełnij krótki kalkulator i dostaniesz widełki + propozycję zakresu.",
+      "button": "Oblicz wycenę"
+    }
+  },
+  "landingCourse": {
+    "seo": {
+      "title": "Landing page dla kursu online | Lead-gen, płatności i automatyzacje",
+      "description": "Projektujemy landing page pod sprzedaż kursu: szybki, SEO-ready, z analityką, integracją płatności i automatyzacjami. Bez WordPressowych wtyczek i chaosu."
+    },
+    "kicker": "Kurs online • Landing page",
+    "h1": "Landing page dla kursu online, który domyka sprzedaż",
+    "lead": "Zrobimy stronę sprzedażową, która ładuje się błyskawicznie, mierzy konwersje i pozwala skalować kampanie bez technicznego długu.",
+    "primaryCta": "Zamów konsultację",
+    "secondaryCta": "Zobacz usługi",
+    "section1": {
+      "title": "Dlaczego to działa",
+      "desc": "Skupiamy się na jasnym przekazie, wiarygodności i mierzalnych zdarzeniach. Dzięki temu wiesz co poprawiać, a kampanie są tańsze."
+    },
+    "cards": [
+      {
+        "title": "Szybkość + UX",
+        "desc": "Wyniki kampanii zależą od UX. Szybki landing zwiększa jakość ruchu i konwersję."
+      },
+      {
+        "title": "Analityka i zdarzenia",
+        "desc": "GA4/GTM, zdarzenia, cele, mikro-konwersje. Bez strzelania na ślepo."
+      },
+      {
+        "title": "Integracje",
+        "desc": "Płatności, newsletter, CRM, automatyzacje e-maili i webhooki – pod Twój proces."
+      }
+    ],
+    "section2": {
+      "title": "Co możemy wdrożyć",
+      "bullets": [
+        "Sekcje: obietnica, proof, program, bonusy, FAQ, CTA",
+        "Integracja płatności (Stripe/Przelewy24 – zależnie od potrzeb)",
+        "Formularze + automatyzacje (np. MailerLite / HubSpot / własne)",
+        "Wersja PL/EN + SEO techniczne"
+      ]
+    },
+    "finalCta": {
+      "title": "Chcesz to policzyć?",
+      "desc": "Podaj zakres i zobacz widełki + rekomendację najlepszego pakietu.",
+      "button": "Przejdź do kalkulatora"
+    }
+  },
+  "landingAdminPanel": {
+    "seo": {
+      "title": "Panel administracyjny na zamówienie | Aplikacje webowe, dashboardy i integracje",
+      "description": "Budujemy panele administracyjne i aplikacje webowe dopasowane do procesów firmy: dashboardy, role, integracje, automatyzacje. Szybko, bez przepalania budżetu."
+    },
+    "kicker": "Aplikacja webowa • Panel admin",
+    "h1": "Panel administracyjny na zamówienie – bez kompromisów",
+    "lead": "Jeśli Excel i wtyczki przestały wystarczać, czas na własny system: role, logi, integracje i dashboardy dopasowane pod proces.",
+    "primaryCta": "Porozmawiajmy",
+    "secondaryCta": "Zobacz portfolio",
+    "section1": {
+      "title": "Kiedy warto",
+      "desc": "Gdy potrzebujesz kontroli, automatyzacji i jednej prawdy o danych – zamiast kilku narzędzi, które się nie spinają."
+    },
+    "cards": [
+      {
+        "title": "Role i uprawnienia",
+        "desc": "Dostęp per użytkownik/rola, audyt, logi, bezpieczeństwo."
+      },
+      {
+        "title": "Integracje",
+        "desc": "API, webhooki, płatności, CRM, faktury, magazyn. Pod realny proces."
+      },
+      {
+        "title": "Dashboardy",
+        "desc": "Wizualizacje KPI, alerty, raporty – żeby decyzje były oparte o dane."
+      }
+    ],
+    "section2": {
+      "title": "Co dowozimy", 
+      "bullets": [
+        "Panel + API + baza danych (architektura pod skalowanie)",
+        "Autoryzacja, role, logowanie zmian (audit trail)",
+        "Integracje i automatyzacje (webhooki, cron, kolejki)",
+        "Wdrożenie + monitoring + plan rozwoju"
+      ]
+    },
+    "finalCta": {
+      "title": "Masz proces do zautomatyzowania?",
+      "desc": "Opisz go w 2–3 zdaniach. Powiemy, jak to ugryźć i ile to realnie kosztuje.",
+      "button": "Napisz do nas"
     }
   }
 }

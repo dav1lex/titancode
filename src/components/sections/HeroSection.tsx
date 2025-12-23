@@ -50,6 +50,27 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.7 }}
           >
+            {/* SEO landing links */}
+            <div className="w-full flex flex-wrap gap-3 justify-center mb-4">
+              <Link
+                href={`/${language}/strony-internetowe-warszawa`}
+                className="text-sm text-gray-600 dark:text-gray-400 underline underline-offset-4 hover:text-gray-900 dark:hover:text-white"
+              >
+                {t("landingWarsaw.kicker")}
+              </Link>
+              <Link
+                href={`/${language}/landing-page-dla-kursu-online`}
+                className="text-sm text-gray-600 dark:text-gray-400 underline underline-offset-4 hover:text-gray-900 dark:hover:text-white"
+              >
+                {t("landingCourse.kicker")}
+              </Link>
+              <Link
+                href={`/${language}/panel-administracyjny-na-zamowienie`}
+                className="text-sm text-gray-600 dark:text-gray-400 underline underline-offset-4 hover:text-gray-900 dark:hover:text-white"
+              >
+                {t("landingAdminPanel.kicker")}
+              </Link>
+            </div>
             <Link href={`/${language}/calculate-estimate`}>
               <Button
                 size="lg"

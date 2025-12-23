@@ -6,9 +6,19 @@ import en from "../translations/en.json";
 import pl from "../translations/pl.json";
 import { Locale } from "../../i18n-config";
 
-type NestedTranslations = {
-  [key: string]: string | string[] | NestedTranslations;
+type TranslationValue =
+  | string
+  | number
+  | boolean
+  | null
+  | TranslationObject
+  | TranslationValue[];
+
+type TranslationObject = {
+  [key: string]: TranslationValue;
 };
+
+type NestedTranslations = TranslationObject;
 
 type LanguageContextType = {
   language: Locale;
@@ -16,7 +26,7 @@ type LanguageContextType = {
   tArray: (key: string) => string[];
 };
 
-const translations: { [key: string]: NestedTranslations } = {
+const translations: Record<string, NestedTranslations> = {
   en,
   pl,
 };
@@ -29,40 +39,67 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const t = (key: string): string => {
     const keys = key.split(".");
-    let result: NestedTranslations | string | string[] =
-      translations[language];
+    let current: TranslationValue = translations[language];
+
     for (const k of keys) {
-      if (
-        result &&
-        typeof result === "object" &&
-        !Array.isArray(result) &&
-        k in result
-      ) {
-        result = (result as NestedTranslations)[k];
-      } else {
+      // Support arrays in translation JSON, e.g. "cards.0.title"
+      if (Array.isArray(current)) {
+        const index = Number.parseInt(k, 10);
+        if (!Number.isNaN(index) && index >= 0 && index < current.length) {
+          current = current[index];
+          continue;
+        }
         return key;
       }
+
+      if (current && typeof current === "object") {
+        const obj = current as TranslationObject;
+        if (k in obj) {
+          current = obj[k];
+          continue;
+        }
+      }
+
+      return key;
     }
-    return typeof result === "string" ? result : key;
+
+    return typeof current === "string" ? current : key;
   };
 
   const tArray = (key: string): string[] => {
     const keys = key.split(".");
-    let result: NestedTranslations | string | string[] =
-      translations[language];
+    let current: TranslationValue = translations[language];
+
     for (const k of keys) {
-      if (
-        result &&
-        typeof result === "object" &&
-        !Array.isArray(result) &&
-        k in result
-      ) {
-        result = (result as NestedTranslations)[k];
-      } else {
+      if (Array.isArray(current)) {
+        const index = Number.parseInt(k, 10);
+        if (!Number.isNaN(index) && index >= 0 && index < current.length) {
+          current = current[index];
+          continue;
+        }
         return [key];
       }
+
+      if (current && typeof current === "object") {
+        const obj = current as TranslationObject;
+        if (k in obj) {
+          current = obj[k];
+          continue;
+        }
+      }
+
+      return [key];
     }
-    return Array.isArray(result) ? result.map(String) : [key];
+
+    if (!Array.isArray(current)) return [key];
+
+    // Only return primitive arrays as string[]
+    const values = current.filter(
+      (v): v is string | number | boolean =>
+        typeof v === "string" || typeof v === "number" || typeof v === "boolean"
+    );
+
+    return values.map(String);
   };
 
   return (

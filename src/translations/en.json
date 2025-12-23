@@ -54,12 +54,12 @@
       "description": "We stick around. Your site stays fast, secure, and up-to-date.",
       "longDescription": "Launch is just the beginning. We handle updates, fix issues, and make changes when you need them. No monthly contracts required."
     },
-    "seoTitle": "Web Development Services Warsaw | TITANCODE",
-    "seoDescription": "We offer comprehensive web development services in Warsaw: design, coding, SEO, e-commerce, and technical support. Check out our offer.",
+    "seoTitle": "Web development services | TITANCODE",
+    "seoDescription": "End-to-end web development: design, engineering, technical SEO, e-commerce, and support. See the offer.",
     "seoKeywords": "web development services, web design warsaw, custom websites, e-commerce solutions, seo optimization, interactive agency",
     "seo": {
-      "title": "Web Development Services in Warsaw | Custom Websites & E-Commerce",
-      "description": "Professional web development services in Warsaw. We build fast, custom websites, e-commerce stores, and web applications tailored to your needs. Contact us for a free quote.",
+      "title": "Web development services | Custom websites & e-commerce",
+      "description": "Fast custom websites, e-commerce stores, and web apps tailored to your needs. Contact us for a free quote.",
       "keywords": "web development warsaw, custom websites, e-commerce solutions, next.js development, seo services, web design agency"
     }
   },
@@ -287,8 +287,8 @@
     "hero": {
       "title": "We Build Websites That Actually Work",
       "subtitle": "Your website should be your hardest working employee. We make sure it is.",
-      "seoTitle": "About Us - Web Development Agency Warsaw | TITANCODE",
-      "seoDescription": "Meet TITANCODE, a web development agency from Warsaw. We specialize in creating custom websites. See our process and the technologies we use.",
+      "seoTitle": "About | TITANCODE",
+      "seoDescription": "Meet TITANCODE. We specialize in building custom websites and web apps. See our process and the technologies we use.",
       "seoKeywords": "about us, web development agency warsaw, custom web development, development team, titancode philosophy"
     },
     "mission": {
@@ -427,8 +427,8 @@
     "addressTitle": "Address",
     "addressLine1": "Warsaw",
     "addressLine2": "Poland",
-    "seoTitle": "Contact - Web Development Warsaw | TITANCODE",
-    "seoDescription": "Contact TITANCODE for web development in Warsaw. Call or write to discuss your project and get a free quote.",
+    "seoTitle": "Contact | TITANCODE",
+    "seoDescription": "Contact us to discuss your website or web app and get a free quote.",
     "seoKeywords": "contact, web development warsaw, website quote, interactive agency contact, phone, email"
   },
   "currency": {
@@ -446,6 +446,131 @@
       "title": "Search Results | TITANCODE",
       "description": "Find articles, projects, and information about web development on the TITANCODE website.",
       "keywords": "search, find, web development, titancode, results"
+    }
+  },
+  "landingWarsaw": {
+    "seo": {
+      "title": "Website Development Warsaw | Fast websites, SEO & performance",
+      "description": "We build fast, modern websites for Warsaw-based businesses. Next.js, strong Core Web Vitals, technical SEO, built to convert and generate leads."
+    },
+    "kicker": "Websites • Warsaw",
+    "h1": "Websites in Warsaw that actually convert",
+    "lead": "We build fast websites without WordPress limitations: clean technical SEO, strong Core Web Vitals, reliable analytics, real outcomes.",
+    "primaryCta": "Let’s talk",
+    "secondaryCta": "See portfolio",
+    "cards": [
+      {
+        "title": "Performance (CWV)",
+        "desc": "Built for speed: LCP, CLS and INP matter. This impacts SEO and conversions."
+      },
+      {
+        "title": "Technical SEO",
+        "desc": "Canonicals, hreflang, sitemap, robots, correct headings and structure. No indexation traps."
+      },
+      {
+        "title": "Conversion",
+        "desc": "Clear offer, CTAs, proof sections and case studies. The site should bring inquiries, not just look nice."
+      }
+    ],
+    "section2": {
+      "title": "What you get",
+      "bullets": [
+        "Custom design + implementation in Next.js (or another stack if it makes sense)",
+        "PL/EN setup with correct hreflang and self-referencing canonicals",
+        "Analytics + conversion events (GA4, GTM) and baseline conversion tracking",
+        "Pre-launch SEO and performance checklists"
+      ]
+    },
+    "finalCta": {
+      "title": "Want a quote?",
+      "desc": "Use the quick estimator and get a range + suggested scope.",
+      "button": "Calculate estimate"
+    }
+  },
+  "landingCourse": {
+    "seo": {
+      "title": "Landing page for an online course | Lead-gen, payments & automation",
+      "description": "We build course sales pages designed to convert: fast, SEO-ready, with analytics, payments integration and automation. No WordPress plugin chaos."
+    },
+    "kicker": "Online course • Landing page",
+    "h1": "A course landing page that closes sales",
+    "lead": "Let’s build a sales page that loads instantly, tracks conversions, and scales your campaigns without technical debt.",
+    "primaryCta": "Book a consult",
+    "secondaryCta": "See services",
+    "section1": {
+      "title": "Why it works",
+      "desc": "We focus on clarity, credibility and measurable events—so you know what to improve and campaigns get cheaper over time."
+    },
+    "cards": [
+      {
+        "title": "Speed + UX",
+        "desc": "Campaign performance depends on UX. A fast landing improves conversion and traffic quality."
+      },
+      {
+        "title": "Analytics & events",
+        "desc": "GA4/GTM events, goals, micro-conversions—no guessing."
+      },
+      {
+        "title": "Integrations",
+        "desc": "Payments, newsletter, CRM, email automation and webhooks—built around your workflow."
+      }
+    ],
+    "section2": {
+      "title": "What I can implement",
+      "bullets": [
+        "Sections: promise, proof, curriculum, bonuses, FAQ, CTA",
+        "Payments integration (Stripe / local providers depending on needs)",
+        "Forms + automation (MailerLite / HubSpot / custom)",
+        "PL/EN + technical SEO"
+      ]
+    },
+    "finalCta": {
+      "title": "Want to price it?",
+      "desc": "Share the scope and see a range + a recommended tier.",
+      "button": "Open estimator"
+    }
+  },
+  "landingAdminPanel": {
+    "seo": {
+      "title": "Custom admin panel | Web apps, dashboards & integrations",
+      "description": "We build custom admin panels and web apps tailored to your processes: dashboards, roles, integrations, automation. Fast delivery without wasted budget."
+    },
+    "kicker": "Web app • Admin panel",
+    "h1": "A custom admin panel—built for your workflow",
+    "lead": "If spreadsheets and plugins aren’t enough anymore, it’s time for a proper system: roles, logs, integrations and dashboards designed around your process.",
+    "primaryCta": "Let’s talk",
+    "secondaryCta": "See portfolio",
+    "section1": {
+      "title": "When it’s worth it",
+      "desc": "When you need control, automation and a single source of truth—instead of tools that don’t connect."
+    },
+    "cards": [
+      {
+        "title": "Roles & permissions",
+        "desc": "Per-role access, audit logs, traceability and security."
+      },
+      {
+        "title": "Integrations",
+        "desc": "APIs, webhooks, payments, CRM, invoicing, inventory—built for the real workflow."
+      },
+      {
+        "title": "Dashboards",
+        "desc": "KPI visualizations, alerts, reporting—so decisions are data-driven."
+      }
+    ],
+    "section2": {
+      "title": "What I deliver",
+      "bullets": [
+        "Admin panel + API + database (scalable architecture)",
+        "Auth, roles, audit trail",
+        "Integrations and automation (webhooks, cron, queues)",
+        "Deployment + monitoring + growth plan"
+      ]
+    },
+    "finalCta": {
+      "title": "Have a process to automate?",
+      "desc": "Describe it in 2–3 sentences. We’ll tell you the approach and a realistic cost range.",
+      "button": "Message us"
     }
   }
 }

@@ -12,15 +12,15 @@ export default function Portfolio() {
   const projects = [
     {
       slug: "nanobid",
-      imageUrl: "https://assets.titancode.pl/images/portfolio/nanobid/n1.png",
+      imageUrl: "/images/portfolio/nanobid/n1.png",
     },
     {
       slug: "kurs8klasisty",
-      imageUrl: "https://assets.titancode.pl/images/portfolio/english-tutor/main.png",
+      imageUrl: "/images/portfolio/english-tutor/main.png",
     },
     {
       slug: "careerflex",
-      imageUrl: "https://assets.titancode.pl/images/portfolio/careerflex/cfx1.jpg",
+      imageUrl: "/images/portfolio/careerflex/cfx1.jpg",
     }
   ];
 

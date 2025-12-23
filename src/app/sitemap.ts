@@ -11,6 +11,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/portfolio',
     '/contact',
     '/calculate-estimate',
+
+    // Landing pages (SEO)
+    '/strony-internetowe-warszawa',
+    '/landing-page-dla-kursu-online',
+    '/panel-administracyjny-na-zamowienie',
   ];
 
   const staticRoutes = routes.flatMap((route) =>

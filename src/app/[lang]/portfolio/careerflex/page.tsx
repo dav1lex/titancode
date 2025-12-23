@@ -9,7 +9,7 @@ export default function Page() {
   const projectData = {
     title: t("portfolio.projects.careerflex.title"),
     subtitle: t("portfolio.projects.careerflex.subtitle"),
-    mainImage: "https://assets.titancode.pl/images/portfolio/careerflex/cfx1.jpg",
+    mainImage: "/images/portfolio/careerflex/cfx1.jpg",
     projectInfo: {
       client: t("portfolio.projects.careerflex.client"),
       year: t("portfolio.projects.careerflex.year"),
@@ -29,12 +29,12 @@ export default function Page() {
       "Framer Motion",
     ],
     images: [
-      "https://assets.titancode.pl/images/portfolio/careerflex/c1.png",
-      "https://assets.titancode.pl/images/portfolio/careerflex/c2.png",
-      "https://assets.titancode.pl/images/portfolio/careerflex/c3.png",
-      "https://assets.titancode.pl/images/portfolio/careerflex/c4.png",
-      "https://assets.titancode.pl/images/portfolio/careerflex/c5.png",
-      "https://assets.titancode.pl/images/portfolio/careerflex/c6.png",
+      "/images/portfolio/careerflex/c1.png",
+      "/images/portfolio/careerflex/c2.png",
+      "/images/portfolio/careerflex/c3.png",
+      "/images/portfolio/careerflex/c4.png",
+      "/images/portfolio/careerflex/c5.png",
+      "/images/portfolio/careerflex/c6.png",
     ],
     liveSiteUrl: "https://careerflex.app",
     t: t,
