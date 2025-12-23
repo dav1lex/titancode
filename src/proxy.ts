@@ -8,14 +8,15 @@ import { i18n } from '../i18n-config';
  * - Set a header so the root layout can set <html lang> correctly.
  */
 export function proxy(request: NextRequest) {
-  const { pathname, hostname, protocol, search } = request.nextUrl;
+  const { pathname, hostname, search } = request.nextUrl;
   const canonicalHostname = 'www.titancode.pl';
 
-  // In production, redirect to the canonical domain
-  if (
-    process.env.NODE_ENV === 'production' &&
-    (protocol !== 'https:' || hostname !== canonicalHostname)
-  ) {
+  // Redirect to canonical domain ONLY for your real domains.
+  // Note: On Vercel preview deployments NODE_ENV is also 'production', so we must not
+  // redirect every *.vercel.app request.
+  const isTitanDomain = hostname === 'titancode.pl' || hostname === 'www.titancode.pl';
+
+  if (isTitanDomain && hostname !== canonicalHostname) {
     const newUrl = new URL(pathname, `https://${canonicalHostname}`);
     newUrl.search = search;
     return NextResponse.redirect(newUrl.toString(), 308);
