@@ -57,7 +57,7 @@
     "seoTitle": "Web development services | TITANCODE",
     "seoDescription": "End-to-end web development: design, engineering, technical SEO, e-commerce, and support. See the offer.",
     "seoKeywords": "web development services, web design warsaw, custom websites, e-commerce solutions, seo optimization, interactive agency",
-    "seo": {
+    "pageSeo": {
       "title": "Web development services | Custom websites & e-commerce",
       "description": "Fast custom websites, e-commerce stores, and web apps tailored to your needs. Contact us for a free quote.",
       "keywords": "web development warsaw, custom websites, e-commerce solutions, next.js development, seo services, web design agency"

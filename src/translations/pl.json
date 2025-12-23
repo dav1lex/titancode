@@ -62,7 +62,7 @@
     "seoTitle": "Usługi web development | TITANCODE",
     "seoDescription": "Kompleksowy web development: projekt, wdrożenie, SEO techniczne, e-commerce i wsparcie. Zobacz ofertę.",
     "seoKeywords": "usługi tworzenia stron internetowych, tworzenie stron warszawa, strony www warszawa, sklepy internetowe, optymalizacja seo, agencja interaktywna",
-    "seo": {
+    "pageSeo": {
       "title": "Usługi web development | strony, sklepy, aplikacje",
       "description": "Szybkie, dedykowane strony WWW, sklepy e-commerce i aplikacje webowe. Napisz po darmową wycenę.",
       "keywords": "tworzenie stron warszawa, strony internetowe, web development, sklepy e-commerce, next.js, agencja interaktywna"
@@ -466,11 +466,11 @@
         "desc": "Projektujemy pod szybkość: LCP, CLS i INP mają znaczenie. To wpływa na SEO i konwersję."
       },
       {
-        "title": "SEO techniczne", 
+        "title": "SEO techniczne",
         "desc": "Kanoniczne adresy, hreflang, sitemap, robots, poprawne nagłówki i struktura. Bez pułapek indeksacji."
       },
       {
-        "title": "Konwersja", 
+        "title": "Konwersja",
         "desc": "Oferta, CTA, sekcje dowodów i case studies. Strona ma dowozić zapytania, a nie tylko \"ładnie wyglądać\"."
       }
     ],
@@ -561,7 +561,7 @@
       }
     ],
     "section2": {
-      "title": "Co dowozimy", 
+      "title": "Co dowozimy",
       "bullets": [
         "Panel + API + baza danych (architektura pod skalowanie)",
         "Autoryzacja, role, logowanie zmian (audit trail)",

@@ -49,11 +49,11 @@ export default function Portfolio() {
                 <h2 className="text-xl font-semibold">
                   {t(`portfolio.projects.${project.slug}.title`)}
                 </h2>
-                <p className="text-gray-600 mt-1">
+                <p className="text-gray-600 dark:text-gray-300 mt-1">
                   {t(`portfolio.projects.${project.slug}.description`)}
                 </p>
               </div>
-              <ArrowRight className="h-6 w-6 text-gray-400 hidden md:block" />
+              <ArrowRight className="h-6 w-6 text-gray-400 dark:text-gray-500 hidden md:block" />
             </div>
           </Link>
         ))}
@@ -63,7 +63,7 @@ export default function Portfolio() {
               <h2 className="text-xl font-semibold">
                 {t("portfolio.projects.dreamProject.title")}
               </h2>
-              <p className="text-gray-600 mt-1">
+              <p className="text-gray-600 dark:text-gray-300 mt-1">
                 {t("portfolio.projects.dreamProject.description")}
               </p>
             </div>

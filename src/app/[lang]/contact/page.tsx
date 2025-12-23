@@ -138,7 +138,9 @@ export default function ContactPage() {
           ]
         }) }}
       />
-      <div className="container mx-auto px-4 py-16 sm:py-24 lg:py-32 min-h-[calc(100vh-9rem)]">
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-transparent to-gray-50 dark:to-black" />
+        <div className="container mx-auto px-4 py-16 sm:py-24 lg:py-32 min-h-[calc(100vh-9rem)]">
         <div className="grid lg:grid-cols-2 lg:gap-16 ">
           <motion.div
             className="flex flex-col justify-center"
@@ -146,7 +148,7 @@ export default function ContactPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl bg-clip-text text-transparent bg-gradient-to-b from-gray-900 to-gray-600 dark:from-white dark:to-gray-300">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
               {t("contact.title")}
             </h1>
             <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
@@ -197,7 +199,7 @@ export default function ContactPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <Card className="bg-white/50 dark:bg-black/50 backdrop-blur-lg border rounded-2xl shadow-lg py-3">
+            <Card className="rounded-2xl border border-black/10 dark:border-white/10 bg-white/70 dark:bg-white/5 backdrop-blur-xl shadow-lg">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold tracking-tight text-center">
                   {t("contact.form.title")}
@@ -235,6 +237,7 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </div>
+     </div>
     </>
   );
 }

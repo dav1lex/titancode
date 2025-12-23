@@ -1,11 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ExternalLink, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
-import { ReactNode, useCallback, useEffect, useState } from "react";
+import { ReactNode } from "react";
+import { ProjectImageGallery } from "@/components/ProjectImageGallery";
 
 interface ProjectInfo {
   client: string;
@@ -41,34 +40,6 @@ export default function PortfolioProjectLayoutSimple({
   t,
 }: PortfolioProjectLayoutProps) {
   const router = useRouter();
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const openLightbox = useCallback((index: number) => {
-    setActiveIndex(index);
-    setLightboxOpen(true);
-  }, []);
-
-  const closeLightbox = useCallback(() => setLightboxOpen(false), []);
-
-  const prev = useCallback(() => {
-    setActiveIndex((idx) => (idx - 1 + images.length) % images.length);
-  }, [images.length]);
-
-  const next = useCallback(() => {
-    setActiveIndex((idx) => (idx + 1) % images.length);
-  }, [images.length]);
-
-  useEffect(() => {
-    if (!lightboxOpen) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") closeLightbox();
-      if (e.key === "ArrowLeft") prev();
-      if (e.key === "ArrowRight") next();
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [lightboxOpen, closeLightbox, prev, next]);
 
   return (
     <div className="bg-white dark:bg-black text-gray-900 dark:text-gray-100 min-h-screen">
@@ -160,105 +131,15 @@ export default function PortfolioProjectLayoutSimple({
           </div>
 
           {/* Right column - Images */}
-          <div className="space-y-6">
-            {/* Main image */}
-            <button
-              type="button"
-              onClick={() => openLightbox(0)}
-              className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden shadow-lg group"
-            >
-              <Image
-                src={mainImage}
-                alt={title}
-                fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
-                priority
-              />
-            </button>
-
-            {/* Gallery grid */}
-            {images.length > 1 && (
-              <div>
-                <h3 className="text-lg font-semibold mb-3">{t("portfolio.projects.screenshotsTitle")}</h3>
-                <div className="grid grid-cols-2 gap-3">
-                  {images.slice(1).map((src, index) => (
-                    <button
-                      key={index}
-                      type="button"
-                      onClick={() => openLightbox(index + 1)}
-                      className="relative w-full h-32 md:h-40 rounded-lg overflow-hidden shadow group"
-                    >
-                      <Image
-                        src={src}
-                        alt={`${title} - screenshot ${index + 2}`}
-                        fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
+          <div>
+            <ProjectImageGallery
+              title={title}
+              images={[mainImage, ...images.filter((img) => img !== mainImage)]}
+              screenshotsLabel={t("portfolio.projects.screenshotsTitle")}
+            />
           </div>
         </div>
       </div>
-
-      {/* Simple lightbox */}
-      <AnimatePresence>
-        {lightboxOpen && (
-          <motion.div
-            key="lightbox"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
-          >
-            <button
-              aria-label="Close"
-              className="absolute top-4 right-4 text-white p-2 rounded-full bg-black/50 hover:bg-black/70"
-              onClick={closeLightbox}
-            >
-              <X className="h-6 w-6" />
-            </button>
-
-            {images.length > 1 && (
-              <>
-                <button
-                  aria-label="Previous"
-                  className="absolute left-4 text-white p-2 rounded-full bg-black/50 hover:bg-black/70"
-                  onClick={prev}
-                >
-                  <ChevronLeft className="h-6 w-6" />
-                </button>
-                <button
-                  aria-label="Next"
-                  className="absolute right-4 text-white p-2 rounded-full bg-black/50 hover:bg-black/70"
-                  onClick={next}
-                >
-                  <ChevronRight className="h-6 w-6" />
-                </button>
-              </>
-            )}
-
-            <motion.div
-              key={activeIndex}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.2 }}
-              className="relative w-[90vw] h-[80vh] md:w-[80vw] md:h-[70vh]"
-            >
-              <Image
-                src={images[activeIndex]}
-                alt={`${title} - fullscreen ${activeIndex + 1}`}
-                fill
-                className="object-contain"
-                priority
-              />
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 }
