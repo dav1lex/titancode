@@ -2,19 +2,13 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import ThemeToggle from "@/app/theme-toggle";
 import LanguageSwitcher from "@/app/language-switcher";
 import { useLanguage } from "@/app/language-context";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown } from "lucide-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import "@fontsource/space-grotesk";
 
 export default function Header() {
@@ -37,9 +31,9 @@ export default function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Logo animation variants
-  const logoLetters = "TITANCODE".split("");
-  
+  const estimatePath = `/${language}/calculate-estimate`;
+  const servicesPath = `/${language}/services`;
+
   return (
     <header 
       className={`sticky top-0 z-50 w-full backdrop-blur-md transition-all duration-300 ${
@@ -51,98 +45,76 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <Link href={`/${language}`} className="flex items-center">
-              <div className="overflow-hidden flex">
-                {logoLetters.map((letter, index) => (
-                  <motion.span
-                    key={index}
-                    className="text-xl font-bold font-['Space_Grotesk'] text-black dark:text-white inline-block"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ 
-                      opacity: 1, 
-                      y: 0,
-                      transition: {
-                        delay: index * 0.05,
-                        duration: 0.5
-                      }
-                    }}
-                    whileHover={{
-                      scale: 1.2,
-                      color: index % 2 === 0 ? "#3B82F6" : "#10B981",
-                      transition: { duration: 0.2 }
-                    }}
-                  >
-                    {letter}
-                  </motion.span>
-                ))}
-              </div>
+          <div className="flex items-center gap-3">
+            <Link href={`/${language}`} className="flex items-center gap-2">
+              <Image
+                src="/logo-sv.svg"
+                alt="TITANCODE"
+                width={44}
+                height={44}
+                className="h-11 w-11 lg:h-12 lg:w-12 dark:invert"
+                priority
+              />
+              <motion.div
+                className="block whitespace-nowrap font-['Space_Grotesk'] text-lg sm:text-xl font-bold tracking-tight text-black dark:text-white"
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                whileHover={{ y: -1, opacity: 0.92 }}
+              >
+                TITANCODE
+              </motion.div>
             </Link>
+
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {["home", "offer", "portfolio", "blog", "about", "contact"].map((item) => {
-              if (item === "offer") {
-                const servicesPath = `/${language}/services`;
-                const estimatePath = `/${language}/calculate-estimate`;
-                const isActive = pathname.startsWith(servicesPath) || pathname.startsWith(estimatePath);
-                return (
-                  <DropdownMenu  key={item}>
-                    <DropdownMenuTrigger asChild>
-                      <button
-                        className={`relative font-['Space_Grotesk'] transition-colors  group flex items-center gap-1 outline-none ${
-                          isActive
-                            ? "text-black dark:text-white"
-                            : "text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white"
-                        }`}
-                      >
-                        <span className="relative z-10">{t(`nav.offer`)}</span>
-                        <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
-                      </button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent className="bg-white dark:bg-black rounded-lg p-2">
-                      <DropdownMenuItem asChild>
-                        <Link href={servicesPath}>{t('nav.services')}</Link>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem asChild>
-                        <Link href={estimatePath}>{t('nav.calculate_estimate')}</Link>
-                      </DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                );
-              }
-
-              const href = item === "home" ? `/${language}` : item === "blog" ? "/blog" : `/${language}/${item}`;
-              const isActive = item === 'home' ? pathname === href : pathname.startsWith(href);
+          <nav className="hidden md:flex items-center space-x-5 lg:space-x-8">
+            {[
+              { key: 'home', href: `/${language}` },
+              { key: 'services', href: servicesPath },
+              { key: 'portfolio', href: `/${language}/portfolio` },
+              { key: 'blog', href: '/blog' },
+              { key: 'about', href: `/${language}/about` },
+              { key: 'contact', href: `/${language}/contact` },
+            ].map((item) => {
+              const isActive = item.key === 'home' ? pathname === item.href : pathname.startsWith(item.href);
               return (
-              <Link
-                href={href}
-                key={item}
-                className={`relative font-['Space_Grotesk'] transition-colors group ${
-                  isActive
-                    ? "text-black dark:text-white"
-                    : "text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white"
-                }`}
-              >
-                <span className="relative z-10">
-                  {t(`nav.${item}`)}
-                </span>
-                <motion.span
-                  className="absolute bottom-0 left-0 h-0.5 bg-blue-500 dark:bg-cyan-400"
-                  animate={{ width: isActive ? "100%" : "0%" }}
-                  whileHover={{ width: "100%" }}
-                  transition={{ duration: 0.3 }}
-                ></motion.span>
-              </Link>
-            )})}
+                <Link
+                  href={item.href}
+                  key={item.key}
+                  className={`relative font-['Space_Grotesk'] text-sm lg:text-base transition-colors group ${
+                    isActive
+                      ? 'text-black dark:text-white'
+                      : 'text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white'
+                  }`}
+                >
+                  <span className="relative z-10">{t(`nav.${item.key}`)}</span>
+                  <motion.span
+                    className="absolute bottom-0 left-0 h-0.5 bg-blue-500 dark:bg-cyan-400"
+                    animate={{ width: isActive ? '100%' : '0%' }}
+                    whileHover={{ width: '100%' }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </Link>
+              );
+            })}
           </nav>
 
-          {/* Theme Toggle, Language Switcher and Mobile Menu Button */}
+          {/* Right controls */}
           <div className="flex items-center gap-3">
-            <ThemeToggle />
-            <span className="text-gray-300 dark:text-gray-700">|</span>
-            <LanguageSwitcher />
+            {/* Primary CTA (desktop) */}
+            <div className="hidden lg:flex items-center gap-3">
+              <Button asChild className="font-['Space_Grotesk']">
+                <Link href={estimatePath}>{t('header.primaryCta')}</Link>
+              </Button>
+            </div>
+
+            <div className="hidden sm:flex items-center gap-3">
+              <ThemeToggle />
+              <span className="text-gray-300 dark:text-gray-700">|</span>
+              <LanguageSwitcher />
+            </div>
             <motion.div
               whileTap={{ scale: 0.9 }}
             >
@@ -215,6 +187,11 @@ export default function Header() {
                 hidden: {},
               }}
             >
+              <div className="flex items-center justify-center gap-3 mb-8">
+                <ThemeToggle />
+                <LanguageSwitcher />
+              </div>
+
               <nav className="flex flex-col space-y-8 text-lg">
                 {[
                   { name: t("nav.home"), path: `/${language}` },

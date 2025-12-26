@@ -1,161 +1,181 @@
 "use client";
 
-import { useState, type ReactElement } from "react";
+import { useMemo, useState, type ReactElement } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+  ArrowRight,
+  Bot,
+  Code,
+  LifeBuoy,
+  LineChart,
+  Search,
+  ShoppingCart,
+} from "lucide-react";
+
 import { useLanguage } from "@/app/language-context";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
-  DialogHeader,
-  DialogTitle,
   DialogDescription,
+  DialogTitle,
 } from "@/components/ui/dialog";
-import { motion } from "framer-motion";
-import { ArrowRight, Code, Bot, Search, ShoppingCart, LineChart, LifeBuoy } from "lucide-react";
+
+type ServiceKey =
+  | "webDev"
+  | "automation"
+  | "seo"
+  | "ecommerce"
+  | "consulting"
+  | "maintenance";
 
 type Service = {
+  key: ServiceKey;
   icon: ReactElement;
-  key: string;
 };
 
 export default function ServicesSection() {
-  const { t } = useLanguage();
-  const [selectedService, setSelectedService] = useState<Service | null>(null);
+  const { t, language } = useLanguage();
+  const [selectedKey, setSelectedKey] = useState<ServiceKey | null>(null);
 
-  const services: Service[] = [
-    {
-      icon: <Code className="w-8 h-8" />,
-      key: "webDev",
-    },
-    {
-      icon: <Bot className="w-8 h-8" />,
-      key: "automation",
-    },
-    {
-      icon: <Search className="w-8 h-8" />,
-      key: "seo",
-    },
-    {
-      icon: <ShoppingCart className="w-8 h-8" />,
-      key: "ecommerce",
-    },
-    {
-      icon: <LineChart className="w-8 h-8" />,
-      key: "consulting",
-    },
-    {
-      icon: <LifeBuoy className="w-8 h-8" />,
-      key: "maintenance",
-    },
-  ];
+  const services: Service[] = useMemo(
+    () => [
+      { key: "webDev", icon: <Code className="size-6" /> },
+      { key: "automation", icon: <Bot className="size-6" /> },
+      { key: "seo", icon: <Search className="size-6" /> },
+      { key: "ecommerce", icon: <ShoppingCart className="size-6" /> },
+      { key: "consulting", icon: <LineChart className="size-6" /> },
+      { key: "maintenance", icon: <LifeBuoy className="size-6" /> },
+    ],
+    []
+  );
 
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
+  const selectedService = selectedKey
+    ? services.find((s) => s.key === selectedKey) ?? null
+    : null;
 
   return (
-    <section className="py-24 sm:py-32 bg-zinc-50 dark:bg-black transition-colors duration-300">
-      <div className="container mx-auto px-4">
-        <div className="max-w-2xl lg:max-w-4xl mx-auto text-center mb-16">
+    <section className="relative py-24 sm:py-32 bg-background overflow-hidden">
+      {/* Animated background elements */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
+      </div>
+
+      <div className="container mx-auto px-4 relative">
+        {/* Header */}
+        <div className="max-w-3xl mx-auto text-center mb-16">
           <motion.h2
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 dark:text-white"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.6 }}
           >
             {t("services.title")}
           </motion.h2>
           <motion.p
-            className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400"
+            className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.7 }}
+            transition={{ delay: 0.1, duration: 0.6 }}
           >
             {t("services.subtitle")}
           </motion.p>
         </div>
 
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {services.map((service) => (
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, idx) => (
             <motion.div
               key={service.key}
-              variants={itemVariants}
-              className="group relative p-8 bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border  hover:border-primary dark:hover:border-primary transition-all duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.08, duration: 0.6 }}
+              className="group relative h-full"
             >
-              <div className="relative z-10">
-                <div className="mb-6 flex items-center justify-center w-12 h-12 bg-gray-100 dark:bg-zinc-800 rounded-lg text-primary dark:text-white group-hover:bg-primary dark:group-hover:bg-primary group-hover:text-white dark:group-hover:text-black transition-colors duration-300">
-                  {service.icon}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-cyan-500/0 group-hover:from-blue-500/5 group-hover:to-cyan-500/5 rounded-2xl transition duration-500" />
+              <div className="relative p-6 h-full border border-border rounded-2xl bg-card/50 backdrop-blur group-hover:border-primary/50 transition-all duration-300 flex flex-col">
+                {/* Icon + Title */}
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-foreground/5 group-hover:bg-primary/10 text-foreground group-hover:text-primary transition-all duration-300 flex-shrink-0">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
+                    {t(`services.${service.key}.title`)}
+                  </h3>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                  {t(`services.${service.key}.title`)}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3 h-[4.5rem]">
+
+                {/* Description */}
+                <p className="text-sm leading-6 text-muted-foreground mb-6 flex-1">
                   {t(`services.${service.key}.description`)}
                 </p>
-                <Button
-                  variant="link"
-                  className="p-0 text-primary dark:text-white font-semibold group-hover:underline"
-                  onClick={() => setSelectedService(service)}
-                >
-                  <span className="flex items-center gap-2">
+
+                {/* Button */}
+                <div>
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="w-full"
+                    onClick={() => setSelectedKey(service.key)}
+                  >
                     {t("services.viewDetails")}
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </Button>
+                    <ArrowRight className="size-4 ml-2" />
+                  </Button>
+                </div>
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
 
+      {/* Premium Modal Dialog */}
       {selectedService && (
-        <Dialog open={!!selectedService} onOpenChange={() => setSelectedService(null)}>
-          <DialogContent className="sm:max-w-[425px]">
-            <DialogHeader>
-              <DialogTitle className="flex items-center gap-4">
-                <div className="flex items-center justify-center w-12 h-12 bg-gray-100 dark:bg-zinc-800 rounded-lg text-primary dark:text-white">
+        <Dialog open={!!selectedService} onOpenChange={() => setSelectedKey(null)}>
+          <DialogContent className="sm:max-w-xl p-8 gap-6">
+            {/* Header with icon */}
+            <div className="space-y-4">
+              <div className="flex items-start gap-4">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg border border-border/50 bg-background text-foreground flex-shrink-0">
                   {selectedService.icon}
                 </div>
-                {t(`services.${selectedService.key}.title`)}
-              </DialogTitle>
-              <DialogDescription>
-                {t(`services.${selectedService.key}.description`)}
-              </DialogDescription>
-            </DialogHeader>
-            <div className="py-4">
-              <p className="text-sm text-gray-500">
+                <div className="flex-1">
+                  <DialogTitle className="text-2xl">
+                    {t(`services.${selectedService.key}.title`)}
+                  </DialogTitle>
+                  <DialogDescription className="text-base mt-2">
+                    {t(`services.${selectedService.key}.description`)}
+                  </DialogDescription>
+                </div>
+              </div>
+            </div>
+
+            {/* Long description */}
+            <div className="py-4 border-t border-b border-border">
+              <p className="text-muted-foreground leading-7">
                 {t(`services.${selectedService.key}.longDescription`)}
               </p>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button asChild className="flex-1 font-semibold">
+                <Link href={`/${language}/calculate-estimate`}>
+                  {t("services.ctaPrimary")}
+                </Link>
+              </Button>
+              <Button asChild variant="outline" className="flex-1 font-semibold">
+                <Link href={`/${language}/contact`}>
+                  {t("services.ctaSecondary")}
+                </Link>
+              </Button>
             </div>
           </DialogContent>
         </Dialog>
       )}
     </section>
   );
-}   
+}

@@ -9,6 +9,9 @@
     "about": "About",
     "contact": "Contact"
   },
+  "header": {
+    "primaryCta": "Get a quote"
+  },
   "footer": {
     "rights": "All rights reserved",
     "about": "We build custom websites and web applications that actually get results. No templates, no shortcuts, just code that works.",
@@ -19,6 +22,8 @@
     "title": "What We Build",
     "subtitle": "Every line of code written for you",
     "viewDetails": "See Details",
+    "ctaPrimary": "Get a quote",
+    "ctaSecondary": "Contact",
     "startingFrom": "From",
     "customSolutions": {
       "title": "Built From Scratch",

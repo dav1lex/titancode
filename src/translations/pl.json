@@ -9,6 +9,9 @@
     "about": "O nas",
     "contact": "Kontakt"
   },
+  "header": {
+    "primaryCta": "Darmowa wycena"
+  },
   "footer": {
     "rights": "Wszelkie prawa zastrzeżone",
     "about": "Tworzymy strony i aplikacje internetowe, które rzeczywiście przynoszą rezultaty. Bez gotowych szablonów, bez skrótów - tylko kod, który działa.",
@@ -24,6 +27,8 @@
     "title": "Usługi: strony internetowe i aplikacje",
     "subtitle": "Projektujemy i wdrażamy strony oraz aplikacje, które działają szybko, stabilnie i są gotowe pod SEO.",
     "viewDetails": "Zobacz szczegóły",
+    "ctaPrimary": "Darmowa wycena",
+    "ctaSecondary": "Kontakt",
     "startingFrom": "Od",
     "customSolutions": {
       "title": "Tworzymy od podstaw",

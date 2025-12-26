@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useLanguage } from "@/app/language-context";
 import { FaGithub, FaFacebook } from "react-icons/fa";
 import "@fontsource/space-grotesk";
@@ -36,6 +37,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
             <Link href={`/${language}`} className="flex items-center space-x-2">
+              <Image
+                src="/logo-sv.svg"
+                alt="TITANCODE"
+                width={48}
+                height={48}
+                className="h-12 w-12 dark:invert"
+              />
               <span className="font-bold text-xl font-['Space_Grotesk']">TITANCODE</span>
             </Link>
             <p className="text-muted-foreground text-sm">

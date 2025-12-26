@@ -9,7 +9,7 @@ export default function BlogIndexPage() {
     const posts = getBlogPosts()
 
     return (
-        <div className="min-h-screen bg-background pb-20 pt-24">
+        <div className="min-h-screen bg-background pb-20">
             {/* Header */}
             <div className="bg-muted/30 border-b border-border py-16 sm:py-24">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
