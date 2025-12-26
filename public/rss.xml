@@ -9,11 +9,19 @@
             <link>https://titancode.pl</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 23 Dec 2025 20:43:38 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 26 Dec 2025 14:21:37 GMT</lastBuildDate>
         <atom:link href="https://titancode.pl/rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 23 Dec 2025 20:43:38 GMT</pubDate>
+        <pubDate>Fri, 26 Dec 2025 14:21:37 GMT</pubDate>
         <copyright><![CDATA[© 2025 TitanCode]]></copyright>
         <language><![CDATA[pl]]></language>
+        <item>
+            <title><![CDATA[Strona Dedykowana vs WordPress: Co Wybrać w 2025? (Porównanie)]]></title>
+            <description><![CDATA[Zastanawiasz się między WordPressem a stroną dedykowaną (Next.js)? Sprawdź, dlaczego w 2025 roku rozwiązania 'custom' wygrywają szybkością, bezpieczeństwem i SEO.]]></description>
+            <link>https://titancode.pl/blog/dlaczego-strona-dedykowana-lepsza-niz-wordpress</link>
+            <guid isPermaLink="false">https://titancode.pl/blog/dlaczego-strona-dedykowana-lepsza-niz-wordpress</guid>
+            <dc:creator><![CDATA[TITANCODE]]></dc:creator>
+            <pubDate>Fri, 15 Aug 2025 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Ile kosztuje strona internetowa w Warszawie w 2025? Kompletny przewodnik po cenach]]></title>
             <description><![CDATA[Planujesz stronę WWW w Warszawie? Zobacz, od czego zależy cena i ile kosztuje profesjonalna strona internetowa. Poznaj czynniki wpływające na wycenę i uniknij pułapek.]]></description>

@@ -1,98 +1,94 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import { remark } from 'remark';
-import html from 'remark-html';
-import readingTime from 'reading-time';
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
+import readingTime from 'reading-time'
 
-export interface PostMeta {
-  slug: string;
-  title: string;
-  date: string;
-  author: string;
-  description: string;
-  image: string;
-  tags: string[];
-  readingTime: string;
+const postsDirectory = path.join(process.cwd(), 'content/blog')
+
+export type BlogPost = {
+    slug: string
+    title: string
+    description: string
+    date: string
+    author: string
+    tags: string[]
+    content: string
+    readingTime: string
+    coverImage?: string
 }
 
-export interface Post extends PostMeta {
-  content: string;
-}
-
-const postsDirectory = path.join(process.cwd(), 'content/blog');
-
-export function getSortedPostsData(): PostMeta[] {
-  if (!fs.existsSync(postsDirectory)) {
-    return [];
-  }
-
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map((fileName) => {
-    const slug = fileName.replace(/\.md$/, '');
-    const fullPath = path.join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const { data, content } = matter(fileContents);
-
-    return {
-      slug,
-      title: data.title,
-      date: data.date,
-      author: data.author,
-      description: data.description,
-      image: data.image,
-      tags: data.tags,
-      readingTime: readingTime(content).text,
-    };
-  });
-
-  return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
-      return 1;
-    } else {
-      return -1;
+export function getBlogPosts(): BlogPost[] {
+    // Create directory if it doesn't exist
+    if (!fs.existsSync(postsDirectory)) {
+        return []
     }
-  });
+
+    const fileNames = fs.readdirSync(postsDirectory)
+    const allPostsData = fileNames
+        .filter((fileName) => fileName.endsWith('.mdx'))
+        .map((fileName) => {
+            const slug = fileName.replace(/\.mdx$/, '')
+            const fullPath = path.join(postsDirectory, fileName)
+            const fileContents = fs.readFileSync(fullPath, 'utf8')
+            const { data, content } = matter(fileContents)
+
+            return {
+                slug,
+                title: data.title,
+                description: data.description,
+                date: data.date,
+                author: data.author,
+                tags: data.tags || [],
+                content,
+                readingTime: readingTime(content).text,
+                coverImage: data.coverImage || data.image,
+            } as BlogPost
+        })
+
+    // Sort posts by date
+    return allPostsData.sort((a, b) => {
+        if (a.date < b.date) {
+            return 1
+        } else {
+            return -1
+        }
+    })
 }
 
-export async function getPostData(slug: string): Promise<Post> {
-  try {
-    const fullPath = path.join(postsDirectory, `${slug}.md`);
-    
-    // Check if file exists to prevent crashes
-    if (!fs.existsSync(fullPath)) {
-      throw new Error(`Post not found: ${slug}`);
+export function getBlogPost(slug: string): BlogPost | null {
+    try {
+        const fullPath = path.join(postsDirectory, `${slug}.mdx`)
+        const fileContents = fs.readFileSync(fullPath, 'utf8')
+        const { data, content } = matter(fileContents)
+
+        return {
+            slug,
+            title: data.title,
+            description: data.description,
+            date: data.date,
+            author: data.author,
+            tags: data.tags || [],
+            content,
+            readingTime: readingTime(content).text,
+            coverImage: data.coverImage || data.image,
+        } as BlogPost
+    } catch (e) {
+        return null
     }
-    
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const { data, content } = matter(fileContents);
-
-    const processedContent = await remark().use(html).process(content);
-    const contentHtml = processedContent.toString();
-
-    return {
-      slug,
-      content: contentHtml,
-      title: data.title || 'Untitled',
-      date: data.date || new Date().toISOString(),
-      author: data.author || 'Unknown',
-      description: data.description || '',
-      image: data.image || '/og-image.png',
-      tags: Array.isArray(data.tags) ? data.tags : [],
-      readingTime: readingTime(content).text,
-    };
-  } catch (error) {
-    console.error('Error loading post:', error);
-    throw error;
-  }
 }
 
-export function getAllPostSlugs() {
-  if (!fs.existsSync(postsDirectory)) {
-    return [];
-  }
-  const fileNames = fs.readdirSync(postsDirectory);
-  return fileNames.map((fileName) => ({
-    slug: fileName.replace(/\.md$/, ''),
-  }));
+export function getAllBlogSlugs() {
+    if (!fs.existsSync(postsDirectory)) {
+        return []
+    }
+    const fileNames = fs.readdirSync(postsDirectory)
+    return fileNames
+        .filter((fileName) => fileName.endsWith('.mdx'))
+        .map((fileName) => {
+            return {
+                params: {
+                    slug: fileName.replace(/\.mdx$/, ''),
+                },
+            }
+        })
 }

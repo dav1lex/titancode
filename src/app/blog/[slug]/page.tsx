@@ -1,181 +1,203 @@
-import { getPostData, getAllPostSlugs } from '@/lib/blog';
-import { notFound } from 'next/navigation';
-import { Metadata } from 'next';
-import Image from 'next/image';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
-import Link from 'next/link';
+import { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+import { MDXRemote } from 'next-mdx-remote/rsc'
+import { getBlogPost, getBlogPosts } from '@/lib/blog'
+import { MDXComponents } from '@/components/blog/MDXComponents'
+import { Calendar, Clock, User, ArrowLeft } from 'lucide-react'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import { siteConfig } from '@/lib/seo-config'
 
-interface PostPageProps {
-  params: Promise<{
-    slug: string;
-  }>;
-}
-
-export async function generateMetadata({
-  params,
-}: PostPageProps): Promise<Metadata> {
-  const { slug } = await params;
-  try {
-    const post = await getPostData(slug);
-    return {
-      title: `${post.title} | TITANCODE Blog`,
-      description: post.description,
-      openGraph: {
-        title: `${post.title} | TITANCODE Blog`,
-        description: post.description,
-        type: 'article',
-        publishedTime: post.date,
-        authors: [post.author],
-        images: [
-          {
-            url: `https://www.titancode.pl${post.image}`,
-            width: 1200,
-            height: 630,
-            alt: post.title,
-          },
-        ],
-      },
-      twitter: {
-        card: 'summary_large_image',
-        title: post.title,
-        description: post.description,
-        images: [`https://www.titancode.pl${post.image}`],
-      },
-    };
-  } catch {
-    return {
-      title: 'Post Not Found',
-      description: 'This post could not be found.',
-    };
-  }
+interface Props {
+    params: Promise<{
+        slug: string
+    }>
 }
 
 export async function generateStaticParams() {
-  return getAllPostSlugs();
+    const posts = getBlogPosts()
+    return posts.map((post) => ({
+        slug: post.slug,
+    }))
 }
 
-export default async function PostPage({ params }: PostPageProps) {
-  const { slug } = await params;
-  let post;
-  try {
-    post = await getPostData(slug);
-  } catch (error) {
-    console.error('Error loading post:', error);
-    notFound();
-  }
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { slug } = await params
+    const post = getBlogPost(slug)
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post.title,
-    image: `https://titancode.pl${post.image}`,
-    datePublished: post.date,
-    author: {
-      '@type': 'Person',
-      name: post.author,
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'TitanCode',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://www.titancode.pl/logo.svg',
-      },
-    },
-    description: post.description,
-  };
+    if (!post) {
+        return {}
+    }
 
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      
-      <main className="min-h-screen bg-gradient-to-b from-background to-muted/20">
-        <div className="container mx-auto px-4 py-8 md:px-6 lg:py-12">
-          <div className="mx-auto max-w-4xl">
-            <Link href="/blog">
-              <Button variant="ghost" className="mb-8 group">
-                <ArrowLeft className="mr-2 h-4 w-4 transition-transform duration-200 group-hover:-translate-x-1" />
-                Back to all posts
-              </Button>
-            </Link>
+    return {
+        title: `${post.title} | TitanCode Blog`,
+        description: post.description,
+        openGraph: {
+            title: post.title,
+            description: post.description,
+            type: 'article',
+            publishedTime: post.date,
+            authors: [post.author],
+            images: post.coverImage ? [post.coverImage] : undefined,
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: post.title,
+            description: post.description,
+            images: post.coverImage ? [post.coverImage] : undefined,
+        },
+    }
+}
 
-            <article className="rounded-lg bg-card shadow-lg">
-              <div className="p-6 md:p-8 lg:p-10">
-                <header className="space-y-6">
-                  <div className="flex flex-wrap gap-2">
-                    {post.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary" className="text-sm">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                  
-                  <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-                    {post.title}
-                  </h1>
-                  
-                  <p className="text-lg text-muted-foreground">
-                    {post.description}
-                  </p>
-                  
-                  <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-1">
-                      <Calendar className="h-4 w-4" />
-                      <span>{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+export default async function BlogPostPage({ params }: Props) {
+    const { slug } = await params
+    const post = getBlogPost(slug)
+
+    if (!post) {
+        notFound()
+    }
+
+    // Schema.org structured data for BlogPosting
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: post.title,
+        description: post.description,
+        author: {
+            '@type': 'Person',
+            name: post.author,
+        },
+        datePublished: post.date,
+        image: post.coverImage ? `${siteConfig.url}${post.coverImage}` : undefined,
+        mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `${siteConfig.url}/blog/${post.slug}`,
+        },
+    }
+
+    return (
+        <div className="min-h-screen bg-background pb-20">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+
+            <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+                {/* Back Link */}
+                <Link href="/blog" className="inline-flex items-center text-muted-foreground hover:text-primary mb-8 transition-colors">
+                    <ArrowLeft className="w-4 h-4 mr-2" />
+                    Wróć do bloga
+                </Link>
+
+                {/* Cover Image */}
+                {post.coverImage && (
+                    <div className="mb-12 -mx-4 sm:-mx-6 lg:-mx-8">
+                        <div className="aspect-video w-full overflow-hidden rounded-xl border border-border">
+                            <img
+                                src={post.coverImage}
+                                alt={post.title}
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
                     </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="h-4 w-4" />
-                      <span>{post.readingTime}</span>
+                )}
+
+                {/* Header */}
+                <header className="space-y-6 mb-12 border-b border-border pb-12">
+                    <div className="flex flex-wrap gap-2 mb-4">
+                        {post.tags.map((tag) => (
+                            <span key={tag} className="px-3 py-1 rounded-full bg-secondary text-secondary-foreground text-sm font-medium">
+                                {tag}
+                            </span>
+                        ))}
                     </div>
-                    <div className="flex items-center gap-1">
-                      <User className="h-4 w-4" />
-                      <span>{post.author}</span>
+
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+                        {post.title}
+                    </h1>
+
+                    <div className="flex flex-wrap items-center gap-6 text-muted-foreground">
+                        <div className="flex items-center gap-2">
+                            <User className="w-5 h-5" />
+                            <span className="font-medium">{post.author}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <Calendar className="w-5 h-5" />
+                            <span>{post.date}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <Clock className="w-5 h-5" />
+                            <span>{post.readingTime}</span>
+                        </div>
                     </div>
-                  </div>
                 </header>
 
-                <div className="my-8">
-                  <div className="relative aspect-[16/9] overflow-hidden rounded-lg">
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      fill
-                      className="object-cover"
-                      priority
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-                    />
-                  </div>
+                {/* Content */}
+                <div className="prose prose-lg dark:prose-invert max-w-none">
+                    <MDXRemote source={post.content} components={MDXComponents} />
                 </div>
 
-                <div 
-                  className="prose prose-lg max-w-none dark:prose-invert prose-headings:font-bold prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-p:text-base prose-p:leading-relaxed prose-a:text-primary hover:prose-a:underline prose-code:text-sm prose-code:bg-muted prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-pre:bg-muted prose-pre:border"
-                  dangerouslySetInnerHTML={{ __html: post.content }}
-                />
-              </div>
+                {/* Recent Posts */}
+                <div className="mt-20 pt-12 border-t border-border">
+                    <h3 className="text-2xl font-bold mb-8">Czytaj dalej</h3>
+                    <div className="grid md:grid-cols-3 gap-6">
+                        {getBlogPosts()
+                            .filter((p) => p.slug !== post.slug)
+                            .slice(0, 3)
+                            .map((recentPost) => (
+                                <Link
+                                    key={recentPost.slug}
+                                    href={`/blog/${recentPost.slug}`}
+                                    className="group block"
+                                >
+                                    <div className="space-y-3">
+                                        {/* Thumbnail */}
+                                        <div className="aspect-video w-full overflow-hidden rounded-lg border border-border bg-muted">
+                                            {recentPost.coverImage ? (
+                                                <img
+                                                    src={recentPost.coverImage}
+                                                    alt={recentPost.title}
+                                                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                                />
+                                            ) : (
+                                                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/5 to-secondary/5">
+                                                    <span className="text-4xl">📄</span>
+                                                </div>
+                                            )}
+                                        </div>
+                                        {/* Info */}
+                                        <div>
+                                            <h4 className="font-semibold text-lg group-hover:text-primary transition-colors line-clamp-2 mb-2">
+                                                {recentPost.title}
+                                            </h4>
+                                            <p className="text-sm text-muted-foreground line-clamp-2">
+                                                {recentPost.description}
+                                            </p>
+                                            <div className="flex items-center gap-3 mt-3 text-xs text-muted-foreground">
+                                                <span>{recentPost.date}</span>
+                                                <span>•</span>
+                                                <span>{recentPost.readingTime}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Link>
+                            ))}
+                    </div>
+                </div>
+
+                {/* CTA Footer */}
+                <div className="mt-20 p-8 rounded-2xl bg-muted/50 border border-border text-center space-y-6">
+                    <h3 className="text-2xl font-bold">Potrzebujesz strony internetowej?</h3>
+                    <p className="text-muted-foreground max-w-xl mx-auto">
+                        Skontaktuj się z nami i otrzymaj darmową wycenę swojego projektu.
+                    </p>
+                    <Link href="/contact">
+                        <Button size="lg" className="px-8 font-semibold">
+                            Darmowa Wycena
+                        </Button>
+                    </Link>
+                </div>
             </article>
-
-            <footer className="mt-12 rounded-lg bg-card p-6 shadow-lg">
-              <div className="flex items-center justify-between">
-                <Link href="/blog">
-                  <Button variant="outline">
-                    <ArrowLeft className="mr-2 h-4 w-4" />
-                    Back to Blog
-                  </Button>
-                </Link>
-                
-                <div className="text-sm text-muted-foreground">
-                  Share this article
-                </div>
-              </div>
-            </footer>
-          </div>
         </div>
-      </main>
-    </>
-  );
+    )
 }

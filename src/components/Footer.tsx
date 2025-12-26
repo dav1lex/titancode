@@ -25,6 +25,7 @@ const Footer = () => {
     { name: t("nav.home"), href: `/${language}` },
     { name: t("nav.services"), href: `/${language}/services` },
     { name: t("nav.portfolio"), href: `/${language}/portfolio` },
+    { name: t("nav.blog"), href: "/blog" },
     { name: t("nav.about"), href: `/${language}/about` },
     { name: t("nav.contact"), href: `/${language}/contact` },
   ];
@@ -35,7 +36,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
             <Link href={`/${language}`} className="flex items-center space-x-2">
-                <span className="font-bold text-xl font-['Space_Grotesk']">TITANCODE</span>
+              <span className="font-bold text-xl font-['Space_Grotesk']">TITANCODE</span>
             </Link>
             <p className="text-muted-foreground text-sm">
               {t("footer.about")}

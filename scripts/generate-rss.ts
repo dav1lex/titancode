@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import RSS from 'rss';
-import { getSortedPostsData } from '../src/lib/blog';
+import { getBlogPosts } from '../src/lib/blog';
 
 async function generateRssFeed() {
   const siteUrl = 'https://titancode.pl';
@@ -17,7 +17,7 @@ async function generateRssFeed() {
     copyright: `© ${new Date().getFullYear()} TitanCode`,
   });
 
-  const posts = getSortedPostsData();
+  const posts = getBlogPosts();
 
   posts.forEach((post) => {
     feed.item({

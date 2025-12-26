@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { getSortedPostsData } from '../lib/blog';
+import { getBlogPosts } from '../lib/blog';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = 'https://www.titancode.pl';
@@ -30,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   };
 
-  const blogPosts = getSortedPostsData().map((post) => ({
+  const blogPosts = getBlogPosts().map((post) => ({
     url: `${siteUrl}/blog/${post.slug}`,
     lastModified: new Date(post.date || new Date()),
   }));

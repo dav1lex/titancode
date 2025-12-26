@@ -1,99 +1,41 @@
-import { getSortedPostsData } from '@/lib/blog';
-import Link from 'next/link';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Calendar, Clock, ArrowRight } from 'lucide-react';
-import Image from 'next/image';
-import type { Metadata } from 'next';
+import { Metadata } from 'next'
+import { getBlogPosts } from '@/lib/blog'
+import { BlogCard } from '@/components/blog/BlogCard'
+import { createMetadata } from '@/lib/seo-config'
 
-export const metadata: Metadata = {
- title: "Web Development Blog | Insights, Tutorials & News | TITANCODE",
- description: "The official TITANCODE blog. Read our latest articles, tutorials, and insights on modern web development, Next.js, SEO, and more.",
- keywords: ["web development blog", "next.js tutorials", "seo tips", "web design articles", "programming insights"],
- alternates: {
-   canonical: "/blog",
- },
-};
+export const metadata: Metadata = createMetadata('blog')
 
-export default function BlogPage() {
-  const posts = getSortedPostsData();
+export default function BlogIndexPage() {
+    const posts = getBlogPosts()
 
-  return (
-    <main className="min-h-screen bg-gradient-to-b from-background to-muted/20">
-      <div className="container mx-auto px-4 py-16 md:px-6 lg:py-24">
-        <div className="mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-            The TitanCode Blog
-          </h1>
-          <p className="mt-6 text-lg text-muted-foreground md:text-xl">
-            Insights, tutorials, and thoughts on modern web development.
-          </p>
-        </div>
-
-        <div className="my-16 h-px bg-border" />
-
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {posts.map((post) => (
-            <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
-              <Card className="h-full overflow-hidden border-0 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                <div className="relative aspect-[16/9] overflow-hidden">
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+    return (
+        <div className="min-h-screen bg-background pb-20 pt-24">
+            {/* Header */}
+            <div className="bg-muted/30 border-b border-border py-16 sm:py-24">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6">
+                        Blog <span className="text-primary">TitanCode</span>
+                    </h1>
+                    <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                        Wiedza, poradniki i nowości ze świata technologii webowych.
+                    </p>
                 </div>
-                
-                <CardHeader className="p-6">
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-1">
-                      <Calendar className="h-4 w-4" />
-                      <span>{new Date(post.date).toLocaleDateString('pl-PL')}</span>
+            </div>
+
+            {/* Blog Grid */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                {posts.length > 0 ? (
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {posts.map((post) => (
+                            <BlogCard key={post.slug} post={post} />
+                        ))}
                     </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="h-4 w-4" />
-                      <span>{post.readingTime}</span>
+                ) : (
+                    <div className="text-center py-20">
+                        <p className="text-muted-foreground text-lg">Brak wpisów. Zajrzyj wkrótce!</p>
                     </div>
-                  </div>
-                  <CardTitle className="mt-3 text-xl font-semibold leading-tight">
-                    {post.title}
-                  </CardTitle>
-                  <CardDescription className="mt-2 line-clamp-2">
-                    {post.description}
-                  </CardDescription>
-                </CardHeader>
-                
-                <CardContent className="px-6 pb-6">
-                  <div className="flex flex-wrap gap-2">
-                    {post.tags.slice(0, 3).map((tag) => (
-                      <Badge key={tag} variant="secondary" className="text-xs">
-                        {tag}
-                      </Badge>
-                    ))}
-                    {post.tags.length > 3 && (
-                      <Badge variant="outline" className="text-xs">
-                        +{post.tags.length - 3}
-                      </Badge>
-                    )}
-                  </div>
-                  
-                  <Button 
-                    variant="ghost" 
-                    className="mt-4 w-full justify-between text-primary hover:text-primary"
-                  >
-                    Read more
-                    <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
-                  </Button>
-                </CardContent>
-              </Card>
-            </Link>
-          ))}
+                )}
+            </div>
         </div>
-      </div>
-    </main>
-  );
+    )
 }
