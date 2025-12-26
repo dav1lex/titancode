@@ -1,9 +1,11 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useLanguage } from "@/app/language-context";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import type { CarouselApi } from "@/components/ui/carousel";
 import {
   Carousel,
   CarouselContent,
@@ -14,7 +16,6 @@ import {
 import {
   Card,
   CardContent,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -56,7 +57,19 @@ const projects = [
 ];
 
 export default function PortfolioSection() {
-  const { t,language } = useLanguage();
+  const { t, language } = useLanguage();
+  const [api, setApi] = useState<CarouselApi>();
+
+  // Auto-scroll every 3 seconds (mobile and desktop)
+  useEffect(() => {
+    if (!api) return;
+
+    const interval = setInterval(() => {
+      api.scrollNext();
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [api]);
 
   return (
     <section className="relative w-full py-24 bg-white dark:bg-black transition-all duration-300 z-10">
@@ -85,51 +98,55 @@ export default function PortfolioSection() {
           </motion.p>
         </div>
 
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto"
-        >
-          <CarouselContent>
-            {projects.map((project) => (
-              <CarouselItem key={project.id} className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-1 h-full">
-                  <Card className="h-full flex flex-col bg-white/50 dark:bg-black/50 backdrop-blur-sm border-gray-200/50 dark:border-gray-800/50 hover:border-gray-300 dark:hover:border-gray-700 transition-all">
-                    <CardHeader className="p-0">
-                      <div className="relative w-full h-72 overflow-hidden rounded-t-lg">
-                        <Image
-                          src={project.image}
-                          alt={project.imageAlt}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                    </CardHeader>
-                    <CardContent className="pt-2 flex-grow">
-                      <p className="text-xs font-medium text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">
-                        {project.category}
-                      </p>
-                      <CardTitle className="text-xl font-semibold text-gray-900 dark:text-white">
-                        {project.title}
-                      </CardTitle>
-                    </CardContent>
-                    <CardFooter>
-                      <Link href={`/${language}${project.link}`} className="w-full">
-                        <Button variant="outline" className="w-full">
-                          {t("portfolio.viewProject")}
-                        </Button>
-                      </Link>
-                    </CardFooter>
-                  </Card>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+        <div className="relative">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            setApi={setApi}
+            className="w-full max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto"
+          >
+            <CarouselContent>
+              {projects.map((project) => (
+                <CarouselItem key={project.id} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1 h-full">
+                    <Link href={`/${language}${project.link}`} className="block h-full group">
+                      <Card className="h-full flex flex-col overflow-hidden bg-card backdrop-blur border-border hover:border-primary/40 hover:shadow-md transition-all duration-300">
+                        <CardHeader className="p-0">
+                          <div className="relative w-full aspect-[4/3] overflow-hidden bg-muted">
+                            <Image
+                              src={project.image}
+                              alt={project.imageAlt}
+                              fill
+                              className="object-cover transition-transform duration-500 group-hover:scale-105"
+                            />
+                          </div>
+                        </CardHeader>
+                        <CardContent className="p-5 flex-1">
+                          <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">
+                            {project.category}
+                          </p>
+                          <CardTitle className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
+                            {project.title}
+                          </CardTitle>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            
+            {/* Navigation buttons - hidden on mobile, shown on lg+ */}
+            <div className="hidden lg:block">
+              <CarouselPrevious />
+              <CarouselNext />
+            </div>
+          </Carousel>
+          
+          {/* Mobile navigation dots indicator (optional, can add if needed) */}
+        </div>
 
         <div className="mt-16 text-center">
           <Link href={`/${language}/portfolio`}>

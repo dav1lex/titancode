@@ -57,10 +57,6 @@ export default function Header() {
               />
               <motion.div
                 className="block whitespace-nowrap font-['Space_Grotesk'] text-lg sm:text-xl font-bold tracking-tight text-black dark:text-white"
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                whileHover={{ y: -1, opacity: 0.92 }}
               >
                 TITANCODE
               </motion.div>
