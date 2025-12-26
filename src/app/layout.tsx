@@ -65,14 +65,9 @@ export const metadata: Metadata = {
     images: ['/twitter-image.png'],
   },
   icons: {
-    icon: {
-      url: "/logo.svg",
-      type: "image/svg+xml",
-    },
-    apple: {
-      url: "/logo.svg",
-      type: "image/svg+xml",
-    },
+    // Use PNG icons for maximum compatibility (Google often ignores SVG favicons).
+    icon: [{ url: '/icon.png', type: 'image/png' }],
+    apple: [{ url: '/apple-icon.png', type: 'image/png' }],
   },
   manifest: '/site.webmanifest',
 };

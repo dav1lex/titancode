@@ -55,6 +55,6 @@ export function proxy(request: NextRequest) {
 export const config = {
   // Matcher ignoring `/_next/` and `/api/`
   matcher: [
-    '/((?!api|blog|images|_next/static|_next/image|sitemap.xml|robots.txt|favicon.ico|logo.svg|site.webmanifest|apple-touch-icon.png|og-image.png|twitter-image.png).*)',
+    '/((?!api|blog|images|_next/static|_next/image|sitemap.xml|robots.txt|favicon.ico|icon.png|apple-icon.png|logo.svg|site.webmanifest|apple-touch-icon.png|og-image.png|twitter-image.png).*)',
   ],
 };

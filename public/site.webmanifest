@@ -4,9 +4,15 @@
   "description": "We craft premium web solutions that blend cutting-edge technology with elegant design to help your brand stand out in the digital landscape.",
   "icons": [
     {
-      "src": "/logo.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
+      "src": "/icon.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
   "theme_color": "#ffffff",
